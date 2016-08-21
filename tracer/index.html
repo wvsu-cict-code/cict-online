@@ -57,7 +57,8 @@
     <link rel="import" href="src/tracer-components.html">
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <style is="custom-style">
-        paper-button.login-button {
+        paper-button.login-button,
+        paper-button.add-button {
             background: #f28028;
             color: #fff;
         }
@@ -135,7 +136,7 @@
                         </div>
                     </div>
                     <div>
-                        <div class="tracer-user">
+                        <div class="tracer-form">
                             <div class="section-content">
                                 <h2 class="mdl-typography--font-light mdl-color-text--white heading">CICT Alumni Tracer Form</h2>
                                 <p class="mdl-color-text--white mdl-typography small">You are currently in admin mode. All fields required.</p>
@@ -147,21 +148,20 @@
                                                     <h2 class="mdl-card__title-text">General Information</h2>
                                                 </div>
                                                 <div class="mdl-card__supporting-text">
-
-                                                    <paper-input label="Family Name"></paper-input>
-                                                    <paper-input label="Given name"></paper-input>
-                                                    <paper-input label="Middle name"></paper-input>
-                                                    <div>                                                        
-                                                        <tracer-bday day="0" month="0" year="1991"></tracer-bday>
-                                                    </div>
-                                                    <paper-dropdown-menu label="Gender">
+                                                    <p>Name
+                                                        <paper-input id="fam-name" label="Family"></paper-input>
+                                                        <paper-input id="giv-name" label="Given"></paper-input>
+                                                        <paper-input id="mid-name" label="Middle"></paper-input>
+                                                    </p>
+                                                    <tracer-bday id="bday" day="0" month="0" year="1991"></tracer-bday>
+                                                    <paper-dropdown-menu id="sex" label="Gender">
                                                         <paper-listbox class="dropdown-content">
                                                             <paper-item>Male</paper-item>
                                                             <paper-item>Female</paper-item>
                                                             <paper-item>Other</paper-item>
                                                         </paper-listbox>
                                                     </paper-dropdown-menu>
-                                                    <paper-dropdown-menu label="Marital Status">
+                                                    <paper-dropdown-menu id="marital-stat" label="Marital Status">
                                                         <paper-listbox class="dropdown-content">
                                                             <paper-item>Single</paper-item>
                                                             <paper-item>Married</paper-item>
@@ -169,9 +169,9 @@
                                                             <paper-item>Widow/Widower</paper-item>
                                                         </paper-listbox>
                                                     </paper-dropdown-menu>
-                                                    <paper-input label="Mobile No."></paper-input>
-                                                    <paper-input label="Email address"></paper-input>
-                                                    <paper-input label="Home Address"></paper-input>
+                                                    <paper-input id="mobile-num" label="Mobile No."></paper-input>
+                                                    <paper-input id="email" label="Email address"></paper-input>
+                                                    <paper-input id="home-add" label="Home Address"></paper-input>
                                                 </div>
                                             </div>
                                         </div>
@@ -181,28 +181,31 @@
                                                     <h2 class="mdl-card__title-text">Educational Background</h2>
                                                 </div>
                                                 <div class="mdl-card__supporting-text">
-                                                    <p>Additional Degrees Earned</p>
-                                                    <paper-checkbox>Doctorate</paper-checkbox>
-                                                    <paper-checkbox>Masters</paper-checkbox>
-                                                    <p>Tertiary</p>
-                                                    <paper-dropdown-menu label="Course">
-                                                        <paper-listbox class="dropdown-content">
-                                                            <paper-item>BSIT</paper-item>
-                                                            <paper-item>BSIS</paper-item>
-                                                            <paper-item>BSIM</paper-item>
-                                                            <paper-item>BSCS</paper-item>
-                                                            <paper-item>MIT</paper-item>
-                                                        </paper-listbox>
-                                                    </paper-dropdown-menu>
-                                                    <paper-input label="Major"></paper-input>
-                                                    <paper-input paper-input label="Year Graduated" auto-validate pattern="^\d{4}$" error-message="Invalid Year"></paper-input>
-                                                    <p>Secondary</p>
-                                                    <paper-input label="School"></paper-input>
-                                                    <paper-input paper-input label="Year Graduated" auto-validate pattern="^\d{4}$" error-message="Invalid Year"></paper-input>
-                                                    <p>Primary</p>
-                                                    <paper-input label="School"></paper-input>
-                                                    <paper-input paper-input label="Year Graduated" auto-validate pattern="^\d{4}$" error-message="Invalid Year"></paper-input>
-
+                                                    <p>Tertiary <br>
+                                                        <tracer-courses></tracer-courses>
+                                                        <paper-input id="ter-major" label="Major"></paper-input>
+                                                        <paper-input id="ter-grad-year" paper-input label="Year Graduated" auto-validate pattern="^\d{4}$" error-message="Invalid Year"></paper-input>
+                                                    </p>
+                                                    <p>Secondary
+                                                        <paper-input id="secschl-name" label="School"></paper-input>
+                                                        <paper-input id="sec-grad-year" paper-input label="Year Graduated" auto-validate pattern="^\d{4}$" error-message="Invalid Year"></paper-input>
+                                                    </p>
+                                                    <p>Primary
+                                                        <paper-input id="primschl-name" label="School"></paper-input>
+                                                        <paper-input id="prim-grad-year" paper-input label="Year Graduated" auto-validate pattern="^\d{4}$" error-message="Invalid Year"></paper-input>
+                                                    </p>
+                                                    <div class="section-spacer"></div>
+                                                    <p><span class="form-section-title">Additional Degrees Earned</span></p>
+                                                    <p>Masteral
+                                                        <paper-input id="msschl-name" label="School"></paper-input>
+                                                        <paper-input id="ms-major" label="Major (if any)"></paper-input>
+                                                        <paper-input id="ms-grad-year" paper-input label="Year Graduated" auto-validate pattern="^\d{4}$" error-message="Invalid Year"></paper-input>
+                                                    </p>
+                                                    <p>Doctorate
+                                                        <paper-input id="docschl-name" label="School"></paper-input>
+                                                        <paper-input id="doc-major" label="Major (if any)"></paper-input>
+                                                        <paper-input id="doc-grad-year" paper-input label="Year Graduated" auto-validate pattern="^\d{4}$" error-message="Invalid Year"></paper-input>
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
@@ -213,18 +216,18 @@
                                                 </div>
                                                 <div class="mdl-card__supporting-text">
                                                     <p>Are you presently employed? </p>
-                                                    <paper-radio-group selected="yes">
+                                                    <paper-radio-group id="empcateg" selected="yes">
                                                         <paper-radio-button name="yes">Yes</paper-radio-button>
                                                         <paper-radio-button name="no">No</paper-radio-button>
                                                     </paper-radio-group>
                                                     <div>
                                                         <p>Employment Details</p>
-                                                        <paper-radio-group selected="local">
+                                                        <paper-radio-group id="emploc" selected="local">
                                                             <paper-radio-button name="local">Local</paper-radio-button>
                                                             <paper-radio-button name="abroad">Abroad</paper-radio-button>
                                                         </paper-radio-group>
                                                         <paper-dropdown-menu label="Current Job Level">
-                                                            <paper-listbox class="dropdown-content">
+                                                            <paper-listbox id="emplvl" class="dropdown-content">
                                                                 <paper-item>Not Applicable</paper-item>
                                                                 <paper-item>Rank or Clerical</paper-item>
                                                                 <paper-item>Professional, Technical or Supervisory</paper-item>
@@ -233,25 +236,23 @@
                                                             </paper-listbox>
                                                         </paper-dropdown-menu>
                                                         <paper-dropdown-menu label="Employment Status">
-                                                            <paper-listbox class="dropdown-content">
+                                                            <paper-listbox id="empstat" class="dropdown-content">
                                                                 <paper-item>Regular/Permanent</paper-item>
                                                                 <paper-item>Casual</paper-item>
                                                                 <paper-item>Contract of Service</paper-item>
                                                                 <paper-item>Part-time</paper-item>
                                                             </paper-listbox>
                                                         </paper-dropdown-menu>
-                                                        <paper-input label="
-Name of present employer (Company / Organization)"></paper-input>
-                                                        <paper-input label="
-Contact no. of present employer (company / organization)"></paper-input>
+                                                        <paper-input id="employer" label="Name of present employer (Company / Organization)"></paper-input>
+                                                        <paper-input id="employer-contact" label="Contact no. of present employer (company / organization)"></paper-input>
                                                         <p>Please state reason(s) why you are not employed. You may check more than one answer.</p>
-                                                        <paper-checkbox>Enrolled in advance or further study</paper-checkbox>
-                                                        <paper-checkbox>Family-related reasons</paper-checkbox>
-                                                        <paper-checkbox>Heath-related reasons</paper-checkbox>
-                                                        <paper-checkbox>Serving as Volunteer / Trainee</paper-checkbox>
-                                                        <paper-checkbox>There is no job opportunity</paper-checkbox>
-                                                        <paper-checkbox>Did not look for a job</paper-checkbox>
-                                                        <paper-checkbox>Lack of work experience</paper-checkbox>
+                                                        <paper-checkbox id="unemp-0">Enrolled in advance or further study</paper-checkbox>
+                                                        <paper-checkbox id="unemp-1">Family-related reasons</paper-checkbox>
+                                                        <paper-checkbox id="unemp-2">Heath-related reasons</paper-checkbox>
+                                                        <paper-checkbox id="unemp-3">Serving as Volunteer / Trainee</paper-checkbox>
+                                                        <paper-checkbox id="unemp-4">There is no job opportunity</paper-checkbox>
+                                                        <paper-checkbox id="unemp-5">Did not look for a job</paper-checkbox>
+                                                        <paper-checkbox id="unemp-6">Lack of work experience</paper-checkbox>
                                                         <div>
                                                         </div>
                                                     </div>
@@ -266,13 +267,25 @@ Contact no. of present employer (company / organization)"></paper-input>
                 </iron-pages>
 
                 <div class="tracer-desc">
+
                     <div class="section-content">
-                        <p class="text-content mdl-typography--font-light mdl-color-text--white">
-                            The college is establishing of tracing its graduates and getting feedback regarding the type of work, further study or other activity you are / were involved in since you completed your study from the institution. The information provided will assist
-                            the institution in planning future educational needs. Results of this tracer study will only be presented in summary form and individual responces will be kept strictly confidential. We would, therefore, highly appreciate it
-                            if you could complete the following questionnaire and submit it to us, at your earliest conveniece.
-                        </p>
+                        <iron-pages selected="0">
+                            <div>
+                                <p class="text-content mdl-typography--font-light mdl-color-text--white left">
+                                    The college is establishing of tracing its graduates and getting feedback regarding the type of work, further study or other activity you were involved in since you completed your study from the institution. The information provided will assist the institution
+                                    in planning future educational needs. Results of this tracer study will only be presented in summary form and individual responces will be kept strictly confidential. We would, therefore, highly appreciate it if you
+                                    could complete the following questionnaire and submit it to us, at your earliest conveniece.
+                                </p>
+                            </div>
+                            <div>
+                                <p class="text-content mdl-typography--font-light mdl-color-text--white">
+                                    Thank you very much!
+                                </p>
+                                <paper-button class="add-button">Submit</paper-button>
+                            </div>
+                        </iron-pages>
                     </div>
+
                 </div>
 
                 <footer class="mdl-mini-footer mdl-color--grey-900">

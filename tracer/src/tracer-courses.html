@@ -1,0 +1,30 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+
+<dom-module id="tracer-courses">
+<template>
+    <paper-dropdown-menu label="Course">
+    <paper-listbox class="dropdown-content" selected=[[index]]>
+        <template is="dom-repeat" items="{{courses}}">
+            <paper-item>{{item}}</paper-item>
+        </template>
+    </paper-listbox>
+</paper-dropdown-menu>
+</template>
+<script>
+    Polymer({
+        is: 'tracer-courses',
+        ready: function(){
+            this.courses = [
+            "BSIT",
+            "BSIS/BSIM",
+            "BSCS",
+            "MIT"
+            ]
+        },
+        properties: {
+            index: Number
+        }
+    })
+</script>
+</dom-module>
