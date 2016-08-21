@@ -1,0 +1,22 @@
+{
+  "name": "cict-online",
+  "homepage": "https://www.cictwvsu.com",
+  "description": "CICT Official Website",
+  "main": "index.html",
+  "moduleType": [],
+  "keywords": [
+    "wvsu",
+    "cict"
+  ],
+  "authors": [
+    "cict"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

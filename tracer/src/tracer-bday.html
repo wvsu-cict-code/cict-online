@@ -1,0 +1,34 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="tracer-days.html">
+<link rel="import" href="tracer-months.html">
+
+<dom-module id="tracer-bday">
+    <style>
+        paper-input {
+            max-width: 90px;
+            display: inline-block;
+        }
+
+        tracer-days, tracer-months{
+            display: inline-block;
+            max-width: 100px;
+            margin-right: 5px
+        }
+    </style>
+<template>
+    <p>Birthday</p>
+    <tracer-days index=[[day]]></tracer-days>
+    <tracer-months index=[[month]]></tracer-months>
+    <paper-input paper-input label="Year" auto-validate pattern="^\d{4}$" error-message="Invalid Year" value="[[year]]"></paper-input>
+</template>
+<script>
+    Polymer({
+        is: "tracer-bday",
+        properties: {
+            day: Number,
+            month: Number,
+            year: Number
+        }
+    })
+</script>
+</dom-module>

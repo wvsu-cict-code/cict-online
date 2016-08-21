@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<!-- {% include head.html %}
+<body>
+{% include header.html %}
+<div class="page-content">
+<div class="wrsiteer">
+{{ content }}
+</div>
+</div>
+{% include footer.html %}
+</body> -->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="CICT Online">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CICT Online</title>
+    <link href="../css/roboto-fontface.css" rel="stylesheet">
+    <link href="../css/icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/material.min.css">
+    <link rel="stylesheet" href="../css/socioicon.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/tracer.css">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <script src="../bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="../bower_components/paper-input/paper-input.html">
+<link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="site-layout mdl-layout mdl-layout--fixed-header mdl-js-layout ">
+        <header class="site-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title">
+                <img src="../images/site-logo.png" alt="CICT" class="site-logo">
+                </span>
+                <div class="mdl-layout-spacer"></div>
+                <nav class="cict-navigation mdl-navigation">
+                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">Updates</a>
+                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">Programs</a>
+                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">About</a>
+                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <main class="site-tracer mdl-layout__content">
+            <div class="tracer-form-container">
+<div class="section-content mdl-typography--font-light">
+<div class="mdl-grid">
+<div class="mdl-cell--7-col">
+<h2 class="mdl-typography--font-light mdl-color-text--white heading">Tracer Study</h2>
+<p class="subhead mdl-color-text--white">
+The current status of CICT Alumnus.
+</p>
+<img src="../images/animated-svg-ff.svg" alt="">
+</div>
+<div class="mdl-cell mdl-cell--4-col">
+<div class="card-login mdl-card">
+<div class="mdl-card__title">
+<h2 class="mdl-card__title-text">Login</h2>
+</div>
+<div class="mdl-card__supporting-text">
+<form action="#">
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class="mdl-textfield__input" type="text" id="uname">
+<label class="mdl-textfield__label" for="uname">Username</label>
+</div>
+<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+<input class="mdl-textfield__input" type="password" id="pass">
+<label class="mdl-textfield__label" for="pass">Password</label>
+</div>
+<p>
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored pull-right" type="submit">
+Login
+</button>
+</p>
+<div class="section-spacer"></div>
+</form>
+</div>
+</div>
+
+<div class="mdl-grid other-login">
+<div class="mdl-cell mdl-cell--12-col mdl-typography--text-center mdl-color-text--white">
+OR
+</div>
+<div class="mdl-cell mdl-cell--4-col">
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+Facebook
+</button>
+</div>
+<div class="mdl-cell mdl-cell--4-col">
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+Google
+</button>
+</div>
+<div class="mdl-cell mdl-cell--4-col">
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+GitHub
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="tracer-desc">
+<div class="section-content">
+<p class="text-content mdl-typography--font-light mdl-color-text--white">
+The college is establishing of tracing its graduates and getting feedback regarding the type of work, further study or other activity you are / were involved in since you completed your study from the institution. The information provided will assist the institution in planning future educational needs. Results of this tracer study will only be presented in summary form and individual responces will be kept strictly confidential. We would, therefore, highly appreciate it if you could complete the following questionnaire and submit it to us, at your earliest conveniece.
+</p>
+</div>
+</div>
+
+<div class="tracer-user">
+<div class="section-content">
+    <h2 class="mdl-typography--font-light heading">CICT Tracer Study Form</h2>
+<p class="text-content mdl-typography--font-light mdl-color-text--grey-800">
+GENERAL INFORMATION
+</p>
+<p class="mdl-color-text--red mdl-typography small">*Required</p>
+
+<form action="#">
+    <paper-input label="Family Name *"></paper-input>
+</form>
+</div>
+</div>
+
+<footer class="mdl-mini-footer mdl-color--grey-900">
+<div class="mdl-mini-footer--left-section">
+<div class="mdl-logo">
+Copyright &copy; 2002‒2016 College of ICT
+</div>
+<ul class="mdl-mini-footer__link-list">
+<li> <a href="http://wvsu.edu.ph/">West Visayas State University</a></li>
+</ul>
+
+</div>
+<div class="mdl-mini-footer__right-section">
+
+</div>
+</footer>
+
+    </div>
+    </main>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+    <script src="../js/material.min.js"></script>
+    <script src="../js/tracer.js"></script>
+</body>
+
+</html>

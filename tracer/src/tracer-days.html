@@ -1,0 +1,25 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+
+<dom-module id="tracer-days">
+<template>
+    <paper-dropdown-menu label="Day">
+    <paper-listbox class="dropdown-content" selected=[[index]]>
+        <template is="dom-repeat" items="{{days}}">
+            <paper-item>{{item}}</paper-item>
+        </template>
+    </paper-listbox>
+</paper-dropdown-menu>
+</template>
+<script>
+    Polymer({
+        is: 'tracer-days',
+        ready: function(){
+            this.days = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31]
+        },
+        properties: {
+            index: Number
+        }
+    })
+</script>
+</dom-module>

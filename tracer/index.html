@@ -15,7 +15,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web sites.">
+    <meta name="description" content="CICT Online">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CICT Online</title>
     <link href="../css/roboto-fontface.css" rel="stylesheet">
@@ -23,12 +23,48 @@
     <link rel="stylesheet" href="../css/material.min.css">
     <link rel="stylesheet" href="../css/socioicon.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/tracer.css">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
-<link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <script>
+        // setup Polymer options
+        window.Polymer = {
+            lazyRegister: true,
+            dom: 'shadow'
+        };
+
+        // load webcomponents polyfills
+        (function() {
+            if ('registerElement' in document &&
+                'import' in document.createElement('link') &&
+                'content' in document.createElement('template')) {
+                // browser has web components
+            } else {
+                // polyfill web components
+                var e = document.createElement('script');
+                e.src = 'bower_components/webcomponentsjs/webcomponents-lite.min.js';
+                document.head.appendChild(e);
+            }
+        })();
+
+        // load pre-caching service worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('service-worker.js');
+            });
+        }
+    </script>
+
+    <link rel="import" href="src/tracer-components.html">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <style is="custom-style">
+        paper-button.login-button {
+            background: #f28028;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
-    <span id="home"></span>
     <div class="site-layout mdl-layout mdl-layout--fixed-header mdl-js-layout ">
         <header class="site-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
             <div class="mdl-layout__header-row">
@@ -46,81 +82,218 @@
         </header>
         <main class="site-tracer mdl-layout__content">
             <div class="tracer-form-container">
-                <div class="section-content mdl-typography--font-light">
-                    <div class="mdl-grid">
-                       <div class="mdl-cell--7-col">
-                        <h2 class="mdl-typography--font-light mdl-color-text--white heading">Tracer Study</h2>
-                        <p class="subhead mdl-color-text--white">
-                        The current status of CICT Alumnus.
-                        </p>
-                        <img src="../images/animated-svg-ff.svg" alt="">
-                       </div>
-                        <div class="mdl-cell mdl-cell--4-col">
-                            <div class="card-login mdl-card">
-                                <div class="mdl-card__title">
-                                    <h2 class="mdl-card__title-text">Login</h2>
+                <iron-pages selected="1">
+                    <div>
+                        <div class="section-content mdl-typography--font-light">
+                            <div class="mdl-grid">
+                                <div class="mdl-cell--7-col">
+                                    <h2 class="mdl-typography--font-light mdl-color-text--white heading">Tracer Study</h2>
+                                    <p class="subhead mdl-color-text--white">
+                                        The current status of CICT Alumnus.
+                                    </p>
+                                    <img class="tracer-art" src="../images/animated-svg-ff.svg" alt="">
                                 </div>
-                                <div class="mdl-card__supporting-text">
-                                    <form action="#">
-                                      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="text" id="uname">
-                                        <label class="mdl-textfield__label" for="uname">Username</label>
-                                      </div>
-                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                        <input class="mdl-textfield__input" type="password" id="pass">
-                                        <label class="mdl-textfield__label" for="pass">Password</label>
-                                      </div>
-<p>
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored pull-right">
-  Sign in
-</button>
-</p>
-<div class="section-spacer"></div>
-                                    </form>
+                                <div class="mdl-cell mdl-cell--4-col">
+                                    <div class="card-login mdl-card">
+                                        <div class="mdl-card__title">
+                                            <h2 class="mdl-card__title-text">Login</h2>
+                                        </div>
+                                        <div class="mdl-card__supporting-text">
+                                            <form action="#">
+                                                <paper-input label="Username"></paper-input>
+                                                <paper-input label="Password" type="password"></paper-input>
+                                                <p>
+                                                    <paper-button raised class="login-button pull-right">Login</paper-button>
+                                                </p>
+                                                <div class="section-spacer"></div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <div class="mdl-grid other-login">
+                                        <div class="mdl-cell mdl-cell--12-col mdl-typography--text-center mdl-color-text--white">
+                                            OR
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--4-col">
+                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                                        Facebook
+                                    </button>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--4-col">
+                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                                        Google
+                                    </button>
+                                        </div>
+                                        <div class="mdl-cell mdl-cell--4-col">
+                                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                                        GitHub
+                                    </button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-
-<div class="mdl-grid other-login">
-    <div class="mdl-cell mdl-cell--6-col">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-  Use Facebook
-</button>
-    </div>
-    <div class="mdl-cell mdl-cell--6-col">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
-  Use Google
-</button>
-    </div>
-</div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="tracer-desc">
-                <div class="section-content">
-<p class="text-content mdl-typography--font-light mdl-color-text--grey-800">
-                        The college is establishing of tracing its graduates and getting feedback regarding the type of work, further study or other activity you are / were involved in since you completed your study from the institution. The information provided will assist the institution in planning future educational needs. Results of this tracer study will only be presented in summary form and individual responces will be kept strictly confidential. We would, therefore, highly appreciate it if you could complete the following questionnaire and submit it to us, at your earliest conveniece.
-</p>
-                </div>
-            </div>
-            <footer class="mdl-mini-footer mdl-color--grey-900">
-                <div class="mdl-mini-footer--left-section">
-                    <div class="mdl-logo">
-                        Copyright &copy; 2002‒2016 College of ICT
+                    <div>
+                        <div class="tracer-user">
+                            <div class="section-content">
+                                <h2 class="mdl-typography--font-light mdl-color-text--white heading">CICT Alumni Tracer Form</h2>
+                                <p class="mdl-color-text--white mdl-typography small">You are currently in admin mode. All fields required.</p>
+                                <form action="#">
+                                    <div class="mdl-grid">
+                                        <div class="mdl-cell">
+                                            <div class="card-tracer mdl-card card-form mdl-shadow--2dp">
+                                                <div class="mdl-card__title">
+                                                    <h2 class="mdl-card__title-text">General Information</h2>
+                                                </div>
+                                                <div class="mdl-card__supporting-text">
+
+                                                    <paper-input label="Family Name"></paper-input>
+                                                    <paper-input label="Given name"></paper-input>
+                                                    <paper-input label="Middle name"></paper-input>
+                                                    <div>                                                        
+                                                        <tracer-bday day="0" month="0" year="1991"></tracer-bday>
+                                                    </div>
+                                                    <paper-dropdown-menu label="Gender">
+                                                        <paper-listbox class="dropdown-content">
+                                                            <paper-item>Male</paper-item>
+                                                            <paper-item>Female</paper-item>
+                                                            <paper-item>Other</paper-item>
+                                                        </paper-listbox>
+                                                    </paper-dropdown-menu>
+                                                    <paper-dropdown-menu label="Marital Status">
+                                                        <paper-listbox class="dropdown-content">
+                                                            <paper-item>Single</paper-item>
+                                                            <paper-item>Married</paper-item>
+                                                            <paper-item>Separated/Divorced</paper-item>
+                                                            <paper-item>Widow/Widower</paper-item>
+                                                        </paper-listbox>
+                                                    </paper-dropdown-menu>
+                                                    <paper-input label="Mobile No."></paper-input>
+                                                    <paper-input label="Email address"></paper-input>
+                                                    <paper-input label="Home Address"></paper-input>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mdl-cell">
+                                            <div class="card-tracer mdl-card card-form mdl-shadow--2dp">
+                                                <div class="mdl-card__title">
+                                                    <h2 class="mdl-card__title-text">Educational Background</h2>
+                                                </div>
+                                                <div class="mdl-card__supporting-text">
+                                                    <p>Additional Degrees Earned</p>
+                                                    <paper-checkbox>Doctorate</paper-checkbox>
+                                                    <paper-checkbox>Masters</paper-checkbox>
+                                                    <p>Tertiary</p>
+                                                    <paper-dropdown-menu label="Course">
+                                                        <paper-listbox class="dropdown-content">
+                                                            <paper-item>BSIT</paper-item>
+                                                            <paper-item>BSIS</paper-item>
+                                                            <paper-item>BSIM</paper-item>
+                                                            <paper-item>BSCS</paper-item>
+                                                            <paper-item>MIT</paper-item>
+                                                        </paper-listbox>
+                                                    </paper-dropdown-menu>
+                                                    <paper-input label="Major"></paper-input>
+                                                    <paper-input paper-input label="Year Graduated" auto-validate pattern="^\d{4}$" error-message="Invalid Year"></paper-input>
+                                                    <p>Secondary</p>
+                                                    <paper-input label="School"></paper-input>
+                                                    <paper-input paper-input label="Year Graduated" auto-validate pattern="^\d{4}$" error-message="Invalid Year"></paper-input>
+                                                    <p>Primary</p>
+                                                    <paper-input label="School"></paper-input>
+                                                    <paper-input paper-input label="Year Graduated" auto-validate pattern="^\d{4}$" error-message="Invalid Year"></paper-input>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mdl-cell">
+                                            <div class="card-tracer mdl-card card-form mdl-shadow--2dp">
+                                                <div class="mdl-card__title">
+                                                    <h2 class="mdl-card__title-text">Employment Status</h2>
+                                                </div>
+                                                <div class="mdl-card__supporting-text">
+                                                    <p>Are you presently employed? </p>
+                                                    <paper-radio-group selected="yes">
+                                                        <paper-radio-button name="yes">Yes</paper-radio-button>
+                                                        <paper-radio-button name="no">No</paper-radio-button>
+                                                    </paper-radio-group>
+                                                    <div>
+                                                        <p>Employment Details</p>
+                                                        <paper-radio-group selected="local">
+                                                            <paper-radio-button name="local">Local</paper-radio-button>
+                                                            <paper-radio-button name="abroad">Abroad</paper-radio-button>
+                                                        </paper-radio-group>
+                                                        <paper-dropdown-menu label="Current Job Level">
+                                                            <paper-listbox class="dropdown-content">
+                                                                <paper-item>Not Applicable</paper-item>
+                                                                <paper-item>Rank or Clerical</paper-item>
+                                                                <paper-item>Professional, Technical or Supervisory</paper-item>
+                                                                <paper-item>Managerail or Executive</paper-item>
+                                                                <paper-item>Self-employed</paper-item>
+                                                            </paper-listbox>
+                                                        </paper-dropdown-menu>
+                                                        <paper-dropdown-menu label="Employment Status">
+                                                            <paper-listbox class="dropdown-content">
+                                                                <paper-item>Regular/Permanent</paper-item>
+                                                                <paper-item>Casual</paper-item>
+                                                                <paper-item>Contract of Service</paper-item>
+                                                                <paper-item>Part-time</paper-item>
+                                                            </paper-listbox>
+                                                        </paper-dropdown-menu>
+                                                        <paper-input label="
+Name of present employer (Company / Organization)"></paper-input>
+                                                        <paper-input label="
+Contact no. of present employer (company / organization)"></paper-input>
+                                                        <p>Please state reason(s) why you are not employed. You may check more than one answer.</p>
+                                                        <paper-checkbox>Enrolled in advance or further study</paper-checkbox>
+                                                        <paper-checkbox>Family-related reasons</paper-checkbox>
+                                                        <paper-checkbox>Heath-related reasons</paper-checkbox>
+                                                        <paper-checkbox>Serving as Volunteer / Trainee</paper-checkbox>
+                                                        <paper-checkbox>There is no job opportunity</paper-checkbox>
+                                                        <paper-checkbox>Did not look for a job</paper-checkbox>
+                                                        <paper-checkbox>Lack of work experience</paper-checkbox>
+                                                        <div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="mdl-mini-footer__link-list">
-                        <li> <a href="http://wvsu.edu.ph/">West Visayas State University</a></li>
-                    </ul>
+                </iron-pages>
 
+                <div class="tracer-desc">
+                    <div class="section-content">
+                        <p class="text-content mdl-typography--font-light mdl-color-text--white">
+                            The college is establishing of tracing its graduates and getting feedback regarding the type of work, further study or other activity you are / were involved in since you completed your study from the institution. The information provided will assist
+                            the institution in planning future educational needs. Results of this tracer study will only be presented in summary form and individual responces will be kept strictly confidential. We would, therefore, highly appreciate it
+                            if you could complete the following questionnaire and submit it to us, at your earliest conveniece.
+                        </p>
+                    </div>
                 </div>
-                <div class="mdl-mini-footer__right-section">
 
-                </div>
-            </footer>
-    </div>
-    </main>
-    </div>
-    <script src="../js/material.min.js"></script>
+                <footer class="mdl-mini-footer mdl-color--grey-900">
+                    <div class="mdl-mini-footer--left-section">
+                        <div class="mdl-logo">
+                            Copyright &copy; 2002‒2016 College of ICT
+                        </div>
+                        <ul class="mdl-mini-footer__link-list">
+                            <li> <a href="http://wvsu.edu.ph/">West Visayas State University</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="mdl-mini-footer__right-section">
+
+                    </div>
+                </footer>
+        </main>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+        <script src="../js/material.min.js"></script>
+        <script src="../js/tracer.js"></script>
 </body>
 
 </html>

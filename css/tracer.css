@@ -1,0 +1,53 @@
+.tracer-desc{
+    max-width: 1600px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #263238;
+}
+
+.tracer-user{
+    max-width: 1600px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #efefef;
+        background: url('../images/tracer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed
+}
+
+.tracer-form-container{
+    max-width: 1600px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: url('../images/tracer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed
+}
+
+.site-tracer {
+    margin-top: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.card-tracer.mdl-card{
+    width: 100%;
+}
+
+.card-tracer.card-form>.mdl-card__title {
+    background-color: #263238;
+    color: #fff
+}
+
+.site-layout.is-small-screen .tracer-art{
+    width: 100%;
+    height: auto
+}
