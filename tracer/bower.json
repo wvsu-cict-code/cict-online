@@ -24,7 +24,10 @@
     "paper-tabs": "PolymerElements/paper-tabs#~1.6.2",
     "paper-checkbox": "PolymerElements/paper-checkbox#~1.4.0",
     "paper-radio-button": "PolymerElements/paper-radio-button#~1.2.1",
-    "paper-radio-group": "PolymerElements/paper-radio-group#~1.2.0"
+    "paper-radio-group": "PolymerElements/paper-radio-group#~1.2.0",
+    "paper-dialog": "PolymerElements/paper-dialog#~1.1.0",
+    "neon-animation": "PolymerElements/neon-animation#~1.2.4",
+    "dialog-polyfill": "~0.4.4"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"

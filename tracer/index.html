@@ -15,15 +15,16 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="CICT Online">
+    <meta name="description" content="CICT Forms">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CICT Online</title>
+    <title>CICT Forms</title>
     <link href="../css/roboto-fontface.css" rel="stylesheet">
     <link href="../css/icons.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/material.min.css">
     <link rel="stylesheet" href="../css/socioicon.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/tracer.css">
+    <link rel="stylesheet" href="../lib/dialog-polyfill/dialog-polyfill.css">
     <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
     <script>
         // setup Polymer options
@@ -53,7 +54,6 @@
             });
         }
     </script>
-
     <link rel="import" href="src/tracer-components.html">
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
     <style is="custom-style">
@@ -65,19 +65,16 @@
     </style>
 </head>
 
-<body>
+<body unresolved>
     <div class="site-layout mdl-layout mdl-layout--fixed-header mdl-js-layout ">
         <header class="site-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
             <div class="mdl-layout__header-row">
                 <span class="mdl-layout-title">
-                <img src="../images/site-logo.png" alt="CICT" class="site-logo">
+                <img src="../images/forms-logo.png" alt="CICT" class="site-logo">
                 </span>
                 <div class="mdl-layout-spacer"></div>
                 <nav class="cict-navigation mdl-navigation">
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">Updates</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">Programs</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">About</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">Contact</a>
+                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">Logout</a>
                 </nav>
             </div>
         </header>
@@ -154,21 +151,8 @@
                                                         <paper-input id="mid-name" label="Middle"></paper-input>
                                                     </p>
                                                     <tracer-bday id="bday" day="0" month="0" year="1991"></tracer-bday>
-                                                    <paper-dropdown-menu id="sex" label="Gender">
-                                                        <paper-listbox class="dropdown-content">
-                                                            <paper-item>Male</paper-item>
-                                                            <paper-item>Female</paper-item>
-                                                            <paper-item>Other</paper-item>
-                                                        </paper-listbox>
-                                                    </paper-dropdown-menu>
-                                                    <paper-dropdown-menu id="marital-stat" label="Marital Status">
-                                                        <paper-listbox class="dropdown-content">
-                                                            <paper-item>Single</paper-item>
-                                                            <paper-item>Married</paper-item>
-                                                            <paper-item>Separated/Divorced</paper-item>
-                                                            <paper-item>Widow/Widower</paper-item>
-                                                        </paper-listbox>
-                                                    </paper-dropdown-menu>
+                                                    <tracer-gender id="gender"></tracer-gender>
+                                                    <tracer-marital id="marital-stat"></tracer-marital>
                                                     <paper-input id="mobile-num" label="Mobile No."></paper-input>
                                                     <paper-input id="email" label="Email address"></paper-input>
                                                     <paper-input id="home-add" label="Home Address"></paper-input>
@@ -182,7 +166,7 @@
                                                 </div>
                                                 <div class="mdl-card__supporting-text">
                                                     <p>Tertiary <br>
-                                                        <tracer-courses></tracer-courses>
+                                                        <tracer-courses id="course"></tracer-courses>
                                                         <paper-input id="ter-major" label="Major"></paper-input>
                                                         <paper-input id="ter-grad-year" paper-input label="Year Graduated" auto-validate pattern="^\d{4}$" error-message="Invalid Year"></paper-input>
                                                     </p>
@@ -216,33 +200,14 @@
                                                 </div>
                                                 <div class="mdl-card__supporting-text">
                                                     <p>Are you presently employed? </p>
-                                                    <paper-radio-group id="empcateg" selected="yes">
-                                                        <paper-radio-button name="yes">Yes</paper-radio-button>
-                                                        <paper-radio-button name="no">No</paper-radio-button>
-                                                    </paper-radio-group>
+                                                    <tracer-twin-radiobtn id="employed" first="Yes" second="No" select="f"></tracer-twin-radiobtn>
                                                     <div>
                                                         <p>Employment Details</p>
                                                         <paper-radio-group id="emploc" selected="local">
                                                             <paper-radio-button name="local">Local</paper-radio-button>
                                                             <paper-radio-button name="abroad">Abroad</paper-radio-button>
                                                         </paper-radio-group>
-                                                        <paper-dropdown-menu label="Current Job Level">
-                                                            <paper-listbox id="emplvl" class="dropdown-content">
-                                                                <paper-item>Not Applicable</paper-item>
-                                                                <paper-item>Rank or Clerical</paper-item>
-                                                                <paper-item>Professional, Technical or Supervisory</paper-item>
-                                                                <paper-item>Managerail or Executive</paper-item>
-                                                                <paper-item>Self-employed</paper-item>
-                                                            </paper-listbox>
-                                                        </paper-dropdown-menu>
-                                                        <paper-dropdown-menu label="Employment Status">
-                                                            <paper-listbox id="empstat" class="dropdown-content">
-                                                                <paper-item>Regular/Permanent</paper-item>
-                                                                <paper-item>Casual</paper-item>
-                                                                <paper-item>Contract of Service</paper-item>
-                                                                <paper-item>Part-time</paper-item>
-                                                            </paper-listbox>
-                                                        </paper-dropdown-menu>
+                                                        <tracer-job-level id="emplvl"></tracer-job-level>
                                                         <paper-input id="employer" label="Name of present employer (Company / Organization)"></paper-input>
                                                         <paper-input id="employer-contact" label="Contact no. of present employer (company / organization)"></paper-input>
                                                         <p>Please state reason(s) why you are not employed. You may check more than one answer.</p>
@@ -269,7 +234,7 @@
                 <div class="tracer-desc">
 
                     <div class="section-content">
-                        <iron-pages selected="0">
+                        <iron-pages selected="1">
                             <div>
                                 <p class="text-content mdl-typography--font-light mdl-color-text--white left">
                                     The college is establishing of tracing its graduates and getting feedback regarding the type of work, further study or other activity you were involved in since you completed your study from the institution. The information provided will assist the institution
@@ -281,7 +246,10 @@
                                 <p class="text-content mdl-typography--font-light mdl-color-text--white">
                                     Thank you very much!
                                 </p>
-                                <paper-button class="add-button">Submit</paper-button>
+                                <paper-button onclick="submit()" class="add-button">Submit</paper-button>
+                            </div>
+                            <div>
+                                  <paper-button onclick="reset()">Add Another Entry</paper-button>
                             </div>
                         </iron-pages>
                     </div>
@@ -304,8 +272,19 @@
                 </footer>
         </main>
         </div>
-        <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+          <dialog class="mdl-dialog">
+    <h4 class="mdl-dialog__title"></h4>
+    <div class="mdl-dialog__content">
+      <p>
+      </p>
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button close">OK</button>
+    </div>
+  </dialog>
+        <script src="../js/firebase.js"></script>
         <script src="../js/material.min.js"></script>
+        <script src="../lib/dialog-polyfill/dialog-polyfill.js"></script>
         <script src="../js/tracer.js"></script>
 </body>
 

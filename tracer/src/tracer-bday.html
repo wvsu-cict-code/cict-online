@@ -17,17 +17,26 @@
     </style>
 <template>
     <p>Birthday</p>
-    <tracer-days index=[[day]]></tracer-days>
-    <tracer-months index=[[month]]></tracer-months>
-    <paper-input paper-input label="Year" auto-validate pattern="^\d{4}$" error-message="Invalid Year" value="[[year]]"></paper-input>
+    <tracer-days index={{day}}></tracer-days>
+    <tracer-months index={{month}}></tracer-months>
+    <paper-input paper-input label="Year" auto-validate pattern="^\d{4}$" error-message="Invalid Year" value="{{year}}"></paper-input>
 </template>
 <script>
     Polymer({
         is: "tracer-bday",
         properties: {
-            day: Number,
-            month: Number,
-            year: Number
+            day: {
+                type: Number,
+                reflectToAttribute: true
+            },
+            month: {
+                type: Number,
+                reflectToAttribute: true
+            },
+            year: {
+                type: Number,
+                reflectToAttribute: true
+            }
         }
     })
 </script>

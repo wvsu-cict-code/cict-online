@@ -4,9 +4,10 @@
     height: auto;
     margin: 0 auto;
     background-color: #263238;
+    text-align: center
 }
 
-.tracer-user{
+.tracer-form{
     max-width: 1600px;
     width: 100%;
     height: auto;
@@ -50,4 +51,8 @@
 .site-layout.is-small-screen .tracer-art{
     width: 100%;
     height: auto
+}
+
+.form-section-title{
+    font-size: 20px
 }
