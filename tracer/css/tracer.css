@@ -12,24 +12,22 @@
     width: 100%;
     height: auto;
     margin: 0 auto;
-    background-color: #efefef;
-        background: url('../images/tracer.jpg');
+    background: url('../images/tracer.jpg');
+    background-color: #263238;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
-    background-attachment: fixed
 }
 
 .tracer-form-container{
     max-width: 1600px;
     width: 100%;
-    height: auto;
+    height: 100%;
     margin: 0 auto;
     background: url('../images/tracer.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: right;
-    background-attachment: fixed
+    background-position: center;
 }
 
 .site-tracer {
@@ -53,6 +51,6 @@
     height: auto
 }
 
-.form-section-title{
-    font-size: 20px
+.hidden{
+    visibility: hidden
 }

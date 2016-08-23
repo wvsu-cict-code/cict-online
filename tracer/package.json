@@ -1,0 +1,19 @@
+{
+    "main":"index.html",
+    "name":"cict-tracer",
+    "description":"Tracer App for CICTzens",
+    "version": "0.1.0",
+    "window": {
+        "title": "CICT Tracer App",
+        "toolbar":false,
+        "frame":true,
+        "width": 1024,
+        "height": 600,
+        "position": "center",
+        "min_width": 300,
+        "min_height": 600
+    },
+    "webkit": {
+        "plugin":false
+    }
+}
