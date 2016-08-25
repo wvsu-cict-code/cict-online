@@ -1,114 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="tracer-components.html">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="CICT Forms - Alumni Tracer">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CICT Alumni Tracer Form</title>
-    <link href="css/roboto-fontface.css" rel="stylesheet">
-    <link href="css/icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/material.min.css">
-    <link rel="stylesheet" href="css/socioicon.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/tracer.css">
-    <link rel="stylesheet" href="lib/dialog-polyfill/dialog-polyfill.css">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <script>
-        // setup Polymer options
-        window.Polymer = {
-            lazyRegister: true,
-            dom: 'shadow'
-        };
-        // load webcomponents polyfills
-        (function() {
-            if ('registerElement' in document &&
-                'import' in document.createElement('link') &&
-                'content' in document.createElement('template')) {
-                // browser has web components
-            } else {
-                // polyfill web components
-                var e = document.createElement('script');
-                e.src = 'bower_components/webcomponentsjs/webcomponents-lite.min.js';
-                document.head.appendChild(e);
-            }
-        })();
-        // load pre-caching service worker
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', function() {
-                navigator.serviceWorker.register('/service-worker.js');
-            });
-        }
-    </script>
-    <link rel="import" href="src/tracer-components.html">
-    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
-    <style is="custom-style">
-        paper-button.login-button,
-        paper-button.add-button,
-        paper-button.submit-button {
-            background: #f28028;
-            color: #fff;
-        }
-        
-        .unemp-reasons>paper-checkbox {
-            display: inline-block;
-            padding-top: 8px
-        }
-        .footer-college-link{
-            color: #fff;
-            font-weight: 400
-        }
-        .footer-college-link:hover{
-            text-decoration: underline
-        }
+<dom-module id="my-app">
+
+  <template>
+
+    <style>
+
+
     </style>
-</head>
 
-<body unresolved>
-        <dialog id="default" class="mdl-dialog">
-            <h4 class="mdl-dialog__title"></h4>
-            <div class="mdl-dialog__content">
-                <p>
-                </p>
-            </div>
-            <div class="mdl-dialog__actions">
-                <button type="button" class="mdl-button close">OK</button>
-            </div>
-        </dialog>
-        <dialog id="prof-exam" class="mdl-dialog">
-            <h4 class="mdl-dialog__title">Professional Exam</h4>
-            <div class="mdl-dialog__content">
-                <p>
-                    <paper-input id="exam-title" label="Examination Title"></paper-input>
-                    <paper-input id="exam-date" label="Date Taken (mm/dd/yyyy)"></paper-input>
-                    <paper-input id="exam-rating" label="Rating"></paper-input>
-                </p>
-                <p id="prof-exam-error" class="mdl-color-text--red"></p>
-            </div>
-            <div class="mdl-dialog__actions">
-                <button type="button" class="mdl-button save">Add</button>
-                <button type="button" class="mdl-button cancel">Cancel</button>
-            </div>
-        </dialog>     
-    <div class="site-layout mdl-layout mdl-layout--fixed-header mdl-js-layout ">
-        <header class="site-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
-            <div class="mdl-layout__header-row">
-                <span class="mdl-layout-title">
-                        <a href="http://cictwvsu.com"><img src="../images/forms-logo.png" alt="CICT" class="site-logo"></a>
-                    </span>
-                <div class="mdl-layout-spacer"></div>
-                <nav class="cict-navigation mdl-navigation">
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-color-text--grey-800" href="#" onclick="about()"><i class="material-icons">help_black</i></a>
-                    <div class="logout hidden">
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase mdl-color-text--grey-800" href="#" onclick="logout()"><i class="material-icons">exit_to_app</i></a>
-                    </div>
-                </nav>
-            </div>
-        </header>
-        <main class="site-tracer mdl-layout__content">
-            <div class="tracer-form-container">
-   <iron-pages id="master-page" selected="0">
+    <iron-pages id="master-page" selected="0">
         <div>
             <div class="section-content mdl-typography--font-light">
                 <div class="mdl-grid">
@@ -274,46 +185,18 @@
                 </div>
             </div>
         </div>
-    </iron-pages>                   
-                <div class="tracer-desc">
-                    <div class="section-content">
-                        <iron-pages id="form-controls" selected="0">
-                            <div>
-                                <p class="text-content mdl-typography--font-light mdl-color-text--white left">
-                                    Good day CICTzen Alumni! Please complete this survey app as accurately and honestly as possible. Your answer will be used for research purposes in order to asses in-school graduate employability, tract your professional growth and career pattern, and improve the demand for our graduates. Your answers to this survey will be treated with strictest confidentiality. 
-                                </p>
-                            </div>
-                            <div>
-                                <p class="text-content mdl-typography--font-light mdl-color-text--white">
-                                    Thank you very much!
-                                </p>
-                                <paper-button onclick="submit()" class="submit-button">Submit</paper-button>
-                            </div>
-                            <div>
-                                <paper-button onclick="reset()" class="add-button">Add Another Entry</paper-button>
-                            </div>
-                        </iron-pages>
-                    </div>
-                </div>
-                <footer class="mdl-mini-footer mdl-color--grey-900">
-                    <div class="mdl-mini-footer--left-section">
-                        <div class="mdl-logo">
-                            Copyright &copy; 2002‒2016 <a href="http://cictwvsu.com" class="footer-college-link">College of ICT</a>
-                        </div>
-                        <ul class="mdl-mini-footer__link-list">
-                            <li> <a href="http://wvsu.edu.ph/" class="mdl-typography--font-light">West Visayas State University</a></li>
-                            <li><a href="#" onclick="about()" class="mdl-typography--font-light">About</a></li>
-                        </ul>
-                    </div>
-                    <div class="mdl-mini-footer__right-section">
-                    </div>
-                </footer>                
-                </div>               
-        </main>
-        <script src="js/firebase.js"></script>
-        <script src="js/material.js"></script>
-        <script src="lib/dialog-polyfill/dialog-polyfill.js"></script>
-        <script src="js/tracer.js"></script>
-</body>
+    </iron-pages>    
 
-</html>
+  </template>
+
+  <script>
+
+    Polymer({
+
+      is: 'my-app'
+
+    });
+
+  </script>
+
+</dom-module>

@@ -1,0 +1,19 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+
+<dom-module id="shared-styles">
+<template>
+    <paper-dropdown-menu label="Day">
+    <paper-listbox class="dropdown-content" selected=[[index]]>
+        <template is="dom-repeat" items="{{days}}">
+            <paper-item>{{item}}</paper-item>
+        </template>
+    </paper-listbox>
+</paper-dropdown-menu>
+</template>
+<script>
+    Polymer({
+        is: 'shared-styles'
+    })
+</script>
+</dom-module>

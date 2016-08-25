@@ -1,34 +1,49 @@
 <!DOCTYPE html>
-<html>
-<!-- {% include head.html %}
-<body>
-{% include header.html %}
-<div class="page-content">
-<div class="wrsiteer">
-{{ content }}
-</div>
-</div>
-{% include footer.html %}
-</body> -->
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web sites.">
+    <meta name="description" content="College of Information and Communications Technology">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CICT Online</title>
     <link href="css/roboto-fontface.css" rel="stylesheet">
     <link href="css/icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/material.min.css">
     <link rel="stylesheet" href="css/socioicon.css">
+    <link rel="stylesheet" href="lib/dialog-polyfill/dialog-polyfill.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <span id="home"></span>
+<dialog id="tracer-web" class="mdl-dialog">
+<h4 class="mdl-dialog__title">Alumni Tracer Web Form</h4>
+<div class="mdl-dialog__content">
+<p>
+    The next page will load a web app. Please wait until it completely loads.
+</p>
+</div>
+<div class="mdl-dialog__actions">
+<a class="mdl-button proceed" href="tracer/">OK</a>
+</div>
+</dialog>
+<dialog id="tracer-desktop" class="mdl-dialog">
+<h4 class="mdl-dialog__title">Alumni Tracer Desktop Form</h4>
+<div class="mdl-dialog__content">
+<p>
+    Internet connection problems? You can take the form offline. Data is synced as soon as you connect to the internet.
+</p>
+<a class="mdl-button mdl-button--raised desktop-form" href="tracer/winx32.zip">Windows x32</a>
+<a class="mdl-button mdl-button--raised desktop-form" href="tracer/winx64.zip">Windows x64</a>
+<a class="mdl-button mdl-button--raised desktop-form" href="tracer/linux.zip">Linux x64</a>
+<a class="mdl-button mdl-button--raised desktop-form" href="tracer/osx.zip">Mac OS X x64</a>
+</div>
+<div class="mdl-dialog__actions">
+<button class="mdl-button close">Close</button>
+</div>
+</dialog> 
     <nav class='mobile-nav'>
         <ul class='mobile-nav-list'>
             <li class='item'>
@@ -66,10 +81,11 @@
                 <p class="university-title mdl-typography--font-light">West Visayas State University</p>
                 <img class="college-logo" src="images/cict-logo.png" alt="">
                 <p class="mdl-typography--font-light tagline">Attaining Excellence
-                    in ICT Education</p>
+                    in ICT Education</p><br>
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect cict-orange">
                     Watch the Video
                 </button>
+                <p class="small devstat">This website is still under heavy development. </p>
             </div>
         </div>
         <main class="site-main mdl-layout__content">
@@ -87,9 +103,9 @@
                                     The different CICTzen barangays (Brgy. Nabigo, Pinaasa...etc) joined the celebration of the 2016<sup>th</sup> CICT Acquaintance Party held at the WVSU Jubilee Park.
                                 </div>
                                 <div class="mdl-card__actions mdl-card--border">
-                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cict-text-orange">
+                                    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" disabled>
 Read More
-</a>
+</button>
                                 </div>
                                 <div class="mdl-card__menu">
                                     <a href="https://youtu.be/F17QUt46weo" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-color--red">
@@ -107,17 +123,23 @@ Read More
                                     <h2 class="mdl-card__title-text">Alumni Tracer</h2>
                                 </div>
                                 <div class="mdl-card__supporting-text">
-                                    The CICT is currently tracking the current status of her graduates. Help us by filling up the form.
+                                    The CICT is currently tracking the current status of her graduates. Choose a form App below.
                                 </div>
                                 <div class="mdl-card__actions mdl-card--border">
-                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cict-text-orange" href="tracer/">
-Checkout the Form
-</a>
+<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cict-text-orange" onclick="openWebTracer()">
+Web
+</button>
+<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cict-text-orange" onclick="openDesktopTracer()">
+Desktop
+</button>
+<button class="mdl-button mdl-button--colored" href="tracer/" disabled>
+Mobile (Soon)
+</button>
                                 </div>
                                 <div class="mdl-card__menu">
-                                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                                    <a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcictwvsu.com%2Ftracer%2F&amp;src=sdkpreparse">
                                         <i class="material-icons mdl-color-text--white">share</i>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -130,17 +152,17 @@ Checkout the Form
                                     The college will be applying for Level 3 Accreditation this coming August 29. Headed by the College Dean, Dr. Joel T. De Castro. Click the button below to check the Accreditation updates.
                                 </div>
                                 <div class="mdl-card__actions mdl-card--border">
-                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cict-text-orange">
+                                    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" disabled>
 Accreditation Updates
-</a>
+</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="section-spacer"></div>
                     <div class="more">
-                        <a href="#" title="More Updates">
-More <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-color--white"><i class="material-icons">arrow_forward</i></button>
+                        <a title="More Updates">
+More <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-js-ripple-effect mdl-color--white" disabled><i class="material-icons">arrow_forward</i></button>
 </a>
                     </div>
                 </div>
@@ -160,13 +182,13 @@ More <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fa
                                     CICT is currently offering Bachelor of Science in Information Technology (BSIT), Bachelor of Science in Information Systems (BSIS) and Bachelor of Science in Computer Science (BSCS).
                                 </div>
                                 <div class="mdl-card__actions mdl-card--border">
-                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cict-text-orange">
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cict-text-orange">
 BSIT
 </a>
-                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cict-text-orange">
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cict-text-orange">
 BSIS
 </a>
-                                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cict-text-orange">
+<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cict-text-orange">
 BSCS
 </a>
                                 </div>
@@ -367,13 +389,10 @@ Download Form
                 <div class="section-content">
                     <ul class="social-list">
                         <li>
-                            <a href="#" class="socicon socicon-facebook"></a>
+                            <a href="https://www.facebook.com/cictwvsu" class="socicon socicon-facebook"></a>
                         </li>
                         <li>
-                            <a href="#" class="socicon socicon-twitter"></a>
-                        </li>
-                        <li>
-                            <a href="#" class="socicon socicon-googleplus"></a>
+                            <a href="https://twitter.com/cictwvsu" class="socicon socicon-twitter"></a>
                         </li>
                         <li>
                             <a href="https://github.com/wvsu-cict-code" class="socicon socicon-github"></a>
@@ -398,7 +417,35 @@ Download Form
     </div>
     </main>
     </div>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <script src="js/material.min.js"></script>
+    <script src="lib/dialog-polyfill/dialog-polyfill.js"></script>
+    <script>        
+        function openWebTracer() {
+        var d = document.querySelector("#tracer-web");
+        dialogPolyfill.registerDialog(d);
+        d.showModal();
+        d.querySelector('.proceed').addEventListener('click', function () {
+            d.close();
+        });
+        }
+
+        function openDesktopTracer() {
+        var d = document.querySelector("#tracer-desktop");
+        dialogPolyfill.registerDialog(d);
+        d.showModal();
+        d.querySelector('.close').addEventListener('click', function () {
+            d.close();
+        });
+        }            
+    </script>
 </body>
 
 </html>

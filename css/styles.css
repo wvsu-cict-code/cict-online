@@ -155,11 +155,12 @@ body {
     flex-flow: row nowrap;
     list-style: none;
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
 
-.socicon{
+.social-list .socicon{
     border: 1px solid #535353;
+    color: #535353;
     padding: 15px 12px 5px 15px;
     border-radius: 100%;
     margin: 20px;
@@ -180,7 +181,7 @@ body {
 }
 
 .site-layout.is-small-screen .social-list{
-    max-width: 220px;
+    max-width: 150px;
 }
 
 .section-content .social-list{
@@ -517,8 +518,18 @@ li.mdl-list__item>span{
     line-height: 1.2em
 }
 
-.small {
+.small, p.small {
     font-size: small
+}
+
+p.devstat{
+    margin-top: 1%
+}
+
+.site-layout.is-small-screen p.devstat{
+    padding-top: 20px;
+    max-width: 200px;
+    margin: 0 auto
 }
 
 p.tagline{
@@ -534,4 +545,8 @@ p.tagline{
     text-align: center;
     margin: 0 auto;
     padding: 20px 0 20px 0
+}
+
+.desktop-form{
+    margin: 5px;
 }
