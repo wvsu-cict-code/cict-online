@@ -4,7 +4,7 @@
 <dom-module id="tracer-months">
 <template>
     <paper-dropdown-menu label="Month">
-    <paper-listbox class="dropdown-content" selected=[[index]]>
+    <paper-listbox class="dropdown-content" selected={{index}}>
         <template is="dom-repeat" items="{{months}}">
             <paper-item>{{item}}</paper-item>
         </template>

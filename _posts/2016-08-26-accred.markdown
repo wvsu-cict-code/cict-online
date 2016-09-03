@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Going for Level 3"
+date:   2016-07-24 09:06:28
+categories: "CICT Days"
+highlight: "false"
+author: Admin
+image: images/cict.jpg
+menu: " "
+excerpt_separator: <!--more-->
+---
+The college will be applying for Level 3 Accreditation this coming August 29. Headed by the College Dean, Dr. Joel T. De Castro. Click the button below to check the Accreditation updates.
+<!--more-->

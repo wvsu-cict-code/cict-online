@@ -4,7 +4,7 @@
 <dom-module id="tracer-days">
 <template>
     <paper-dropdown-menu label="Day">
-    <paper-listbox class="dropdown-content" selected=[[index]]>
+    <paper-listbox class="dropdown-content" selected={{index}}>
         <template is="dom-repeat" items="{{days}}">
             <paper-item>{{item}}</paper-item>
         </template>

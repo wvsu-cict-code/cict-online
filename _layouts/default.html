@@ -1,163 +1,41 @@
+{% include documentation.html %}
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="College of Information and Communications Technology">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CICT Online</title>
-    <link href="css/roboto-fontface.css" rel="stylesheet">
-    <link href="css/icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/material.min.css">
-    <link rel="stylesheet" href="css/socioicon.css">
-    <link rel="stylesheet" href="lib/dialog-polyfill/dialog-polyfill.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-</head>
-
+{% include head.html %}
 <body>
-<dialog id="tracer-web" class="mdl-dialog">
-<h4 class="mdl-dialog__title">Alumni Tracer Web Form</h4>
-<div class="mdl-dialog__content">
-<p>
-    The next page will load a web app. Please wait until it completely loads.
-</p>
-</div>
-<div class="mdl-dialog__actions">
-<a class="mdl-button proceed" href="tracer/">OK</a>
-</div>
-</dialog>
-<dialog id="tracer-desktop" class="mdl-dialog">
-<h4 class="mdl-dialog__title">Alumni Tracer Desktop Form</h4>
-<div class="mdl-dialog__content">
-<p>
-    Internet connection problems? You can take the form offline. Data is synced as soon as you connect to the internet.
-</p>
-<a class="mdl-button mdl-button--raised desktop-form" href="tracer/winx32.zip">Windows x32</a>
-<a class="mdl-button mdl-button--raised desktop-form" href="tracer/winx64.zip">Windows x64</a>
-<a class="mdl-button mdl-button--raised desktop-form" href="tracer/linux.zip">Linux x64</a>
-<a class="mdl-button mdl-button--raised desktop-form" href="tracer/osx.zip">Mac OS X x64</a>
-</div>
-<div class="mdl-dialog__actions">
-<button class="mdl-button close">Close</button>
-</div>
-</dialog> 
-    <nav class='mobile-nav'>
-        <ul class='mobile-nav-list'>
-            <li class='item'>
-                <a class="link" href="#"><i class="material-icons mdl-color-text--white">home</i></a>
-            </li>
-            <li class='item'>
-                <a class="link" href="/programs"><i class="material-icons mdl-color-text--white">school</i>
-</a></li>
-            <li class='item'>
-                <a class="link" href="/blog"><i class="material-icons mdl-color-text--white">notifications</i>
-</a></li>
-            <li class='item'>
-                <a class="link" href="/about"><i class="material-icons mdl-color-text--white">live_help</i>
-</a></li>
-        </ul>
-    </nav>
+{% include dialogs.html %}
     <div class="site-layout mdl-layout mdl-layout--fixed-header mdl-js-layout ">
-        <header class="site-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
-            <div class="mdl-layout__header-row">
-                <span class="mdl-layout-title">
-                <img src="images/site-logo.png" alt="CICT" class="site-logo">
-                </span>
-                <div class="mdl-layout-spacer"></div>
-                <nav class="cict-navigation mdl-navigation">
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase selected">Home</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">Updates</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">Programs</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">About</a>
-                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#">Contact</a>
-                </nav>
-            </div>
-        </header>
-        <div class="site-ribbon">
-            <div class="header-jumbo">
-                <p class="university-title mdl-typography--font-light">West Visayas State University</p>
-                <img class="college-logo" src="images/cict-logo.png" alt="">
-                <p class="mdl-typography--font-light tagline">Attaining Excellence
-                    in ICT Education</p><br>
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect cict-orange">
-                    Watch the Video
-                </button>
-                <p class="small devstat">This website is still under heavy development. </p>
-            </div>
-        </div>
+    {% include header.html %}
+    {% include ribbon.html %}
         <main class="site-main mdl-layout__content">
             <div class="site-updates mdl-grid">
                 <div class="site-content mdl-color--white content mdl-cell mdl-cell--12-col mdl-typography--text-left">
                     <h2 class="mdl-typography--font-light heading">What&apos;s up?</h2>
                     <p class="subhead mdl-color-text--grey-500">Know the latest happenings in the college.</p>
                     <div class="updates-grid mdl-grid">
-                        <div class="mdl-cell">
-                            <div class="card-update mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand update-00">
-                                    <h2 class="mdl-card__title-text">Pagtiriripon 2016</h2>
-                                </div>
-                                <div class="mdl-card__supporting-text">
-                                    The different CICTzen barangays (Brgy. Nabigo, Pinaasa...etc) joined the celebration of the 2016<sup>th</sup> CICT Acquaintance Party held at the WVSU Jubilee Park.
-                                </div>
-                                <div class="mdl-card__actions mdl-card--border">
-                                    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" disabled>
-Read More
-</button>
-                                </div>
-                                <div class="mdl-card__menu">
-                                    <a href="https://youtu.be/F17QUt46weo" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect mdl-color--red">
-                                        <svg class="icon-fab-video" enable-background="new 0 0 32 32" height="16px" version="1.1" viewBox="0 0 32 32" width="16px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
-                                            <path d="M28.8,3.8c-1-0.3-6.9-0.6-12.8-0.6c-5.9,0-11.8,0.3-12.8,0.6C0.7,4.6,0,10.2,0,16s0.7,11.4,3.2,12.2c1,0.3,6.9,0.6,12.8,0.6 c5.9,0,11.8-0.3,12.8-0.6C31.3,27.4,32,21.8,32,16S31.3,4.7,28.8,3.8 M12.8,22.4V9.6l8.8,6.4L12.8,22.4z">
-                                            </path>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mdl-cell">
-                            <div class="card-update mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand update-01">
-                                    <h2 class="mdl-card__title-text">Alumni Tracer</h2>
-                                </div>
-                                <div class="mdl-card__supporting-text">
-                                    The CICT is currently tracking the current status of her graduates. Choose a form App below.
-                                </div>
-                                <div class="mdl-card__actions mdl-card--border">
-<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cict-text-orange" onclick="openWebTracer()">
-Web
-</button>
-<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cict-text-orange" onclick="openDesktopTracer()">
-Desktop
-</button>
-<button class="mdl-button mdl-button--colored" href="tracer/" disabled>
-Mobile (Soon)
-</button>
-                                </div>
-                                <div class="mdl-card__menu">
-                                    <a class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fcictwvsu.com%2Ftracer%2F&amp;src=sdkpreparse">
-                                        <i class="material-icons mdl-color-text--white">share</i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mdl-cell">
-                            <div class="card-update mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand update-02">
-                                    <h2 class="mdl-card__title-text">Going for Level 3</h2>
-                                </div>
-                                <div class="mdl-card__supporting-text">
-                                    The college will be applying for Level 3 Accreditation this coming August 29. Headed by the College Dean, Dr. Joel T. De Castro. Click the button below to check the Accreditation updates.
-                                </div>
-                                <div class="mdl-card__actions mdl-card--border">
-                                    <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" disabled>
-Accreditation Updates
-</button>
-                                </div>
-                            </div>
-                        </div>
+    {% for post in site.posts %}
+    {% if post.highlight == 'true' %}
+    <div class="mdl-cell">
+        <div class="card-update mdl-card mdl-shadow--2dp">
+            <div class="mdl-card__title mdl-card--expand" {% if post.image %} style="background: url('{{ post.image }}') center 15% no-repeat #f28028; background-size: cover;" {% endif %}>
+                <h2 class="mdl-card__title-text">{{ post.title }}</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+                {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cict-text-orange"" href="{{ post.url | prepend: site.baseurl }}">
+                    Read More
+                </a>
+            </div>
+            <div class="mdl-card__menu">
+                {{ post.menu }}
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+    {% include pinned-post.html %}
                     </div>
                     <div class="section-spacer"></div>
                     <div class="more">
@@ -400,20 +278,7 @@ Download Form
                     </ul>
                 </div>
             </div>
-            <footer class="mdl-mini-footer mdl-color--grey-900">
-                <div class="mdl-mini-footer--left-section">
-                    <div class="mdl-logo">
-                        Copyright &copy; 2002‒2016 College of ICT
-                    </div>
-                    <ul class="mdl-mini-footer__link-list">
-                        <li> <a href="http://wvsu.edu.ph/">West Visayas State University</a></li>
-                    </ul>
-
-                </div>
-                <div class="mdl-mini-footer__right-section">
-
-                </div>
-            </footer>
+            {% include footer.html %}
     </div>
     </main>
     </div>

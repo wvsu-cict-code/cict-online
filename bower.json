@@ -18,5 +18,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "scrollreveal": "~3.3.1"
+  }
 }

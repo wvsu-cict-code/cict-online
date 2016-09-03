@@ -384,21 +384,11 @@ img.site-logo {
     color: #fff;
 }
 
-.card-update> .mdl-card__title.update-00 {
-    background: url('../images/fiesta.jpg') center 15% no-repeat #f28028;
-    background-size: cover;
-}
 
 .card-update> .mdl-card__title.update-01 {
     background: url('../images/alumni.jpg') center 15% no-repeat #f28028;
     background-size: cover;
 }
-
-.card-update> .mdl-card__title.update-02 {
-    background: url('../images/cict.jpg') center 15% no-repeat #f28028;
-    background-size: cover;
-}
-
 .card-update.mdl-card {
     width: auto;
     max-width: 350px;
