@@ -1,0 +1,30 @@
+{
+  "name": "cict-online",
+  "version": "1.0.0",
+  "description": "CICT official website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wvsu-cict-code/cict-online.git"
+  },
+  "keywords": [
+    "cict",
+    "wvsu"
+  ],
+  "author": "cictzens",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wvsu-cict-code/cict-online/issues"
+  },
+  "homepage": "https://github.com/wvsu-cict-code/cict-online#readme",
+  "devDependencies": {
+    "browser-sync": "^2.14.3",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-header": "^1.8.8",
+    "gulp-util": "^3.0.7"
+  }
+}

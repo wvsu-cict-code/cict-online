@@ -2,9 +2,7 @@
 title: CICT Online
 email: cict@wvsu.edu.ph
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  College of Information and Communications Technology official welsite.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://cictwvsu.com/" # the base hostname & protocol for your site
 twitter_username: jekyllrb
@@ -14,3 +12,9 @@ github_username:  jekyll
 markdown: kramdown
 gems:
   - octopress-minify-html
+exclude:
+  - package.json
+  - bower.json
+  - node_modules
+  - gulpfile.js
+  - bower_components
