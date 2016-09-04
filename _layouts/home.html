@@ -1,0 +1,16 @@
+{% include documentation.html %}
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body>
+{% include dialogs.html %}
+    <div class="site-layout mdl-layout mdl-layout--fixed-header mdl-js-layout ">
+    {% include header.html %}
+    {% include ribbon.html %}
+    <main class="site-main mdl-layout__content">
+    {{ content }}
+    </main>
+    </div>
+    {% include control-scripts-home.html %}
+</body>
+</html>

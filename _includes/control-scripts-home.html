@@ -1,0 +1,29 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script src="js/material.min.js"></script>
+<script src="lib/dialog-polyfill/dialog-polyfill.js"></script>
+<script>        
+    function openWebTracer() {
+    var d = document.querySelector("#tracer-web");
+    dialogPolyfill.registerDialog(d);
+    d.showModal();
+    d.querySelector('.proceed').addEventListener('click', function () {
+        d.close();
+    });
+    }
+
+    function openDesktopTracer() {
+    var d = document.querySelector("#tracer-desktop");
+    dialogPolyfill.registerDialog(d);
+    d.showModal();
+    d.querySelector('.close').addEventListener('click', function () {
+        d.close();
+    });
+    }            
+</script>
