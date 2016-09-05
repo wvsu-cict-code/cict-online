@@ -3,13 +3,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <link href="css/roboto-fontface.css" rel="stylesheet">
-    <link href="css/icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/material.min.css">
-    <link rel="stylesheet" href="css/socioicon.css">
+    
+    <link rel="stylesheet" href="lib/material.min.css">
     <link rel="stylesheet" href="lib/dialog-polyfill/dialog-polyfill.css">
-    <link rel="stylesheet" href="css/styles.css">
+    
+    <link rel="stylesheet" href="css/styles.min.css">
+
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>

@@ -23,8 +23,13 @@
   "devDependencies": {
     "browser-sync": "^2.14.3",
     "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "^2.0.12",
     "gulp-concat": "^2.6.0",
     "gulp-header": "^1.8.8",
-    "gulp-util": "^3.0.7"
+    "gulp-minify": "0.0.14",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "pump": "^1.0.1"
   }
 }
