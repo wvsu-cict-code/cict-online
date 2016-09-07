@@ -265,7 +265,7 @@ img.college-logo {
     margin: 0 auto;
 }
 
-button.cict-orange {
+a.cict-orange, button.cict-orange {
     background-color: #F28028!important;
     color: #fff;
     padding: 4px, 2px, 4px, 2px;
@@ -539,4 +539,13 @@ p.tagline{
 
 .desktop-form{
     margin: 5px;
+}
+
+dialog.mdl-dialog.lightbox{
+    width: 90%
+}
+
+video{
+    height: 90%;
+    width: auto;
 }

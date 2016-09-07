@@ -14,4 +14,10 @@ d.showModal();
 d.querySelector('.close').addEventListener('click', function () {
     d.close();
 });
-}     
+}
+
+var lightbox = lity();
+
+function lightUp(val){
+	lightbox(val);
+}
