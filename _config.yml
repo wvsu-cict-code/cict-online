@@ -16,3 +16,6 @@ exclude:
   - node_modules
   - gulpfile.js
   - bower_components
+  - cssjs_src
+  - raw
+  - tracer

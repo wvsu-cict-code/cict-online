@@ -5,6 +5,7 @@ const gulp = require('gulp');
 const concat = require('gulp-concat');
 const distCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
+const rename = require('gulp-rename');  
 const pump = require('pump');
 const gutil = require('gulp-util');
 const ghead = require('gulp-header');
@@ -12,8 +13,8 @@ const clean = require('gulp-clean');
 const fs = require('fs');
 
 const siteRoot = '_site';
-const cssFiles = 'css/**/*.?(s)css';
-const jsFiles = 'js/*.js';
+const cssFiles = 'cssjs_src/css/**/*.?(s)css';
+const jsFiles = 'cssjs_src/js/**/*.js';
 const pkg = require('./package.json');
 
 gulp.task('jekyll', () => {
@@ -33,26 +34,29 @@ gulp.task('jekyll', () => {
   jekyll.stderr.on('data', jekyllLogger);
 });
 
-// combine and clean all css files
-gulp.task('css', () => {
-  gulp.src(cssFiles)
-    .pipe(concat('styles.min.css'))
-    .pipe(distCSS({compatibility: 'ie8'}))
-    .pipe(ghead(fs.readFileSync('_includes/doc.css', 'utf8'), { pkg : pkg }))
-    .pipe(gulp.dest('_site/css/'));
+// process css
+gulp.task('css', (cb) => {
+  pump([
+      gulp.src(cssFiles),
+      concat('styles.min.css'),
+      distCSS({compatibility: 'ie8'}),
+      ghead(fs.readFileSync('_includes/doc.css', 'utf8'), { pkg : pkg }),
+      gulp.dest('css/')
+    ],cb)
 });
 
-//combine and clean all js files
+//process js
 gulp.task('js', (cb) => {
   pump([
         gulp.src(jsFiles),
         uglify(),
-        ghead(fs.readFileSync('_includes/doc.js', 'utf8'), { pkg : pkg }),
-        gulp.dest('_site/js/')
-    ],
-    cb
+        rename('main.min.js'),
+        ghead(fs.readFileSync('_includes/doc.css', 'utf8'), { pkg : pkg }),
+        gulp.dest('js/')
+    ],cb
   );
-})
+});
+
 
 //Add documentation headers
 gulp.task('document_html', () => {
@@ -61,8 +65,14 @@ gulp.task('document_html', () => {
     .pipe(gulp.dest('_site/'));
 });
 
+
+
 //Combine documentation tasks
-gulp.task('code_docs',['document_html']);
+gulp.task('code_docs',[
+  'document_html',
+  'css',
+  'js'
+  ]);
 
 gulp.task('serve', () => {
   browserSync.init({
@@ -76,8 +86,6 @@ gulp.task('serve', () => {
 
 gulp.task('default', [
   'jekyll', 
-  'css',
-  'js',
   'code_docs', 
   'serve'
   ]);
