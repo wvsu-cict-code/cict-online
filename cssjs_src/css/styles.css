@@ -260,7 +260,7 @@ footer>div {
 }
 
 img.college-logo {
-    width: 200px;
+    width: 180px;
     height: auto;
     margin: 0 auto;
 }
@@ -363,6 +363,7 @@ img.site-logo {
     .mobile-nav> ul {
         list-style: none;
     }
+
     img.college-logo {
         width: 160px;
         height: auto;
@@ -527,6 +528,8 @@ p.tagline{
     line-height: 1.1em;
     text-align: center;
     margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .site-layout.is-small-screen p.tagline{
@@ -534,7 +537,8 @@ p.tagline{
     line-height: 1.1em;
     text-align: center;
     margin: 0 auto;
-    padding: 20px 0 20px 0
+    padding: 20px 0 20px 0;
+    font-size: medium;
 }
 
 .desktop-form{
