@@ -24,14 +24,17 @@ Help us develop our website! If you found a bug or you want to contribute, pleas
 ```
 git clone https://github.com/wvsu-cict-code/cict-online.git
 ```
+
 1. Go to the repository directory
 ```
 cd cict-online
 ```
+
 1. Install the dependencies.
 ```
 npm install
 ```
+
 1. Run the build system. The output will be available inside the ```_site``` directory.
 ```
 gulp
