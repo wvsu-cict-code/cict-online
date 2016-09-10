@@ -613,3 +613,7 @@ video{
 .page-social span > * {
     vertical-align: middle!important;
 }
+
+.fab-menu{
+    position: absolute; bottom:0; right: 0; z-index: 100; margin: 20px
+}
