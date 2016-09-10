@@ -615,5 +615,10 @@ video{
 }
 
 .fab-menu{
+    visibility: hidden;
     position: absolute; bottom:0; right: 0; z-index: 100; margin: 20px
+}
+
+.site-layout.is-small-screen .fab-menu{
+    visibility: visible;
 }

@@ -88,7 +88,8 @@ gulp.task('serve', () => {
 });
 
 gulp.task( 'deploy', function () {
- 
+
+    // Connection Settings
     var conn = ftp.create( {
         host:     'cictwvsu.com',
         user:     '', //removed for security
@@ -96,15 +97,15 @@ gulp.task( 'deploy', function () {
         parallel: 10,
         log:      gutil.log
     } );
- 
+
     var globs = [
         '_site/**'
     ];
-  
+
     return gulp.src( globs, { base: '_site', buffer: false } )
-        .pipe( conn.newer('/') ) // only upload newer files 
+        .pipe( conn.newer('/') ) // only upload newer files
         .pipe( conn.dest('/') );
- 
+
 } );
 
 gulp.task('default', () => {
