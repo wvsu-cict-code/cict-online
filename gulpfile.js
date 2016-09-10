@@ -11,6 +11,7 @@ const ghead = require('gulp-header');
 const clean = require('del');
 const fs = require('fs');
 const pkg = require('./package.json');
+const ftp = require( 'vinyl-ftp' );
 const runSequence = require('run-sequence');
 
 var siteRoot = '_site';
@@ -22,11 +23,7 @@ var jsFiles = 'cssjs_src/js/**/*.js';
 
 
 gulp.task('jekyll', () => {
-  const jekyll = child.spawn('jekyll', ['build',
-    '--watch',
-    '--incremental',
-    '--drafts'
-  ]);
+  const jekyll = child.spawn('jekyll', ['build','--incremental']);
 
   const jekyllLogger = (buffer) => {
     buffer.toString()
@@ -90,6 +87,26 @@ gulp.task('serve', () => {
   });
 });
 
+gulp.task( 'deploy', function () {
+ 
+    var conn = ftp.create( {
+        host:     'cictwvsu.com',
+        user:     '', //removed for security
+        password: '', //removed for security
+        parallel: 10,
+        log:      gutil.log
+    } );
+ 
+    var globs = [
+        '_site/**'
+    ];
+  
+    return gulp.src( globs, { base: '_site', buffer: false } )
+        .pipe( conn.newer('/') ) // only upload newer files 
+        .pipe( conn.dest('/') );
+ 
+} );
+
 gulp.task('default', () => {
-  runSequence('clean', ['jekyll','docs','serve'])
+  runSequence('clean', ['jekyll','docs'])
 });

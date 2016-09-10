@@ -23,7 +23,6 @@
   "devDependencies": {
     "browser-sync": "^2.14.3",
     "gulp": "^3.9.1",
-    "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^2.0.12",
     "gulp-concat": "^2.6.0",
     "gulp-header": "^1.8.8",
@@ -32,7 +31,8 @@
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.7",
     "pump": "^1.0.1",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "vinyl-ftp": "^0.5.0"
   },
   "dependencies": {
     "del": "^2.2.2"
