@@ -11,11 +11,11 @@
 						<h2 class="mdl-card__title-text">{{ post.title }}</h2>
 					</div>
 					<div class="mdl-card__supporting-text">
-						{{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+						{{ post.short_desc | remove: '<p>' | remove: '</p>' }}
 					</div>
 					<div class="mdl-card__actions mdl-card--border">
-						<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cict-text-orange"" href="{{ post.url | prepend: site.baseurl }}">
-						Read More
+						<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect cict-text-orange" href="{{ post.url | prepend: site.baseurl }}">
+						{{ post.link_text }}
 						</a>
 					</div>
 					<div class="mdl-card__menu">

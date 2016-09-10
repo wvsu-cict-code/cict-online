@@ -4,13 +4,14 @@ const gulp = require('gulp');
 const concat = require('gulp-concat');
 const distCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
-const rename = require('gulp-rename');  
+const rename = require('gulp-rename');
 const pump = require('pump');
 const gutil = require('gulp-util');
 const ghead = require('gulp-header');
-const clean = require('gulp-clean');
+const clean = require('del');
 const fs = require('fs');
 const pkg = require('./package.json');
+const runSequence = require('run-sequence');
 
 var siteRoot = '_site';
 var siteDist = '_site/';
@@ -35,6 +36,11 @@ gulp.task('jekyll', () => {
 
   jekyll.stdout.on('data', jekyllLogger);
   jekyll.stderr.on('data', jekyllLogger);
+});
+
+// Clean
+gulp.task('clean', () => {
+  return clean(['_site/**/*'])
 });
 
 // Process css
@@ -68,7 +74,7 @@ gulp.task('document_html', () => {
 });
 
 //Combine documentation tasks
-gulp.task('code_docs',[
+gulp.task('docs',[
   'document_html',
   'css',
   'js'
@@ -84,8 +90,6 @@ gulp.task('serve', () => {
   });
 });
 
-gulp.task('default', [
-  'jekyll', 
-  'code_docs', 
-  'serve'
-  ]);
+gulp.task('default', () => {
+  runSequence('clean', ['jekyll','docs','serve'])
+});

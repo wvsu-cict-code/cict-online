@@ -1,5 +1,7 @@
 {
     "jscodehints.detectedExclusions": [
-        "/home/mj/Repositories/cict-online/_site/tracer/bower_components/chai/chai.js"
+        "/home/mj/Repositories/cict-online/_site/tracer/bower_components/chai/chai.js",
+        "/home/mj/Repositories/cict-online/tracer/bower_components/async/perf/benchmark.js",
+        "/home/mj/Repositories/cict-online/tracer/lib/dialog-polyfill/dialog-polyfill.js"
     ]
 }

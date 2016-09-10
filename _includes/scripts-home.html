@@ -6,8 +6,8 @@ js = d.createElement(s); js.id = id;
 js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
 fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
-<script src="lib/material.min.js"></script>
-<script src="lib/dialog-polyfill/dialog-polyfill.js"></script>
-<script src="lib/jquery-3.1.0.slim.min.js"></script>
-<script src="lib/lity.min.js"></script>
-<script src="js/main.min.js"></script>
+<script src="{{ "/lib/material.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+<script src="{{ "/lib/dialog-polyfill/dialog-polyfill.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+<script src="{{ "/lib/jquery-3.1.0.slim.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+<script src="{{ "/lib/lity.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+<script src="{{ "/js/main.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>

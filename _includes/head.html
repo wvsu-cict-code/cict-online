@@ -6,11 +6,11 @@
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     
-    <link rel="stylesheet" href="lib/material.min.css">
-    <link rel="stylesheet" href="lib/dialog-polyfill/dialog-polyfill.css">
-    <link rel="stylesheet" href="lib/lity.min.css">
-    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="stylesheet" href="{{ "/lib/material.min.css" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ "/lib/dialog-polyfill/dialog-polyfill.css" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ "/lib/lity.min.css" | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ "/css/styles.min.css" | prepend: site.baseurl | prepend: site.url }}">
 
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ "/images/favicon.ico" | prepend: site.baseurl | prepend: site.url }}" type="image/x-icon">
+    <link rel="icon" href="{{ "/images/favicon.ico" | prepend: site.baseurl | prepend: site.url }}" type="image/x-icon">
 </head>

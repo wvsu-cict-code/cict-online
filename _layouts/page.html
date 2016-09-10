@@ -1,14 +1,25 @@
 ---
 layout: default
 ---
-<div class="post">
 
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+<div class="default-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
 
-  <article class="post-content">
+    <h3 class="page-header">{{ page.title }}</h3>
+    <div class="page-meta">{{ page.author }} on {{ page.date | date_to_string }}</div>
+ <div class="page-social">
+ <span class="facebook">
+ 	    <div class="fb-share-button" data-href="{{ page.url | prepend: site.url }}" data-layout="button_count" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F{{ post.url | prepend: site.baseurl }}%2F&amp;src=sdkpreparse">Share</a></div>
+ </span>
+ <span class="twitter">
+ 		<a href="https://twitter.com/intent/tweet?text=CICT | {{ page.title | uri_escape }} {{ page.url | prepend: site.url }}" class="twitter-hashtag-button" data-show-count="false">Tweet</a>
+ </span>
+ <span class="google">
+ 		<div class="g-plus" data-action="share" data-href="{{ page.url | prepend: site.url }}" data-annotation="bubble"></div>
+ </span>
+</div> 
+
+<div>
     {{ content }}
-  </article>
+</div>
 
 </div>

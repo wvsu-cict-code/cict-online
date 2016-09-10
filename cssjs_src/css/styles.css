@@ -71,6 +71,30 @@ body {
     flex-shrink: 0;
 }
 
+.site-default {
+    margin-top: 0;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.default-container{
+    max-width: 1600px;
+    width: calc(100% - 16px);
+    margin: 0 auto;
+    background-color: #d9d9d9;
+
+}
+
+.mdl-cell--8-col.default-content{
+    border-radius: 2px;
+    padding: 40px 80px;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 80px;
+
+}
+
 .site-updates {
     max-width: 1600px;
     width: calc(100% - 16px);
@@ -257,6 +281,15 @@ footer>div {
     div.mdl-layout-spacer {
         visibility: hidden
     }
+
+    .mdl-cell--8-col.default-content{
+      border-radius: 2px;
+      padding: 10px 20px;
+      margin: 0 auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
 }
 
 img.college-logo {
@@ -552,4 +585,31 @@ dialog.mdl-dialog.lightbox{
 video{
     height: 90%;
     width: auto;
+}
+
+.page-header{
+  margin-bottom: 0;
+  padding-bottom: 0
+}
+
+.page-meta{
+  font-size:small;
+  color: #8e8e8e;
+  margin-bottom: 0.2em;
+}
+
+.page-social{
+    margin-bottom: 2em;
+}
+
+/* Set an optional width for your button wrappers */
+.page-social span {
+    display: inline-block;
+    margin-left: 2em;
+    font-size: 1px;
+    vertical-align: middle;
+}
+
+.page-social span > * {
+    vertical-align: middle!important;
 }
