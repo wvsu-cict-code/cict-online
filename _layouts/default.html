@@ -2,11 +2,9 @@
 <html lang="en">
 {% include head.html %}
 <body>
-<button class="fab-menu mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
-  <i class="material-icons">menu</i>
-</button>
 <div class="site-layout mdl-layout mdl-layout--fixed-header mdl-js-layout ">
 {% include header.html %}
+{% include mobile-nav.html %}
 <main class="site-default mdl-layout__content">
 <div class="default-container mdl-grid">
 	{{ content }}
@@ -33,10 +31,12 @@
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <script src="{{ "/lib/material.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
 <script src="{{ "/lib/dialog-polyfill/dialog-polyfill.js" | prepend: site.baseurl | prepend: site.url }}"></script>
-<script src="{{ "/lib/jquery-3.1.0.slim.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+<script src="{{ "/lib/jquery.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
 <script src="{{ "/lib/lity.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
+<script src="{{ "/js/main.min.js" | prepend: site.baseurl | prepend: site.url }}"></script>
 <script>
 	$('.nav__link-updates').addClass('selected');
 </script>
+{% include analytics.html %}
 </body>
 </html>

@@ -21,3 +21,19 @@ var lightbox = lity();
 function lightUp(val){
 	lightbox(val);
 }
+$(".fab-menu>.items").slideToggle();
+function toggleMenu(){
+  $(".fab-menu>.items").slideToggle("fast");
+  var t = $("#mobile-menu>i").text();
+  $("#mobile-menu>i").text(t == "close" ? "menu" : "close");
+}
+
+$("*").scroll(function() {
+  var y = $(this).scrollTop();
+  if (y > 400) {
+    $(".fab-menu").removeClass('hidden');
+    $(".fab-menu>.items").removeClass('hidden');
+  } else {
+    $('.fab-menu').addClass('hidden');
+  }
+});

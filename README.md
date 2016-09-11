@@ -30,7 +30,7 @@ Help us develop our website! If you found a bug or you want to contribute, pleas
 
 ### Local Server
 1. Edit the configuration file ```_config.yml```.
-1. Make sure that the url value is 127.0.0.1:8081.
+1. Make sure that the url value is http://localhost:8081.
 1. Test the site on a local server.
 ```
 gulp serve

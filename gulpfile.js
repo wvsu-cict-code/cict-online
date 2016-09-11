@@ -72,9 +72,7 @@ gulp.task('document_html', () => {
 
 //Combine documentation tasks
 gulp.task('docs',[
-  'document_html',
-  'css',
-  'js'
+  'document_html'
   ]);
 
 gulp.task('serve', () => {
@@ -87,7 +85,7 @@ gulp.task('serve', () => {
   });
 });
 
-gulp.task( 'deploy', function () {
+gulp.task( 'ftp', function () {
 
     // Connection Settings
     var conn = ftp.create( {
@@ -108,6 +106,10 @@ gulp.task( 'deploy', function () {
 
 } );
 
+gulp.task('deploy', () => {
+  runSequence('docs','ftp')
+})
+
 gulp.task('default', () => {
-  runSequence('clean', ['jekyll','docs'])
+  runSequence('clean', ['css','js','jekyll'])
 });

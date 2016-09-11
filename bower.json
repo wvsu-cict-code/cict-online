@@ -20,6 +20,7 @@
     "tests"
   ],
   "dependencies": {
-    "scrollreveal": "~3.3.1"
+    "scrollreveal": "~3.3.1",
+    "jquery": "^3.1.0"
   }
 }
