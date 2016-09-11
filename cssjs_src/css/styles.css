@@ -30,7 +30,7 @@ body {
 }
 
 .mdl-layout__header-row {
-    border-bottom: 4px solid #fff;
+    border-bottom: 4px solid #F5F5F5;
     margin-top: 4px;
 }
 
@@ -560,4 +560,15 @@ video {
 
 .page-social span> * {
     vertical-align: middle!important;
+}
+
+.img-responsive{
+    width: 100%;
+    height: auto;
+}
+
+.img-desc{
+    margin-top: 0;
+    color: #5f5f5f;
+    margin-bottom: 2em;
 }
