@@ -90,8 +90,8 @@ gulp.task( 'ftp', function () {
     // Connection Settings
     var conn = ftp.create( {
         host:     'cictwvsu.com',
-        user:     '', //removed for security
-        password: '', //removed for security
+        user:     'cict-ftp@cictwvsu.com', //removed for security
+        password: 'c|c+ftp', //removed for security
         parallel: 10,
         log:      gutil.log
     } );

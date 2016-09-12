@@ -21,5 +21,9 @@ layout: default
 <div>
     {{ content }}
 </div>
-
+{% if page.comments %}
+<div class="section-spacer"></div>
+<div id="disqus_thread"></div>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+{% endif %}
 </div>
