@@ -2,7 +2,7 @@
 layout: page
 title:  "Pagtiriripon 2016"
 date:   2016-07-24 09:06:28
-categories: "CICT Days"
+categories: "cict"
 highlight: "false"
 author: Admin
 image: /images/updates/fiesta-thumb.jpg

@@ -23,7 +23,7 @@ var jsFiles = 'cssjs_src/js/**/*.js';
 
 
 gulp.task('jekyll', () => {
-  const jekyll = child.spawn('jekyll', ['build','--incremental']);
+  const jekyll = child.spawn('jekyll', ['build']);
 
   const jekyllLogger = (buffer) => {
     buffer.toString()
