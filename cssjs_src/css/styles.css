@@ -157,6 +157,41 @@ body {
     background-attachment: fixed;
 }
 
+.site-about-hero {
+    max-width: 1600px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: url('../images/about-header.jpg');
+    background-size: cover;    
+    background-position: center;
+    padding: 3%
+}
+
+.site-about-fragment{
+    max-width: 1600px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #fff;
+    color: #333;
+    padding: 3%
+}
+
+.site-about-fragment.qh{
+    max-width: 1600px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #fff;
+    background: url('../images/quezon-hall.jpg');
+    background-size: cover;    
+    background-position: center;
+    color: #333;
+    padding: 3%
+}
+
+
 .translate-right, .translate-left{
     text-align: center;
 }
@@ -355,6 +390,15 @@ footer>div {
     .iconpubs-mobile{
         visibility: visible;
     }
+
+}
+
+.site-layout.is-small-screen .col-2 > div, .site-layout.is-small-screen .col-2 > div > img {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+    margin-top: 20px;
 }
 
 img.college-logo {
@@ -397,6 +441,8 @@ img.site-logo {
         visibility: visible;
         height: auto;
     }
+
+
 
     /*.header-jumbo .university-title{
       font-size: 0.35em;
@@ -625,4 +671,26 @@ video {
 a.iconpubs-mobile-link{
     max-width: 230px;
     text-overflow: ellipsis;
+}
+
+.section-content.col-2 > div > img {
+    margin-left: 20px;
+}
+
+.section-content.col-2 > div {
+    display: table-cell;
+    vertical-align: middle;
+    max-width: 600px;
+    min-width: 450px
+
+}
+
+.iict-logo-container, .cict-logo-container{
+    text-align: center;
+}
+
+#iict-logo, #cict-logo{
+    width: 200px;
+    text-align: center;
+    vertical-align: middle;
 }
