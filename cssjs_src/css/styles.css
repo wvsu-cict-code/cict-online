@@ -393,12 +393,12 @@ footer>div {
 
 }
 
-.site-layout.is-small-screen .col-2 > div, .site-layout.is-small-screen .col-2 > div > img {
+.site-layout.is-small-screen .col-2 > div{
     display: inline-block;
-    width: 100%;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 100%;
     margin-top: 20px;
+    width: 100%
 }
 
 img.college-logo {
@@ -693,4 +693,15 @@ a.iconpubs-mobile-link{
     width: 200px;
     text-align: center;
     vertical-align: middle;
+}
+
+.site-layout.is-small-screen .col-2 > div > img {
+    width: 100%;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0 auto
+}
+
+.site-layout.is-small-screen .section-content.col-2 > div {
+    min-width: 100%;
 }
