@@ -163,7 +163,7 @@ body {
     height: auto;
     margin: 0 auto;
     background: url('../images/about-header.jpg');
-    background-size: cover;    
+    background-size: cover;
     background-position: center;
     padding: 3%
 }
@@ -185,7 +185,7 @@ body {
     margin: 0 auto;
     background-color: #fff;
     background: url('../images/quezon-hall.jpg');
-    background-size: cover;    
+    background-size: cover;
     background-position: center;
     color: #333;
     padding: 3%
@@ -704,4 +704,24 @@ a.iconpubs-mobile-link{
 
 .site-layout.is-small-screen .section-content.col-2 > div {
     min-width: 100%;
+}
+
+.linkage{
+  text-align: center;
+}
+
+.linkage-logo-box{
+  max-width: 250px
+}
+
+.linkage-logo-rec{
+  max-width: 300px;
+  padding-top: 30px;
+
+}
+
+.site-layout.is-small-screen .linkage-logo-rec{
+  max-width: 200px;
+  padding-top: 30px;
+
 }
