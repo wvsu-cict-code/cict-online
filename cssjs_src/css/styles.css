@@ -17,12 +17,12 @@ body {
     color: #fff
 }
 
-.hidden{
-  visibility: hidden;
+.hidden {
+    visibility: hidden;
 }
 
-.send-to-back{
-  z-index: -100
+.send-to-back {
+    z-index: -100
 }
 
 .mdl-layout__header .mdl-layout__drawer-button {
@@ -87,7 +87,6 @@ body {
 }
 
 .default-container {
-    max-width: 1600px;
     width: 100%;
     margin: 0 auto;
     background-color: #d9d9d9;
@@ -136,7 +135,7 @@ body {
     background-color: #263238
 }
 
-.site-objectives-full{
+.site-objectives-full {
     max-width: 1600px;
     width: 100%;
     height: auto;
@@ -168,7 +167,7 @@ body {
     padding: 3%
 }
 
-.site-about-fragment{
+.site-about-fragment {
     max-width: 1600px;
     width: 100%;
     height: auto;
@@ -178,7 +177,7 @@ body {
     padding: 3%
 }
 
-.site-about-fragment.qh{
+.site-about-fragment.qh {
     max-width: 1600px;
     width: 100%;
     height: auto;
@@ -191,8 +190,7 @@ body {
     padding: 3%
 }
 
-
-.translate-right, .translate-left{
+.translate-right, .translate-left {
     text-align: center;
 }
 
@@ -271,7 +269,7 @@ body {
 }
 
 .site-layout.is-small-screen .social-list {
-    max-width: 150px;
+    max-width: 180px;
 }
 
 .section-content .social-list {
@@ -320,7 +318,7 @@ footer>div {
     margin-top: 0.3em;
 }
 
-.header-jumbo> p {
+.header-jumbo>p {
     margin: 0;
     font-size: 0.8em;
     color: #fff
@@ -358,7 +356,7 @@ footer>div {
         width: 100%;
         text-align: center
     }
-    .header-jumbo> p {
+    .header-jumbo>p {
         font-size: 0.4em;
     }
     .mdl-navigation {
@@ -382,18 +380,15 @@ footer>div {
         visibility: visible;
         position: fixed;
     }
-
-    .iconpubs-desktop{
+    .iconpubs-desktop {
         visibility: hidden
     }
-
-    .iconpubs-mobile{
+    .iconpubs-mobile {
         visibility: visible;
     }
-
 }
 
-.site-layout.is-small-screen .col-2 > div{
+.site-layout.is-small-screen .col-2>div {
     display: inline-block;
     margin: 0 auto;
     max-width: 100%;
@@ -425,7 +420,7 @@ img.site-logo {
     height: 38px;
 }
 
-.iconpubs-mobile{
+.iconpubs-mobile {
     visibility: hidden;
     height: 0
 }
@@ -436,14 +431,10 @@ img.site-logo {
         height: auto;
         margin: 0 auto;
     }
-
-    .iconpubs-mobile{
+    .iconpubs-mobile {
         visibility: visible;
         height: auto;
     }
-
-
-
     /*.header-jumbo .university-title{
       font-size: 0.35em;
       padding: 25px
@@ -454,11 +445,11 @@ img.site-logo {
     text-align: left
 }
 
-.card-update> .mdl-card__title {
+.card-update>.mdl-card__title {
     color: #fff;
 }
 
-.card-update> .mdl-card__title.update-01 {
+.card-update>.mdl-card__title.update-01 {
     background: url('../images/alumni.jpg') center 15% no-repeat #f28028;
     background-size: cover;
 }
@@ -589,7 +580,7 @@ p.devstat {
 
 .site-layout.is-small-screen p.devstat {
     padding-top: 20px;
-    max-width: 200px;
+    width: 100%;
     margin: 0 auto
 }
 
@@ -649,79 +640,326 @@ video {
     vertical-align: middle;
 }
 
-.page-social span> * {
+.page-social span>* {
     vertical-align: middle!important;
 }
 
-.img-responsive{
+.img-responsive {
     width: 100%;
     height: auto;
 }
 
-.img-desc{
+.img-desc {
     margin-top: 0;
     color: #5f5f5f;
     margin-bottom: 2em;
 }
 
-.updates-grid{
+.updates-grid {
     max-width: 1024px;
 }
 
-a.iconpubs-mobile-link{
+a.iconpubs-mobile-link {
     max-width: 230px;
     text-overflow: ellipsis;
 }
 
-.section-content.col-2 > div > img {
+.section-content.col-2>div>img {
     margin-left: 20px;
 }
 
-.section-content.col-2 > div {
+.section-content.col-2>div {
     display: table-cell;
     vertical-align: middle;
     max-width: 600px;
     min-width: 450px
-
 }
 
-.iict-logo-container, .cict-logo-container{
+.iict-logo-container, .cict-logo-container {
     text-align: center;
 }
 
-#iict-logo, #cict-logo{
+#iict-logo, #cict-logo {
     width: 200px;
     text-align: center;
     vertical-align: middle;
 }
 
-.site-layout.is-small-screen .col-2 > div > img {
+.site-layout.is-small-screen .col-2>div>img {
     width: 100%;
     text-align: center;
     vertical-align: middle;
     margin: 0 auto
 }
 
-.site-layout.is-small-screen .section-content.col-2 > div {
+.site-layout.is-small-screen .section-content.col-2>div {
     min-width: 100%;
 }
 
-.linkage{
-  text-align: center;
+.linkage {
+    text-align: center;
 }
 
-.linkage-logo-box{
-  max-width: 250px
+.linkage-logo-box {
+    max-width: 250px
 }
 
-.linkage-logo-rec{
-  max-width: 300px;
-  padding-top: 30px;
-
+.linkage-logo-rec {
+    max-width: 300px;
+    padding-top: 30px;
 }
 
-.site-layout.is-small-screen .linkage-logo-rec{
+.site-layout.is-small-screen .linkage-logo-rec {
+    max-width: 200px;
+    padding-top: 30px;
+}
+
+.site-reality-hero {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    background: url('../images/reality/hero.jpg');
+    background-size: cover;
+    background-position: bottom;
+    padding: 3%;
+}
+
+.section-nav {
+    margin-bottom: 290px;
+    padding: 20px;
+    position: relative;
+    z-index: 9999
+}
+
+.section-reel {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    z-index: 9999;
+}
+
+.reality-theme {
+    padding: 40px 53px 0 40px;
+    position: relative;
+    z-index: 9999
+}
+
+.space-reset {
+    margin: 0;
+    padding: 0;
+}
+
+.text-large {
+    font-size: large
+}
+
+.social-list .socicon-reality {
+    border: 0;
+    color: rgba(255, 255, 255, 0.60);
+    padding: 15px 12px 5px 15px;
+    margin: 20px;
+    font-size: 30px;
+}
+
+.social-list .socicon-reality:hover {
+    color: #fff;
+}
+
+.site-layout.is-small-screen .social-list .socicon-reality {
+    padding: 0;
+}
+
+.reality-social {
+    display: inline-flex;
+    float: right;
+    list-style: none;
+}
+
+.site-layout.is-small-screen .section-nav {
+    text-align: center;
+}
+
+.site-layout.is-small-screen .social-list.reality-social {
+    clear: both;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 180px;
+}
+
+.site-layout.is-small-screen .social-list.reality-social .socicon-reality {
+    margin: 0 auto;
+    padding: 0 9px;
+}
+
+.site-layout.is-small-screen .reality-theme h3, .site-layout.is-small-screen .reality-theme p {
+    visibility: hidden;
+    display: none;
+}
+
+.site-layout.is-small-screen .site-reality-hero {
+    background: url('../images/reality/hero-mobile.jpg');
+    background-size: cover;
+    background-position: bottom;
+}
+
+.site-reality-countdown {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 3%;
+    background-color: #DBD4C4!important;
+    max-width: 1600px;
+    color: #4C4C4C
+}
+
+.site-layout.is-small-screen #clock {
+    font-size: 20px;
+}
+
+.days, .hours, .minutes, .seconds {
+    font-weight: 700;
+    background-color:#4C4C4C;
+    padding:5px;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 1.3em;
+    margin:5px;
+}
+
+#playreel {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff
+}
+
+#playreel:hover {
+    width: 100px;
+    height: 100px;
+    border: 3px solid #fff;
+    cursor: pointer;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.play {
+    color: #fff;
+    font-size: 5em;
+}
+
+.reality-p {
+    font-size: large;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+.pg-canvas {
+    z-index: 1;
+    position: absolute;;
+    opacity: 0.17;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#venue{
+  width: 100%;
+  height: 300px;
+}
+
+.site-reality-venue {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 3%;
+    background-color: #4C4C4C;
+    max-width: 1600px;
+    color: #fff
+}
+
+.site-reality-schedule{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 3%;
+  background-color: #FFF!important;
+  max-width: 1600px;
+  color: #4C4C4C;
+  padding-bottom: 30px;
+}
+
+.site-reality-contests{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 3%;
+    background-image: url('../images/reality/contests.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #DBD4C4!important;
+    max-width: 1600px;
+    color: #4C4C4C;
+    padding-bottom: 50px;
+}
+
+.site-reality-speakers{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 3%;
+  background-image: url('../images/reality/contests-colored.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #DBD4C4!important;
+  max-width: 1600px;
+  color: #FFF;
+  padding-bottom: 50px;
+}
+
+.site-reality-sponsors{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 3%;
+  background-color: #FFF!important;
+  max-width: 1600px;
+  color: #FFF;
+  padding-bottom: 50px;
+}
+
+img.cl{
+    max-width: 200px;
+    height: auto;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.reality-btn{
+    background-color: #4C4C4C!important;
+    color: #fff
+}
+
+.tb-reality-schedule{
+  margin: 0 auto;
+}
+#toggle-tb{
+  margin: 0 auto;
+}
+.spkimg{
+  border-radius: 100%;
   max-width: 200px;
-  padding-top: 30px;
+  padding: 5px;
+    border: 3px solid #423621;
+    background-color: #dad1c0;
+}
 
+.spkdesc{
+    padding:15px;
 }
