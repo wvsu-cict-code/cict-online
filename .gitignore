@@ -1,8 +1,1 @@
-_site
-bower_components
-tracer/bower_components
-.sass-cache
-node_modules
-css
-js
-downloads
+wp-config.php
