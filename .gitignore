@@ -1,7 +1,4 @@
 wp-config.php
-wp-content/themes/FoundationPress/.DS_Store
 wp-content/themes/FoundationPress/*.sass-cache*
 wp-content/themes/FoundationPress/*.log
 wp-content/themes/FoundationPress/node_modules/
-wp-content/themes/FoundationPress/packaged/
-wp-content/themes/FoundationPress/wpcs/
