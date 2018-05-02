@@ -1,13 +1,10 @@
-# CICT Online
-> Source code of the CICT official website.
+# React-Static - Basic Example
 
-[![GitHub version](https://badge.fury.io/gh/wvsu-cict-code%2Fcict-online.svg)](https://badge.fury.io/gh/wvsu-cict-code%2Fcict-online)
+This example is the most basic version of react-static available. It includes:
+- Babel
+- CSS imports
+- Image imports
+- File imports
+- Automatic Routing
 
-## CICTzens!
-Help us develop our website! If you found a bug or you want to contribute, please submit an [issue](https://help.github.com/articles/creating-an-issue/), contact the faculty or email your concern at [cictapps@wvsu.edu.ph](cictapps@wvsu.edu.ph). Student contributions are welcome!
-
-## About
-This website is built using Wordpress and Foundation Zurb. It is still under heavy development.
-
-## License
-&copy; 2017, College of Information and Communications Technology, West Visayas State University. Licensed under an Apache-2 license.
+To get started, run `react-static create` and use the `basic` template.
