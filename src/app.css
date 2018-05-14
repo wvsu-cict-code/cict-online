@@ -1,3 +1,21 @@
+* {
+  font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+body {
+  background-color: #fafafa
+}
+
+.ui.header-light--jumbo{
+  font-weight: 300;
+  font-size: 45px!important;
+  font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif
+}
+
+.ui.container-padded{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
 .maintenance_page_fullscreen {
   background-color: #333;
   background-position: center;
@@ -49,4 +67,18 @@
 
 .github-button{
   margin: 0 5px
+}
+
+.brand-icon {
+  height: 40px;
+  width: auto;
+}
+
+.ui.attached.menu.menu-borderless:not(.tabular){
+  border:  none
+}
+
+.home-header{
+  background-position: center;
+  background-repeat: no-repeat;
 }

@@ -5947,6 +5947,12 @@ react-table@^6.8.2:
   dependencies:
     classnames "^2.2.5"
 
+react-typist@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/react-typist/-/react-typist-2.0.4.tgz#e7ee4de53ead913d363d38f07b700c00ce271be0"
+  dependencies:
+    prop-types "^15.5.10"
+
 react-universal-component@^2.8.1:
   version "2.9.0"
   resolved "https://registry.yarnpkg.com/react-universal-component/-/react-universal-component-2.9.0.tgz#75e8d418e6611e43cdbabe5a6c5dab8870c12e30"

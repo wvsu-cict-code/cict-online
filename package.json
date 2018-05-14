@@ -20,6 +20,7 @@
     "react-router": "^4.2.0",
     "react-static": "^5.9.1",
     "react-table": "^6.8.2",
+    "react-typist": "^2.0.4",
     "semantic-ui-css": "2.2.14",
     "semantic-ui-react": "^0.80.0",
     "uuid": "^3.2.1"

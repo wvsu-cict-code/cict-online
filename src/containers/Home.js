@@ -1,32 +1,45 @@
-import React from 'react'
-import { withSiteData, Head } from 'react-static'
-import { Fade } from 'react-reveal'
-import { Icon } from 'semantic-ui-react'
-//
-import v2Logo from '../assets/cictonline-logo-light.png'
-import maintenanceBG from '../assets/background.jpg'
-import ogImage from '../assets/og-image.jpg'
 
-export default withSiteData(() => (
-  <div className="maintenance_page_fullscreen" style={{ backgroundImage: `url(${maintenanceBG})` }}>
+import React from 'react'
+import { Menu, Image, Container, Message, Header, Divider, Icon, Card } from 'semantic-ui-react'
+import { Link, Head } from 'react-static'
+import Typist from 'react-typist'
+import 'react-typist/dist/Typist.css'
+import ogImage from '../assets/og-image.jpg'
+import brandIcon from '../assets/brandicon.svg'
+import homeHeadeBackground from '../assets/background.jpg'
+
+export default () => (
+  <div>
     <Head>
       <title>CICT Online</title>
-      <meta property="og:url" content="http://cictwvsu.com/" />
+      <meta property="og:url" content="http://cictwvsu.com/admission" />
       <meta property="og:type" content="article" />
-      <meta property="og:title" content="CICT WVSU" />
-      <meta property="og:description" content="Page under construction." />
+      <meta property="og:title" content="College Aptitude Exam Results 2018" />
+      <meta property="og:description" content="Names in the list will proceed for interview on May 7-8, 2018" />
       <meta property="og:image" content={ogImage} />
     </Head>
-    <Fade>
-      <div className="maintenance_logo__centered" style={{ backgroundImage: `url(${v2Logo})` }} />
-    </Fade>
-    <Fade>
-      <div className="maintenance_social_links">
-        <a href="https://github.com/wvsu-cict-code" className="maintenance_social_links_item" ><Icon name="github" inverted size="big" /></a>
-        <a href="https://www.facebook.com/cictwvsu/" className="maintenance_social_links_item" ><Icon name="facebook" inverted size="big" /></a>
-        <a href="https://twitter.com/cictwvsu" className="maintenance_social_links_item" ><Icon name="twitter" inverted size="big" /></a>
-        <a href="https://medium.com/cictwvsu-online" className="maintenance_social_links_item" ><Icon name="medium" inverted size="big" /></a>
-      </div>
-    </Fade>
+    <Menu attached="top" borderless>
+      <Menu.Item>
+        <Image src={brandIcon} className="brand-icon" />
+      </Menu.Item>
+      <Menu.Menu position="right">
+        <Menu.Item as={Link} >Admission</Menu.Item>
+        <Menu.Item as={Link} >Students</Menu.Item>
+        <Menu.Item as={Link} >Faculty &amp; Staff</Menu.Item>
+      </Menu.Menu>
+    </Menu>
+    <Container className="home-header" fluid>
+      <Container className="container-padded">
+        <Header as="h1" className="header-light--jumbo">
+          <Header.Content>
+            <Typist avgTypingDelay={100} cursor={{ show: false, blink: true }}>CICT Online</Typist>
+            <Header.Subheader>
+              <Typist startDelay={1500} >Welcome to the College of Information and Communications Technology Website!</Typist>
+            </Header.Subheader>
+          </Header.Content>
+        </Header>
+      </Container>
+    </Container>
+    <Container />
   </div>
-))
+)

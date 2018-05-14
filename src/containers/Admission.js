@@ -40,12 +40,12 @@ export default () => (
       <meta property="og:description" content="Names in the list will proceed for interview on May 7-8, 2018" />
       <meta property="og:image" content={ogImage} />
     </Head>
-    <Menu attached="top">
+    <Menu attached="top" borderless>
       <Menu.Item as={Link} to="/">
         <Image src={logoInverted} size="mini" />
       </Menu.Item>
       <Menu.Item>
-            College Aptitude Exam Results 2018
+            College Aptitude Exam Results
       </Menu.Item>
       <Menu.Menu position="right" />
     </Menu>
