@@ -82,3 +82,29 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 }
+
+a.ui.header {
+  font-weight: 200
+}
+
+.ui.header {
+  font-weight: 400
+}
+
+p {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 1.2rem
+}
+
+a.ui.header:hover{
+  color: darkorange
+}
+
+.ui.header.header-light{
+  font-weight: 200
+}
+.image-background{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
