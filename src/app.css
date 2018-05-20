@@ -112,3 +112,9 @@ a.ui.header:hover{
 .ui.image.cict-tech-line{
   height: 230px;
 }
+
+.ui.container.default{
+  padding: 3rem;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1)
+}
