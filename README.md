@@ -8,7 +8,9 @@ Help us develop our website! If you found a bug or you want to contribute, pleas
 Contributing to the code will require you to use a GitHub account and knowledge of using Git. Please visit this [git tutorial](https://try.github.io/levels/1/challenges/1) to learn more.
 
 ## Todo
-[] Add After Effects animation to the line arts utilizing Lottie
+* Add After Effects animation to the line arts utilizing Lottie.
+* Connect frontend to Contentful.
+* Improve page responsiveness.
 
 ## Architecture
 ![alt text](architecture.png "Architecture")
