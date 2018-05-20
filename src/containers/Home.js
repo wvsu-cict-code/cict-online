@@ -5,6 +5,7 @@ import { Head, Link } from 'react-static'
 import Typist from 'react-typist'
 import { Button, Container, Grid, Header, Icon, Image, Menu, Segment } from 'semantic-ui-react'
 import courses from '../config/courses'
+import linkages from '../config/linkages'
 import brandIcon from '../assets/brandicon.svg'
 import techLogo from '../assets/cict-lines.svg'
 import facultyStaff from '../assets/noun_1336214_cc.svg'
@@ -12,6 +13,21 @@ import toolsResources from '../assets/noun_1544052_cc.svg'
 import admission from '../assets/noun_1698513_cc.svg'
 import students from '../assets/noun_776665_cc.svg'
 import ogImage from '../assets/og-image.jpg'
+import icon57 from '../assets/apple-icon-57x57.png'
+import icon60 from '../assets/apple-icon-60x60.png'
+import icon72 from '../assets/apple-icon-72x72.png'
+import icon76 from '../assets/apple-icon-76x76.png'
+import icon114 from '../assets/apple-icon-114x114.png'
+import icon120 from '../assets/apple-icon-120x120.png'
+import icon144 from '../assets/apple-icon-144x144.png'
+import icon152 from '../assets/apple-icon-152x152.png'
+import icon180 from '../assets/apple-icon-180x180.png'
+import icon192 from '../assets/android-icon-192x192.png'
+import icon32 from '../assets/favicon-32x32.png'
+import icon96 from '../assets/favicon-96x96.png'
+import icon16 from '../assets/favicon-16x16.png'
+import icon144ms from '../assets/ms-icon-144x144.png'
+import favicon from '../assets/favicon.ico'
 
 export default () => (
   <div>
@@ -22,6 +38,24 @@ export default () => (
       <meta property="og:title" content="CICT Online" />
       <meta property="og:description" content="West Visayas State University, College of Information and Communications Technology Website" />
       <meta property="og:image" content={ogImage} />
+      <link rel="apple-touch-icon" sizes="57x57" href={icon57} />
+      <link rel="apple-touch-icon" sizes="60x60" href={icon60} />
+      <link rel="apple-touch-icon" sizes="72x72" href={icon72} />
+      <link rel="apple-touch-icon" sizes="76x76" href={icon76} />
+      <link rel="apple-touch-icon" sizes="114x114" href={icon114} />
+      <link rel="apple-touch-icon" sizes="120x120" href={icon120} />
+      <link rel="apple-touch-icon" sizes="144x144" href={icon144} />
+      <link rel="apple-touch-icon" sizes="152x152" href={icon152} />
+      <link rel="apple-touch-icon" sizes="180x180" href={icon180} />
+      <link rel="icon" type="image/png" sizes="192x192" href={icon192} />
+      <link rel="icon" type="image/png" sizes="32x32" href={icon32} />
+      <link rel="icon" type="image/png" sizes="96x96" href={icon96} />
+      <link rel="icon" type="image/png" sizes="16x16" href={icon16} />
+      <link rel="shortcut icon" href={favicon} type="image/x-icon" />
+      <link rel="icon" href={favicon} type="image/x-icon" />
+      <meta name="msapplication-TileColor" content="#ffffff" />
+      <meta name="msapplication-TileImage" content={icon144ms} />
+      <meta name="theme-color" content="#ffffff" />
     </Head>
     <Menu attached="top" borderless>
       <Menu.Item>
@@ -108,7 +142,7 @@ export default () => (
         </Grid>
       </Container>
     </Container>
-    <Container fluid style={{ backgroundColor: '#24292E'}}>
+    <Container fluid style={{ backgroundColor: '#24292E' }}>
       <Container style={{ padding: '3rem' }}>
         <Header inverted as="h1" content="About CICT" />
         <p style={{ color: '#fff' }}>
@@ -121,8 +155,14 @@ export default () => (
       <Container>
         <Header as="h1" content="Academic Partners" />
         <p>The college also established linkages along the way. They include local and international partners as well as government units.</p>
-        <Grid columns={4} stackable className="center" centered>
-          dfsdf
+        <Grid columns={6} stackable className="center" centered verticalAlign="middle">
+          <Grid.Row>
+            {linkages.map(i => (
+              <Grid.Column>
+                <Image as="a" href={i.link} size="small" src={i.logo} alt={i.name} />
+              </Grid.Column>
+          ))}
+          </Grid.Row>
         </Grid>
       </Container>
     </Container>
