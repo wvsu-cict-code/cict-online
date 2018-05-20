@@ -12,7 +12,6 @@
   "dependencies": {
     "axios": "^0.16.2",
     "contentful": "^6.1.0",
-    "mobx": "^4.2.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-feather": "^1.1.0",

@@ -108,3 +108,7 @@ a.ui.header:hover{
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.ui.image.cict-tech-line{
+  height: 230px;
+}
