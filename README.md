@@ -23,6 +23,7 @@ Contributing to the code will require you to use a GitHub account and knowledge 
 - [ ] Omni Updates Section (Medium Blog, Facebook, Twitter)
 - [ ] Footer Section
 - [ ] Credits in About Page
+- [ ] Integrate Tracer Study App
 
 ## Architecture
 ![alt text](architecture.png "Architecture")
@@ -30,7 +31,7 @@ Contributing to the code will require you to use a GitHub account and knowledge 
 ## Contributors
 We specially want to recognize the following for helping us develop our website
 * Regin C. Cabacas - Hosting & Domain Manager
-* Link.exe - Photos
+* Link.exe - Photos & Videos
 
 
 ## License
