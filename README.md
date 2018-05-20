@@ -22,6 +22,7 @@ Contributing to the code will require you to use a GitHub account and knowledge 
 - [ ] Tools and Resources Page
 - [ ] Omni Updates Section (Medium Blog, Facebook, Twitter)
 - [ ] Footer Section
+- [ ] Credits in About Page
 
 ## Architecture
 ![alt text](architecture.png "Architecture")
