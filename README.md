@@ -29,7 +29,8 @@ Contributing to the code will require you to use a GitHub account and knowledge 
 ![alt text](architecture.png "Architecture")
 
 ## Contributors
-We specially want to recognize the following for helping us develop our website
+We specially want to recognize the following for helping us develop and maintain our website:
+* CICT PTA - Domain and App Store Funding
 * Regin C. Cabacas - Hosting & Domain Manager
 * Link.exe - Photos & Videos
 
