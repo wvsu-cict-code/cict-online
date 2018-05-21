@@ -25,6 +25,14 @@ Contributing to the code will require you to use a GitHub account and knowledge 
 - [ ] Credits in About Page
 - [ ] Integrate Tracer Study App
 
+## Milestones
+- [ ] Learning Management System / e-Class 
+- [ ] Student/Alumni Support Page
+- [ ] CICT Online Forum
+- [ ] CICT Spotlight
+- [ ] Matching, Placement and Career Support
+
+
 ## Architecture
 ![alt text](architecture.png "Architecture")
 
