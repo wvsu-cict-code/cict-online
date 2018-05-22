@@ -155,7 +155,7 @@ export default () => (
       <Container>
         <Header as="h1" content="Academic Partners" />
         <p>The college also established linkages along the way. They include local and international partners as well as government units.</p>
-        <Grid columns={6} stackable className="center" centered verticalAlign="middle">
+        <Grid columns={5} stackable className="center" centered verticalAlign="middle">
           <Grid.Row>
             {linkages.map(i => (
               <Grid.Column>
