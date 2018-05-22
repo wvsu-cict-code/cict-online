@@ -10,6 +10,7 @@ import kunsan from '../assets/linkages/kunsan.png'
 import ngkhai from '../assets/linkages/ngkhai.png'
 import pldt from '../assets/linkages/pldt.png'
 import epic from '../assets/linkages/epic.png'
+import tio from '../assets/linkages/tio.jpg'
 
 const linkages = [
   {
@@ -71,6 +72,11 @@ const linkages = [
     name: 'PLDT',
     logo: pldt,
     link: 'https://m.pldthome.com/',
+  },
+  {
+    name: 'Tio Chu Teg Ana Ros Foundation Integrated School',
+    logo: tio,
+    link: 'https://www.facebook.com/pages/Tiu-Cho-Teg-Ana-Ros-Foundation-Integrated-School/390453294299833',
   },
 ]
 
