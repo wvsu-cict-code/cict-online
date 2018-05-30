@@ -8,12 +8,12 @@ import blisIcon from '../assets/blis-icon.svg'
 const courses = [
   {
     name: 'Bachelor of Science in Information Technology',
-    description: 'The Bachelor of Science in Information Technology (BSIT) program prepares students to be IT professionals who are able to perform installation, operation, development, maintenance and administration of computer applications.',
+    description: 'The Bachelor of Science in Information Technology (BSIT) program aims to produce quality graduates who study, analyze, design, develop, implement, and evaluate ICT solutions. The program focuses on the use of ICT for a variety of applications such as in business, governance, education, personal and entertainment. Professional subjects include logic design, microcomputer technology, computer systems organization, networking technologies, and systems resource management.',
     icon: itIcon,
   },
   {
     name: 'Bachelor of Science in Information Systems',
-    description: 'Bachelor of Science in Information Systems (BSIS), formerly known as BS in Information Management, is a four year degree program that deals with the design and implementation of solutions that integrate information technology with business processes.',
+    description: 'Bachelor of Science in Information Systems (BSIS) program, formerly known as BS in Information Management, aims to equip students with the knowledge, skills, and attitude in the design and implementation of solutions that integrate information technology with business processes. This program prepares students to be IT professionals that could harness ICT as a strategic resource to meet business and organizational objectives.',
     icon: isIcon,
   },
   {

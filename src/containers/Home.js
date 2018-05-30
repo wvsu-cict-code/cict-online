@@ -4,9 +4,11 @@ import React from 'react'
 import { Head, Link } from 'react-static'
 import Typist from 'react-typist'
 import { Button, Container, Grid, Header, Icon, Image, Menu, Segment } from 'semantic-ui-react'
+import { Fade } from 'react-reveal'
 import courses from '../config/courses'
 import linkages from '../config/linkages'
 import brandIcon from '../assets/brandicon.svg'
+import brandIconLight from '../assets/brandicon-light.svg'
 import techLogo from '../assets/cict-lines.svg'
 import facultyStaff from '../assets/noun_1336214_cc.svg'
 import toolsResources from '../assets/noun_1544052_cc.svg'
@@ -58,7 +60,7 @@ export default () => (
       <meta name="theme-color" content="#ffffff" />
     </Head>
     <Menu attached="top" borderless>
-      <Menu.Item>
+      <Menu.Item as={Link} to="/" className="brand-icon-container">
         <Image src={brandIcon} className="brand-icon" />
       </Menu.Item>
     </Menu>
@@ -101,7 +103,7 @@ export default () => (
             </Grid.Column>
             <Grid.Column>
               <Image src={toolsResources} size="tiny" centered />
-              <Header as={Link} to="/" content="Tools and Resources" textAlign="center" />
+              <Header as={Link} to="/" content="Apps and Resources" textAlign="center" />
             </Grid.Column>
           </Grid.Row>
         </Grid>
@@ -131,24 +133,28 @@ export default () => (
           {courses.map(i => (
             <Grid.Row>
               <Grid.Column width={3}>
-                <Image src={i.icon} />
+                <Fade>
+                  <Image src={i.icon} />
+                </Fade>
               </Grid.Column>
               <Grid.Column width={13}>
-                <Header as="h2" content={i.name} />
-                <p>{i.description}</p>
+                <Fade>
+                  <Header as="h2" content={i.name} />
+                  <p>{i.description}</p>
+                </Fade>
               </Grid.Column>
             </Grid.Row>
           ))}
         </Grid>
       </Container>
     </Container>
-    <Container fluid style={{ backgroundColor: '#24292E' }}>
+    <Container fluid style={{ backgroundColor: '#2f2d2e' }}>
       <Container style={{ padding: '3rem' }}>
         <Header inverted as="h1" content="About CICT" />
         <p style={{ color: '#fff' }}>
           Information and Communications Technology has penetrated the core of societal and individual lives. Its development is changing the course of all other technologies. ICT has now become less of a choice and more of a requirement for individuals and societies concerned with competitiveness in the international arena.
         </p>
-        <Button inverted content="LEARN MORE" />
+        <Button as="a" href="https://medium.com/cictwvsu-online/our-story-87a461c14ab" target="_blank" inverted content="LEARN MORE" />
       </Container>
     </Container>
     <Container fluid className="default">
@@ -161,9 +167,26 @@ export default () => (
               <Grid.Column>
                 <Image as="a" href={i.link} size="small" src={i.logo} alt={i.name} />
               </Grid.Column>
-          ))}
+            ))}
           </Grid.Row>
         </Grid>
+      </Container>
+    </Container>
+    <Container style={{ backgroundColor: '#2f2d2e' }} as="footer" fluid >
+      <Container style={{ color: '#FFF', padding: '1rem' }}>
+        <Menu secondary inverted>
+          <Menu.Item as={Link} to="/" className="brand-icon-container">
+            <Image src={brandIconLight} size="tiny" />
+          </Menu.Item>
+          <Menu.Item>Privacy Policy</Menu.Item>
+          <Menu.Item>Contact Us</Menu.Item>
+          <Menu.Menu position="right">
+            <Menu.Item><Icon name="facebook" /> <Icon name="twitter" /> <Icon name="github" /> <Icon name="medium" /></Menu.Item>
+            <Menu.Item>
+              <Icon name="code" /> with <Icon name="heart" /> by CICTzens
+            </Menu.Item>
+          </Menu.Menu>
+        </Menu>
       </Container>
     </Container>
   </div>

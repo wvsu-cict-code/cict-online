@@ -109,6 +109,9 @@ a.ui.header:hover{
   background-size: cover;
 }
 
+.item.brand-icon-container.active{
+  background-color: transparent!important
+}
 .ui.image.cict-tech-line{
   height: 230px;
 }
