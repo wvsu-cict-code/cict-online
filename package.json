@@ -28,6 +28,7 @@
     "uuid": "^3.2.1"
   },
   "engines": {
+    "yarn": "1.7.0",
     "node": "8.11.1"
   },
   "devDependencies": {
