@@ -3,7 +3,7 @@ import 'react-typist/dist/Typist.css'
 import React from 'react'
 import { Head, Link } from 'react-static'
 import Typist from 'react-typist'
-import { Button, Container, Grid, Header, Icon, Image, Menu, Segment } from 'semantic-ui-react'
+import { Button, Container, Grid, Header, Icon, Image, Menu, Segment, Responsive, Message } from 'semantic-ui-react'
 import { Fade } from 'react-reveal'
 import courses from '../config/courses'
 import linkages from '../config/linkages'
@@ -59,35 +59,57 @@ export default () => (
       <meta name="msapplication-TileImage" content={icon144ms} />
       <meta name="theme-color" content="#ffffff" />
     </Head>
-    <Menu attached="top" borderless>
-      <Menu.Item as={Link} to="/" className="brand-icon-container">
-        <Image src={brandIcon} className="brand-icon" />
-      </Menu.Item>
-    </Menu>
-    <Container className="home-header" fluid>
-      <Container className="container-padded">
-        <Grid verticalAlign="middle">
-          <Grid.Column width={12}>
-            <Header as="h1" className="header-light--jumbo" style={{ marginBottom: '1rem' }}>
-              <Header.Content>
-                <Typist avgTypingDelay={100} cursor={{ show: false, blink: true }}>CICT Online</Typist>
-                <Header.Subheader>
-                  <Typist startDelay={1500} >Welcome to our College Website!</Typist>
-                </Header.Subheader>
-              </Header.Content>
-            </Header>
-          </Grid.Column>
-          <Grid.Column width={4}>
-            <p><small><Icon name="info circle" />Still under heavy development.</small></p>
-            <Button as="a" href="https://github.com/wvsu-cict-code/cict-online/tree/v2-development" target="_blank" icon="github" content="Contribute" color="black" />
-          </Grid.Column>
-        </Grid>
+    <Responsive minWidth={769}>
+      <Menu attached="top" borderless>
+        <Menu.Item as={Link} to="/" className="brand-icon-container">
+          <Image src={brandIcon} className="brand-icon" />
+        </Menu.Item>
+      </Menu>
+    </Responsive>
+    <Responsive maxWidth={768}>
+      <div className="navbar-mobile">
+        <Image centered src={brandIcon} size="small" className="navbar-mobile-brandicon" />
+      </div>
+    </Responsive>
+    <Responsive minWidth={769}>
+      <Container className="home-header" fluid>
+        <Container className="container-padded">
+          <Grid verticalAlign="middle">
+            <Grid.Column width={12}>
+              <Header as="h1" className="header-light--jumbo" style={{ marginBottom: '1rem' }}>
+                <Header.Content>
+                  <Typist avgTypingDelay={100} cursor={{ show: false, blink: true }}>CICT Online</Typist>
+                  <Header.Subheader>
+                    <Typist startDelay={1500} >Welcome to our College Website!</Typist>
+                  </Header.Subheader>
+                </Header.Content>
+              </Header>
+            </Grid.Column>
+            <Grid.Column width={4}>
+              <p><small><Icon name="info circle" />Still under heavy development.</small></p>
+              <Button as="a" href="https://github.com/wvsu-cict-code/cict-online/tree/v2-development" target="_blank" icon="github" content="Contribute" color="black" />
+            </Grid.Column>
+          </Grid>
+        </Container>
       </Container>
-    </Container>
-    <Container />
+    </Responsive>
+    <Responsive maxWidth={768}>
+      <Container className="home-header" fluid>
+        <Container className="container-padded">
+          <Header textAlign="center" as="h1" className="header-light--jumbo" style={{ marginBottom: '1rem' }}>
+            <Header.Content>
+              <Typist avgTypingDelay={100} cursor={{ show: false, blink: true }}>CICT Online</Typist>
+              <Header.Subheader>
+                <Typist startDelay={1500} >Welcome to our College Website!</Typist>
+              </Header.Subheader>
+            </Header.Content>
+          </Header>
+        </Container>
+      </Container>
+    </Responsive>
     <Container fluid className="default">
       <Segment basic>
-        <Grid columns="equal">
+        <Grid columns="equal" stackable>
           <Grid.Row stretched>
             <Grid.Column>
               <Image src={admission} size="tiny" centered />
@@ -109,85 +131,208 @@ export default () => (
         </Grid>
       </Segment>
     </Container>
-    <Container className="image-background" fluid>
-      <div>
-        <Container style={{ padding: '3rem' }}>
-          <Grid stackable>
-            <Grid.Column width={6}>
-              <Image centered src={techLogo} size="medium" className="cict-tech-line" />
-            </Grid.Column>
-            <Grid.Column width={10}>
-              <Header as="h1">
-                Attaining Excellence<br />in ICT Education
-              </Header>
-              <p>The West Visayas State University, College of Information and Communications Technology commits to provide quality instruction, undetake relevant and innovative ICT researches, and deliver valuable extension services through continuous process improvement focused on client satisfaction; hence, producing globally competitive lifelong learners.</p>
-            </Grid.Column>
+    <Responsive minWidth={769}>
+      <Container className="image-background" fluid>
+        <div>
+          <Container style={{ padding: '3rem' }}>
+            <Grid stackable>
+              <Grid.Column width={6}>
+                <Image centered src={techLogo} size="medium" className="cict-tech-line" />
+              </Grid.Column>
+              <Grid.Column width={10}>
+                <Header as="h1">
+                  Attaining Excellence<br />in ICT Education
+                </Header>
+                <p>The West Visayas State University, College of Information and Communications Technology commits to provide quality instruction, undetake relevant and innovative ICT researches, and deliver valuable extension services through continuous process improvement focused on client satisfaction; hence, producing globally competitive lifelong learners.</p>
+              </Grid.Column>
+            </Grid>
+          </Container>
+        </div>
+      </Container>
+    </Responsive>
+    <Responsive maxWidth={768}>
+      <Container style={{ marginTop: '1rem' }}>
+        <Message warning>
+          <Message.Header>
+              Under Heavy Development!
+          </Message.Header>
+          <Message.Content>
+            <p>
+              <small>
+                Help us on GitHub!
+              </small>
+            </p>
+            <Button as="a" href="https://github.com/wvsu-cict-code/cict-online/tree/v2-development" target="_blank" icon="github" content="Contribute" color="black" />
+          </Message.Content>
+        </Message>
+      </Container>
+      <Container className="image-background" fluid>
+        <div>
+          <Container style={{ padding: '0.5rem' }}>
+            <Grid stackable>
+              <Grid.Column width={6}>
+                <Image style={{ marginTop: '2rem' }} centered src={techLogo} size="medium" className="cict-tech-line" />
+              </Grid.Column>
+              <Grid.Column width={10}>
+                <Header as="h1" textAlign="center">
+                  Attaining Excellence in ICT Education
+                </Header>
+                <p style={{ textAlign: 'center', marginBottom: '1rem' }}>The West Visayas State University, College of Information and Communications Technology commits to provide quality instruction, undetake relevant and innovative ICT researches, and deliver valuable extension services through continuous process improvement focused on client satisfaction; hence, producing globally competitive lifelong learners.</p>
+              </Grid.Column>
+            </Grid>
+          </Container>
+        </div>
+      </Container>
+    </Responsive>
+    <Responsive minWidth={769}>
+      <Container fluid className="default">
+        <Container>
+          <Header as="h1" content="Courses Offered" />
+          <Grid verticalAlign="middle" padded>
+            {courses.map(i => (
+              <Grid.Row>
+                <Grid.Column width={3}>
+                  <Fade>
+                    <Image src={i.icon} />
+                  </Fade>
+                </Grid.Column>
+                <Grid.Column width={13}>
+                  <Fade>
+                    <Header as="h2" content={i.name} />
+                    <p>{i.description}</p>
+                  </Fade>
+                </Grid.Column>
+              </Grid.Row>
+            ))}
           </Grid>
         </Container>
-      </div>
-    </Container>
-    <Container fluid className="default">
-      <Container>
-        <Header as="h1" content="Courses Offered" />
-        <Grid verticalAlign="middle" padded>
-          {courses.map(i => (
-            <Grid.Row>
-              <Grid.Column width={3}>
-                <Fade>
-                  <Image src={i.icon} />
-                </Fade>
-              </Grid.Column>
-              <Grid.Column width={13}>
-                <Fade>
-                  <Header as="h2" content={i.name} />
-                  <p>{i.description}</p>
-                </Fade>
-              </Grid.Column>
-            </Grid.Row>
-          ))}
-        </Grid>
       </Container>
-    </Container>
-    <Container fluid style={{ backgroundColor: '#2f2d2e' }}>
-      <Container style={{ padding: '3rem' }}>
-        <Header inverted as="h1" content="About CICT" />
-        <p style={{ color: '#fff' }}>
-          Information and Communications Technology has penetrated the core of societal and individual lives. Its development is changing the course of all other technologies. ICT has now become less of a choice and more of a requirement for individuals and societies concerned with competitiveness in the international arena.
-        </p>
-        <Button as="a" href="https://medium.com/cictwvsu-online/our-story-87a461c14ab" target="_blank" inverted content="LEARN MORE" />
-      </Container>
-    </Container>
-    <Container fluid className="default">
-      <Container>
-        <Header as="h1" content="Academic Partners" />
-        <p>The college also established linkages along the way. They include local and international partners as well as government units.</p>
-        <Grid columns={5} stackable className="center" centered verticalAlign="middle">
-          <Grid.Row>
-            {linkages.map(i => (
-              <Grid.Column>
-                <Image as="a" href={i.link} size="small" src={i.logo} alt={i.name} />
-              </Grid.Column>
+    </Responsive>
+    <Responsive maxWidth={768}>
+      <Container fluid className="default">
+        <Container fluid>
+          <Header textAlign="center" as="h2" content="Courses Offered" />
+          <Grid stackable verticalAlign="middle" padded>
+            {courses.map(i => (
+              <Grid.Row>
+                <Grid.Column>
+                  <Fade>
+                    <Image centered src={i.icon} />
+                    <Header textAlign="center" as="h3" content={i.name} />
+                  </Fade>
+                </Grid.Column>
+              </Grid.Row>
             ))}
-          </Grid.Row>
-        </Grid>
+          </Grid>
+        </Container>
       </Container>
-    </Container>
-    <Container style={{ backgroundColor: '#2f2d2e' }} as="footer" fluid >
-      <Container style={{ color: '#FFF', padding: '1rem' }}>
-        <Menu secondary inverted>
-          <Menu.Item as={Link} to="/" className="brand-icon-container">
-            <Image src={brandIconLight} size="tiny" />
-          </Menu.Item>
-          <Menu.Item>Privacy Policy</Menu.Item>
-          <Menu.Item>Contact Us</Menu.Item>
-          <Menu.Menu position="right">
-            <Menu.Item><Icon name="facebook" /> <Icon name="twitter" /> <Icon name="github" /> <Icon name="medium" /></Menu.Item>
-            <Menu.Item>
-              <Icon name="code" /> with <Icon name="heart" /> by CICTzens
+    </Responsive>
+    <Responsive minWidth={769}>
+      <Container fluid style={{ backgroundColor: '#2f2d2e' }}>
+        <Container style={{ padding: '3rem' }}>
+          <Header inverted as="h1" content="About CICT" />
+          <p style={{ color: '#fff' }}>
+            Information and Communications Technology has penetrated the core of societal and individual lives. Its development is changing the course of all other technologies. ICT has now become less of a choice and more of a requirement for individuals and societies concerned with competitiveness in the international arena.
+          </p>
+          <Button as="a" href="https://medium.com/cictwvsu-online/our-story-87a461c14ab" target="_blank" inverted content="LEARN MORE" />
+        </Container>
+      </Container>
+    </Responsive>
+    <Responsive maxWidth={768}>
+      <Container fluid style={{ backgroundColor: '#2f2d2e' }} textAlign="center">
+        <Container style={{ padding: '3rem 1rem' }}>
+          <Header textAlign="center" inverted as="h1" content="About CICT" />
+          <p style={{ color: '#fff' }}>
+            Information and Communications Technology has penetrated the core of societal and individual lives. Its development is changing the course of all other...
+          </p>
+          <Button as="a" href="https://medium.com/cictwvsu-online/our-story-87a461c14ab" target="_blank" inverted content="LEARN MORE" />
+        </Container>
+      </Container>
+    </Responsive>
+    <Responsive minWidth={769}>
+      <Container fluid className="default">
+        <Container>
+          <Header as="h1" content="Academic Partners" />
+          <p>The college also established linkages along the way. They include local and international partners as well as government units.</p>
+          <Grid columns={5} stackable className="center" centered verticalAlign="middle">
+            <Grid.Row>
+              {linkages.map(i => (
+                <Grid.Column>
+                  <Image centered as="a" href={i.link} size="small" src={i.logo} alt={i.name} />
+                </Grid.Column>
+              ))}
+            </Grid.Row>
+          </Grid>
+        </Container>
+      </Container>
+    </Responsive>
+    <Responsive maxWidth={768}>
+      <Container fluid className="default" style={{ marginBottom: '1rem' }}>
+        <Container>
+          <Header textAlign="center" as="h1" content="Academic Partners" />
+          <p style={{ textAlign: 'center' }}>The college also established linkages along the way.</p>
+          <Grid columns={5} stackable className="center" centered verticalAlign="middle">
+            <Grid.Row>
+              {linkages.map(i => (
+                <Grid.Column>
+                  <Fade>
+                    <div style={{ textAlign: 'center' }}>
+                      <Image centered as="a" href={i.link} size="small" src={i.logo} alt={i.name} />
+                    </div>
+                  </Fade>
+                </Grid.Column>
+              ))}
+            </Grid.Row>
+          </Grid>
+        </Container>
+      </Container>
+    </Responsive>
+    <Responsive minWidth={769}>
+      <footer style={{ backgroundColor: '#2f2d2e' }} as="footer" fluid >
+        <Container style={{ color: '#FFF', padding: '1rem' }}>
+          <Menu secondary inverted>
+            <Menu.Item as={Link} to="/" className="brand-icon-container">
+              <Image src={brandIconLight} size="tiny" />
             </Menu.Item>
-          </Menu.Menu>
-        </Menu>
-      </Container>
-    </Container>
+            <Menu.Item>Privacy Policy</Menu.Item>
+            <Menu.Item>Contact Us</Menu.Item>
+            <Menu.Menu position="right">
+              <Menu.Item>
+                <a href="https://www.facebook.com/cictwvsu/" ><Icon name="facebook" /></a>
+                <a href="https://twitter.com/cictwvsu" ><Icon name="twitter" /></a>
+                <a href="https://github.com/wvsu-cict-code" ><Icon name="github" /></a>
+                <a href="https://medium.com/cictwvsu-online" ><Icon name="medium" /></a>
+              </Menu.Item>
+              <Menu.Item>
+                <Icon name="code" /> with&nbsp;<Icon name="heart" /> by CICTzens
+              </Menu.Item>
+            </Menu.Menu>
+          </Menu>
+        </Container>
+      </footer>
+    </Responsive>
+    <Responsive maxWidth={768}>
+      <footer style={{ backgroundColor: '#2f2d2e' }} as="footer" fluid >
+        <Container style={{ color: '#FFF', padding: '3rem 1rem' }} textAlign="center">
+          <p>
+            <Link className="footer-link">Privacy Policy</Link>
+          </p>
+          <p>
+            <Link className="footer-link">Contact Us</Link>
+          </p>
+          <p>
+            <a className="footer-link" href="https://www.facebook.com/cictwvsu/" ><Icon name="facebook" /></a>
+            <a className="footer-link" href="https://twitter.com/cictwvsu" ><Icon name="twitter" /></a>
+            <a className="footer-link" href="https://github.com/wvsu-cict-code" ><Icon name="github" /></a>
+            <a className="footer-link" href="https://medium.com/cictwvsu-online" ><Icon name="medium" /></a>
+          </p>
+          <p style={{ color: '#FFF' }}>
+            <small>
+              <Icon name="code" /> with&nbsp;<Icon name="heart" /> by CICTzens
+            </small>
+          </p>
+        </Container>
+      </footer>
+    </Responsive>
   </div>
 )

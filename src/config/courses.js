@@ -22,7 +22,7 @@ const courses = [
     icon: csIcon,
   },
   {
-    name: 'The BS in Computer Science course prepares you for proficiency in designing, writing and developing computer programs and computer networks.',
+    name: 'The BS in Entertainment and Multimedia Computing',
     description: 'Entertainment and Multimedia Computing is the study and use of concepts, principles, and techniques of computing in the design and development of multimedia products and solutions. It includes various applications such as in science, entertainment, education, simulations and advertising.',
     icon: emcIcon,
   },

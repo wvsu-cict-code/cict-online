@@ -14,11 +14,12 @@ Contributing to the code will require you to use a GitHub account and knowledge 
 ## Todo
 - [ ] Add After Effects animation to the line arts utilizing Lottie.
 - [ ] Connect frontend to Contentful.
-- [ ] Improve page responsiveness.
+- [x] Improve page responsiveness.
 - [ ] About Page
 - [ ] Students Page (Student's Works)
 - [ ] Admission Page
 - [ ] Faculty & Staff Page
+- [ ] Code Cleanup
 - [ ] Tools and Resources Page
 - [ ] Omni Updates Section (Medium Blog, Facebook, Twitter)
 - [ ] Footer Section
@@ -41,6 +42,7 @@ We specially want to recognize the following for helping us develop and maintain
 * CICT PTA - Domain and App Store Funding
 * Regin C. Cabacas - Hosting & Domain Manager
 * Link.exe - Photos & Videos
+* Wilson Olivier C. Gazer - Volunteer Animator
 
 
 ## License
