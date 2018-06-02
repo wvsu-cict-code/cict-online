@@ -190,7 +190,7 @@ export default () => (
           <Header as="h1" content="Courses Offered" />
           <Grid verticalAlign="middle" padded>
             {courses.map(i => (
-              <Grid.Row>
+              <Grid.Row key={i}>
                 <Grid.Column width={3}>
                   <Fade>
                     <Image src={i.icon} />
@@ -214,7 +214,7 @@ export default () => (
           <Header textAlign="center" as="h2" content="Courses Offered" />
           <Grid stackable verticalAlign="middle" padded>
             {courses.map(i => (
-              <Grid.Row>
+              <Grid.Row key={i}>
                 <Grid.Column>
                   <Fade>
                     <Image centered src={i.icon} />
@@ -257,7 +257,7 @@ export default () => (
           <Grid columns={5} stackable className="center" centered verticalAlign="middle">
             <Grid.Row>
               {linkages.map(i => (
-                <Grid.Column>
+                <Grid.Column key={i}>
                   <Image centered as="a" href={i.link} size="small" src={i.logo} alt={i.name} />
                 </Grid.Column>
               ))}
@@ -274,7 +274,7 @@ export default () => (
           <Grid columns={5} stackable className="center" centered verticalAlign="middle">
             <Grid.Row>
               {linkages.map(i => (
-                <Grid.Column>
+                <Grid.Column key={i}>
                   <Fade>
                     <div style={{ textAlign: 'center' }}>
                       <Image centered as="a" href={i.link} size="small" src={i.logo} alt={i.name} />
@@ -312,13 +312,13 @@ export default () => (
       </footer>
     </Responsive>
     <Responsive maxWidth={768}>
-      <footer style={{ backgroundColor: '#2f2d2e' }} as="footer" fluid >
+      <footer style={{ backgroundColor: '#2f2d2e' }}>
         <Container style={{ color: '#FFF', padding: '3rem 1rem' }} textAlign="center">
           <p>
-            <Link className="footer-link">Privacy Policy</Link>
+            <Link className="footer-link" to="/">Privacy Policy</Link>
           </p>
           <p>
-            <Link className="footer-link">Contact Us</Link>
+            <Link className="footer-link" to="/">Contact Us</Link>
           </p>
           <p>
             <a className="footer-link" href="https://www.facebook.com/cictwvsu/" ><Icon name="facebook" /></a>
