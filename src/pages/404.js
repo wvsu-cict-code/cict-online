@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
-class Admission extends Component {
+export default class extends Component {
   render () {
     return (
-      <div />
+      <div>
+        404
+      </div>
     )
   }
 }
-
-export default Admission

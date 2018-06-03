@@ -1,6 +1,6 @@
 {
   "name": "cict-online",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -12,20 +12,18 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
-    "contentful": "^6.1.0",
+    "contentful": "^6.1.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-feather": "^1.1.0",
-    "react-hot-loader": "^4.0.0-beta.21",
     "react-lottie": "^1.1.0",
     "react-responsive": "^4.1.0",
-    "react-reveal": "^1.2.1",
+    "react-reveal": "^1.2.2",
     "react-router": "^4.2.0",
-    "react-static": "^5.9.1",
-    "react-table": "^6.8.2",
+    "react-static": "^5.9.7",
+    "react-table": "^6.8.6",
     "react-typist": "^2.0.4",
-    "semantic-ui-css": "2.2.12",
-    "semantic-ui-react": "^0.80.2",
+    "tailwindcss": "^0.3.0",
     "uuid": "^3.2.1"
   },
   "engines": {
