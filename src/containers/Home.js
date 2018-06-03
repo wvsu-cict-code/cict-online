@@ -3,7 +3,18 @@ import 'react-typist/dist/Typist.css'
 import React from 'react'
 import { Head, Link } from 'react-static'
 import Typist from 'react-typist'
-import { Button, Container, Grid, Header, Icon, Image, Menu, Segment, Responsive, Message } from 'semantic-ui-react'
+import {
+  Button,
+  Container,
+  Grid,
+  Header,
+  Icon,
+  Image,
+  Menu,
+  Segment,
+  Message,
+} from 'semantic-ui-react'
+import Responsive from 'react-responsive'
 import { Fade } from 'react-reveal'
 import courses from '../config/courses'
 import linkages from '../config/linkages'
@@ -30,6 +41,13 @@ import icon96 from '../assets/favicon-96x96.png'
 import icon16 from '../assets/favicon-16x16.png'
 import icon144ms from '../assets/ms-icon-144x144.png'
 import favicon from '../assets/favicon.ico'
+import studentsPhoto from '../assets/students.jpg'
+import cictLogoLight from '../assets/cict-logo-light.svg'
+
+const Desktop = props => <Responsive {...props} minWidth={768} maxWidth={3000} />
+const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991} />
+const Mobile = props => <Responsive {...props} maxWidth={767} />
+const Default = props => <Responsive {...props} minWidth={768} />
 
 export default () => (
   <div>
@@ -59,19 +77,17 @@ export default () => (
       <meta name="msapplication-TileImage" content={icon144ms} />
       <meta name="theme-color" content="#ffffff" />
     </Head>
-    <Responsive minWidth={769}>
-      <Menu attached="top" borderless>
-        <Menu.Item as={Link} to="/" className="brand-icon-container">
-          <Image src={brandIcon} className="brand-icon" />
-        </Menu.Item>
-      </Menu>
-    </Responsive>
-    <Responsive maxWidth={768}>
+    <Desktop>
+      <div className="navbar-desktop">
+        <Link to="/"><Image src={brandIcon} className="brand-icon" /></Link>
+      </div>
+    </Desktop>
+    <Mobile>
       <div className="navbar-mobile">
         <Image centered src={brandIcon} size="small" className="navbar-mobile-brandicon" />
       </div>
-    </Responsive>
-    <Responsive minWidth={769}>
+    </Mobile>
+    <Desktop>
       <Container className="home-header" fluid>
         <Container className="container-padded">
           <Grid verticalAlign="middle">
@@ -92,8 +108,8 @@ export default () => (
           </Grid>
         </Container>
       </Container>
-    </Responsive>
-    <Responsive maxWidth={768}>
+    </Desktop>
+    <Mobile>
       <Container className="home-header" fluid>
         <Container className="container-padded">
           <Header textAlign="center" as="h1" className="header-light--jumbo" style={{ marginBottom: '1rem' }}>
@@ -106,7 +122,7 @@ export default () => (
           </Header>
         </Container>
       </Container>
-    </Responsive>
+    </Mobile>
     <Container fluid className="default">
       <Segment basic>
         <Grid columns="equal" stackable>
@@ -131,7 +147,7 @@ export default () => (
         </Grid>
       </Segment>
     </Container>
-    <Responsive minWidth={769}>
+    <Desktop>
       <Container className="image-background" fluid>
         <div>
           <Container style={{ padding: '3rem' }}>
@@ -149,8 +165,8 @@ export default () => (
           </Container>
         </div>
       </Container>
-    </Responsive>
-    <Responsive maxWidth={768}>
+    </Desktop>
+    <Mobile>
       <Container style={{ marginTop: '1rem' }}>
         <Message warning>
           <Message.Header>
@@ -183,8 +199,33 @@ export default () => (
           </Container>
         </div>
       </Container>
-    </Responsive>
-    <Responsive minWidth={769}>
+    </Mobile>
+    <Desktop>
+      <Container className="cict-featured" fluid style={{ backgroundImage: `url(${studentsPhoto})` }}>
+        <Container>
+          <Grid>
+            <Grid.Row columns={2}>
+              <Grid.Column>
+                <div style={{ padding: '4rem' }}>
+                  <Image src={cictLogoLight} centered size="medium" />
+                  <Header as="h2" inverted content='"The primary role of ICT education is to develop professionals who shall be able to meet the growing manpower demand by expanding the ICT industries in the country."' style={{ marginTop: '2rem' }} />
+                </div>
+              </Grid.Column>
+              <Grid.Column>&nbsp;</Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Container>
+      </Container>
+    </Desktop>
+    <Mobile>
+      <div className="cict-featured cict-feature--mobile" fluid style={{ backgroundImage: `url(${studentsPhoto})` }}>
+        <Container>
+          <Image src={cictLogoLight} centered size="medium" />
+          <Header as="h3" inverted content='"The primary role of ICT education is to develop professionals who shall be able to meet the growing manpower demand by expanding the ICT industries in the country."' style={{ marginTop: '2rem' }} />
+        </Container>
+      </div>
+    </Mobile>
+    <Desktop>
       <Container fluid className="default">
         <Container>
           <Header as="h1" content="Courses Offered" />
@@ -207,8 +248,8 @@ export default () => (
           </Grid>
         </Container>
       </Container>
-    </Responsive>
-    <Responsive maxWidth={768}>
+    </Desktop>
+    <Mobile>
       <Container fluid className="default">
         <Container fluid>
           <Header textAlign="center" as="h2" content="Courses Offered" />
@@ -226,8 +267,8 @@ export default () => (
           </Grid>
         </Container>
       </Container>
-    </Responsive>
-    <Responsive minWidth={769}>
+    </Mobile>
+    <Desktop>
       <Container fluid style={{ backgroundColor: '#2f2d2e' }}>
         <Container style={{ padding: '3rem' }}>
           <Header inverted as="h1" content="About CICT" />
@@ -237,8 +278,8 @@ export default () => (
           <Button as="a" href="https://medium.com/cictwvsu-online/our-story-87a461c14ab" target="_blank" inverted content="LEARN MORE" />
         </Container>
       </Container>
-    </Responsive>
-    <Responsive maxWidth={768}>
+    </Desktop>
+    <Mobile>
       <Container fluid style={{ backgroundColor: '#2f2d2e' }} textAlign="center">
         <Container style={{ padding: '3rem 1rem' }}>
           <Header textAlign="center" inverted as="h1" content="About CICT" />
@@ -248,8 +289,8 @@ export default () => (
           <Button as="a" href="https://medium.com/cictwvsu-online/our-story-87a461c14ab" target="_blank" inverted content="LEARN MORE" />
         </Container>
       </Container>
-    </Responsive>
-    <Responsive minWidth={769}>
+    </Mobile>
+    <Desktop>
       <Container fluid className="default">
         <Container>
           <Header as="h1" content="Academic Partners" />
@@ -258,15 +299,15 @@ export default () => (
             <Grid.Row>
               {linkages.map(i => (
                 <Grid.Column key={i}>
-                  <Image centered as="a" href={i.link} size="small" src={i.logo} alt={i.name} />
+                  <Image className="zoom" centered as="a" href={i.link} size="small" src={i.logo} alt={i.name} />
                 </Grid.Column>
               ))}
             </Grid.Row>
           </Grid>
         </Container>
       </Container>
-    </Responsive>
-    <Responsive maxWidth={768}>
+    </Desktop>
+    <Mobile>
       <Container fluid className="default" style={{ marginBottom: '1rem' }}>
         <Container>
           <Header textAlign="center" as="h1" content="Academic Partners" />
@@ -277,7 +318,7 @@ export default () => (
                 <Grid.Column key={i}>
                   <Fade>
                     <div style={{ textAlign: 'center' }}>
-                      <Image centered as="a" href={i.link} size="small" src={i.logo} alt={i.name} />
+                      <Image className="zoom" centered as="a" href={i.link} size="small" src={i.logo} alt={i.name} />
                     </div>
                   </Fade>
                 </Grid.Column>
@@ -286,16 +327,16 @@ export default () => (
           </Grid>
         </Container>
       </Container>
-    </Responsive>
-    <Responsive minWidth={769}>
+    </Mobile>
+    <Desktop>
       <footer style={{ backgroundColor: '#2f2d2e' }} as="footer" fluid >
         <Container style={{ color: '#FFF', padding: '1rem' }}>
           <Menu secondary inverted>
             <Menu.Item as={Link} to="/" className="brand-icon-container">
               <Image src={brandIconLight} size="tiny" />
             </Menu.Item>
-            <Menu.Item>Privacy Policy</Menu.Item>
-            <Menu.Item>Contact Us</Menu.Item>
+            <Menu.Item><Link to="/privacypolicy">Privacy Policy</Link></Menu.Item>
+            <Menu.Item><Link to="/contact">Contact Us</Link></Menu.Item>
             <Menu.Menu position="right">
               <Menu.Item>
                 <a href="https://www.facebook.com/cictwvsu/" ><Icon name="facebook" /></a>
@@ -310,15 +351,15 @@ export default () => (
           </Menu>
         </Container>
       </footer>
-    </Responsive>
-    <Responsive maxWidth={768}>
+    </Desktop>
+    <Mobile>
       <footer style={{ backgroundColor: '#2f2d2e' }}>
         <Container style={{ color: '#FFF', padding: '3rem 1rem' }} textAlign="center">
           <p>
-            <Link className="footer-link" to="/">Privacy Policy</Link>
+            <Link className="footer-link" to="/privacypolicy">Privacy Policy</Link>
           </p>
           <p>
-            <Link className="footer-link" to="/">Contact Us</Link>
+            <Link className="footer-link" to="/contact">Contact Us</Link>
           </p>
           <p>
             <a className="footer-link" href="https://www.facebook.com/cictwvsu/" ><Icon name="facebook" /></a>
@@ -333,6 +374,6 @@ export default () => (
           </p>
         </Container>
       </footer>
-    </Responsive>
+    </Mobile>
   </div>
 )

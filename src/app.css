@@ -122,11 +122,15 @@ a.ui.header:hover{
   border: 1px solid rgba(0,0,0,0.1)
 }
 
-.navbar-mobile{
+.navbar-mobile, .navbar-desktop{
   border-bottom: 1px solid #d4d4d5;
   background: #FFF;
   padding-top: 13px;
   padding-bottom: 13px;
+}
+
+.navbar-desktop {
+  padding: 13px;
 }
 
 .ui.image.navbar-mobile-brandicon {
@@ -134,8 +138,14 @@ a.ui.header:hover{
   width: auto;
 }
 
-a > i.icon:hover{
-  color: orange
+a {
+  transition: color .25s ease-in-out;
+   -moz-transition: color .25s ease-in-out;
+   -webkit-transition: color .25s ease-in-out;
+}
+
+a > i.icon:hover, a:hover{
+  color: orange!important;
 }
 
 a.footer-link{
@@ -144,4 +154,25 @@ a.footer-link{
 
 a.footer-link:hover {
   color: orange
+}
+
+.zoom {
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.cict-featured{
+  background-color: #d4d4d5;
+  background-position: left;
+  background-size: cover;
+  height: 600px;
+}
+
+.cict-feature--mobile{
+  padding: 3rem;
+  height: 500px;
 }
