@@ -1,159 +1,85 @@
-* {
-  font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif
-}
+/**
+ * This injects Tailwind's base styles, which is a combination of
+ * Normalize.css and some additional base styles.
+ *
+ * You can see the styles here:
+ * https://github.com/tailwindcss/tailwindcss/blob/master/css/preflight.css
+ *
+ * If using `postcss-import`, you should import this line from it's own file:
+ *
+ * @import "./tailwind-preflight.css";
+ *
+ * See: https://github.com/tailwindcss/tailwindcss/issues/53#issuecomment-341413622
+ */
+@tailwind preflight;
+
+/**
+ * Here you would add any of your custom component classes; stuff that you'd
+ * want loaded *before* the utilities so that the utilities could still
+ * override them.
+ *
+ * Example:
+ *
+ * .btn { ... }
+ * .form-input { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "components/buttons";
+ * @import "components/forms";
+ */
+
+/**
+ * This injects all of Tailwind's utility classes, generated based on your
+ * config file.
+ *
+ * If using `postcss-import`, you should import this line from it's own file:
+ *
+ * @import "./tailwind-utilities.css";
+ *
+ * See: https://github.com/tailwindcss/tailwindcss/issues/53#issuecomment-341413622
+ */
+@tailwind utilities;
+
+/**
+ * Here you would add any custom utilities you need that don't come out of the
+ * box with Tailwind.
+ *
+ * Example :
+ *
+ * .bg-pattern-graph-paper { ... }
+ * .skew-45 { ... }
+ *
+ * Or if using a preprocessor or `postcss-import`:
+ *
+ * @import "utilities/background-patterns";
+ * @import "utilities/skew-transforms";
+ */
 
 body {
+  font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+.theme-color{
   background-color: #fafafa
 }
 
-.ui.header-light--jumbo{
-  font-weight: 300;
-  font-size: 45px!important;
-  font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif
+.cict-dark{
+  background-color: #2f2d2e
 }
 
-.ui.container-padded{
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.cict-darker{
+  background-color: #212121
 }
-.maintenance_page_fullscreen {
-  background-color: #333;
-  background-position: center;
+.cict-featured{
+  background-color: #d4d4d5;
+  background-position: left;
   background-size: cover;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.maintenance_logo__centered {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-position: center;
-  background-size: 230px auto;
-  background-repeat: no-repeat;
-}
-
-.maintenance_social_links{
-  position: absolute;
-  top: 65%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center
-}
-
-.maintenance_404__centered {
-  position: absolute;
-  top: 40%;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center  
-}
-
-.maintenance_social_links_item {
-  opacity: 0.7;
-}
-
-.maintenance_social_links_item:hover{
-  opacity: 1;
-}
-
-.github-button{
-  margin: 0 5px
-}
-
-.brand-icon {
-  height: 40px;
-  width: auto;
-}
-
-.ui.attached.menu.menu-borderless:not(.tabular){
-  border:  none
-}
-
-.home-header{
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-a.ui.header {
-  font-weight: 200
-}
-
-.ui.header {
-  font-weight: 400
-}
-
-p {
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 1.2rem
-}
-
-a.ui.header:hover{
-  color: darkorange
-}
-
-.ui.header.header-light{
-  font-weight: 200
-}
-.image-background{
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.item.brand-icon-container.active{
-  background-color: transparent!important
-}
-.ui.image.cict-tech-line{
-  height: 230px;
-}
-
-.ui.container.default{
-  padding: 3rem;
-  background-color: #fff;
-  border: 1px solid rgba(0,0,0,0.1)
-}
-
-.navbar-mobile, .navbar-desktop{
-  border-bottom: 1px solid #d4d4d5;
-  background: #FFF;
-  padding-top: 13px;
-  padding-bottom: 13px;
-}
-
-.navbar-desktop {
-  padding: 13px;
-}
-
-.ui.image.navbar-mobile-brandicon {
-  height: 40px;
-  width: auto;
-}
-
-a {
-  transition: color .25s ease-in-out;
-   -moz-transition: color .25s ease-in-out;
-   -webkit-transition: color .25s ease-in-out;
-}
-
-a > i.icon:hover, a:hover{
-  color: orange!important;
-}
-
-a.footer-link{
-  color: #FFF
-}
-
-a.footer-link:hover {
-  color: orange
+  height: 550px;
 }
 
 .zoom {
@@ -163,16 +89,4 @@ a.footer-link:hover {
 
 .zoom:hover {
   transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
-
-.cict-featured{
-  background-color: #d4d4d5;
-  background-position: left;
-  background-size: cover;
-  height: 600px;
-}
-
-.cict-feature--mobile{
-  padding: 3rem;
-  height: 500px;
 }
