@@ -13,6 +13,7 @@
   "dependencies": {
     "axios": "^0.16.2",
     "contentful": "^6.1.1",
+    "evergreen-ui": "^3.2.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-feather": "^1.1.0",
