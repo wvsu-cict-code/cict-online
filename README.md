@@ -65,6 +65,7 @@ We specially want to recognize the following for helping us develop and maintain
 * Regin C. Cabacas - Hosting & Domain Manager
 * Link.exe - Photos & Videos
 * Wilson Olivier C. Gazer - Volunteer Animator
+* Nina Ricci Marie Benite - Code Contributor
 
 
 ## License
