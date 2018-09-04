@@ -19,6 +19,7 @@ import Navbar from '../components/Navbar'
 import WhiteContainer from '../components/WhiteContainer'
 import courses from '../config/courses'
 import linkages from '../config/linkages'
+import CornerModal from '../components/CornerModal';
 import Footer from '../components/Footer';
 
 class Home extends Component {
@@ -148,6 +149,7 @@ class Home extends Component {
             ))}
           </div>
         </WhiteContainer>
+        <CornerModal />
         <Footer />
       </div>
     )
