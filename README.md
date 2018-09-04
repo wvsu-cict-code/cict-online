@@ -61,6 +61,8 @@ This website is built using ReactJS. To learn more how to use React, please visi
 
 `pnpm build`
 
+> If you are having trouble with `pnpm` you can use `yarn` instead.
+
 ## Contributors
 We specially want to recognize the following for helping us develop and maintain our website:
 * CICT PTA - Domain and App Store Funding
