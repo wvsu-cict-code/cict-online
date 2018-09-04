@@ -14,6 +14,14 @@ class CornerModal extends Component {
     this.setState({isCornerDialogOpen: false})
   }
 
+  openGitHubRepo() {
+    if(window){
+      window.open('https://github.com/wvsu-cict-code/cict-online', '_blank')
+    }else{
+      alert('Window object does not exist')
+    }
+  }
+
   render () {
     return (
       <div>
@@ -21,6 +29,7 @@ class CornerModal extends Component {
           title="Hello Stranger! It's been a while."
           isShown={this.state.isCornerDialogOpen}
           onCloseComplete={this.onCloseComplete}
+          onConfirm={this.openGitHubRepo}
         >
           This website is still under heavy development.
           Please help us improve by contributing to the
