@@ -24,12 +24,14 @@ This website is built using ReactJS. To learn more how to use React, please visi
 - [ ] Students Page (Student's Works)
 - [ ] Admission Page
 - [ ] Faculty & Staff Page
+- [ ] CICT Online Forms and Registration
 - [ ] Code Cleanup
 - [ ] Tools and Resources Page
 - [ ] Omni Updates Section (Medium Blog, Facebook, Twitter)
 - [ ] Footer Section
 - [ ] Credits in About Page
 - [ ] Integrate Tracer Study App
+- [ ] Use Ant Design instead of Evergreen UI
 
 ## Milestones
 - [ ] **Geek mode**: Implement a geeky way to browse the website [DOS Mode](http://kristopolous.github.io/BOOTSTRA.386/), [Terminal Mode](http://kristopolous.github.io/BOOTSTRA.386/) or [Window Mode](http://www.marianopascual.me/index.html#)
@@ -45,21 +47,19 @@ This website is built using ReactJS. To learn more how to use React, please visi
 
 ## Get Started
 
-1. Install the pnpm package manager:
-
-`npm install -g pnpm`
+1. Install [yarn package manager](https://yarnpkg.com/lang/en/docs/install/#debian-stable).
 
 2. Install the project's dependencies:
 
-`pnpm install`
+`yarn`
 
 3. Start the dev server and edit some code!
 
-`pnpm start`
+`yarn start`
 
 4. Build for production
 
-`pnpm build`
+`yarn build`
 
 > If you are having trouble with `pnpm` you can use `yarn` instead.
 
