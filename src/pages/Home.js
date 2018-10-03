@@ -64,9 +64,9 @@ class Home extends Component {
             <div className="w-1/2 h-12">
               <div className="float-right">
                 <p className="text-xs mb-3"><Info className="w-3 h-3 mr-2" />Still under heavy development.</p>
-                <button className="text-sm cict-darker hover:bg-black hover:text-orange text-white py-3 px-6 rounded inline-flex items-center">
+                <a href="https://github.com/wvsu-cict-code/cict-online" target="_blank" className="text-sm cict-darker hover:bg-black hover:text-orange text-white py-3 px-6 rounded inline-flex items-center no-underline font-bold">
                   <Github className="w-4 h-4 mr-2" /> <span>Contribute</span>
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -131,9 +131,9 @@ class Home extends Component {
           <div className="mt-4 mb-4">
             <h1 className="text-white font-light mb-4">About CICT</h1>
             <p className="text-white font-normal leading-normal mb-4">Information and Communications Technology has penetrated the core of societal and individual lives. Its development is changing the course of all other technologies. ICT has now become less of a choice and more of a requirement for individuals and societies concerned with competitiveness in the international arena.</p>
-            <button className="text-sm border-white border hover:text-orange hover:bg-white text-white py-3 px-6 rounded inline-flex items-center">
+            <a href="https://medium.com/cictwvsu-online/our-story-87a461c14ab" target="_blank" className="text-sm border-white border hover:text-orange hover:bg-white text-white py-3 px-6 rounded inline-flex items-center font-bold no-underline">
               <span>READ MORE</span>
-            </button>
+            </a>
           </div>
         </DarkContainer>
         <WhiteContainer>
