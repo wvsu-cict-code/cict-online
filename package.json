@@ -28,8 +28,8 @@
     "uuid": "^3.2.1"
   },
   "engines": {
-    "yarn": "1.7.0",
-    "node": "10.6.0"
+    "yarn": "1.10.1",
+    "node": "8.11.3"
   },
   "devDependencies": {
     "eslint-config-react-tools": "1.x.x",
