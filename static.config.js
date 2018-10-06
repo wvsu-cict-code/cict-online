@@ -76,6 +76,10 @@ export default {
         component: 'src/pages/Home',
       },
       {
+        path: '/geek-mode',
+        component: 'src/pages/GeekMode'
+      },
+      {
         is404: true,
         component: 'src/pages/404',
       },
