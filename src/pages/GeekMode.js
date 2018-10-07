@@ -4,6 +4,7 @@ import {
   EmulatorState, OutputFactory,
   Outputs,
 } from 'javascript-terminal'
+import { Head } from 'react-static';
 
 class GeekMode extends Component {
   render() {
@@ -18,11 +19,27 @@ class GeekMode extends Component {
     );
     const emulatorState = defaultState.setOutputs(newOutputs);
     return (
+      <React.Fragment>
+        <Head>
+          <title>CICT Online - Geek Mode</title>
+        </Head>
       <ReactTerminal
         inputStr=''
         promptSymbol='~ guest#'
         emulatorState={emulatorState}
+        theme={{
+          background: '#141313',
+          promptSymbolColor: '#6effe6',
+          commandColor: '#fcfcfc',
+          outputColor: '#fcfcfc',
+          errorOutputColor: '#ff89bd',
+          fontSize: '1.1rem',
+          spacing: '1%',
+          height: '100vh',
+          fontFamily: 'monospace',
+        }}
       />
+      </React.Fragment>
     )
   }
 }

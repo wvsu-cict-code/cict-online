@@ -90,3 +90,11 @@ body {
 .zoom:hover {
   transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
+
+.terminal-icon{
+  opacity: 0.25;
+}
+
+.terminal-icon:hover{
+  opacity: 0.6;
+}
