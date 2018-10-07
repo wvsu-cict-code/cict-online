@@ -25,7 +25,7 @@ class GeekMode extends Component {
         </Head>
       <ReactTerminal
         inputStr=''
-        promptSymbol='~ guest#'
+        promptSymbol='guest:~$'
         emulatorState={emulatorState}
         theme={{
           background: '#141313',

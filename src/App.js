@@ -7,7 +7,7 @@ import './app.css'
 class App extends Component {
   render () {
     return (
-      <Router>
+      <Router>        
         <div>
           <div className="content">
             <Routes />
