@@ -80,6 +80,10 @@ export default {
         component: 'src/pages/GeekMode'
       },
       {
+        path: '/faculty-staff',
+        component: 'src/pages/FacultyStaff'
+      },
+      {
         is404: true,
         component: 'src/pages/404',
       },

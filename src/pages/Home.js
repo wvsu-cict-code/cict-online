@@ -38,7 +38,7 @@ class Home extends Component {
       {
         name: 'Faculty and Staff',
         icon: facultyStaff,
-        path: '/',
+        path: '/faculty-staff',
       },
       {
         name: 'Apps and Resources',
