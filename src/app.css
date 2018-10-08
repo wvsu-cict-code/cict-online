@@ -98,3 +98,7 @@ body {
 .terminal-icon:hover{
   opacity: 0.6;
 }
+
+.grid-pattern{
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQoU2NkYGCQYiACMEIVPiOgVmpUIb4QggcPwSAHAJ3ICQ/mI97EAAAAAElFTkSuQmCC);  
+}
