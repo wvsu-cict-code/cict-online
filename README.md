@@ -37,6 +37,7 @@ This website is built using ReactJS. To learn more how to use React, please visi
 - [ ] **Geek mode**: Implement a geeky way to browse the website [DOS Mode](http://kristopolous.github.io/BOOTSTRA.386/), [Terminal Mode](http://kristopolous.github.io/BOOTSTRA.386/) or [Window Mode](http://www.marianopascual.me/index.html#)
 - [ ] Learning Management System / e-Class 
 - [ ] Student/Alumni Support Page
+- [ ] Alumni Tracer Page with LinkedIn Support
 - [ ] CICT Online Forum
 - [ ] CICT Spotlight
 - [ ] Matching, Placement and Career Support
