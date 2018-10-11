@@ -1,49 +1,43 @@
-import React, { Component } from 'react'
-import { Github, Info } from 'react-feather'
-import { hot } from 'react-hot-loader'
-import { Fade } from 'react-reveal'
-import { Link } from 'react-static'
-import ReactSVG from 'react-svg'
-import Typist from 'react-typist'
-
-import techLogo from '../assets/cict-lines.svg'
-import cictLogoLight from '../assets/cict-logo-light.svg'
-import facultyStaff from '../assets/noun_1336214_cc.svg'
-import appsResources from '../assets/noun_1544052_cc.svg'
-import admission from '../assets/noun_1698513_cc.svg'
-import students from '../assets/noun_776665_cc.svg'
-import studentsPhoto from '../assets/students.jpg'
-import DarkContainer from '../components/DarkContainer'
-import DefaultContainer from '../components/DefaultContainer'
-import Helmet from '../components/Helmet'
-import Navbar from '../components/Navbar'
-import WhiteContainer from '../components/WhiteContainer'
-import courses from '../config/courses'
-import linkages from '../config/linkages'
+import React, { Component } from 'react';
+import { Github, Info } from 'react-feather';
+import { hot } from 'react-hot-loader';
+import { Fade } from 'react-reveal';
+import { Link } from 'react-static';
+import Typist from 'react-typist';
+import studentsPhoto from '../assets/students.jpg';
+import { Admission, CICTLogoLight, FacultyAndStaff, Students, Tools } from '../assets/svg-components';
 import CornerModal from '../components/CornerModal';
+import DarkContainer from '../components/DarkContainer';
+import DefaultContainer from '../components/DefaultContainer';
 import Footer from '../components/Footer';
+import Helmet from '../components/Helmet';
+import Navbar from '../components/Navbar';
+import WhiteContainer from '../components/WhiteContainer';
+import courses from '../config/courses';
+import linkages from '../config/linkages';
+import TechLogo from '../assets/cict-lines.svg'
 
 class Home extends Component {
   render() {
     const menu = [
       {
         name: 'Admission',
-        icon: admission,
+        icon: <Admission className="flex m-auto mb-4 fill-current" />,
         path: '/',
       },
       {
         name: 'Students',
-        icon: students,
+        icon: <Students className="flex m-auto mb-4 fill-current" />,
         path: '/',
       },
       {
         name: 'Faculty and Staff',
-        icon: facultyStaff,
+        icon: <FacultyAndStaff className="flex m-auto mb-4 fill-current" />,
         path: '/faculty-staff',
       },
       {
         name: 'Apps and Resources',
-        icon: appsResources,
+        icon: <Tools className="flex m-auto mb-4 fill-current" />,
         path: '/',
       },
     ]
@@ -78,7 +72,7 @@ class Home extends Component {
               <div className="w-1/4 py-6" key={i}>                
                 <p className="mt-4 text-center zoom">                  
                   <Link to={i.path} className="text-black no-underline font-normal hover:text-orange">
-                  <img className="flex m-auto mb-4" src={i.icon} alt={i.name} />
+                  {i.icon}                  
                     {i.name}
                   </Link>
                 </p>
@@ -90,7 +84,7 @@ class Home extends Component {
           <div className="mx-8">
             <div className="flex inline-flex items-center">
               <div className="w-1/4 m-8">
-                <img src={techLogo} className="flex m-auto w-64 h-64" alt="cict-lines" />
+                <img src={TechLogo} className="flex m-auto w-64 h-64" alt="cict-lines" />
               </div>
               <div className="w-3/4 m-8">
                 <h1 className="font-light text-3xl mb-4">Attaining Excellence in ICT Education</h1>
@@ -104,7 +98,7 @@ class Home extends Component {
             <div className="mx-8">
               <div className="flex inline-flex items-center">
                 <div className="w-1/2 m-8">
-                  <img src={cictLogoLight} className="flex m-auto w-64 h-64 mt-8" alt="CICT Logo" />
+                  <img src={CICTLogoLight} className="flex m-auto w-64 h-64 mt-8" alt="CICT Logo" />
                   <p className="text-white text-2xl leading-normal font-normal m-4 mt-8">"The primary role of ICT education is to develop professionals who shall be able to meet the growing manpower demand by expanding the ICT industries in the country."</p>
                 </div>
                 <div className="w-1/2 m-8" />

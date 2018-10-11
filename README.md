@@ -62,6 +62,9 @@ This website is built using ReactJS. To learn more how to use React, please visi
 
 `yarn build`
 
+## Notes
+* To transform SVG to React components use [svgr](https://github.com/smooth-code/svgr).
+
 ## Contributors
 We specially want to recognize the following for helping us develop and maintain our website:
 * CICT PTA - Domain and App Store Funding
@@ -69,6 +72,7 @@ We specially want to recognize the following for helping us develop and maintain
 * Link.exe - Photos & Videos
 * Wilson Olivier C. Gazer - Volunteer Animator
 * Nina Ricci Marie Benite - Code Contributor
+* Shem Durst Elijah Sandig - Quality Assurance
 
 
 ## License

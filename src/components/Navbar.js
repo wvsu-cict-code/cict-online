@@ -8,7 +8,7 @@ class Navbar extends Component {
     return (
       <nav className="flex items-center justify-between flex-wrap bg-white p-4 border-b">
         <Link to="/"><img className="fill-current h-8" src={brandIcon} alt="CICT Online Logo" /></Link>
-        <Link to="/geek-mode" className="terminal-icon"><img className="fill-current h-12" src={geekModeIcon} alt="CICT Geek Mode Terminal" /></Link>
+        <Link to="/geek-mode" className="terminal-icon"><img className="fill-current h-10" src={geekModeIcon} alt="CICT Geek Mode Terminal" /></Link>
       </nav>
     )
   }
