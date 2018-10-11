@@ -5,7 +5,7 @@ import { Fade } from 'react-reveal';
 import { Link } from 'react-static';
 import Typist from 'react-typist';
 import studentsPhoto from '../assets/students.jpg';
-import { Admission, CICTLogoLight, FacultyAndStaff, Students, Tools } from '../assets/svg-components';
+import { Admission, FacultyAndStaff, Students, Tools } from '../assets/svg-components';
 import CornerModal from '../components/CornerModal';
 import DarkContainer from '../components/DarkContainer';
 import DefaultContainer from '../components/DefaultContainer';
@@ -16,6 +16,7 @@ import WhiteContainer from '../components/WhiteContainer';
 import courses from '../config/courses';
 import linkages from '../config/linkages';
 import TechLogo from '../assets/cict-lines.svg'
+import CICTLogoLight from '../assets/cict-logo-light.svg'
 
 class Home extends Component {
   render() {
