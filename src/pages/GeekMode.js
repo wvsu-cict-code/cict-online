@@ -26,7 +26,7 @@ class GeekMode extends Component {
           promptSymbol='guest:~$'
           emulatorState={emulatorState}
           theme={{
-            background: '#141313',
+            background: '#222B2F',
             promptSymbolColor: '#6effe6',
             commandColor: '#fcfcfc',
             outputColor: '#fcfcfc',
