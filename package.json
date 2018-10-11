@@ -23,6 +23,7 @@
     "react-reveal": "^1.2.2",
     "react-router": "^4.2.0",
     "react-static": "^5.9.7",
+    "react-svg": "^6.0.18",
     "react-table": "^6.8.6",
     "react-terminal-component": "https://github.com/wvsu-cict-code/react-terminal-component",
     "react-typist": "^2.0.4",

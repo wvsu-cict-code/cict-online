@@ -3,6 +3,7 @@ import { Github, Info } from 'react-feather'
 import { hot } from 'react-hot-loader'
 import { Fade } from 'react-reveal'
 import { Link } from 'react-static'
+import ReactSVG from 'react-svg'
 import Typist from 'react-typist'
 
 import techLogo from '../assets/cict-lines.svg'
@@ -74,10 +75,12 @@ class Home extends Component {
         <WhiteContainer>
           <div className="flex mb-2">
             {menu.map(i => (
-              <div className="w-1/4 py-6" key={i}>
-                <img className="flex m-auto" src={i.icon} alt={i.name} />
-                <p className="mt-4 text-center">
-                  <Link to={i.path} className="text-black no-underline font-normal hover:text-orange">{i.name}</Link>
+              <div className="w-1/4 py-6" key={i}>                
+                <p className="mt-4 text-center zoom">                  
+                  <Link to={i.path} className="text-black no-underline font-normal hover:text-orange">
+                  <img className="flex m-auto mb-4" src={i.icon} alt={i.name} />
+                    {i.name}
+                  </Link>
                 </p>
               </div>
             ))}
