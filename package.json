@@ -15,6 +15,7 @@
     "contentful": "^6.1.1",
     "evergreen-ui": "^3.2.4",
     "javascript-terminal": "^1.0.2",
+    "knuth-shuffle": "1.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-feather": "^1.1.0",
@@ -30,10 +31,6 @@
     "storm-react-diagrams": "^5.2.1",
     "tailwindcss": "^0.3.0",
     "uuid": "^3.2.1"
-  },
-  "engines": {
-    "yarn": "1.10.1",
-    "node": "8.11.3"
   },
   "devDependencies": {
     "eslint-config-react-tools": "1.x.x",

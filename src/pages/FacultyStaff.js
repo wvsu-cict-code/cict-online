@@ -4,21 +4,25 @@ import React, { Component } from 'react';
 import Typist from 'react-typist';
 import { DefaultNodeModel, DiagramEngine, DiagramModel, DiagramWidget } from 'storm-react-diagrams';
 
+import Footer from '../components/Footer';
 import Helmet from '../components/Helmet';
 import Navbar from '../components/Navbar';
+import EmployeeModal from '../components/EmployeeModal';
 import { connections, nodes } from '../config/faculty-and-staff';
 
-const Typer = text => {
-    return (
-        <h1 className="font-light text-4xl text-white">{text}</h1>
-    )
-}
+const Typer = text => (
+    <h1 className="font-light text-4xl text-white">{text}</h1>
+)
 
 class FacultyStaff extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            title: Typer("Faculty and Staff")
+            title: 'Test',
+            infoOpen: false,
+            specialization: '',
+            description: '',
+            photoUrl: 'http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png'
         }
 
         this.engine = new DiagramEngine();
@@ -30,8 +34,22 @@ class FacultyStaff extends Component {
         this.setState({ title: Typer("Faculty and Staff") })
     }
 
-    showInfo = info => {
-        this.setState({ title: Typer(info.entity.name) })
+    showInfo = info => {        
+        this.setState({
+            title: info.entity.name,
+            photoUrl: info.entity.extra.photoUrl,
+            description: info.entity.extra.description,
+            specialization: info.entity.extra.specialization,
+            infoOpen: true
+        })
+    }
+
+    hideInfo = () => {
+        this.setState({ infoOpen: false })
+    }
+
+    onInfoClose = () => {
+        this.setState({ infoOpen: false })
     }
 
     componentDidMount() {
@@ -48,40 +66,46 @@ class FacultyStaff extends Component {
 
         Object.keys(parts).map(i => {
             let port = null
+            parts[i].extra = {
+                description: nodes[i].description,
+                photoUrl: nodes[i].photoUrl,
+                specialization: nodes[i].specialization,
+            }
             nodes[i].ports.map(j => {
                 console.log("ports added")
                 if (j.type === 'in') {
-                    port = parts[i].addInPort(j.name)
+                    port = parts[i].addInPort(` ${j.name}`)
                 } else {
-                    port = parts[i].addOutPort(j.name)
+                    port = parts[i].addOutPort(` ${j.name}`)
                 }
                 ports.push(port)
             })
         })
 
-        parts.map(i => {
-            this.model.addNode(i)
-        })
+        parts.map(i => this.model.addNode(i))
 
         parts.forEach(node => {
             node.addListener({
                 selectionChanged: e => {
                     if (e.isSelected) {
-                        console.log(e.entity.x + "," + e.entity.y)
-                        if (e.entity.name !== "+") {
+                        console.log(e)
+                        console.log(`${e.entity.x},${e.entity.y}`)
+                        if (e.entity.color !== "#EC1261") {
                             app.showInfo(e)
+                        } else {
+                            app.hideInfo()
                         }
                     } else {
-                        this.resetTitle()
+                        this.hideInfo()
                     }
                 }
             })
         })
 
-        setTimeout(function() {
+        setTimeout(() => {
             connections.map(i => {
                 const link = ports[i[0]].link(ports[i[1]])
-                app.model.addLink(link)
+                return app.model.addLink(link)
             })
         }, 0)
 
@@ -90,7 +114,7 @@ class FacultyStaff extends Component {
     }
 
     render() {
-        const { title } = this.state
+        const { title, infoOpen, photoUrl, description, specialization } = this.state
         return (
             <div>
                 <Helmet
@@ -101,10 +125,9 @@ class FacultyStaff extends Component {
                 <div className="bg-black">
                     <div className="grid-pattern">
                         <div className="container mx-auto flex border-b border-grey-dark">
-                            <img className="h-16 w-16 my-8 rounded-full flex" src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png" />
                             <div className="flex">
                                 <div className="p-8">
-                                    {title}
+                                    <h1 className="font-light text-4xl text-white">Faculty & Staff</h1>
                                     <Typist className="text-white" startDelay={1500} >Nice to meet you!</Typist>
                                 </div>
                             </div>
@@ -112,6 +135,22 @@ class FacultyStaff extends Component {
                         <DiagramWidget className="w-full h-screen" maxNumberPointsPerLink={0} diagramEngine={this.engine} />
                     </div>
                 </div>
+                <Footer />
+                <EmployeeModal
+                    title={title}
+                    isShown={infoOpen}
+                    onCloseComplete={() => this.onInfoClose()}
+                    confirmLabel="OK"
+                    hasCancel={false}
+                    description={() => (
+                        <div>
+                            <img className="h-24 w-24 rounded-full mb-4" alt="" src={photoUrl} />                            
+                            <p>{description}</p>
+                            <p className="mt-4"><span className="font-bold">Specialization:</span> {specialization}</p>
+                            <p className="pt-4"><small className="text-orange">Note: Mock data purposes only: These descriptions are randomly generated via api.</small></p>
+                        </div>
+                    )}
+                />
             </div>
         )
     }
