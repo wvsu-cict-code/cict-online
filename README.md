@@ -23,9 +23,9 @@ This website is built using ReactJS. To learn more how to use React, please visi
 - [ ] About Page
 - [ ] Students Page (Student's Works)
 - [ ] Admission Page
-- [ ] Faculty & Staff Page
+- [x] Faculty & Staff Page
 - [ ] CICT Online Forms and Registration
-- [ ] Code Cleanup
+- [x] Code Cleanup
 - [ ] Tools and Resources Page
 - [ ] Omni Updates Section (Medium Blog, Facebook, Twitter)
 - [ ] Footer Section
