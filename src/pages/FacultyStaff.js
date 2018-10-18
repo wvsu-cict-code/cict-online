@@ -3,7 +3,7 @@ import 'storm-react-diagrams/dist/style.min.css';
 import React, { Component } from 'react';
 import Typist from 'react-typist';
 import { DefaultNodeModel, DiagramEngine, DiagramModel, DiagramWidget } from 'storm-react-diagrams';
-
+import uuidv4 from 'uuid/v4';
 import Footer from '../components/Footer';
 import Helmet from '../components/Helmet';
 import Navbar from '../components/Navbar';
@@ -22,6 +22,7 @@ class FacultyStaff extends Component {
             infoOpen: false,
             specialization: '',
             description: '',
+            hobbies: '',
             photoUrl: 'http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640.png'
         }
 
@@ -40,6 +41,7 @@ class FacultyStaff extends Component {
             photoUrl: info.entity.extra.photoUrl,
             description: info.entity.extra.description,
             specialization: info.entity.extra.specialization,
+            hobbies: info.entity.extra.hobbies,
             infoOpen: true
         })
     }
@@ -70,6 +72,7 @@ class FacultyStaff extends Component {
                 description: nodes[i].description,
                 photoUrl: nodes[i].photoUrl,
                 specialization: nodes[i].specialization,
+                hobbies: nodes[i].hobbies,
             }
             nodes[i].ports.map(j => {
                 console.log("ports added")
@@ -102,19 +105,23 @@ class FacultyStaff extends Component {
             })
         })
 
+        // Delay fix for non-displaying links
         setTimeout(() => {
             connections.map(i => {
-                const link = ports[i[0]].link(ports[i[1]])
-                return app.model.addLink(link)
+                console.log(i)
             })
-        }, 0)
+        }, 10)
 
-        this.engine.setDiagramModel(this.model);
+        connections.map(i => {
+            const link = ports[i[0]].link(ports[i[1]])
+            return app.model.addLink(link)
+        })
 
+        app.engine.setDiagramModel(app.model);
     }
 
     render() {
-        const { title, infoOpen, photoUrl, description, specialization } = this.state
+        const { title, infoOpen, photoUrl, description, specialization, hobbies } = this.state
         return (
             <div>
                 <Helmet
@@ -132,7 +139,7 @@ class FacultyStaff extends Component {
                                 </div>
                             </div>
                         </div>
-                        <DiagramWidget className="w-full h-screen" maxNumberPointsPerLink={0} diagramEngine={this.engine} />
+                        <DiagramWidget key={uuidv4()} className="w-full h-screen" maxNumberPointsPerLink={0} diagramEngine={this.engine} />
                     </div>
                 </div>
                 <Footer />
@@ -146,8 +153,8 @@ class FacultyStaff extends Component {
                         <div>
                             <img className="h-24 w-24 rounded-full mb-4" alt="" src={photoUrl} />                            
                             <p>{description}</p>
-                            <p className="mt-4"><span className="font-bold">Specialization:</span> {specialization}</p>
-                            <p className="pt-4"><small className="text-orange">Note: Mock data purposes only: These descriptions are randomly generated via api.</small></p>
+                            <p className="mt-4"><span className="font-bold">Specializations:</span> {specialization}</p>
+                            <p className="pt-4"><small><span className="font-bold">Hobbies:</span> {hobbies}</small></p>
                         </div>
                     )}
                 />

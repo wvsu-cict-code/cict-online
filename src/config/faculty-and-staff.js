@@ -77,6 +77,7 @@ const nodes = [
         position: [100, 100],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: decastro
     },
     connector('+', 338, 144),
@@ -87,6 +88,7 @@ const nodes = [
         position: [471, 49],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: secondes
     },
     {
@@ -96,6 +98,7 @@ const nodes = [
         position: [472, 249],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: sabayle
     },
     connector('+', 689.4629104616998, 136.6771159874604),
@@ -106,6 +109,7 @@ const nodes = [
         position: [734, 18],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: gantala
     },
     {
@@ -113,8 +117,9 @@ const nodes = [
         ports: [{ name: 'Admin Aide Clerk', type: 'in' }],
         color: '#333',
         position: [725, 295],
-        description: shuffle(mockDescriptions)[0],
-        specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        description: 'She is very passionate about her work because she loves what she does, She have a steady source of motivation that drives her to do her best, this passion led her to challenge herself daily and learn new skills that helped her to do better work.',
+        specialization: 'Entrepreneurship and Management',
+        hobbies: 'Typing',
         photoUrl: figueroa
     },
     connector('+', 856.4629104616998, 150.6771159874604),
@@ -127,6 +132,7 @@ const nodes = [
         position: [1168.3821075795604, 148.13196786106622],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: gerardo
     },
     {
@@ -136,6 +142,7 @@ const nodes = [
         position: [1365.8000180273216, 222.62610330240636],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: elijorde
     },
     {
@@ -145,6 +152,7 @@ const nodes = [
         position: [1476.8000180273216, 144.62610330240636],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: dofitas
     },
     {
@@ -157,6 +165,7 @@ const nodes = [
         position: [1642.8000180273216, 210.62610330240636],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: sansolis
     },
     {
@@ -166,6 +175,7 @@ const nodes = [
         position: [1780.7701672810529, 144.04401375016755],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: sumido
     },
     {
@@ -178,6 +188,7 @@ const nodes = [
         position: [1746.8000180273216, 302.62610330240636],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: ygot
     },
     {
@@ -187,6 +198,7 @@ const nodes = [
         position: [1838.8000180273216, 399.62610330240636],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: ferrer
     },
     connector('Information Systems', 410.0081713775678, 487.48222780854667),
@@ -204,6 +216,7 @@ const nodes = [
         position: [463.0081713775678, 567.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl:dumpit
     },
     {
@@ -213,6 +226,7 @@ const nodes = [
         position: [661.0081713775678, 647.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: feliprada
     },
     {
@@ -222,6 +236,7 @@ const nodes = [
         position: [640.0081713775678, 707.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: osorio
     },
     {
@@ -231,6 +246,7 @@ const nodes = [
         position: [609.0081713775678, 767.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: concepcion
     },
     {
@@ -240,6 +256,7 @@ const nodes = [
         position: [563.0081713775678, 845.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: sandig
     },
     {
@@ -252,6 +269,7 @@ const nodes = [
         position: [870.0081713775678, 561.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: dayot
     },
     {
@@ -261,6 +279,7 @@ const nodes = [
         position: [1101.0081713775678, 634.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: gabawa
     },
     {
@@ -270,6 +289,7 @@ const nodes = [
         position: [1065.0081713775678, 695.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: sansolis
     },
     {
@@ -279,6 +299,7 @@ const nodes = [
         position: [1023.0081713775678, 761.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: subong
     },
     {
@@ -286,8 +307,9 @@ const nodes = [
         ports: [{ name: '(On Study Leave)', type: 'in' }],
         color: '#1565C0',
         position: [963.0081713775678, 826.4822278085467],
-        description: shuffle(mockDescriptions)[0],
-        specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        description: 'Received his B.S. degree in Information Technology from West Visayas State University and Masters of Engineering from Kunsan National University, South Korea in 2010 and 2015, respectively. He is currently working toward the Doctors’s degree with the School of Computer, Information and Communication Engineering, Kunsan National University, Gunsan, South Korea.',
+        specialization: 'Delay Tolerant Networks, Wireless Sensor Networks, Vehicular Ad-hoc Networks, Blockchain',
+        hobbies: 'Reading manga (mecha, action, sports) and watching anime, travel blogs and food review shows.',
         photoUrl: cabacas
     },
     {
@@ -300,6 +322,7 @@ const nodes = [
         position: [1334.0081713775678, 556.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: elijorde
     },
     {
@@ -309,6 +332,7 @@ const nodes = [
         position: [1514.0081713775678, 627.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: decastro
     },
     {
@@ -318,6 +342,7 @@ const nodes = [
         position: [1446.0081713775678, 691.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: sabayle
     },
     {
@@ -327,6 +352,7 @@ const nodes = [
         position: [1380.0081713775678, 755.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: secondes
     },
     {
@@ -336,6 +362,7 @@ const nodes = [
         position: [1299.0081713775678, 824.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: dofitas
     },
     {
@@ -348,6 +375,7 @@ const nodes = [
         position: [1820.0081713775678, 570.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: sumido
     },
     {
@@ -357,6 +385,7 @@ const nodes = [
         position: [1879.0081713775678, 652.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: defante
     },
     {
@@ -369,6 +398,7 @@ const nodes = [
         position: [2431.008171377568, 551.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: gerardo
     },
     {
@@ -378,6 +408,7 @@ const nodes = [
         position: [2397.008171377568, 624.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: decastro
     },
     {
@@ -387,6 +418,7 @@ const nodes = [
         position: [2359.008171377568, 686.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: elijorde
     },
     {
@@ -396,6 +428,7 @@ const nodes = [
         position: [2306.008171377568, 750.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: cervantes
     },
     {
@@ -405,6 +438,7 @@ const nodes = [
         position: [2246.008171377568, 812.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: secondes
     },
     {
@@ -414,6 +448,7 @@ const nodes = [
         position: [2203.008171377568, 878.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: sumido
     },
     {
@@ -423,6 +458,7 @@ const nodes = [
         position: [2156.008171377568, 943.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: dayot
     },
     {
@@ -432,6 +468,7 @@ const nodes = [
         position: [2118.008171377568, 1012.4822278085467],
         description: shuffle(mockDescriptions)[0],
         specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        hobbies: '',
         photoUrl: sabayle
     },
     {
@@ -439,8 +476,9 @@ const nodes = [
         ports: [{ name: '(On Study Leave)', type: 'in' }],
         color: '#1565C0',
         position: [2068.008171377568, 1081.4822278085467],
-        description: shuffle(mockDescriptions)[0],
-        specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
+        description: 'Received his B.S. degree in Information Technology from West Visayas State University and Masters of Engineering from Kunsan National University, South Korea in 2010 and 2015, respectively. He is currently working toward the Doctors’s degree with the School of Computer, Information and Communication Engineering, Kunsan National University, Gunsan, South Korea.',
+        specialization: 'Delay Tolerant Networks, Wireless Sensor Networks, Vehicular Ad-hoc Networks, Blockchain',
+        hobbies: 'Reading manga (mecha, action, sports) and watching anime, travel blogs and food review shows.',
         photoUrl: cabacas
     },
 ]
