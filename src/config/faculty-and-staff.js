@@ -52,21 +52,14 @@ const mockSpecializations = [
 ]
 
 const mockDescriptions = [
-    'Wannabe web fanatic. Lifelong communicator. Student. Entrepreneur. Certified thinker. Organizer.',
-    'Thinker. Communicator. Extreme introvert. Alcohol enthusiast. Web lover. Twitter trailblazer.',
-    'Coffee maven. Amateur food evangelist. Prone to fits of apathy. Thinker. General zombie aficionado.',
-    'Troublemaker. Unapologetic music geek. Award-winning travel buff. Certified social media ninja.',
-    'Typical food lover. Coffee aficionado. Musicaholic. Unable to type with boxing gloves on.',
-    'Incurable creator. Infuriatingly humble beeraholic. Subtly charming internet buff.',
-    'Travel lover. Evil twitter buff. Zombie geek. Tv evangelist. Incurable internet fanatic.',
-    'Coffee lover. Wannabe alcohol geek. Hipster-friendly travel evangelist. General tv guru. Amateur web ninja. Social media advocate.',
-    'Social media fanatic. Explorer. Amateur thinker. Webaholic. Hipster-friendly food trailblazer.',
-    'Music practitioner. Twitter nerd. Social mediaholic. Organizer. Pop culture ninja. Passionate internet scholar. General web enthusiast.',
-    'Total explorer. Wannabe travel lover. Devoted troublemaker. Food buff. Gamer. Future teen idol. Thinker. Web guru. Infuriatingly humble bacon practitioner.',
-    'Typical music buff. Communicator. Subtly charming analyst. Certified writer. Entrepreneur. Student.',
-    'Introvert. Unapologetic food buff. Alcohol enthusiast. Friend of animals everywhere.',
-    'Reader. Wannabe bacon fan. Alcohol evangelist. Web lover. Certified internet fanatic. Problem solver. Music scholar.',
-    'Hipster-friendly music maven. Pop culture enthusiast. Student. Web fanatic. Certified food buff.',
+    '(Mock data only) adaptable, adventurous, affectionate, ambitious',
+    '(Mock data only) amiable, compassionate, considerate, courageous',
+    '(Mock data only) courteous, diligent, empathetic, exuberant',
+    '(Mock data only) frank, generous, gregarious, impartial',
+    '(Mock data only) intuitive, inventive, passionate, persistent',
+    '(Mock data only) philosophical, practical, rational, reliable',
+    '(Mock data only) resourceful, sensible, sincere, sympathetic',
+    '(Mock data only) unassuming, witty',
 ]
 
 const nodes = [
