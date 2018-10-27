@@ -33,6 +33,7 @@
     "uuid": "^3.2.1"
   },
   "devDependencies": {
+    "eslint": "^5.8.0",
     "eslint-config-react-tools": "1.x.x",
     "serve": "^7.0.0"
   }
