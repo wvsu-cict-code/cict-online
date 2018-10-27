@@ -8,7 +8,9 @@
     "stage": "react-static build --staging",
     "build": "react-static build",
     "serve": "serve dist -p 3000",
-    "heroku-postbuild": "react-static build"
+    "heroku-postbuild": "react-static build",
+    "lint": "eslint \"**/*.js\" --ignore-pattern node_modules/",
+    "fixlint": "eslint \"**/*.js\" --ignore-pattern node_modules/ --fix"
   },
   "dependencies": {
     "axios": "^0.16.2",
