@@ -207,9 +207,9 @@ const nodes = [
         ],
         color: '#1565C0',
         position: [463.0081713775678, 567.4822278085467],
-        description: shuffle(mockDescriptions)[0],
-        specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
-        hobbies: 'None Specified Yet :(',
+        description: 'Electronics and Communications Engineering Graduate',
+        specialization: 'Logic Design, 2D Traditional Drawing',
+        hobbies: 'Drawing, Nature Trip',
         photoUrl:dumpit
     },
     {
@@ -419,9 +419,9 @@ const nodes = [
         ports: [{ name: ' ', type: 'in' }],
         color: '#1565C0',
         position: [2306.008171377568, 750.4822278085467],
-        description: shuffle(mockDescriptions)[0],
-        specialization: `${shuffle(mockSpecializations)[0]}, ${shuffle(mockSpecializations)[3]}`,
-        hobbies: 'None Specified Yet :(',
+        description: 'Louie Cervantes is the IT Officer II of West Visayas State University and the Director of the Management Information System Office.',
+        specialization: 'Information Engineering (Distributed Systems, Artificial Intelligence)',
+        hobbies: 'Competitive Road Cycling',
         photoUrl: cervantes
     },
     {
