@@ -8,7 +8,9 @@
     "stage": "react-static build --staging",
     "build": "react-static build",
     "serve": "serve dist -p 3000",
-    "heroku-postbuild": "react-static build"
+    "heroku-postbuild": "react-static build",
+    "lint": "eslint \"**/*.js\" --ignore-pattern node_modules/",
+    "fixlint": "eslint \"**/*.js\" --ignore-pattern node_modules/ --fix"
   },
   "dependencies": {
     "axios": "^0.16.2",
@@ -33,7 +35,18 @@
     "uuid": "^3.2.1"
   },
   "devDependencies": {
+    "eslint": "^5.8.0",
+    "eslint-config-airbnb": "^17.1.0",
     "eslint-config-react-tools": "1.x.x",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.1.2",
     "serve": "^7.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   }
 }
