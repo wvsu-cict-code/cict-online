@@ -1,9 +1,10 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 import { Github, Info } from 'react-feather';
-import { hot } from 'react-hot-loader';
 import { Fade } from 'react-reveal';
 import { Link } from 'react-static';
 import Typist from 'react-typist';
+import uuidv4 from 'uuid/v4';
 
 import TechLogo from '../assets/cict-lines.svg';
 import CICTLogoLight from '../assets/cict-logo-light.svg';
@@ -19,6 +20,7 @@ import Navbar from '../components/Navbar';
 import WhiteContainer from '../components/WhiteContainer';
 import courses from '../config/courses';
 import linkages from '../config/linkages';
+
 
 class Home extends Component {
   render() {
@@ -73,17 +75,20 @@ class Home extends Component {
         <WhiteContainer>
           <div className="flex mb-2">
             {menu.map(i => (
-              <div className="w-1/4 py-6" key={i}>
+              <div className="w-1/4 py-6" key={uuidv4()}>
                 <p className="mt-4 text-center zoom">
                   <Link to={i.path} className="text-black no-underline font-normal hover:text-orange">
-                    {i.icon}
-                    {i.name}
+                    <React.Fragment>
+                      {i.icon}
+                      {i.name}
+                    </React.Fragment>
                   </Link>
                 </p>
               </div>
             ))}
           </div>
         </WhiteContainer>
+
         <DefaultContainer>
           <div className="mx-8">
             <div className="flex inline-flex items-center">
@@ -114,7 +119,7 @@ class Home extends Component {
           <h1 className="font-light mb-8 mt-8">Courses Offered</h1>
           <div className="mx-8">
             {courses.map(i => (
-              <Fade>
+              <Fade key={uuidv4()}>
                 <div className="flex inline-flex items-center mb-8">
                   <div className="w-1/4">
                     <img src={i.icon} className="flex m-auto w-48 h-48" alt="cict-lines" />
@@ -132,7 +137,7 @@ class Home extends Component {
           <div className="mt-4 mb-4">
             <h1 className="text-white font-light mb-4">About CICT</h1>
             <p className="text-white font-normal leading-normal mb-4">Information and Communications Technology has penetrated the core of societal and individual lives. Its development is changing the course of all other technologies. ICT has now become less of a choice and more of a requirement for individuals and societies concerned with competitiveness in the international arena.</p>
-            <a href="https://medium.com/cictwvsu-online/our-story-87a461c14ab" target="_blank" className="text-sm border-white border hover:text-orange hover:bg-white text-white py-3 px-6 rounded inline-flex items-center font-bold no-underline">
+            <a href="https://medium.com/cictwvsu-online/our-story-87a461c14ab" target="_blank" rel="noopener noreferrer" className="text-sm border-white border hover:text-orange hover:bg-white text-white py-3 px-6 rounded inline-flex items-center font-bold no-underline">
               <span>READ MORE</span>
             </a>
           </div>
@@ -157,5 +162,5 @@ class Home extends Component {
   }
 }
 
-export default hot(module)(Home)
 
+export default Home

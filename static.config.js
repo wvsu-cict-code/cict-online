@@ -1,9 +1,8 @@
-import path from 'path'
-
-import autoprefixer from 'autoprefixer'
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
-import postcssFlexbugsFixes from 'postcss-flexbugs-fixes'
-import tailwindcss from 'tailwindcss'
+import autoprefixer from 'autoprefixer';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import path from 'path';
+import postcssFlexbugsFixes from 'postcss-flexbugs-fixes';
+import tailwindcss from 'tailwindcss';
 
 export default {
   webpack: (config, { stage, defaultLoaders }) => {

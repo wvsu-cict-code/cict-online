@@ -62,10 +62,12 @@ class FacultyStaff extends Component {
         const ports = []
         Object.keys(nodes).map(i => {
             parts.push(new DefaultNodeModel(nodes[i].title, nodes[i].color))
+            return null
         })
 
-        Object.keys(parts).map(i => {
+        Object.keys(parts).map((i) => {
             parts[i].setPosition(nodes[i].position[0], nodes[i].position[1])
+            return null
         })
 
         Object.keys(parts).map(i => {
@@ -84,7 +86,9 @@ class FacultyStaff extends Component {
                     port = parts[i].addOutPort(` ${j.name}`)
                 }
                 ports.push(port)
+                return null
             })
+            return null
         })
 
         parts.map(i => this.model.addNode(i))
@@ -111,6 +115,7 @@ class FacultyStaff extends Component {
         setTimeout(() => {
             connections.map(i => {
                 console.log(i)
+                return null
             })
         }, 10)
 

@@ -1,7 +1,7 @@
+import axios from 'axios';
 import React, { Component } from 'react';
-import { Clock, MapPin, Facebook, Twitter, Mail } from 'react-feather';
-import axios from 'axios'
-import { Slide, Fade } from 'react-reveal';
+import { Clock, Facebook, Mail, MapPin, Twitter } from 'react-feather';
+import { Fade, Slide } from 'react-reveal';
 
 import bgImage from '../assets/misc/alumni-2019.jpg';
 import ogImage from '../assets/og-image.jpg';
