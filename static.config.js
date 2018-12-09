@@ -84,6 +84,10 @@ export default {
         component: 'src/pages/FacultyStaff'
       },
       {
+        path: '/alumni',
+        component: 'src/pages/Alumni'
+      },
+      {
         is404: true,
         component: 'src/pages/404',
       },

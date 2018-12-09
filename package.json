@@ -19,6 +19,7 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-feather": "^1.1.0",
+    "react-hot-loader": "^4.3.12",
     "react-lottie": "^1.1.0",
     "react-responsive": "^4.1.0",
     "react-reveal": "^1.2.2",

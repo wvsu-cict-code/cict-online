@@ -1,6 +1,8 @@
 import { EmulatorState, OutputFactory, Outputs } from 'javascript-terminal';
 import React, { Component } from 'react';
 import ReactTerminal from 'react-terminal-component';
+
+import ogImage from '../assets/og-image.jpg';
 import Helmet from '../components/Helmet';
 
 class GeekMode extends Component {
@@ -20,6 +22,7 @@ class GeekMode extends Component {
         <Helmet
           title="CICT Online - Geek Mode"
           description="West Visayas State University, College of Information and Communications Technology Website"
+          ogImage={ogImage}
         />
         <ReactTerminal
           inputStr=''

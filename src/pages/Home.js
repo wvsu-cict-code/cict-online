@@ -4,6 +4,10 @@ import { hot } from 'react-hot-loader';
 import { Fade } from 'react-reveal';
 import { Link } from 'react-static';
 import Typist from 'react-typist';
+
+import TechLogo from '../assets/cict-lines.svg';
+import CICTLogoLight from '../assets/cict-logo-light.svg';
+import ogImage from '../assets/og-image.jpg';
 import studentsPhoto from '../assets/students.jpg';
 import { Admission, FacultyAndStaff, Students, Tools } from '../assets/svg-components';
 import CornerModal from '../components/CornerModal';
@@ -15,8 +19,6 @@ import Navbar from '../components/Navbar';
 import WhiteContainer from '../components/WhiteContainer';
 import courses from '../config/courses';
 import linkages from '../config/linkages';
-import TechLogo from '../assets/cict-lines.svg'
-import CICTLogoLight from '../assets/cict-logo-light.svg'
 
 class Home extends Component {
   render() {
@@ -47,33 +49,34 @@ class Home extends Component {
         <Helmet
           title="CICT Online"
           description="West Visayas State University, College of Information and Communications Technology Website"
+          ogImage={ogImage}
         />
         <Navbar />
-        <DefaultContainer>          
-              <div className="flex mb-4">
-                <div className="w-1/2 h-12">
-                  <h1>
-                    <Typist className="font-normal text-4xl" avgTypingDelay={100} cursor={{ show: false, blink: true }}>CICT Online</Typist>
-                  </h1>
-                  <Typist startDelay={1500} >Welcome to our College Website!</Typist>
-                </div>
-                <div className="w-1/2 h-12">
-                  <div className="float-right">
-                    <p className="text-xs mb-3"><Info className="w-3 h-3 mr-2" />Still under heavy development.</p>
-                    <a href="https://github.com/wvsu-cict-code/cict-online" target="_blank" className="text-sm cict-darker hover:bg-black hover:text-orange text-white py-3 px-6 rounded inline-flex items-center no-underline font-bold">
-                      <Github className="w-4 h-4 mr-2" /> <span>Contribute</span>
-                    </a>
-                  </div>
-                </div>
+        <DefaultContainer>
+          <div className="flex mb-4">
+            <div className="w-1/2 h-12">
+              <h1>
+                <Typist className="font-normal text-4xl" avgTypingDelay={100} cursor={{ show: false, blink: true }}>CICT Online</Typist>
+              </h1>
+              <Typist startDelay={1500} >Welcome to our College Website!</Typist>
+            </div>
+            <div className="w-1/2 h-12">
+              <div className="float-right">
+                <p className="text-xs mb-3"><Info className="w-3 h-3 mr-2" />Still under heavy development.</p>
+                <a href="https://github.com/wvsu-cict-code/cict-online" target="_blank" rel="noopener noreferrer" className="text-sm cict-darker hover:bg-black hover:text-orange text-white py-3 px-6 rounded inline-flex items-center no-underline font-bold">
+                  <Github className="w-4 h-4 mr-2" /> <span>Contribute</span>
+                </a>
               </div>
+            </div>
+          </div>
         </DefaultContainer>
         <WhiteContainer>
           <div className="flex mb-2">
             {menu.map(i => (
-              <div className="w-1/4 py-6" key={i}>                
-                <p className="mt-4 text-center zoom">                  
+              <div className="w-1/4 py-6" key={i}>
+                <p className="mt-4 text-center zoom">
                   <Link to={i.path} className="text-black no-underline font-normal hover:text-orange">
-                  {i.icon}                  
+                    {i.icon}
                     {i.name}
                   </Link>
                 </p>

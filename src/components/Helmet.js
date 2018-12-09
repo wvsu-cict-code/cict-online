@@ -16,18 +16,19 @@ import icon32 from '../assets/favicon-32x32.png'
 import icon96 from '../assets/favicon-96x96.png'
 import favicon from '../assets/favicon.ico'
 import icon144ms from '../assets/ms-icon-144x144.png'
-import ogImage from '../assets/og-image.jpg'
+
 
 
 class Helmet extends Component {
   render () {
+    const { ogImage, description, title} = this.props
     return (
       <Head>
-        <title>{this.props.title}</title>
+        <title>{title}</title>
         <meta property="og:url" content="http://cictwvsu.com" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content="CICT Online" />
-        <meta property="og:description" content={this.props.description} />
+        <meta property="og:description" content={description} />
         <meta property="og:image" content={ogImage} />
         <link rel="apple-touch-icon" sizes="57x57" href={icon57} />
         <link rel="apple-touch-icon" sizes="60x60" href={icon60} />

@@ -4,10 +4,12 @@ import React, { Component } from 'react';
 import Typist from 'react-typist';
 import { DefaultNodeModel, DiagramEngine, DiagramModel, DiagramWidget } from 'storm-react-diagrams';
 import uuidv4 from 'uuid/v4';
+
+import ogImage from '../assets/og-image.jpg';
+import EmployeeModal from '../components/EmployeeModal';
 import Footer from '../components/Footer';
 import Helmet from '../components/Helmet';
 import Navbar from '../components/Navbar';
-import EmployeeModal from '../components/EmployeeModal';
 import { connections, nodes } from '../config/faculty-and-staff';
 
 const Typer = text => (
@@ -35,7 +37,7 @@ class FacultyStaff extends Component {
         this.setState({ title: Typer("Faculty and Staff") })
     }
 
-    showInfo = info => {        
+    showInfo = info => {
         this.setState({
             title: info.entity.name,
             photoUrl: info.entity.extra.photoUrl,
@@ -127,6 +129,7 @@ class FacultyStaff extends Component {
                 <Helmet
                     title="Faculty and Staff - CICT Online"
                     description="West Visayas State University, College of Information and Communications Technology Website"
+                    ogImage={ogImage}
                 />
                 <Navbar />
                 <div className="bg-black">
@@ -151,7 +154,7 @@ class FacultyStaff extends Component {
                     hasCancel={false}
                     description={() => (
                         <div>
-                            <img className="h-24 w-24 rounded-full mb-4" alt="" src={photoUrl} />                            
+                            <img className="h-24 w-24 rounded-full mb-4" alt="" src={photoUrl} />
                             <p>{description}</p>
                             <p className="mt-4"><span className="font-bold">Specializations:</span> {specialization}</p>
                             <p className="pt-4"><small><span className="font-bold">Hobbies:</span> {hobbies}</small></p>
