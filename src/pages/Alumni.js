@@ -8,7 +8,7 @@ import Gravatar from 'react-gravatar';
 import uuidv4 from 'uuid/v4';
 import bgImage from '../assets/misc/alumni-2019.jpg';
 import Helmet from '../components/Helmet';
-import { Link } from 'react-static';
+
 
 const theme = {
     text: 'font-light alumni-2019-theme-text--color mt-2',
@@ -46,17 +46,17 @@ class Alumni extends Component {
         super(props)
         this.state = {
             attendees: [],
-            email: 'mjsolidarios@wvsu.edu.ph'
+            email: 'cict@wvsu.edu.ph'
         }
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.props.form.validateFields((err, values) => {
-            if (!err) {
-                console.log('Received values of form: ', values);
-            }
-        });
+        // this.props.form.validateFields((err, values) => {
+        //     if (!err) {
+        //         console.log('Received values of form: ', values);
+        //     }
+        // });
     }
 
     handleEmailChange = e => {
@@ -85,7 +85,7 @@ class Alumni extends Component {
 
     render() {
         const { attendees, email } = this.state
-        const { getFieldDecorator } = this.props.form;
+        
         return (
             <React.Fragment>
                 <Helmet
@@ -109,25 +109,13 @@ class Alumni extends Component {
                             <Form onSubmit={this.handleSubmit} className="alumni-registration-form px-4 lg:px-auto mx-auto py-8 text-left sm:px-4 xs:px-4">
                                 <small>* Required Items</small>
                                 <FormItem className="mt-4">
-                                    {getFieldDecorator('firstName', {
-                                        rules: [{ required: true, message: '' }],
-                                    })(
-                                        <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* First Name" />
-                                    )}
+                                <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* First Name" />
                                 </FormItem>
                                 <FormItem>
-                                    {getFieldDecorator('middleName', {
-                                        rules: [{ required: true, message: '' }],
-                                    })(
-                                        <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Middle Name" />
-                                    )}
+                                <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Middle Name" />
                                 </FormItem>
                                 <FormItem>
-                                    {getFieldDecorator('lastNameName', {
-                                        rules: [{ required: true, message: '' }],
-                                    })(
-                                        <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Last Name" />
-                                    )}
+                                <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Last Name" />
                                 </FormItem>
 
                                 <FormItem>
@@ -152,21 +140,12 @@ class Alumni extends Component {
                                     </Select>
                                 </FormItem>
                                 <FormItem>
-                                    {getFieldDecorator('company', {
-                                        rules: [{ required: true, message: '' }],
-                                    })(
-                                        <Input placeholder="Company Affiliated" />
-                                    )}
+                                    <Input placeholder="Company Affiliated" />
                                 </FormItem>
                                 <FormItem>
-                                    {getFieldDecorator('contact', {
-                                        rules: [{ required: true, message: '' }],
-
-                                    })(
-                                        <Input placeholder="* Contact Number" />
-                                    )}
+                                    <Input placeholder="* Contact Number" />
                                 </FormItem>
-                                <Gravatar default="monsterid" size={150} className="rounded-full mx-0 my-4" email={this.props.form.email} />
+                                <p className="text-center mb-4"><Gravatar default="monsterid" size={150} className="rounded-full mx-0 my-4" email={email} /></p>
                                 <FormItem>
                                     <Input prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Gravatar Email" onChange={e => this.handleChange(e, 'email')} />
                                     <p><a href="https://en.gravatar.com/" target="_blank" rel="noopener noreferrer">Create your own Gravatar</a></p>
@@ -209,4 +188,4 @@ class Alumni extends Component {
     }
 }
 
-export default Form.create()(Alumni)
+export default Alumni
