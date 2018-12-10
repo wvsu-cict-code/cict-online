@@ -1,7 +1,9 @@
-import React, { Component } from 'react'
-import { Link } from 'react-static'
-import { Facebook, Twitter, Github, Code, Heart } from 'react-feather'
-import brandIconLight from '../assets/brandicon-light.svg'
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { Component } from 'react';
+import { Facebook, Github, Twitter } from 'react-feather';
+import { Link } from 'react-static';
+
+import brandIconLight from '../assets/brandicon-light.svg';
 
 class Footer extends Component {
   render () {
@@ -15,15 +17,15 @@ class Footer extends Component {
         path: '/contactus',
       },
       {
-        name: <Facebook className="w-4 h-4 m-1" />,
+        name: () => <Facebook className="w-4 h-4 m-1" />,
         path: 'https://www.facebook.com/cictwvsu/',
       },
       {
-        name: <Twitter className="w-4 h-4 m-1" />,
+        name: () => <Twitter className="w-4 h-4 m-1" />,
         path: 'https://twitter.com/cictwvsu',
       },
       {
-        name: <Github className="w-4 h-4 m-1" />,
+        name: () => <Github className="w-4 h-4 m-1" />,
         path: 'https://github.com/wvsu-cict-code',
       },
     ]

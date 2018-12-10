@@ -66,7 +66,7 @@ class Home extends Component {
               <div className="float-right">
                 <p className="text-xs mb-3"><Info className="w-3 h-3 mr-2" />Still under heavy development.</p>
                 <a href="https://github.com/wvsu-cict-code/cict-online" target="_blank" rel="noopener noreferrer" className="text-sm cict-darker hover:bg-black hover:text-orange text-white py-3 px-6 rounded inline-flex items-center no-underline font-bold">
-                  <Github className="w-4 h-4 mr-2" /> <span>Contribute</span>
+                  {() =><Github className="w-4 h-4 mr-2" />} <span>Contribute</span>
                 </a>
               </div>
             </div>

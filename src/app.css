@@ -138,3 +138,7 @@ body {
 .alumni-2019-brand{
   height: 300px; width: 300px;
 }
+
+.alumni-registration-form{
+  max-width: 400px;
+}
