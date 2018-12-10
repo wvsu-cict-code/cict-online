@@ -22,7 +22,7 @@ import figueroa from '../assets/faculty-and-staff/figueroa.jpg'
 import osorio from '../assets/faculty-and-staff/osorio.png'
 import secondes from '../assets/faculty-and-staff/secondes.png'
 
-const shuffle = require('knuth-shuffle').knuthShuffle
+const shuffle = require('fisher-yates-shuffle')
 
 const connector = (name, x, y) => ({
     title: name,
