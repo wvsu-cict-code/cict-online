@@ -10,15 +10,18 @@
     "serve": "serve dist -p 3000",
     "heroku-postbuild": "react-static build"
   },
+  "resolutions": {
+    "**/event-stream": "^4.0.1"
+  },
   "dependencies": {
-    
+    "antd": "^3.11.2",
     "axios": "^0.16.2",
     "contentful": "^6.1.1",
     "evergreen-ui": "^3.2.4",
-    
+    "firebase": "^5.7.0",
+    "fisher-yates-shuffle": "^0.2.0",
     "javascript-terminal": "^1.0.2",
     "knuth-shuffle": "1.0",
-    
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-feather": "^1.1.0",

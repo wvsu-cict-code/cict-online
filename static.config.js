@@ -24,6 +24,7 @@ export default {
           ident: 'postcss',
           plugins: () => [
             postcssFlexbugsFixes,
+            tailwindcss(path.resolve(__dirname, './tailwind.config.js')),
             autoprefixer({
               browsers: [
                 '>1%',
@@ -32,8 +33,7 @@ export default {
                 'not ie < 9', // React doesn't support IE8 anyway
               ],
               flexbox: 'no-2009',
-            }),
-            tailwindcss(path.resolve(__dirname, './tailwind.config.js')),
+            }),            
           ],
         },
       },

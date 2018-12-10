@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import { Clock, Facebook, Mail, MapPin, Twitter } from 'react-feather';
 import { Fade, Slide } from 'react-reveal';
-
+import { Button } from 'antd'
 import bgImage from '../assets/misc/alumni-2019.jpg';
 import ogImage from '../assets/og-image.jpg';
 import Helmet from '../components/Helmet';
@@ -48,7 +48,7 @@ class Alumni extends Component {
                             </div>
                         </Fade>
                         <Slide bottom>
-                            <button className="rounded alumni-2019-theme-button px-8 py-2 m-4 font-bold">Join Us</button>
+                        <Button className="my-8 rounded" type="primary">Join Us</Button>
                         </Slide>
                         <p>
                             <Facebook className={[theme.link, 'w-8 h-8 mx-2']} />
