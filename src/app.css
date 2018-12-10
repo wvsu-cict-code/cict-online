@@ -56,6 +56,8 @@
  * @import "utilities/skew-transforms";
  */
 
+ @import '~antd/dist/antd.css';
+ 
 body {
   font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
@@ -63,6 +65,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 
 .theme-color{
   background-color: #fafafa
