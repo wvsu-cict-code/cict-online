@@ -1,6 +1,6 @@
-//import { EmulatorState, OutputFactory, Outputs } from 'javascript-terminal';
+import { EmulatorState, OutputFactory, Outputs } from 'javascript-terminal';
 import React, { Component } from 'react';
-//import ReactTerminal from 'react-terminal-component';
+import ReactTerminal from 'react-terminal-component';
 
 
 import Helmet from '../components/Helmet';
@@ -9,16 +9,16 @@ import ogImage from '../assets/og-image.jpg';
 
 class GeekMode extends Component {
   render() {
-    // const defaultState = EmulatorState.createEmpty();
-    // const defaultOutputs = defaultState.getOutputs();
+    const defaultState = EmulatorState.createEmpty();
+    const defaultOutputs = defaultState.getOutputs();
 
-    // const newOutputs = Outputs.addRecord(
-    //   defaultOutputs, OutputFactory.makeTextOutput(
-    //     `Welcome to Geek Mode! You can browse CICT Online using
-    //     commands. For a list of available commands, execute help`
-    //   )
-    // );
-    // const emulatorState = defaultState.setOutputs(newOutputs);
+    const newOutputs = Outputs.addRecord(
+      defaultOutputs, OutputFactory.makeTextOutput(
+        `Welcome to Geek Mode! You can browse CICT Online using
+        commands. For a list of available commands, execute help`
+      )
+    );
+    const emulatorState = defaultState.setOutputs(newOutputs);
     return (
       <React.Fragment>
         <Helmet
@@ -26,7 +26,7 @@ class GeekMode extends Component {
           description="West Visayas State University, College of Information and Communications Technology Website"
           ogImage={ogImage}
         />
-        {/* <ReactTerminal
+        <ReactTerminal
           inputStr=''
           promptSymbol='guest:~$'
           emulatorState={emulatorState}
@@ -41,7 +41,7 @@ class GeekMode extends Component {
             height: '100vh',
             fontFamily: 'monospace',
           }}
-        /> */}
+        />
       </React.Fragment>
     )
   }

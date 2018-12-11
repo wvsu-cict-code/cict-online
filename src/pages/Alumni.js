@@ -6,9 +6,14 @@ import { Clock, Facebook, Mail, MapPin, Twitter } from 'react-feather';
 import { Fade, Slide } from 'react-reveal';
 import Gravatar from 'react-gravatar';
 import uuidv4 from 'uuid/v4';
-import bgImage from '../assets/misc/alumni-2019.jpg';
+import brandLogo from '../assets/misc/alumni-2019-brand.svg';
+import bgMain from '../assets/misc/alumni-2019-bg.jpg';
+import bgLeft from '../assets/misc/alumni-2019-bg-left.jpg';
+import bgRight from '../assets/misc/alumni-2019-bg-right.jpg';
 import Helmet from '../components/Helmet';
-
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
+import fernsBottom from '../assets/misc/ferns-bottom.png'
 
 const theme = {
     text: 'font-light alumni-2019-theme-text--color mt-2',
@@ -46,34 +51,36 @@ class Alumni extends Component {
         super(props)
         this.state = {
             attendees: [],
-            email: 'cict@wvsu.edu.ph'
+            email: 'cict@wvsu.edu.ph',
+            fname: '',
+            mname: '',
+            sname: '',
+            ystart: '',
+            yend: '',
+            course: '',
+            company: '',
+            contact: '',
+            noGravatar: false,       
         }
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
-        // this.props.form.validateFields((err, values) => {
-        //     if (!err) {
-        //         console.log('Received values of form: ', values);
-        //     }
-        // });
+        console.log(this.state)
     }
 
-    handleEmailChange = e => {
-        const { name, value } = e.target
-        console.log(e)
-        // this.setState({[name]:value})
+    handleSelectionChange = (value, name) => {
+        this.setState({
+            [name]: value
+        })
     }
 
-    handleChange = value => {
-        console.log(value.target.value)
-    }
-
-    handleEmailChange = e => {
+    handleChange = e => {
         const { name, value } = e.target
         this.setState({
             [name]: value
         })
+
     }
 
     componentDidMount() {
@@ -83,20 +90,29 @@ class Alumni extends Component {
         })
     }
 
+    onCheckboxChange = e => {
+        const {name, checked} = e.target
+        this.setState({[name]:checked})
+    }
+
     render() {
-        const { attendees, email } = this.state
+        const { attendees, email, contact, company, noGravatar } = this.state
         
         return (
             <React.Fragment>
                 <Helmet
                     title="CICT Online - Alumni Homecoming 2019"
                     description="West Visayas State University, College of Information and Communications Technology Website"
-                    ogImage={bgImage}
+                    ogImage={null}
                 />
-                <div className="bg-white w-full h-full h-screen text-center py-8 rounded">
+                <Navbar />
+                <div className="w-full text-center bg-no-repeat bg-left-bottom" style={{backgroundImage: `url(${bgLeft})`}}>
+                    <div className="w-full text-center bg-no-repeat bg-right-bottom" style={{backgroundImage: `url(${bgRight})`}}>
+                     
                     <div className="bg-white mx-auto max-w-sm rounded pb-8">
+
                         <Slide top>
-                            <img src={bgImage} className="alumni-2019-brand mx-auto mt-8" alt="" />
+                            <img src={brandLogo} className="alumni-2019-brand mx-auto mt-8" alt="" />
                         </Slide>
                         <Fade>
                             <div className="container mx-auto px-8">
@@ -109,47 +125,47 @@ class Alumni extends Component {
                             <Form onSubmit={this.handleSubmit} className="alumni-registration-form px-4 lg:px-auto mx-auto py-8 text-left sm:px-4 xs:px-4">
                                 <small>* Required Items</small>
                                 <FormItem className="mt-4">
-                                <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* First Name" />
+                                <Input size="large" name="fname" prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* First Name" onChange={e => this.handleChange(e, 'fname')} />
                                 </FormItem>
                                 <FormItem>
-                                <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Middle Name" />
+                                <Input size="large" name="mname" prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Middle Name" onChange={e => this.handleChange(e, 'mname')} />
                                 </FormItem>
                                 <FormItem>
-                                <Input prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Last Name" />
+                                <Input size="large" name="sname" prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Last Name" onChange={e => this.handleChange(e, 'sname')} />
                                 </FormItem>
 
                                 <FormItem>
-                                    <Select placeholder="* Year Entered" onChange={this.handleChange}>
+                                    <Select size="large" placeholder="* Year Entered" onChange={e => this.handleSelectionChange(e, 'ystart')}>
                                         {yearStartRange.map(i => (
                                             <Option key={i} value={i}>{i}</Option>
                                         ))}
                                     </Select>
                                 </FormItem>
                                 <FormItem>
-                                    <Select placeholder="* Year Graduated" onChange={this.handleChange}>
+                                    <Select size="large" placeholder="* Year Graduated" onChange={e => this.handleSelectionChange(e, 'yend')}>
                                         {yearEndRange.map(i => (
                                             <Option key={i} value={i}>{i}</Option>
                                         ))}
                                     </Select>
                                 </FormItem>
                                 <FormItem>
-                                    <Select placeholder="Course" onChange={this.handleChange}>
+                                    <Select size="large" placeholder="Course" onChange={e => this.handleSelectionChange(e, 'course')}>
                                         {courses.map(i => (
                                             <Option key={i.value} value={i.value}>{i.name}</Option>
                                         ))}
                                     </Select>
                                 </FormItem>
                                 <FormItem>
-                                    <Input placeholder="Company Affiliated" />
+                                    <Input name="company" size="large" placeholder="Company Affiliated" onChange={e => this.handleChange(e, 'company')} />
                                 </FormItem>
                                 <FormItem>
-                                    <Input placeholder="* Contact Number" />
+                                    <Input name="contact" size="large" placeholder="* Contact Number" onChange={e => this.handleChange(e, 'contact')} />
                                 </FormItem>
                                 <p className="text-center mb-4"><Gravatar default="monsterid" size={150} className="rounded-full mx-0 my-4" email={email} /></p>
                                 <FormItem>
-                                    <Input prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Gravatar Email" onChange={e => this.handleChange(e, 'email')} />
+                                    <Input disabled={noGravatar} size="large" prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Gravatar Email" onChange={e => this.handleChange(e, 'email')} />
                                     <p><a href="https://en.gravatar.com/" target="_blank" rel="noopener noreferrer">Create your own Gravatar</a></p>
-                                    <Checkbox>I don't have a Gravatar email.</Checkbox>
+                                    <Checkbox name="noGravatar" checked={noGravatar} onChange={this.onCheckboxChange}>I don't have a Gravatar email.</Checkbox>
                                 </FormItem>
                                 <p className="text-center">
                                 <Button type="primary" htmlType="submit" className="w-full">
@@ -166,7 +182,7 @@ class Alumni extends Component {
                             <Mail className={[theme.link, 'w-8 h-8 mx-2']} />
                         </p>
                     </div>
-                    <div className="max-w-md mx-auto">
+                    <div className="max-w-md mx-auto pb-8">
                         <hr className="h-px w-full alumni-2019-theme-bg--color mb-8" />
                         <h3 className={theme.text}><span className="font-bold">20</span> CICTzens are Attending</h3>
                         <div className="flex flex-wrap mt-8 mx-4">
@@ -181,8 +197,11 @@ class Alumni extends Component {
                             ))}
                         </div>
                     </div>
-                </div>
 
+                </div>
+                
+                </div>
+                <Footer />
             </React.Fragment>
         )
     }
