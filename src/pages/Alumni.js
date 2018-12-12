@@ -166,10 +166,10 @@ class Alumni extends Component {
         return (
             <React.Fragment>
                 <Helmet
-                    title="Alumni Homecoming 2019"
+                    title="Online Registration"
                     description="CICT Alumni Homecoming Registration"
                     ogImage={ogImage}
-                    url="https://cictwvsu.netlify.com/alumni"
+                    url="https://cictwvsu.com/alumni"
                 />
                 <Navbar />
                 <div className="w-full text-center bg-no-repeat bg-left-bottom" style={{ backgroundImage: `url(${bgLeft})` }}>
@@ -187,18 +187,18 @@ class Alumni extends Component {
                                     <p className={theme.text}><Clock className={[theme.text, 'w-4 h-4']} /> 8:30 AM - 6:00 PM</p>
                                 </div>
                             </Fade>
-                            <Slide bottom>
+                            <Fade>
                                 <Form key={formKey} onSubmit={this.handleSubmit} className="alumni-registration-form px-4 lg:px-auto mx-auto py-8 text-left sm:px-4 xs:px-4">
                                     <small>* Required Fields</small>
                                     <FormItem required label="Basic Info" className="my-0">
                                         <FormItem className="mt-0">
-                                            <Input addonBefore="Your First Name" required size="large" name="fname" prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* First Name" onChange={e => this.handleChange(e, 'fname')} />
+                                            <Input addonBefore="First Name" required size="large" name="fname" prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Your First Name" onChange={e => this.handleChange(e, 'fname')} />
                                         </FormItem>
                                         <FormItem>
-                                            <Input addonBefore="Your Middle Name" required size="large" name="mname" prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Middle Name" onChange={e => this.handleChange(e, 'mname')} />
+                                            <Input addonBefore="Middle Name" required size="large" name="mname" prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Your Middle Name" onChange={e => this.handleChange(e, 'mname')} />
                                         </FormItem>
                                         <FormItem>
-                                            <Input addonBefore="Your Last Name" required size="large" name="sname" prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Last Name" onChange={e => this.handleChange(e, 'sname')} />
+                                            <Input addonBefore="Last Name" required size="large" name="sname" prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Your Last Name" onChange={e => this.handleChange(e, 'sname')} />
                                         </FormItem>
                                     </FormItem>
 
@@ -248,7 +248,7 @@ class Alumni extends Component {
 
                                     <p className="text-center">
                                         <Button loading={submitting} type="primary" htmlType="submit" className="w-full">
-                                            I am attending
+                                            Register Now
                                         </Button>
                                             </p>
                                 </Form>
@@ -287,7 +287,7 @@ class Alumni extends Component {
                                         </EmailShareButton>
                                     </div>
                                 </div>
-                            </Slide>
+                            </Fade>
 
                         </div>
                         <div className="max-w-md mx-auto pb-8">
