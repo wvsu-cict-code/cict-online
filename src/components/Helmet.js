@@ -29,7 +29,7 @@ class Helmet extends Component {
         <meta property="og:type" content="article" />
         <meta property="og:title" content="CICT Online" />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={ogImage} />
+        <meta property="og:image" content={`https://cictwvsu.netlify.com${ogImage}`} />
         <link rel="apple-touch-icon" sizes="57x57" href={icon57} />
         <link rel="apple-touch-icon" sizes="60x60" href={icon60} />
         <link rel="apple-touch-icon" sizes="72x72" href={icon72} />
