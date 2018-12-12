@@ -27,6 +27,7 @@ import brandLogo from '../assets/misc/alumni-2019-brand.svg';
 import Helmet from '../components/Helmet';
 import Navbar from '../components/Navbar';
 import ogImage from '../assets/misc/alumni-2019.jpg';
+import DisqusThread from '../components/DisqusThread';
 
 const jdenticon = require('jdenticon')
 
@@ -143,7 +144,7 @@ class Alumni extends Component {
     getLatestData = () => {
         const app = this
         axios.get('https://us-central1-cict-online.cloudfunctions.net/getRegisteredEntries').then(res => {
-            if(Object.keys(res.data) !== 0){                
+            if (Object.keys(res.data) !== 0) {
                 app.setState({ attendees: res.data.reverse() })
             }
         })
@@ -161,8 +162,8 @@ class Alumni extends Component {
 
     render() {
         const { attendees, email, noGravatar, submitting, formKey } = this.state
-        const url = '';
-        const quote = '';
+        const url = 'http://cictwvsu.com/alumni/';
+        const quote = 'Register now!';
         return (
             <React.Fragment>
                 <Helmet
@@ -250,7 +251,7 @@ class Alumni extends Component {
                                         <Button loading={submitting} type="primary" htmlType="submit" className="w-full">
                                             Register Now
                                         </Button>
-                                            </p>
+                                    </p>
                                 </Form>
 
                                 <div className="text-center">
@@ -274,7 +275,7 @@ class Alumni extends Component {
 
                                                 round />
                                         </TwitterShareButton>
-                                        
+
                                         <EmailShareButton
                                             className="mx-2"
                                             url={url}
@@ -317,7 +318,13 @@ class Alumni extends Component {
                         </div>
 
                     </div>
-
+                    <div className="max-w-sm mx-auto mb-8">
+                    <DisqusThread
+                        id="main"
+                        title="CICT Allumni Homecoming"
+                        path="https://cictwvsu.com/alumni/"
+                    />
+                    </div>
                 </div>
                 <footer className="justify-between flex-wrap cict-darker p-8">
                     <div className="container mx-auto text-center">
