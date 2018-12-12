@@ -323,15 +323,15 @@ class Alumni extends Component {
                                 )}
                             </div>
                         </div>
+                        <div className="max-w-sm mx-auto mb-8">
+                            <DisqusThread
+                                id="main"
+                                title="CICT Allumni Homecoming"
+                                path="https://cictwvsu.com/alumni/"
+                            />
+                        </div>
+                    </div>
 
-                    </div>
-                    <div className="max-w-sm mx-auto mb-8">
-                        <DisqusThread
-                            id="main"
-                            title="CICT Allumni Homecoming"
-                            path="https://cictwvsu.com/alumni/"
-                        />
-                    </div>
                 </div>
                 <footer className="justify-between flex-wrap cict-darker p-8">
                     <div className="container mx-auto text-center">
