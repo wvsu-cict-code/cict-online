@@ -255,37 +255,44 @@ class Alumni extends Component {
                                 </Form>
 
                                 <div className="text-center">
+                                    <p className="mb-4">Share with your friends!</p>
                                     <div className="inline-flex mx-auto">
-                                        <FacebookShareButton
-                                            url={url}
-                                            quote={quote}
-                                            className="mx-2"
-                                        >
-                                            <FacebookIcon
-                                                size={32}
-                                                round />
-                                        </FacebookShareButton>
-                                        <TwitterShareButton
-                                            className="mx-2"
-                                            url={url}
-                                            title={quote}
-                                        >
-                                            <TwitterIcon
-                                                size={32}
+                                        <div className="zoom">
+                                            <FacebookShareButton
+                                                url={url}
+                                                quote={quote}
+                                                className="mx-2"
+                                            >
+                                                <FacebookIcon
+                                                    size={32}
+                                                    round />
+                                            </FacebookShareButton>
+                                        </div>
+                                        <div className="zoom">
+                                            <TwitterShareButton
+                                                className="mx-2"
+                                                url={url}
+                                                title={quote}
+                                            >
+                                                <TwitterIcon
+                                                    size={32}
 
-                                                round />
-                                        </TwitterShareButton>
+                                                    round />
+                                            </TwitterShareButton>
+                                        </div>
 
-                                        <EmailShareButton
-                                            className="mx-2"
-                                            url={url}
-                                            subject={quote}
-                                            body="Register for CICT Alumni Homecoming 2019!"
-                                        >
-                                            <EmailIcon
-                                                size={32}
-                                                round />
-                                        </EmailShareButton>
+                                        <div className="zoom">
+                                            <EmailShareButton
+                                                className="mx-2"
+                                                url={url}
+                                                subject={quote}
+                                                body="Register for CICT Alumni Homecoming 2019!"
+                                            >
+                                                <EmailIcon
+                                                    size={32}
+                                                    round />
+                                            </EmailShareButton>
+                                        </div>
                                     </div>
                                 </div>
                             </Fade>
@@ -319,11 +326,11 @@ class Alumni extends Component {
 
                     </div>
                     <div className="max-w-sm mx-auto mb-8">
-                    <DisqusThread
-                        id="main"
-                        title="CICT Allumni Homecoming"
-                        path="https://cictwvsu.com/alumni/"
-                    />
+                        <DisqusThread
+                            id="main"
+                            title="CICT Allumni Homecoming"
+                            path="https://cictwvsu.com/alumni/"
+                        />
                     </div>
                 </div>
                 <footer className="justify-between flex-wrap cict-darker p-8">
