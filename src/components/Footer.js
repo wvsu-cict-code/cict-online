@@ -9,11 +9,11 @@ class Footer extends Component {
   render () {
     const menu = [
       {
-        name: 'Privacy Policy',
+        name: <React.Fragment>'Privacy Policy'</React.Fragment>,
         path: '/privacypolicy',
       },
       {
-        name: 'Contact Us',
+        name: <React.Fragment>'Contact Us'</React.Fragment>,
         path: '/contactus',
       },
       {
@@ -38,7 +38,7 @@ class Footer extends Component {
               <div className="mx-4 p-4">
                 <ul className="list-reset flex">
                   {menu.map(i => (
-                    <li key={uuidv4()} className="mr-6"><Link className="no-underline align-middle text-grey hover:text-orange" to={i.path}>{i.name}</Link></li>
+                    <li key={uuidv4()} className="mr-6"><Link className="no-underline align-middle text-grey hover:text-orange" to={i.path}>{()=>i.name}</Link></li>
                 ))}
                 </ul>
               </div>

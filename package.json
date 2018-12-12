@@ -21,6 +21,7 @@
     "firebase": "^5.7.0",
     "fisher-yates-shuffle": "^0.2.0",
     "javascript-terminal": "^1.0.2",
+    "jdenticon": "^2.1.0",
     "knuth-shuffle": "1.0",
     "lodash": "^4.17.11",
     "react": "^16.0.0",
@@ -40,6 +41,7 @@
     "react-terminal-component": "https://github.com/wvsu-cict-code/react-terminal-component",
     "react-typist": "^2.0.4",
     "storm-react-diagrams": "^5.2.1",
+    "svg-inline-react": "^3.1.0",
     "tailwindcss": "^0.3.0",
     "uuid": "^3.2.1"
   },

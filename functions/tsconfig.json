@@ -5,7 +5,9 @@
     "noImplicitReturns": true,
     "outDir": "lib",
     "sourceMap": true,
-    "target": "es6"
+    "target": "es6",
+    "skipLibCheck": true,
+    "no-shadowed-variable": false
   },
   "compileOnSave": true,
   "include": [

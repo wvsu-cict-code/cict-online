@@ -1,6 +1,10 @@
 # dependencies
 /node_modules
 /functions/node_modules
+/functions/api/credentials.json
+/functions/api/credentials.ts
+/functions/sheets/token.ts
+
 
 # testing
 /coverage

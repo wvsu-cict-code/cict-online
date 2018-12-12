@@ -1,8 +1,12 @@
-import * as functions from 'firebase-functions';
+import * as admin from 'firebase-admin';
+import getRegisteredEntries from './api/getRegisteredEntries';
+import addNewEntry from "./api/addNewEntry";
 
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
-//
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//  response.send("Hello from Firebase!");
-// });
+admin.initializeApp({
+    credential: admin.credential.applicationDefault()
+});
+
+export {
+    getRegisteredEntries,
+    addNewEntry
+}

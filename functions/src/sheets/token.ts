@@ -1,0 +1,1 @@
+export default {"access_token":"ya29.GltvBrfhnjGFBYFNleUQBlQJuCcb29pyhc7Kl9aanAfOhEvfD-rFCAzQCgcj-smyTaEaqvfvMMQZloWZ989yE6zRgK4vxBywLPujvxEYihzdjxJKjMfJGQHvmUcT","refresh_token":"1/FbOBl4q3hDITHT6azkVKvtVp0wf1wuuJDQGN8Fsj6Gg","scope":"https://www.googleapis.com/auth/spreadsheets","token_type":"Bearer","expiry_date":1544572392785}
