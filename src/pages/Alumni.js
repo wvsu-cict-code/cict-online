@@ -1,21 +1,32 @@
-import { Button, Checkbox, Form, Icon, Input, Select, notification, Popover } from 'antd';
+import { Button, Checkbox, Form, Icon, Input, notification, Popover, Select } from 'antd';
 import axios from 'axios';
-import { Link } from 'react-static';
 import _ from 'lodash';
+import moment from 'moment';
 import React, { Component } from 'react';
 import { Clock, Facebook, Mail, MapPin, Twitter } from 'react-feather';
 import Gravatar from 'react-gravatar';
 import { Fade, Slide } from 'react-reveal';
-import uuidv4 from 'uuid/v4';
+import { Link } from 'react-static';
 import InlineSVG from 'svg-inline-react';
+import uuidv4 from 'uuid/v4';
+import {
+    FacebookIcon,
+    FacebookShareButton,
+    GooglePlusShareButton,
+    GooglePlusIcon,
+    TwitterShareButton,
+    TwitterIcon,
+    EmailShareButton,
+    EmailIcon,
+} from 'react-share';
 
+import brandIconLight from '../assets/brandicon-light.svg';
 import bgLeft from '../assets/misc/alumni-2019-bg-left.jpg';
 import bgRight from '../assets/misc/alumni-2019-bg-right.jpg';
 import brandLogo from '../assets/misc/alumni-2019-brand.svg';
-
 import Helmet from '../components/Helmet';
 import Navbar from '../components/Navbar';
-import brandIconLight from '../assets/brandicon-light.svg';
+import ogImage from '../assets/misc/alumni-2019.jpg';
 
 const jdenticon = require('jdenticon')
 
@@ -66,17 +77,18 @@ class Alumni extends Component {
             contact: '',
             noGravatar: false,
             submitting: false,
+            formKey: uuidv4()
         }
     }
 
     handleSubmit = (e) => {
         e.preventDefault();
-        this.setState({submitting:true})
+        this.setState({ submitting: true })
         const { fname, mname, sname, ystart, yend, course, company, contact, email, noGravatar } = this.state
         axios.get('https://us-central1-cict-online.cloudfunctions.net/addNewEntry', {
             params: {
                 data: [
-                    new Date().toISOString(),
+                    moment().format('MMMM Do YYYY, h:mm:ss a'),
                     fname,
                     mname,
                     sname,
@@ -96,28 +108,22 @@ class Alumni extends Component {
                     message: 'See you soon!',
                     description: 'You are now registered! Please check our Facebook group for updates.',
                     onClose: () => {
-                        app.getLatestData();                        
+                        app.getLatestData();
                     }
                 });
-                app.setState({
-    submitting:false,
-      email: '',
-        fname: '',
-        mname: '',
-        sname: '',
-        ystart: '',
-        yend: '',
-        course: '',
-        company: '',
-        contact: '',
-        noGravatar: false,
-})
             } else {
                 notification.open({
                     message: 'Ooops!',
                     description: 'Sorry and error occured. Please contact us on our Facebook page.',
                 });
             }
+            setTimeout(() => {
+                this.props.form.resetFields();
+                this.setState({
+                    submitting: false,
+                    formKey: uuidv4()
+                })
+            }, 1000)
         })
     }
 
@@ -137,7 +143,9 @@ class Alumni extends Component {
     getLatestData = () => {
         const app = this
         axios.get('https://us-central1-cict-online.cloudfunctions.net/getRegisteredEntries').then(res => {
-            app.setState({ attendees: res.data.reverse() })
+            if(Object.keys(res.data) !== 0){                
+                app.setState({ attendees: res.data.reverse() })
+            }
         })
     }
 
@@ -152,14 +160,15 @@ class Alumni extends Component {
     }
 
     render() {
-        const { attendees, email, noGravatar, submitting } = this.state
-
+        const { attendees, email, noGravatar, submitting, formKey } = this.state
+        const url = '';
+        const quote = '';
         return (
             <React.Fragment>
                 <Helmet
-                    title="CICT Online - Alumni Homecoming 2019"
-                    description="West Visayas State University, College of Information and Communications Technology Website"
-                    ogImage={null}
+                    title="Alumni Homecoming 2019"
+                    description="CICT Alumni Homecoming Registration"
+                    ogImage={ogImage}
                 />
                 <Navbar />
                 <div className="w-full text-center bg-no-repeat bg-left-bottom" style={{ backgroundImage: `url(${bgLeft})` }}>
@@ -178,7 +187,7 @@ class Alumni extends Component {
                                 </div>
                             </Fade>
                             <Slide bottom>
-                                <Form onSubmit={this.handleSubmit} className="alumni-registration-form px-4 lg:px-auto mx-auto py-8 text-left sm:px-4 xs:px-4">
+                                <Form key={formKey} onSubmit={this.handleSubmit} className="alumni-registration-form px-4 lg:px-auto mx-auto py-8 text-left sm:px-4 xs:px-4">
                                     <small>* Required Fields</small>
                                     <FormItem required label="Basic Info" className="my-0">
                                         <FormItem className="mt-0">
@@ -238,31 +247,60 @@ class Alumni extends Component {
 
                                     <p className="text-center">
                                         <Button loading={submitting} type="primary" htmlType="submit" className="w-full">
-                                            Join Us
-                                </Button>
-                                    </p>
+                                            I am attending
+                                        </Button>
+                                            </p>
                                 </Form>
 
+                                <div className="text-center">
+                                    <div className="inline-flex mx-auto">
+                                        <FacebookShareButton
+                                            url={url}
+                                            quote={quote}
+                                            className="mx-2"
+                                        >
+                                            <FacebookIcon
+                                                size={32}
+                                                round />
+                                        </FacebookShareButton>
+                                        <TwitterShareButton
+                                            className="mx-2"
+                                            url={url}
+                                            title={quote}
+                                        >
+                                            <TwitterIcon
+                                                size={32}
 
+                                                round />
+                                        </TwitterShareButton>
+                                        
+                                        <EmailShareButton
+                                            className="mx-2"
+                                            url={url}
+                                            subject={quote}
+                                            body="Register for CICT Alumni Homecoming 2019!"
+                                        >
+                                            <EmailIcon
+                                                size={32}
+                                                round />
+                                        </EmailShareButton>
+                                    </div>
+                                </div>
                             </Slide>
-                            <p>
-                                <Facebook className={[theme.link, 'w-8 h-8 mx-2']} />
-                                <Twitter className={[theme.link, 'w-8 h-8 mx-2']} />
-                                <Mail className={[theme.link, 'w-8 h-8 mx-2']} />
-                            </p>
+
                         </div>
                         <div className="max-w-md mx-auto pb-8">
                             <hr className="h-px w-full alumni-2019-theme-bg--color mb-8" />
-                            <h3 className={theme.text}><span className="font-bold">{attendees? Object.keys(attendees).length: 0}</span> CICTzens are Attending</h3>
+                            <h3 className={theme.text}><span className="font-bold">{attendees ? Object.keys(attendees).length : 0}</span> CICTzens are Attending</h3>
                             <div className="flex flex-wrap mt-8 mx-4">
 
                                 {attendees && attendees.map(i => (
-                                        <div key={uuidv4()} className="sm:w-full md:w-full lg:w-1/6 xl:1/6 mb-4 zoom justify-center text-center">
+                                    <div key={uuidv4()} className="sm:w-full md:w-full lg:w-1/6 xl:1/6 mb-4 zoom justify-center text-center">
                                         <Popover content={
                                             <p>
                                                 Batch {i[5]}, {_.upperCase(i[6])}
                                             </p>
-                                            } title={`${i[3]}, ${i[2]} ${i[1]}`}>
+                                        } title={`${i[3]}, ${i[2]} ${i[1]}`}>
                                             <div className="w-16 h-16 border-2 mb-4 rounded-full alumni-2019-theme-border--color p-2">
                                                 {
                                                     JSON.parse(i[10]) ?
@@ -270,9 +308,9 @@ class Alumni extends Component {
                                                         <Gravatar default="monsterid" size={100} className="w-16 h-auto rounded-full" email={i[9]} />
                                                 }
                                             </div>
-                                            </Popover>
-                                        </div>
-                                    )
+                                        </Popover>
+                                    </div>
+                                )
                                 )}
                             </div>
                         </div>
@@ -281,19 +319,21 @@ class Alumni extends Component {
 
                 </div>
                 <footer className="justify-between flex-wrap cict-darker p-8">
-        <div className="container mx-auto text-center">
-          <Link className="mx-4 p-4" to="/"><img className="h-8" src={brandIconLight} alt="CICT Online Logo" /></Link>
-          <p className="flex mx-4 p-4 text-grey-dark items-center leading-loose">
-                <small className="mx-auto">
-                  <span>&lt;/&gt; with &lt;3 by CICTzens | 2016 - Present</span>
-                </small>
-              </p>
+                    <div className="container mx-auto text-center">
+                        <Link className="mx-4 p-4" to="/"><img className="h-8" src={brandIconLight} alt="CICT Online Logo" /></Link>
+                        <p className="flex mx-4 p-4 text-grey-dark items-center leading-loose">
+                            <small className="mx-auto">
+                                <span>&lt;/&gt; with &lt;3 by CICTzens | 2016 - Present</span>
+                            </small>
+                        </p>
 
-        </div>
-      </footer>
+                    </div>
+                </footer>
             </React.Fragment>
         )
     }
 }
 
-export default Alumni
+const WrappedForm = Form.create()(Alumni);
+
+export default WrappedForm
