@@ -169,6 +169,7 @@ class Alumni extends Component {
                     title="Alumni Homecoming 2019"
                     description="CICT Alumni Homecoming Registration"
                     ogImage={ogImage}
+                    url="https://cictwvsu.netlify.com/alumni"
                 />
                 <Navbar />
                 <div className="w-full text-center bg-no-repeat bg-left-bottom" style={{ backgroundImage: `url(${bgLeft})` }}>

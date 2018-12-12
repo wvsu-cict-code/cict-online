@@ -21,11 +21,11 @@ import icon144ms from '../assets/ms-icon-144x144.png'
 
 class Helmet extends Component {
   render () {
-    const { ogImage, description, title} = this.props
+    const { ogImage, description, title, url} = this.props
     return (
       <Head>
         <title>{title}</title>
-        <meta property="og:url" content="http://cictwvsu.com" />
+        <meta property="og:url" content={url||'http://cictwvsu.com'} />
         <meta property="og:type" content="article" />
         <meta property="og:title" content="CICT Online" />
         <meta property="og:description" content={description} />
