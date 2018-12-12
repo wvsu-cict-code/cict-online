@@ -1,5 +1,6 @@
 import { Button, Checkbox, Form, Icon, Input, Select, notification, Popover } from 'antd';
 import axios from 'axios';
+import { Link } from 'react-static';
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { Clock, Facebook, Mail, MapPin, Twitter } from 'react-feather';
@@ -11,9 +12,10 @@ import InlineSVG from 'svg-inline-react';
 import bgLeft from '../assets/misc/alumni-2019-bg-left.jpg';
 import bgRight from '../assets/misc/alumni-2019-bg-right.jpg';
 import brandLogo from '../assets/misc/alumni-2019-brand.svg';
-import Footer from '../components/Footer';
+
 import Helmet from '../components/Helmet';
 import Navbar from '../components/Navbar';
+import brandIconLight from '../assets/brandicon-light.svg';
 
 const jdenticon = require('jdenticon')
 
@@ -278,7 +280,17 @@ class Alumni extends Component {
                     </div>
 
                 </div>
-                {() => <Footer />}
+                <footer className="justify-between flex-wrap cict-darker p-8">
+        <div className="container mx-auto text-center">
+          <Link className="mx-4 p-4" to="/"><img className="h-8" src={brandIconLight} alt="CICT Online Logo" /></Link>
+          <p className="flex mx-4 p-4 text-grey-dark items-center leading-loose">
+                <small className="mx-auto">
+                  <span>&lt;/&gt; with &lt;3 by CICTzens | 2016 - Present</span>
+                </small>
+              </p>
+
+        </div>
+      </footer>
             </React.Fragment>
         )
     }
