@@ -25,7 +25,6 @@ import brandLogo from '../assets/misc/alumni-2019-brand.svg';
 import ogImage from '../assets/misc/alumni-2019.jpg';
 import Helmet from '../components/Helmet';
 import Navbar from '../components/Navbar';
-import ogImage from '../assets/misc/alumni-2019.jpg';
 import DisqusThread from '../components/DisqusThread';
 
 const jdenticon = require('jdenticon')
