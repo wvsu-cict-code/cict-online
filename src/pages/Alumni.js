@@ -1,4 +1,4 @@
-import { Button, Checkbox, Form, Icon, Input, notification, Popover, Select } from 'antd';
+import { Button, Checkbox, Form, Icon, Input, notification, Popover, Select, Spin } from 'antd';
 import axios from 'axios';
 import _ from 'lodash';
 import moment from 'moment';
@@ -78,6 +78,8 @@ class Alumni extends Component {
             contact: '',
             noGravatar: false,
             submitting: false,
+            count: 0,
+            loadingAttendees: true,
             formKey: uuidv4()
         }
     }
@@ -141,11 +143,19 @@ class Alumni extends Component {
         })
     }
 
-    getLatestData = () => {
+    getLatestData = (start, end) => {
         const app = this
-        axios.get('https://us-central1-cict-online.cloudfunctions.net/getRegisteredEntries').then(res => {
+        const attendeesQuery = `https://us-central1-cict-online.cloudfunctions.net/getRegisteredEntries?start=${start || 2}&end=${end || 6}`;
+        axios.get(attendeesQuery).then(res => {
             if (Object.keys(res.data) !== 0) {
                 app.setState({ attendees: res.data.reverse() })
+            }
+        })
+
+        const countQuery = `https://us-central1-cict-online.cloudfunctions.net/countAllRegistered`;
+        axios.get(countQuery).then(res => {
+            if (Object.keys(res.data) !== 0) {
+                app.setState({ count: res.data.length, loadingAttendees: false })
             }
         })
     }
@@ -160,8 +170,19 @@ class Alumni extends Component {
         this.setState({ [name]: checked })
     }
 
+    countAttendees = count => {
+        switch (count) {
+            case 0:
+                return 'Be the first to register!'
+            case 1:
+                return 'Wow! You are the first to register!'
+            default:
+                return <React.Fragment><span className="font-bold">{count}</span> CICTzens are attending!</React.Fragment>
+        }
+    }
+
     render() {
-        const { attendees, email, noGravatar, submitting, formKey } = this.state
+        const { attendees, email, noGravatar, submitting, formKey, count, loadingAttendees } = this.state
         const url = 'http://cictwvsu.com/alumni/';
         const quote = 'Register now!';
         return (
@@ -189,71 +210,72 @@ class Alumni extends Component {
                                 </div>
                             </Fade>
                             <Fade>
-                                <Form key={formKey} onSubmit={this.handleSubmit} className="alumni-registration-form px-4 lg:px-auto mx-auto py-8 text-left sm:px-4 xs:px-4">
-                                    <small>* Required Fields</small>
-                                    <FormItem required label="Basic Info" className="my-0">
-                                        <FormItem className="mt-0">
-                                            <Input addonBefore="First Name" required size="large" name="fname" prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Your First Name" onChange={e => this.handleChange(e, 'fname')} />
-                                        </FormItem>
-                                        <FormItem>
-                                            <Input addonBefore="Middle Name" required size="large" name="mname" prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Your Middle Name" onChange={e => this.handleChange(e, 'mname')} />
-                                        </FormItem>
-                                        <FormItem>
-                                            <Input addonBefore="Last Name" required size="large" name="sname" prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Your Last Name" onChange={e => this.handleChange(e, 'sname')} />
-                                        </FormItem>
-                                    </FormItem>
-
-                                    <FormItem required label="Year Entered the College">
-                                        <Select showSearch size="large" placeholder="Select a Year" onChange={e => this.handleSelectionChange(e, 'ystart')}>
-                                            {yearStartRange.map(i => (
-                                                <Option key={i} value={i}>{i}</Option>
-                                            ))}
-                                        </Select>
-                                    </FormItem>
-                                    <FormItem required label="Year Graduated from the College">
-                                        <Select showSearch size="large" placeholder="Select a Year" onChange={e => this.handleSelectionChange(e, 'yend')}>
-                                            {yearEndRange.map(i => (
-                                                <Option key={i} value={i}>{i}</Option>
-                                            ))}
-                                        </Select>
-                                    </FormItem>
-                                    <FormItem required label="Course">
-                                        <Select showSearch size="large" placeholder="Select a Course" onChange={e => this.handleSelectionChange(e, 'course')}>
-                                            {courses.map(i => (
-                                                <Option key={i.value} value={i.value}>{i.name}</Option>
-                                            ))}
-                                        </Select>
-                                    </FormItem>
-                                    <FormItem required label="Company Affiliated">
-                                        <Input required addonBefore="Details" name="company" size="large" placeholder="Where are you working now?" onChange={e => this.handleChange(e, 'company')} />
-                                    </FormItem>
-                                    <FormItem required label="Profile Email">
-                                        <FormItem>
-                                            <p className="text-center mb-4" >
-                                                {
-                                                    noGravatar ?
-                                                        <InlineSVG src={jdenticon.toSvg(email, 150)} className="rounded-full mx-0 my-4" /> :
-                                                        <Gravatar default="monsterid" size={150} className="rounded-full mx-0 my-4" email={email} />
-                                                }
-                                            </p>
-                                            <Input addonBefore={noGravatar ? "Email" : "Gravatar Email"} type="email" size="large" prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder={noGravatar ? "Email" : "Gravatar Email"} onChange={e => this.handleChange(e, 'email')} name="email" />
-                                            <p><a href="https://en.gravatar.com/" target="_blank" rel="noopener noreferrer">Create your own Gravatar</a></p>
-                                            <Checkbox name="noGravatar" checked={noGravatar} onChange={this.onCheckboxChange}>I don't have a Gravatar email.</Checkbox>
-                                        </FormItem>
-                                        <FormItem required label="Mobile/Landline">
-                                            <Input name="contact" size="large" placeholder="Your Number" onChange={e => this.handleChange(e, 'contact')} />
+                                <Spin spinning={submitting}>
+                                    <Form key={formKey} onSubmit={this.handleSubmit} className="alumni-registration-form px-4 lg:px-auto mx-auto py-8 text-left sm:px-4 xs:px-4">
+                                        <small>* Required Fields</small>
+                                        <FormItem required label="Basic Info" className="my-0">
+                                            <FormItem className="mt-0">
+                                                <Input addonBefore="First Name" required size="large" name="fname" prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Your First Name" onChange={e => this.handleChange(e, 'fname')} />
+                                            </FormItem>
+                                            <FormItem>
+                                                <Input addonBefore="Middle Name" required size="large" name="mname" prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Your Middle Name" onChange={e => this.handleChange(e, 'mname')} />
+                                            </FormItem>
+                                            <FormItem>
+                                                <Input addonBefore="Last Name" required size="large" name="sname" prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="* Your Last Name" onChange={e => this.handleChange(e, 'sname')} />
+                                            </FormItem>
                                         </FormItem>
 
+                                        <FormItem required label="Year Entered the College">
+                                            <Select showSearch size="large" placeholder="Select a Year" onChange={e => this.handleSelectionChange(e, 'ystart')}>
+                                                {yearStartRange.map(i => (
+                                                    <Option key={i} value={i}>{i}</Option>
+                                                ))}
+                                            </Select>
+                                        </FormItem>
+                                        <FormItem required label="Year Graduated from the College">
+                                            <Select showSearch size="large" placeholder="Select a Year" onChange={e => this.handleSelectionChange(e, 'yend')}>
+                                                {yearEndRange.map(i => (
+                                                    <Option key={i} value={i}>{i}</Option>
+                                                ))}
+                                            </Select>
+                                        </FormItem>
+                                        <FormItem required label="Course">
+                                            <Select showSearch size="large" placeholder="Select a Course" onChange={e => this.handleSelectionChange(e, 'course')}>
+                                                {courses.map(i => (
+                                                    <Option key={i.value} value={i.value}>{i.name}</Option>
+                                                ))}
+                                            </Select>
+                                        </FormItem>
+                                        <FormItem required label="Company Affiliated">
+                                            <Input required addonBefore="Details" name="company" size="large" placeholder="Where are you working now?" onChange={e => this.handleChange(e, 'company')} />
+                                        </FormItem>
+                                        <FormItem required label="Profile Email">
+                                            <FormItem>
+                                                <p className="text-center mb-4" >
+                                                    {
+                                                        noGravatar ?
+                                                            <InlineSVG src={jdenticon.toSvg(email, 150)} className="rounded-full mx-0 my-4" /> :
+                                                            <Gravatar default="monsterid" size={150} className="rounded-full mx-0 my-4" email={email} />
+                                                    }
+                                                </p>
+                                                <Input addonBefore={noGravatar ? "Email" : "Gravatar Email"} type="email" size="large" prefix={<Icon type="mail" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder={noGravatar ? "Email" : "Gravatar Email"} onChange={e => this.handleChange(e, 'email')} name="email" />
+                                                <p><a href="https://en.gravatar.com/" target="_blank" rel="noopener noreferrer">Create your own Gravatar</a></p>
+                                                <Checkbox name="noGravatar" checked={noGravatar} onChange={this.onCheckboxChange}>I don't have a Gravatar email.</Checkbox>
+                                            </FormItem>
+                                            <FormItem required label="Mobile/Landline">
+                                                <Input name="contact" size="large" placeholder="Your Number" onChange={e => this.handleChange(e, 'contact')} />
+                                            </FormItem>
 
-                                    </FormItem>
 
-                                    <p className="text-center">
-                                        <Button loading={submitting} type="primary" htmlType="submit" className="w-full">
-                                            Register Now
+                                        </FormItem>
+
+                                        <p className="text-center">
+                                            <Button loading={submitting} type="primary" htmlType="submit" className="w-full">
+                                                Register Now
                                         </Button>
-                                    </p>
-                                </Form>
-
+                                        </p>
+                                    </Form>
+                                </Spin>
                                 <div className="text-center">
                                     <p className="mb-4">Share with your friends!</p>
                                     <div className="inline-flex mx-auto">
@@ -300,38 +322,46 @@ class Alumni extends Component {
                         </div>
                         <div className="max-w-md mx-auto pb-8">
                             <hr className="h-px w-full alumni-2019-theme-bg--color mb-8" />
-                            <h3 className={theme.text}><span className="font-bold">{attendees ? Object.keys(attendees).length : 0}</span> CICTzens are Attending</h3>
-                            <div className="flex flex-wrap mt-8 mx-4">
+                            <h3 className={theme.text}>{this.countAttendees(count)}</h3>
+                            <Spin className="mx-auto w-full" spinning={submitting}>
+                                <div className="flex flex-wrap mt-8 mx-4">
+                                    {loadingAttendees && <Spin className="mx-auto" />}
+                                    {attendees && attendees.map(i => (
+                                        <div key={uuidv4()} className="sm:w-full md:w-full lg:w-1/6 xl:1/6 mb-4 zoom justify-center text-center">
 
-                                {attendees && attendees.map(i => (
-                                    <div key={uuidv4()} className="sm:w-full md:w-full lg:w-1/6 xl:1/6 mb-4 zoom justify-center text-center">
-                                        <Popover content={
-                                            <p>
-                                                Batch {i[5]}, {_.upperCase(i[6])}
-                                            </p>
-                                        } title={`${i[3]}, ${i[2]} ${i[1]}`}>
-                                            <div className="w-16 h-16 border-2 mb-4 rounded-full alumni-2019-theme-border--color p-2">
-                                                {
-                                                    JSON.parse(i[10]) ?
-                                                        <InlineSVG src={jdenticon.toSvg(i[9], 44)} className="w-16 h-auto rounded-full" /> :
-                                                        <Gravatar default="monsterid" size={100} className="w-16 h-auto rounded-full" email={i[9]} />
-                                                }
-                                            </div>
-                                        </Popover>
-                                    </div>
-                                )
-                                )}
-                            </div>
+                                            <Popover content={
+                                                <p>
+                                                    Batch {i[5]}, {_.upperCase(i[6])}
+                                                </p>
+                                            } title={`${i[3]}, ${i[2]} ${i[1]}`}>
+                                                <div className="w-16 h-16 border-2 mb-4 rounded-full alumni-2019-theme-border--color p-2">
+                                                    {
+                                                        JSON.parse(i[10]) ?
+                                                            <InlineSVG src={jdenticon.toSvg(i[9], 44)} className="w-16 h-auto rounded-full" /> :
+                                                            <Gravatar default="monsterid" size={100} className="w-16 h-auto rounded-full" email={i[9]} />
+                                                    }
+                                                </div>
+                                            </Popover>
+
+                                        </div>
+                                    )
+                                    )}
+
+                                </div>
+                            </Spin>                            
                         </div>
-                        <div className="max-w-sm mx-auto mb-8">
+                        <Link className="font-bold mt-8" to="/homecoming2019">View All</Link>
+                        <div className="max-w-sm mx-auto mt-4 mb-8 px-4">
                             <DisqusThread
                                 id="main"
                                 title="CICT Allumni Homecoming"
                                 path="https://cictwvsu.com/alumni/"
                             />
+                            <p className="mb-2"><small>Help us build a better college website!</small></p>
+                            <Button href="https://github.com/wvsu-cict-code/cict-online" target="_blank" icon="github">Contribute</Button>
                         </div>
                     </div>
-
+                    
                 </div>
                 <footer className="justify-between flex-wrap cict-darker p-8">
                     <div className="container mx-auto text-center">
