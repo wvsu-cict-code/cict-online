@@ -3,30 +3,28 @@ import axios from 'axios';
 import _ from 'lodash';
 import moment from 'moment';
 import React, { Component } from 'react';
-import { Clock, Facebook, Mail, MapPin, Twitter } from 'react-feather';
+import { Clock, MapPin } from 'react-feather';
 import Gravatar from 'react-gravatar';
 import { Fade, Slide } from 'react-reveal';
+import {
+    EmailIcon,
+    EmailShareButton,
+    FacebookIcon,
+    FacebookShareButton,
+    TwitterIcon,
+    TwitterShareButton,
+} from 'react-share';
 import { Link } from 'react-static';
 import InlineSVG from 'svg-inline-react';
 import uuidv4 from 'uuid/v4';
-import {
-    FacebookIcon,
-    FacebookShareButton,
-    GooglePlusShareButton,
-    GooglePlusIcon,
-    TwitterShareButton,
-    TwitterIcon,
-    EmailShareButton,
-    EmailIcon,
-} from 'react-share';
 
 import brandIconLight from '../assets/brandicon-light.svg';
 import bgLeft from '../assets/misc/alumni-2019-bg-left.jpg';
 import bgRight from '../assets/misc/alumni-2019-bg-right.jpg';
 import brandLogo from '../assets/misc/alumni-2019-brand.svg';
+import ogImage from '../assets/misc/alumni-2019.jpg';
 import Helmet from '../components/Helmet';
 import Navbar from '../components/Navbar';
-import ogImage from '../assets/misc/alumni-2019.jpg';
 import DisqusThread from '../components/DisqusThread';
 
 const jdenticon = require('jdenticon')
