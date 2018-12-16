@@ -87,6 +87,10 @@ export default {
         component: 'src/pages/Alumni'
       },
       {
+        path: '/homecoming2019',
+        component: 'src/pages/Homecoming2019'
+      },
+      {
         is404: true,
         component: 'src/pages/404',
       },
