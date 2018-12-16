@@ -346,11 +346,11 @@ class Alumni extends Component {
                                     )
                                     )}
 
-                                    <Link to="/homecoming2019" className="w-16 h-16 border-2 mb-4 rounded-full alumni-2019-theme-border--color p-2 zoom">
+                                    {!loadingAttendees && <Link to="/homecoming2019" className="w-16 h-16 border-2 mb-4 rounded-full alumni-2019-theme-border--color p-2 zoom">
                                         <div className="bg-blue text-white rounded-full font-bold alumni-count-more">
                                             +{count - 4}
                                         </div>
-                                    </Link>
+                                    </Link>}
 
                                 </div>
                             </Spin>
