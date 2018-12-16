@@ -22,6 +22,7 @@ import brandIconLight from '../assets/brandicon-light.svg';
 import bgLeft from '../assets/misc/alumni-2019-bg-left.jpg';
 import bgRight from '../assets/misc/alumni-2019-bg-right.jpg';
 import brandLogo from '../assets/misc/alumni-2019-brand.svg';
+import divider from '../assets/misc/divider.svg';
 import ogImage from '../assets/misc/alumni-2019.jpg';
 import Helmet from '../components/Helmet';
 import Navbar from '../components/Navbar';
@@ -143,7 +144,7 @@ class Alumni extends Component {
 
     getLatestData = (start, end) => {
         const app = this
-        const attendeesQuery = `https://us-central1-cict-online.cloudfunctions.net/getRegisteredEntries?start=${start || 2}&end=${end || 6}`;
+        const attendeesQuery = `https://us-central1-cict-online.cloudfunctions.net/getRegisteredEntries?start=${start || 2}&end=${end || 5}`;
         axios.get(attendeesQuery).then(res => {
             if (Object.keys(res.data) !== 0) {
                 app.setState({ attendees: res.data.reverse() })
@@ -319,7 +320,7 @@ class Alumni extends Component {
 
                         </div>
                         <div className="max-w-md mx-auto pb-8">
-                            <hr className="h-px w-full alumni-2019-theme-bg--color mb-8" />
+                            <img src={divider} className="w-48 h-auto mx-auto mt-4 mb-8" alt="" />
                             <h3 className={theme.text}>{this.countAttendees(count)}</h3>
                             <Spin className="mx-auto w-full" spinning={submitting}>
                                 <div className="flex flex-wrap mt-8 mx-4">
@@ -345,8 +346,14 @@ class Alumni extends Component {
                                     )
                                     )}
 
+                                    <Link to="/homecoming2019" className="w-16 h-16 border-2 mb-4 rounded-full alumni-2019-theme-border--color p-2 zoom">
+                                        <div className="bg-blue text-white rounded-full font-bold alumni-count-more">
+                                            +{count - 4}
+                                        </div>
+                                    </Link>
+
                                 </div>
-                            </Spin>                            
+                            </Spin>
                         </div>
                         <Link className="font-bold mt-8" to="/homecoming2019">View All</Link>
                         <div className="max-w-sm mx-auto mt-4 mb-8 px-4">
@@ -359,7 +366,7 @@ class Alumni extends Component {
                             <Button href="https://github.com/wvsu-cict-code/cict-online" target="_blank" icon="github">Contribute</Button>
                         </div>
                     </div>
-                    
+
                 </div>
                 <footer className="justify-between flex-wrap cict-darker p-8">
                     <div className="container mx-auto text-center">

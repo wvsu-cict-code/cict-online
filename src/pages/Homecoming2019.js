@@ -7,7 +7,8 @@ import { Slide } from 'react-reveal';
 import { Link } from 'react-static';
 import InlineSVG from 'svg-inline-react';
 import uuidv4 from 'uuid/v4';
-
+import divider from '../assets/misc/divider.svg';
+import title from '../assets/misc/title.svg';
 import brandIconLight from '../assets/brandicon-light.svg';
 import bgLeft from '../assets/misc/alumni-2019-bg-left.jpg';
 import bgRight from '../assets/misc/alumni-2019-bg-right.jpg';
@@ -72,8 +73,8 @@ class Homecoming2019 extends Component {
 
                         </div>
                         <div className="max-w-md mx-auto pb-8">
-                            <hr className="h-px w-full alumni-2019-theme-bg--color mb-8" />                            
-                            <h3 className={`${theme.text} font-bold`}>Homecoming Attendees</h3>
+                        
+                        <img src={title} className="w-64 h-auto mx-auto mt-4" alt="" />
                                 <div className="flex flex-wrap mt-8 mx-4 mb-8">
                                     {loadingAttendees && <Spin className="mx-auto" />}
                                     {attendees && attendees.map(i => (
@@ -100,7 +101,7 @@ class Homecoming2019 extends Component {
                                 </div>
                                 <Link className="font-bold mt-8" to="/alumni">Back to Registration</Link>
                         </div>
-                        
+                        <img src={divider} className="w-32 h-auto mx-auto mt-4 mb-8" alt="" />                       
                         <div className="max-w-sm mx-auto mt-4 mb-8 px-4">
                             <DisqusThread
                                 id="main"

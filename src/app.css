@@ -142,3 +142,11 @@ body {
 .alumni-registration-form{
   max-width: 400px;
 }
+
+.alumni-count-more{
+  text-align: center;
+  margin: 0 auto;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+}
