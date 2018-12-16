@@ -1,10 +1,6 @@
 # CICT Online
 > Source code of the CICT official website.
 
-### Preview
-* Staging [link](https://cictonline.herokuapp.com/) 
-* Release [link](http://cictwvsu.com/)
-
 ## CICTzens!
 Help us develop our website! If you found a bug or you want to contribute, please submit an [issue](https://help.github.com/articles/creating-an-issue/), contact the faculty or email your concern at [cict@wvsu.edu.ph](cict@wvsu.edu.ph). Student contributions are welcome!
 
