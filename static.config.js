@@ -3,7 +3,8 @@ import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import path from 'path';
 import postcssFlexbugsFixes from 'postcss-flexbugs-fixes';
 import tailwindcss from 'tailwindcss';
-
+import PurgecssPlugin from 'purgecss-webpack-plugin';
+import {appSrc} from './paths';
 export default {
   webpack: (config, { stage, defaultLoaders }) => {
     let loaders = [
@@ -66,6 +67,13 @@ export default {
         ],
       },
     ]
+    // TODO: Make purgecss work with webpack
+    // config.plugins = [
+    //   new PurgecssPlugin({
+    //     whitelist: ['body', '.whitelisted-class'],
+    //     paths: appSrc,
+    //     })
+    // ]
     return config
   },
   getRoutes: async () =>
@@ -91,7 +99,7 @@ export default {
         component: 'src/pages/Homecoming2019'
       },
       {
-        is404: true,
+        path: '/404',
         component: 'src/pages/404',
       },
     ],
