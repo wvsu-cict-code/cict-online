@@ -158,6 +158,7 @@ const VerificationDetails = props => (
         <img className="w-64 h-auto mx-auto zoom" src={dogo} alt="" />
         <p className="mt-4">You may also message us on our <a className="font-bold" href="https://www.facebook.com/cictwvsu/" target="_blank" rel="noopener noreferrer">college Facebook page</a> for additional inquiries.</p>
         <h4 className="my-4">See you soon!</h4>
+        <div className="text-center mx-4">
         <Button.Group>
           <Button type="ghost" onClick={props.backToPayment}>
             <Icon type="left" />Review Payment Instructions
@@ -166,6 +167,7 @@ const VerificationDetails = props => (
             Finished<Icon type="right" />
           </Button>
         </Button.Group>
+        </div>
         <Divider />
         </div>
     </React.Fragment>
@@ -248,7 +250,8 @@ class Alumni extends Component {
                     company,
                     contact,
                     email,
-                    noGravatar
+                    noGravatar,
+                    false
                 ]
             }
         }).then(res => {
