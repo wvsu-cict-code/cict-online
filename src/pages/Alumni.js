@@ -321,7 +321,7 @@ class Alumni extends Component {
         this.setState({ [name]: checked })
     }
 
-    countAttendees = count => {
+    countAttendees = count => {        
         switch (count) {
             case 0:
                 return 'Be the first to register!'
@@ -434,7 +434,7 @@ class Alumni extends Component {
                         </div>
                         <div className="max-w-md mx-auto pb-8">
                             <img src={divider} className="w-48 h-auto mx-auto mt-4 mb-8" alt="" />
-                            <h3 className={theme.text}>{this.countAttendees(count)}</h3>
+                            <h3 className={theme.text}>{this.countAttendees(count||0)}</h3>
                             <Spin className="mx-auto w-full" spinning={submitting}>
                                 <div className="flex flex-wrap mt-8 mx-4">
                                     {loadingAttendees && <Spin className="mx-auto" />}
@@ -443,26 +443,26 @@ class Alumni extends Component {
                                         <div key={uuidv4()} className="sm:w-full md:w-full lg:w-1/6 xl:1/6 mb-4 zoom justify-center text-center">
                                             <Popover content={
                                                 <React.Fragment>
-                                                    <p>
+                                                    <div>
                                                         Batch {i[5]}, {_.upperCase(i[6])}
                                                         <hr />
-                                                    </p>
-                                                    {JSON.parse(i[11])&&<small className="opacity-75"><Icon type="check-circle" theme="filled" style={{ color: 'green' }} /> Payment Verified</small>}
+                                                    </div>
+                                                    {i[11]&&JSON.parse(i[11])&&<small className="opacity-75"><Icon type="check-circle" theme="filled" style={{ color: 'green' }} /> Payment Verified</small>}
                                                 </React.Fragment>
                                             } title={<p className="text-center pt-2">{
-                                                JSON.parse(i[10]) ?
+                                                i[10]&&JSON.parse(i[10]) ?
                                                     <InlineSVG src={jdenticon.toSvg(i[9], 90)} className="w-24 h-auto rounded-full" />
                                                     :
                                                     <Gravatar default="monsterid" size={100} className="w-24 h-auto rounded-full" email={i[9]} />
                                             }<br />{i[3]}, {i[2]} {i[1]}</p>}>
                                                 <div className="w-16 h-16 border-2 mb-4 rounded-full alumni-2019-theme-border--color p-2">
                                                     {
-                                                        JSON.parse(i[10]) ?
+                                                        i[10]&&JSON.parse(i[10]) ?
                                                             <Badge status={JSON.parse(i[11])?"success":"default"} offset={[-4,35]}>
                                                                 <InlineSVG src={jdenticon.toSvg(i[9], 44)} className="w-16 h-auto rounded-full" />
                                                             </Badge>
                                                             :
-                                                            <Badge status={JSON.parse(i[11])?"success":"default"} offset={[-4,35]}>
+                                                            <Badge status={i[11]&&JSON.parse(i[11])?"success":"default"} offset={[-4,35]}>
                                                                 <Gravatar default="monsterid" size={100} className="w-16 h-auto rounded-full" email={i[9]} />
                                                             </Badge>
                                                     }
@@ -472,16 +472,16 @@ class Alumni extends Component {
                                     )
                                     )}
 
-                                    {!loadingAttendees && <Link to="/homecoming2019" className="w-16 h-16 border-2 mb-4 rounded-full alumni-2019-theme-border--color p-2 zoom">
+                                    {!loadingAttendees && count>10 &&<Link to="/homecoming2019" className="w-16 h-16 border-2 mb-4 rounded-full alumni-2019-theme-border--color p-2 zoom">
                                         <div className="bg-blue text-white rounded-full font-bold alumni-count-more">
-                                            +{count - 4}
+                                            +{count>10?count - 4:count}
                                         </div>
                                     </Link>}
 
                                 </div>
                             </Spin>
                         </div>
-                        <Link className="font-bold mt-8" to="/homecoming2019">View All</Link>
+                        {count&&<Link className="font-bold mt-8" to="/homecoming2019">View All</Link>}
                         <div className="max-w-sm mx-auto mt-4 mb-8 px-4">
                             <DisqusThread
                                 id="main"

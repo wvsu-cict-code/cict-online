@@ -82,10 +82,10 @@ class Homecoming2019 extends Component {
                                     <div key={uuidv4()} className="sm:w-full md:w-full lg:w-1/6 xl:1/6 mb-4 zoom justify-center text-center">
                                         <Popover content={
                                             <React.Fragment>
-                                                <p>
+                                                <div>
                                                     Batch {i[5]}, {_.upperCase(i[6])}
                                                     <hr />
-                                                </p>
+                                                </div>
                                                 {JSON.parse(i[11]) && <small className="opacity-75"><Icon type="check-circle" theme="filled" style={{ color: 'green' }} /> Payment Verified</small>}
                                             </React.Fragment>
                                         } title={<p className="text-center pt-2">{
