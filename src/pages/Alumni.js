@@ -215,7 +215,7 @@ class Alumni extends Component {
             count: 0,
             loadingAttendees: true,
             formKey: uuidv4(),
-            activeSubroute: 'verify',
+            activeSubroute: 'register',
             currentPayStep: 0,
         }
     }
