@@ -64,6 +64,15 @@ const courses = [
     },
 ]
 
+const inclusions = [
+'Rental (Tables and Chairs)',
+'Tarpaulin Printing',
+'Stage Setup',
+'Lights and Sounds',
+'Food for Guests',
+'Souvenirs',
+]
+
 const RegistrationSteps = props => (
     <div className="mb-4 mt-8 mx-8 text-left">
         <Steps current={props.current}>
@@ -181,11 +190,9 @@ const PaymentDetails = props => (
         <h2 className="mb-4">₱300.00</h2>
             <h3 className="mb-4">Payment Inclusions</h3>
             <ul className="mb-8">
-                <li><span className="font-bold">Rental (Tables and Chairs)</span></li>
-                <li><span className="font-bold">Tarpaulin Printing</span></li>
-                <li><span className="font-bold">Stage Setup</span></li>
-                <li><span className="font-bold">Lights and Sounds</span></li>
-                <li><span className="font-bold">Food for Guests</span></li>
+            {inclusions.map(i => (
+                <li><span className="font-bold">{i}</span></li>
+            ))}              
             </ul>
             <Divider />
             <h3 className="mb-4">How to Pay</h3>
