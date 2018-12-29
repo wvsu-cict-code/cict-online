@@ -185,6 +185,7 @@ const PaymentDetails = props => (
                 <li><span className="font-bold">Tarpaulin Printing</span></li>
                 <li><span className="font-bold">Stage Setup</span></li>
                 <li><span className="font-bold">Lights and Sounds</span></li>
+                <li><span className="font-bold">Food for Guests</span></li>
             </ul>
             <Divider />
             <h3 className="mb-4">How to Pay</h3>
@@ -458,7 +459,7 @@ class Alumni extends Component {
                                                     :
                                                     <Gravatar default="monsterid" size={100} className="w-24 h-auto rounded-full" email={i[9]} />
                                             }<br />{i[3]}, {i[2]} {i[1]}</p>}>
-                                                <div className="w-16 h-16 border-2 mb-4 rounded-full alumni-2019-theme-border--color p-2">
+                                                <div className="w-16 h-16 border-2 mb-4 rounded-full alumni-2019-theme-border--color p-2 mx-auto">
                                                     {
                                                         i[10]&&JSON.parse(i[10]) ?
                                                             <Badge status={JSON.parse(i[11])?"success":"default"} offset={[-4,35]}>
@@ -475,7 +476,7 @@ class Alumni extends Component {
                                     )
                                     )}
 
-                                    {!loadingAttendees && count>10 &&<Link to="/homecoming2019" className="w-16 h-16 border-2 mb-4 rounded-full alumni-2019-theme-border--color p-2 zoom">
+                                    {!loadingAttendees && count>10 &&<Link to="/homecoming2019" className="w-16 h-16 border-2 mb-4 rounded-full alumni-2019-theme-border--color p-2 mx-auto zoom">
                                         <div className="bg-blue text-white rounded-full font-bold alumni-count-more">
                                             +{count>10?count - 4:count}
                                         </div>
