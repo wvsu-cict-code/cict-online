@@ -9,7 +9,7 @@ const getSheetData = (authenticatedSheet, spreadsheetId, start, end) => {
     return new Promise((resolve, reject) => {
         authenticatedSheet.spreadsheets.values.get({
             spreadsheetId,
-            range: `Entries!A${start?start:2}:L${end?end:1000}`,
+            range: `Entries!A${start?start:2}:M${end?end:1000}`,
         }, (err, res) => {
             if (err) {
                 reject(err)

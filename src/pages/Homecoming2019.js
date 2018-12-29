@@ -1,4 +1,4 @@
-import { Button, Form, Popover, Spin } from 'antd';
+import { Button, Icon, Form, Popover, Spin, Badge } from 'antd';
 import axios from 'axios';
 import _ from 'lodash';
 import React, { Component } from 'react';
@@ -41,7 +41,7 @@ class Homecoming2019 extends Component {
         const attendeesQuery = `https://us-central1-cict-online.cloudfunctions.net/getRegisteredEntries?start=${start || 2}&end=${end || 1000}`;
         axios.get(attendeesQuery).then(res => {
             if (Object.keys(res.data) !== 0) {
-                app.setState({ attendees: res.data.reverse(), loadingAttendees:false })
+                app.setState({ attendees: res.data.reverse(), loadingAttendees: false })
             }
         })
     }
@@ -52,7 +52,7 @@ class Homecoming2019 extends Component {
     }
 
     render() {
-        const { attendees,loadingAttendees } = this.state
+        const { attendees, loadingAttendees } = this.state
         return (
             <React.Fragment>
                 <Helmet
@@ -73,35 +73,48 @@ class Homecoming2019 extends Component {
 
                         </div>
                         <div className="max-w-md mx-auto pb-8">
-                        
-                        <img src={title} className="w-64 h-auto mx-auto mt-4" alt="" />
-                                <div className="flex flex-wrap mt-8 mx-4 mb-8">
-                                    {loadingAttendees && <Spin className="mx-auto" />}
-                                    {attendees && attendees.map(i => (
-                                        <div key={uuidv4()} className="sm:w-full md:w-full lg:w-1/6 xl:1/6 mb-4 zoom justify-center text-center">
 
-                                            <Popover content={
+                            <img src={title} className="w-64 h-auto mx-auto mt-4" alt="" />
+                            <div className="flex flex-wrap mt-8 mx-4 mb-8">
+                                {loadingAttendees && <Spin className="mx-auto" />}
+                                {attendees && attendees.map(i => (
+
+                                    <div key={uuidv4()} className="sm:w-full md:w-full lg:w-1/6 xl:1/6 mb-4 zoom justify-center text-center">
+                                        <Popover content={
+                                            <React.Fragment>
                                                 <p>
                                                     Batch {i[5]}, {_.upperCase(i[6])}
+                                                    <hr />
                                                 </p>
-                                            } title={`${i[3]}, ${i[2]} ${i[1]}`}>
-                                                <div className="w-16 h-16 border-2 mb-4 rounded-full alumni-2019-theme-border--color p-2">
-                                                    {
-                                                        JSON.parse(i[10]) ?
-                                                            <InlineSVG src={jdenticon.toSvg(i[9], 44)} className="w-16 h-auto rounded-full" /> :
+                                                {JSON.parse(i[11]) && <small className="opacity-75"><Icon type="check-circle" theme="filled" style={{ color: 'green' }} /> Payment Verified</small>}
+                                            </React.Fragment>
+                                        } title={<p className="text-center pt-2">{
+                                            JSON.parse(i[10]) ?
+                                                <InlineSVG src={jdenticon.toSvg(i[9], 90)} className="w-24 h-auto rounded-full" />
+                                                :
+                                                <Gravatar default="monsterid" size={100} className="w-24 h-auto rounded-full" email={i[9]} />
+                                        }<br />{i[3]}, {i[2]} {i[1]}</p>}>
+                                            <div className="w-16 h-16 border-2 mb-4 rounded-full alumni-2019-theme-border--color p-2">
+                                                {
+                                                    JSON.parse(i[10]) ?
+                                                        <Badge status={JSON.parse(i[11]) ? "success" : "default"} offset={[-4, 35]}>
+                                                            <InlineSVG src={jdenticon.toSvg(i[9], 44)} className="w-16 h-auto rounded-full" />
+                                                        </Badge>
+                                                        :
+                                                        <Badge status={JSON.parse(i[11]) ? "success" : "default"} offset={[-4, 35]}>
                                                             <Gravatar default="monsterid" size={100} className="w-16 h-auto rounded-full" email={i[9]} />
-                                                    }
-                                                </div>
-                                            </Popover>
+                                                        </Badge>
+                                                }
+                                            </div>
+                                        </Popover>
+                                    </div>
+                                )
+                                )}
 
-                                        </div>
-                                    )
-                                    )}
-
-                                </div>
-                                <Link className="font-bold mt-8" to="/alumni">Back to Registration</Link>
+                            </div>
+                            <Link className="font-bold mt-8" to="/alumni">Back to Registration</Link>
                         </div>
-                        <img src={divider} className="w-32 h-auto mx-auto mt-4 mb-8" alt="" />                       
+                        <img src={divider} className="w-32 h-auto mx-auto mt-4 mb-8" alt="" />
                         <div className="max-w-sm mx-auto mt-4 mb-8 px-4">
                             <DisqusThread
                                 id="main"
@@ -112,7 +125,7 @@ class Homecoming2019 extends Component {
                             <Button href="https://github.com/wvsu-cict-code/cict-online" target="_blank" icon="github">Contribute</Button>
                         </div>
                     </div>
-                    
+
                 </div>
                 <footer className="justify-between flex-wrap cict-darker p-8">
                     <div className="container mx-auto text-center">
