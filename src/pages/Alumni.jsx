@@ -269,7 +269,7 @@ class Alumni extends Component {
 
                                     {!loadingAttendees && count > 5 && <Link to="/homecoming2019" className="w-16 h-16 border-2 mb-4 rounded-full alumni-2019-theme-border--color p-2 mx-auto zoom">
                                         <div className="bg-blue text-white rounded-full font-bold alumni-count-more">
-                                            +{count > 5 ? count - 5 : count}
+                                            +{count > 5 ? count - 4 : count}
                                         </div>
                                     </Link>}
 
