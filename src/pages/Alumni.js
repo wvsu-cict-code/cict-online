@@ -3,7 +3,7 @@ import axios from 'axios';
 import _ from 'lodash';
 import moment from 'moment';
 import React, { Component } from 'react';
-import { Clock, MapPin } from 'react-feather';
+import { Clock, MapPin, Calendar } from 'react-feather';
 import Gravatar from 'react-gravatar';
 import { Fade, Slide } from 'react-reveal';
 import {
@@ -166,7 +166,7 @@ const VerificationDetails = props => (
         <p className="mb-4">Upon verification, the registration committee will update your registration profile status. An indicator (green badge) will be shown on your profile info in addition to the email the registration team sent you.</p>
         <img className="w-64 h-auto mx-auto zoom" src={dogo} alt="" />
         <p className="mt-4">You may also message us on our <a className="font-bold" href="https://www.facebook.com/cictwvsu/" target="_blank" rel="noopener noreferrer">college Facebook page</a> for additional inquiries.</p>
-        <h4 className="my-4">See you soon!</h4>
+        <h4 className="my-4">See you this coming January 20!</h4>
         <div className="text-center mx-4">
         <Button.Group>
           <Button type="ghost" onClick={props.backToPayment}>
@@ -397,6 +397,7 @@ class Alumni extends Component {
                                 <div className="container mx-auto px-8">
                                     <h1 className={theme.text}><a className={theme.link} href="https://twitter.com/search?q=cicttweet16&src=typd&lang=en" target="_black" rel="noopener noreferrer">#tweet16</a></h1>
                                     <p className={theme.text}><MapPin className={[theme.text, 'w-4 h-4']} /> West Visayas State University, CICT Grounds, Iloilo City</p>
+                                    <p className={theme.text}><Calendar className={[theme.text, 'w-4 h-4']} /> January 20, 2019</p>
                                     <p className={theme.text}><Clock className={[theme.text, 'w-4 h-4']} /> 8:30 AM - 6:00 PM</p>
                                 </div>
                             </Fade>
