@@ -40,7 +40,7 @@ const Step = Steps.Step;
 const FormItem = Form.Item;
 const Option = Select.Option;
 const yearStartRange = _.range(2000, (new Date()).getFullYear(), 1)
-const yearEndRange = _.range(2004, (new Date()).getFullYear(), 1)
+const yearEndRange = _.range(2004, (new Date()).getFullYear()+1, 1)
 const courses = [
     {
         name: 'Bachelor of Science in Information Management',
