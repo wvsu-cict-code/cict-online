@@ -234,7 +234,10 @@ class Alumni extends Component {
     }
 
     switchSubroute = route => {
-        this.setState({ activeSubroute: route })
+        this.setState({ activeSubroute: route });
+        if(window){
+            window.scrollTo(0, 0); 
+        }
     }
 
     donePaying = () => {
