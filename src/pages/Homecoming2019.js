@@ -90,7 +90,7 @@ class Homecoming2019 extends Component {
                                             </React.Fragment>
                                         } title={<p className="text-center pt-2">{
                                             JSON.parse(i[10]) ?
-                                                <InlineSVG src={jdenticon.toSvg(i[9], 90)} className="w-24 h-auto rounded-full" />
+                                                <InlineSVG src={jdenticon.toSvg(i[8], 90)} className="w-24 h-auto rounded-full" />
                                                 :
                                                 <Gravatar default="monsterid" size={100} className="w-24 h-auto rounded-full" email={i[9]} />
                                         }<br />{i[3]}, {i[2]} {i[1]}</p>}>
@@ -98,7 +98,7 @@ class Homecoming2019 extends Component {
                                                 {
                                                     JSON.parse(i[10]) ?
                                                         <Badge status={JSON.parse(i[11]) ? "success" : "default"} offset={[-4, 35]}>
-                                                            <InlineSVG src={jdenticon.toSvg(i[9], 44)} className="w-16 h-auto rounded-full" />
+                                                            <InlineSVG src={jdenticon.toSvg(i[8], 44)} className="w-16 h-auto rounded-full" />
                                                         </Badge>
                                                         :
                                                         <Badge status={JSON.parse(i[11]) ? "success" : "default"} offset={[-4, 35]}>
