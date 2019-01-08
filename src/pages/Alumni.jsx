@@ -10,13 +10,7 @@ import { Link } from 'react-static';
 import InlineSVG from 'svg-inline-react';
 import uuidv4 from 'uuid/v4';
 
-import {
-    CommentsAndContributions,
-    PaymentDetails,
-    RegistrationForm,
-    SocialSharing,
-    VerificationDetails,
-} from '../components/AlumniHomeComing';
+import { CommentsAndContributions, RegistrationForm, SocialSharing } from '../components/AlumniHomeComing';
 import { bgLeft, bgRight, brandIconLight, brandLogo, divider, ogImage } from '../components/AlumniHomeComing/assets';
 import Helmet from '../components/Helmet';
 import Navbar from '../components/Navbar';
@@ -109,7 +103,6 @@ class Alumni extends Component {
                     submitting: false,
                     formKey: uuidv4()
                 })
-                this.switchSubroute('pay')
             }, 500)
         }).catch(error => {
             notification.open({
@@ -182,18 +175,8 @@ class Alumni extends Component {
                     handleChange={this.handleChange}
                     handleSelectionChange={this.handleSelectionChange}
                     onCheckboxChange={this.onCheckboxChange}
-                    skipRegistration={() => this.switchSubroute('pay')}
+                    skipRegistration={() => this.switchSubroute('verify')}
                 />
-                break
-            case 'pay':
-                subroute = <PaymentDetails
-                    email={email}
-                    current={currentPayStep}
-                    donePaying={this.donePaying}
-                />
-                break
-            case 'verify':
-                subroute = <VerificationDetails backToPayment={() => this.switchSubroute('pay')} backToRegistration={() => this.switchSubroute('register')} />
                 break
             default:
                 subroute = <React.Fragment />
@@ -224,6 +207,7 @@ class Alumni extends Component {
                                 </div>
                             </Fade>
                             <Fade>
+                                <h2 className="mb-4 mt-8 text-blue">Online Registration</h2>
                                 {subroute}
                                 <SocialSharing />
                             </Fade>

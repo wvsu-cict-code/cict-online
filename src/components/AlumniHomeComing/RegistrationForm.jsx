@@ -1,10 +1,11 @@
-import { Button, Checkbox, Form, Icon, Input, Select, Spin } from 'antd';
+import { Button, Checkbox, Divider, Form, Icon, Input, Select, Spin } from 'antd';
 import _ from 'lodash';
 import React, { Component } from 'react';
 import Gravatar from 'react-gravatar';
 import InlineSVG from 'svg-inline-react';
 
-import RegistrationSteps from './RegistrationSteps';
+import PaymentDetails from './PaymentDetails.jsx';
+import VerificationDetails from './VerificationDetails.jsx';
 
 const jdenticon = require('jdenticon')
 
@@ -36,8 +37,8 @@ const courses = [
 ]
 
 const RegistrationForm = props => (
-    <React.Fragment>
-        <RegistrationSteps current={0} />
+    <React.Fragment>                  
+        <p class="my-8">Onsite registration starts at 12:00 NN to 12:30 PM. Registering online will help the committee prepare for the anticipated number of participating alumni.</p>     
         <Spin spinning={props.submitting}>
             <Form key={props.formKey} onSubmit={props.handleSubmit} className="alumni-registration-form px-4 lg:px-auto mx-auto pb-8 text-left sm:px-4 xs:px-4">
                 <small>* Required Fields</small>
@@ -93,19 +94,16 @@ const RegistrationForm = props => (
                     <FormItem required label="Mobile/Landline">
                         <Input name="contact" size="large" placeholder="Your Number" onChange={e => props.handleChange(e, 'contact')} />
                     </FormItem>
-
-
                 </FormItem>
-
+                <Divider />
+                <PaymentDetails />
+                <VerificationDetails />
                 <p className="text-center">
                     <Button loading={props.submitting} type="primary" htmlType="submit" className="w-full">
                         Register Now
                 </Button>
-                    <Button onClick={props.skipRegistration} type="ghost" htmlType="submit" className="w-full mt-2">
-                        Already Registered?
-                </Button>
                 </p>
-            </Form>
+            </Form>            
         </Spin>
     </React.Fragment>
 )

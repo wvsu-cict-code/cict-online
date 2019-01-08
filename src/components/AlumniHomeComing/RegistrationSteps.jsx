@@ -4,10 +4,9 @@ import React, { Component } from 'react';
 const Step = Steps.Step;
 
 const RegistrationSteps = props => (
-    <div className="mb-4 mt-8 mx-8 text-left">
+    <div className="mb-4 mt-8 mx-auto text-left max-w-sm">
         <Steps current={props.current}>
             <Step title="Register" />
-            <Step title="Pay Registration" />
             <Step title="Check Payment Status" />
         </Steps>
     </div>
