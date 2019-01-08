@@ -38,7 +38,7 @@ const courses = [
 
 const RegistrationForm = props => (
     <React.Fragment>                  
-        <p class="my-8">Onsite registration starts at 12:00 NN to 12:30 PM. Registering online will help the committee prepare for the anticipated number of participating alumni.</p>     
+        <p class="my-8 px-4">Onsite registration starts at 12:00 NN to 12:30 PM. Registering online will help the committee prepare for the anticipated number of participating alumni.</p>     
         <Spin spinning={props.submitting}>
             <Form key={props.formKey} onSubmit={props.handleSubmit} className="alumni-registration-form px-4 lg:px-auto mx-auto pb-8 text-left sm:px-4 xs:px-4">
                 <small>* Required Fields</small>
