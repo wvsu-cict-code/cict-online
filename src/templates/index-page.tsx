@@ -187,7 +187,7 @@ export const IndexPageTemplate = ({
       type="info"
       closable
     />
-        <Title level={2}><Typist cursor={cursorOptions}>{`> ${heading}`}</Typist></Title>
+        <Title level={2}>{`> ${heading}`}</Title>
         <p>{subheading}</p>
         <p>{goal}</p>
         <Button size="large" type="primary" href="https://medium.com/cictwvsu-online/our-story-87a461c14ab" target="_blank">Learn More</Button>
