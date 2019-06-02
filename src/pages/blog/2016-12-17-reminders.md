@@ -11,7 +11,7 @@ tags:
   - reminders
   - important
 ---
-[Go directly to downloadable forms.](#Downloadable-Forms)
+<a href="#forms">Go directly to downloadable forms.</a>
 
 ## June 10-14, 2019
 
@@ -49,7 +49,7 @@ Requirements:
 
 # Downloadable Forms
 
-
+<div id="forms"></div>
 
 * [NSTP Enlistment Form](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/nstp_component_enlistment_form.pdf)
 * [Opt-Out Application Form](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/opt_out_form_revised_2018.pdf)
