@@ -29,9 +29,9 @@ Requirements:
 Requirements:
 
 * Print and Fill-out the Following:
-  * Scholarship Application Form
-  * Opt-out Application form (For those who would not avail the free tuition fee)
-  * NSTP Form (for first year students only on those who will re-enroll their NSTP)
+  * [Free Tuition Fee Scholarship Application Form](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/ra_10931_revised_oct_2018_application_form.pdf)
+  * [Opt-Out Application Form](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/opt_out_form_revised_2018.pdf) (for those who would not avail the free tuition fee)
+  * [NSTP Enlistment Form](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/nstp_component_enlistment_form.pdf) (for first year students only on those who will re-enroll their NSTP)
 
 ## June 18, 2019
 
@@ -52,6 +52,6 @@ Requirements:
 
 
 * [NSTP Enlistment Form](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/nstp_component_enlistment_form.pdf)
-* [Opt-Out Form](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/opt_out_form_revised_2018.pdf)
+* [Opt-Out Application Form](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/opt_out_form_revised_2018.pdf)
 * [Free Tuition Fee Scholarship Form](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/ra_10931_revised_oct_2018_application_form.pdf)
 
