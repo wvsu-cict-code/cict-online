@@ -190,7 +190,7 @@ export const IndexPageTemplate = ({
         <Title level={2}>{`> ${heading}`}</Title>
         <p>{subheading}</p>
         <p>{goal}</p>
-        <Button size="large" type="primary" href="https://medium.com/cictwvsu-online/our-story-87a461c14ab" target="_blank">Learn More</Button>
+        <Button size="large" type="primary" href="https://cictwvsu.com/blog/2019-06-02-our-story" target="_blank">Learn More</Button>
         <Divider />
         <Title level={3}>
           <Typist startDelay={2000} cursor={cursorOptions}>

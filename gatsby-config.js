@@ -13,7 +13,7 @@ module.exports = {
       options: {
         modifyVars: {
           'primary-color': '#222B2F',
-          'link-color': '#222B2F',
+          'link-color': '#FD8F36',
         },
         javascriptEnabled: true
       },
