@@ -47,6 +47,6 @@ Requirements:
 
 # Downloadable Forms
 
-* [Enlistment Form](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/nstp_component_enlistment_form.pdf)
+* [NSTP Enlistment Form](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/nstp_component_enlistment_form.pdf)
 * [Opt-Out Form](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/opt_out_form_revised_2018.pdf)
-* [Scholarship Form](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/ra_10931_revised_oct_2018_application_form.pdf)
+* [Free Tuition Fee Scholarship Form](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/ra_10931_revised_oct_2018_application_form.pdf)
