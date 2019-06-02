@@ -51,7 +51,7 @@ const TemplateWrapper = ({ children }) => {
       </Helmet>
       <Layout className="layout">
       <Navbar />
-      <div style={{backgroundColor: '#fff', borderTop:' 1px solid #e8e8e8'}}>{children}</div>
+      <div style={{backgroundColor: '#fff', borderTop:' 1px solid #e8e8e8', padding: '0 2rem'}}>{children}</div>
       <Footer />
       </Layout>
     </div>

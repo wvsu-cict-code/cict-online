@@ -217,7 +217,6 @@ export const IndexPageTemplate = ({
           </Typist>
         </Title>
         <List
-    grid={{ gutter: 30, column: 3 }}
     dataSource={linkages}
     renderItem={item => (
       <List.Item>
