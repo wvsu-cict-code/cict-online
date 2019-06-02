@@ -11,6 +11,8 @@ tags:
   - reminders
   - important
 ---
+[Go directly to downloadable forms.](#Downloadable-Forms)
+
 ## June 10-14, 2019
 
 ### \- Enlistment Period \[Old Students]
@@ -20,7 +22,7 @@ Requirements:
 * College Clearance
 * Printed Grades (IUIS)
 
-## June 17-23, 2019
+## June 17-21, 2019
 
 ### \- Enrollment Period \[Old and New Students]
 
@@ -47,6 +49,9 @@ Requirements:
 
 # Downloadable Forms
 
+
+
 * [NSTP Enlistment Form](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/nstp_component_enlistment_form.pdf)
 * [Opt-Out Form](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/opt_out_form_revised_2018.pdf)
 * [Free Tuition Fee Scholarship Form](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/ra_10931_revised_oct_2018_application_form.pdf)
+
