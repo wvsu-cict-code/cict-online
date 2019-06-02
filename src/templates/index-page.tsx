@@ -177,8 +177,8 @@ export const IndexPageTemplate = ({
   intro,
   goal,
 }: Props) => (
-    <div style={{ margin: '0 1rem' }}>
-      <div style={{ padding: '2rem 1rem' }}>
+    <div className="section">
+      <div className="content">
         {/* <img style={{ width: 'auto', height: '150px', margin: '1rem auto' }} src={collegeLogo} />         */}
         <Alert
         style={{marginBottom: '1rem'}}
@@ -217,7 +217,7 @@ export const IndexPageTemplate = ({
           </Typist>
         </Title>
         <List
-    grid={{ gutter: 20, column: 4 }}
+    grid={{ gutter: 30, column: 3 }}
     dataSource={linkages}
     renderItem={item => (
       <List.Item>

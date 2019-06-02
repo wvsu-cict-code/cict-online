@@ -22,7 +22,7 @@ export const BlogPostTemplate = ({
   return (
     <section className="section">
       {helmet || ''}
-      <div className="container content">
+      <div className="content">
         <div className="columns">
           <div className="column is-10 is-offset-1">
             <Breadcrumb style={{marginBottom: '2rem'}}>
@@ -34,6 +34,7 @@ export const BlogPostTemplate = ({
               </Breadcrumb.Item>
               <Breadcrumb.Item>{title}</Breadcrumb.Item>
             </Breadcrumb>
+            <div style={{maxWidth: '800px', margin: '0 auto'}}>
             <Title level={3}>
               {title}
             </Title>
@@ -48,6 +49,7 @@ export const BlogPostTemplate = ({
                 </div>
               </div>
             ) : null} */}
+            </div>
           </div>
         </div>
       </div>

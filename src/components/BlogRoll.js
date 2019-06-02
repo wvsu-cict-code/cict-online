@@ -22,12 +22,12 @@ class BlogRoll extends React.Component {
     return (
       <div className="columns is-multiline">
         <StackGrid        
-        columnWidth={width <= 375 ? '100%' : '33.33%'}
+        columnWidth={width <= 350 ? '100%' : '33.33%'}
       >
       {posts &&
         posts.map(({ node: post }) => (
           <div key={post.id}>
-            <Card style={{ marginBottom: '2rem', width: 300 }}
+            <Card style={{ marginBottom: '2rem', width: 290 }}
              cover={
               <PreviewCompatibleImage
                         imageInfo={{

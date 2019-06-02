@@ -17,7 +17,9 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <Header style={{backgroundColor:'#fff', padding: 0}}>
+      <div className="navbar-container">
+        <Header style={{backgroundColor:'#fff', padding: 0, margin: '0 auto'}}>
+      <div className="navbar">
       <Link to="/">
       <img style={{
         width: '120px',
@@ -34,7 +36,9 @@ const Navbar = class extends React.Component {
       >
         <Menu.Item key="1" onClick={()=>navigate('blog')}><Icon type="notification" /><Badge dot>Updates </Badge></Menu.Item>
       </Menu>
+      </div>
     </Header>
+      </div>
     )
   }
 }
