@@ -1,10 +1,8 @@
 ---
 templateKey: blog-post
-title: Schedules To Watch Out For
+title: Schedules To Watch Out For (Outdated)
 date: 2019-06-02T13:15:10.000Z
-description: >-
-  Hello CICTzens! Please be reminded of the following important schedules also
-  don't forget to download the files below.
+description: '*These details are now changed. Please refer to our new post.'
 featuredpost: true
 featuredimage: /img/reminders.jpg
 tags:
