@@ -2,14 +2,14 @@
 templateKey: blog-post
 title: Schedules To Watch Out For (Outdated)
 date: 2019-06-02T13:15:10.000Z
-description: '*These details are now changed. Please refer to our new post.'
+description: '*These details are now changed. '
 featuredpost: true
 featuredimage: /img/reminders.jpg
 tags:
   - reminders
   - important
 ---
-<a href="#forms">Go directly to downloadable forms.</a>
+<a href="https://cictwvsu.com/blog/2019-06-07-schedule-changes/">Please refer to our new post</a>
 
 ## June 10-14, 2019
 
