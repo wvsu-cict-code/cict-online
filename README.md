@@ -1,12 +1,42 @@
-# Gatsby + Netlify CMS Starter
+# CICT Online
+> Source code of the CICT official website.
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status)](https://app.netlify.com/sites/gatsby-starter-netlify-cms-ci/deploys)
 
-**Note:** This starter uses [Gatsby v2](https://www.gatsbyjs.org/blog/2018-09-17-gatsby-v2/).
+## CICTzens!
+Help us develop our website! If you found a bug or you want to contribute, please submit an [issue](https://help.github.com/articles/creating-an-issue/), contact the faculty or email your concern at [cict@wvsu.edu.ph](cict@wvsu.edu.ph). Student contributions are welcome!
 
-This repo contains an example business website that is built with [Gatsby](https://www.gatsbyjs.org/), and [Netlify CMS](https://www.netlifycms.org): **[Demo Link](https://gatsby-netlify-cms.netlify.com/)**.
+## Contributing to its Development
+* Contributing to the code will require you to use a GitHub account and knowledge of using Git. Please visit this [git tutorial](https://try.github.io/levels/1/challenges/1) to learn more.
 
-It follows the [JAMstack architecture](https://jamstack.org) by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
+## Architecture
+This website follows the [JAMstack architecture](https://jamstack.org) focusing on ReactJS as the UI framework. by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
+
+## Todo
+- [ ] Add After Effects animation to the line arts utilizing Lottie.
+- [x] Improve page responsiveness.
+- [ ] About Page
+- [ ] Students Page (Student's Works)
+- [ ] Admission Page
+- [ ] Faculty & Staff Page
+- [ ] CICT Online Forms and Registration
+- [ ] Code Cleanup
+- [ ] Tools and Resources Page
+- [x] Omni Updates Section (Medium Blog, Facebook, Twitter)
+- [ ] Footer Section
+- [ ] Credits in About Page
+- [ ] Integrate Tracer Study App
+- [x] Use Ant Design UI
+- [ ] Restore Faculty and Staff Page
+
+## Milestones
+- [ ] **Geek mode**: Implement a geeky way to browse the website [DOS Mode](http://kristopolous.github.io/BOOTSTRA.386/), [Terminal Mode](http://kristopolous.github.io/BOOTSTRA.386/) or [Window Mode](http://www.marianopascual.me/index.html#)
+- [ ] Learning Management System / e-Class 
+- [ ] Student/Alumni Support Page
+- [ ] CICT Online Forum
+- [ ] CICT Spotlight
+- [ ] Matching, Placement and Career Support
+
 
 ## Features ##
 
@@ -15,7 +45,6 @@ It follows the [JAMstack architecture](https://jamstack.org) by using Git as a s
 - Create Blog posts from Netlify CMS
 - Tags: Separate page for posts under each tag
 - Basic directory organization
-- Uses Bulma for styling, but size is reduced by `purge-css-plugin`
 - Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
 - Uses `gatbsy-image` with Netlify-CMS preview support
 - Separate components for everything
@@ -97,7 +126,15 @@ npm install --global --production windows-build-tools
 ## Purgecss
 This plugin uses [gatsby-plugin-purgecss](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/) and [bulma](https://bulma.io/). The bulma builds are usually ~170K but reduced 90% by purgecss.
 
-# CONTRIBUTING
+## Contributors
+We specially want to recognize the following for helping us develop and maintain our website:
+* CICT PTA - Domain and App Store Funding
+* Regin C. Cabacas - Hosting & Domain Manager
+* ICON Publication - Content Management
+* Link.exe - Photos & Videos
+* Wilson Olivier C. Gazer - Volunteer Animator
+* Nina Ricci Marie Benite - Code Contributor
 
-Contributions are always welcome, no matter how large or small. Before contributing,
-please read the [code of conduct](CODE_OF_CONDUCT.md).
+## License
+&copy; 2016-Present, College of Information and Communications Technology, West Visayas State University. Licensed under an [Apache-2](https://github.com/wvsu-cict-code/cict-online/blob/master/LICENSE) license.
+
