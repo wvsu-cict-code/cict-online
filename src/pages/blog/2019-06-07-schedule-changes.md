@@ -40,4 +40,4 @@ tags:
 #### Enlistment Requirements
 
 - [Revised Free Tuition Fee Form](https://wvsu.edu.ph/files/pdf/Downloads/RA%2010931%20Revised%20oct%202018%20Application%20Form.pdf)
-- [NSTP Enlistment Form](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/nstp_component_enlistment_form.pdf)
+- NSTP Enlistment Form (to be given during orientation)
