@@ -39,7 +39,7 @@ Continuing and upcoming freshmen are required to follow the enrollment  process 
 <hr />
 
 * **Q**: Do we have additional payments during enrollment?
-  * **A**: Yes - the **CICT PTA** will be collecting P300.00 and an additional P50.00 for the insurance fee, no other payments will be collected other than those two. A PTA representative will be staying in the CICT office to collect your payment and issue you a receipt. Please note that your insurance fee can be payed after enrollment.<br /><br/> 
+  * **A**: Yes - the **CICT PTA** will be collecting P300.00 and an additional P50.00 for the insurance fee, no other payments will be collected other than those two. A PTA representative will be staying in the CICT office to collect your payment and issue you a receipt. Please note that your PTA fee can be payed after enrollment if you don't have enough budget.<br /><br/> 
 * **Q**: What are the requirements for enrollment?
   * **A**: For continuing students, you only need a filled-up **Free Higher Education (FHE)** form; For new students, you also need a filled-up FHE form and NSTP form. Please note that the NSTP form will be given during orientation and that the FHE form should be printed in a long bond paper.<br /><br/>
 * **Q**: Where can we download the FHE form?
