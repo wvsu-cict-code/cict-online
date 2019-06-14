@@ -16,7 +16,11 @@ Continuing and upcoming freshmen are required to follow the enrollment  process 
 
 <hr />
 
+<div style="overflow-x:scroll">
+
 ![](/img/first-year-enroll.svg)
+
+</div>
 
 <hr />
 
@@ -24,7 +28,11 @@ Continuing and upcoming freshmen are required to follow the enrollment  process 
 
 <hr />
 
+<div style="overflow-x:scroll">
+
 ![](/img/old-stud-enroll.svg)
+
+</div>
 
 ## WVSU Vicinity Map
 
