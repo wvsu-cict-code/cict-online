@@ -6,8 +6,6 @@ description: This process will be followed on June 18 - 21. Please be guided acc
 featuredpost: true
 featuredimage: /img/enrollment-3.jpg
 ---
-![]()
-
 Continuing and upcoming freshmen are required to follow the enrollment  process released by our University. Please check the diagram for the details.
 
 <hr />
@@ -49,7 +47,7 @@ Continuing and upcoming freshmen are required to follow the enrollment  process 
 * **Q**: I'm new to this University. Where can I find the offices that were stated in the process diagram?
   * **A**: Please check our **University Vicinity Map** below (you may click/tap on the image to open it in a new browser tab). Please note that the OSA office is located at the Hometel Building beside the University Clinic.
 * **Q**: Are there additional infos that we need to know?
-  * **A**: Just bring your Certificate of Enrollment on the first day of school for identification and don't forget to visit our [Facebook](facebook.com/cictwvsu), [Twitter](https://twitter.com/cictwvsu) and [Website](www.cictwvsu.com) pages often to stay updated with our recent announcements.
+  * **A**: Just bring your **Certificate of Enrollment** on the first day of school for identification and don't forget to visit our [Facebook](facebook.com/cictwvsu), [Twitter](https://twitter.com/cictwvsu) and [Website](www.cictwvsu.com) pages often to stay updated with our recent announcements.
 
 <hr />
 
