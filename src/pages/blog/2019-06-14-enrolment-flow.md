@@ -4,7 +4,7 @@ title: Enrolment Flow
 date: 2019-06-14T02:18:21.821Z
 description: This process will be followed on June 18 - 21. Please be guided accordingly.
 featuredpost: true
-featuredimage: /img/enrollment.jpg
+featuredimage: /img/enrollment-2.jpg
 ---
 ![]()
 
