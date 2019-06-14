@@ -34,6 +34,37 @@ Continuing and upcoming freshmen are required to follow the enrollment  process 
 
 </div>
 
+<hr />
+
+## FAQs
+
+<hr />
+
+* **Q**: Do we have additional payments during enrollment?
+  * **A**: Yes - the **CICT PTA** will be collecting P300.00 and an additional P50.00 for the insurance fee, no other payments will be collected other than those two. A PTA representative will be staying in the CICT office to collect your payment and issue you a receipt. Please note that your insurance fee can be payed after enrollment.
+
+
+
+
+* **Q**: What are the requirements for enrollment?
+  * **A**: For continuing students, you only need a filled-up **Free Higher Education (FHE)** form; For new students, you also need a filled-up FHE form and NSTP form. Please note that the NSTP form will be given during orientation and that the FHE form should be printed in a long bond paper.
+
+
+
+
+* **Q**: Where can we download the FHE form?
+  * **A**: The form is available on our University website under the download subpage: <http://wvsu.edu.ph/download>
+
+
+
+
+* **Q**: I'm new to this University. Where can I find the offices that were stated in the process diagram?
+  * **A**: Please check our **University Vicinity Map** below (you may click/tap on the image to open it in a new browser tab):
+
+<hr />
+
 ## WVSU Vicinity Map
+
+<hr />
 
 ![](/img/map-guide.jpg)
