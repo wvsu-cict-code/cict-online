@@ -6,6 +6,8 @@ description: This process will be followed on June 18 - 21. Please be guided acc
 featuredpost: true
 featuredimage: /img/enrollment.jpg
 ---
+![]()
+
 Continuing and upcoming freshmen are required to follow the processed released by our University. Please check the diagram for the details.
 
 <hr />
@@ -24,4 +26,6 @@ Continuing and upcoming freshmen are required to follow the processed released b
 
 ![](/img/old-stud-enroll.svg)
 
-## Guide Map
+## WVSU Vicinity Map
+
+![](/img/map-guide.jpg)
