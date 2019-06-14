@@ -1,14 +1,14 @@
 ---
 templateKey: blog-post
-title: Enrolment Flow
+title: Enrollment Flow
 date: 2019-06-14T02:18:21.821Z
 description: This process will be followed on June 18 - 21. Please be guided accordingly.
 featuredpost: true
-featuredimage: /img/enrollment-2.jpg
+featuredimage: /img/enrollment-3.jpg
 ---
 ![]()
 
-Continuing and upcoming freshmen are required to follow the processed released by our University. Please check the diagram for the details.
+Continuing and upcoming freshmen are required to follow the enrollment  process released by our University. Please check the diagram for the details.
 
 <hr />
 
