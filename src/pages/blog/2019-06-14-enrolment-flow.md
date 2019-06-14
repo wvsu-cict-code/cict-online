@@ -46,8 +46,13 @@ Continuing and upcoming freshmen are required to follow the enrollment  process 
   * **A**: The form is available on our University website under the download subpage: <http://wvsu.edu.ph/download>
   * **A+**: For you reference, please see the image below:<br/><br/>
 
+<div style="overflow-x:scroll">
+
   ![](/img/scholarship-form.png)
+
+</div>
 <br/>
+
 * **Q**: I'm new to this University. Where can I find the offices that were stated in the process diagram?
   * **A**: Please check our **University Vicinity Map** below (you may click/tap on the image to open it in a new browser tab). Please note that the OSA office is located at the Hometel Building beside the University Clinic.<br/><br/>
 * **Q**: Are there additional infos that we need to know?
