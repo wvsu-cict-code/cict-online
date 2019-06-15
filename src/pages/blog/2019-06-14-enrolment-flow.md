@@ -66,4 +66,10 @@ Continuing and upcoming freshmen are required to follow the enrollment  process 
 
 ![](/img/map-guide.jpg)
 
+<hr />
+
+## Bonus: [Download the Adventurer's Map](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/adventurer_map.png)
+
+<hr />
+
 See you soon CICTzen!
