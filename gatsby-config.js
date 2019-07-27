@@ -3,7 +3,7 @@ var proxy = require('http-proxy-middleware')
 module.exports = {
   siteMetadata: {
     title: 'WVSU-CICT Online',
-    url: "http://cict.wvsu.edu.ph",
+    url: "cict.wvsu.edu.ph",
     description:
       'Official website of the College of ICT.',
   },
