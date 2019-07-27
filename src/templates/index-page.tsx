@@ -1,31 +1,32 @@
-import { Button, Typography, Divider, Row, Col, List, Avatar, Alert, Icon } from 'antd';
+import { Alert, Button, Divider, Icon, List, Typography } from 'antd';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Typist from 'react-typist';
 import Layout from '../components/Layout';
-import collegeLogo from '../img/cict-dark.svg';
-import cictLines from '../img/cict-lines.svg';
-import cs from '../img/programs/cs-icon.svg';
-import emc from '../img/programs/emc-icon.svg';
-import is from '../img/programs/is-icon.svg';
-import it from '../img/programs/it-icon.svg';
-import blis from '../img/programs/blis-icon.svg';
-import msit from '../img/programs/msit-icon.svg';
-import callbox from '../img/partners/callbox.png'
-import deltek from '../img/partners/deltek.png'
-import dlsu from '../img/partners/dlsu.png'
-import unity from '../img/partners/unity.png'
-import dost from '../img/partners/dost.png'
-import geoplan from '../img/partners/geoplan.png'
-import hytec from '../img/partners/hytec.png'
-import kch from '../img/partners/kch.png'
-import kmc from '../img/partners/kmc.png'
-import kunsan from '../img/partners/kunsan.png'
-import ngkhai from '../img/partners/ngkhai.png'
-import pldt from '../img/partners/pldt.png'
-import epic from '../img/partners/epic.png'
-import tio from '../img/partners/tio.jpg'
+// import collegeLogo from '../img/cict-dark.svg';
+// import cictLines from '../img/cict-lines.svg';
+const cs = require('../img/programs/cs-icon.svg')
+const emc = require('../img/programs/emc-icon.svg')
+const is = require('../img/programs/is-icon.svg')
+const it = require('../img/programs/it-icon.svg')
+const blis = require('../img/programs/blis-icon.svg')
+const msit = require('../img/programs/msit-icon.svg')
+const callbox = require('../img/partners/callbox.png')
+const deltek = require('../img/partners/deltek.png')
+const dlsu = require('../img/partners/dlsu.png')
+const unity = require('../img/partners/unity.png')
+const dost = require('../img/partners/dost.png')
+const geoplan = require('../img/partners/geoplan.png')
+const hytec = require('../img/partners/hytec.png')
+const kch = require('../img/partners/kch.png')
+const kmc = require('../img/partners/kmc.png')
+const kunsan = require('../img/partners/kunsan.png')
+const ngkhai = require('../img/partners/ngkhai.png')
+const pldt = require('../img/partners/pldt.png')
+const epic = require('../img/partners/epic.png')
+const tio = require('../img/partners/tio.jpg')
+const mikrotik = require('../img/partners/mikrotik.png')
 
 const programs = [
   {
@@ -58,9 +59,15 @@ const programs = [
     icon: msit,
     description: 'The Master of Information Technology degree is designed for IT professionals looking to update and extend their technical knowledge of advanced computing subjects, or move into a new IT specialisation. Internationally recognised, it can help advance your career in diverse fields such as software engineering, health, telecommunications and more.'
   },
-];
+]
 
 const linkages = [
+  {
+    title: 'MikroTik',
+    logo: mikrotik,
+    link: 'https://mikrotik.com',
+    description: 'Academic Partner',
+  },
   {
     title: 'Kunsan National University',
     logo: kunsan,
@@ -221,7 +228,7 @@ export const IndexPageTemplate = ({
     renderItem={item => (
       <List.Item>
          <List.Item.Meta
-                avatar={<img style={{ height: '100px', width: 'auto' }} src={item.logo} />}
+                avatar={<img style={{ height: '50px', width: 'auto' }} src={item.logo} />}
                 title={<a href={item.link}>{item.title}</a>}
                 description={item.description}
               />
