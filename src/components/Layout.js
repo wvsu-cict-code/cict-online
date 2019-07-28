@@ -48,7 +48,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:image" content="https://cictwvsu.com/img/og-image.jpg" />   
         <meta property="og:description" content="Official Website of the College of ICT" />  
         <meta property="og:image" content="https://cictwvsu.com/img/og-image.jpg" />       
-        <meta property="fb:app_id" content="https://cict.wvsu.edu.ph" />  
+        <meta property="fb:app_id" content="2302291186701393" />  
       </Helmet>
       <Layout className="layout">
       <Navbar />
