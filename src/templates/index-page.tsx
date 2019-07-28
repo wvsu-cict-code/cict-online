@@ -8,6 +8,7 @@ import Layout from '../components/Layout';
 // import cictLines from '../img/cict-lines.svg';
 const cs = require('../img/programs/cs-icon.svg')
 const emc = require('../img/programs/emc-icon.svg')
+const cisco = require('../img/partners/cisco.png')
 const is = require('../img/programs/is-icon.svg')
 const it = require('../img/programs/it-icon.svg')
 const blis = require('../img/programs/blis-icon.svg')
@@ -20,6 +21,7 @@ const dost = require('../img/partners/dost.png')
 const geoplan = require('../img/partners/geoplan.png')
 const hytec = require('../img/partners/hytec.png')
 const kch = require('../img/partners/kch.png')
+const jeju = require('../img/partners/jeju.png')
 const kmc = require('../img/partners/kmc.png')
 const kunsan = require('../img/partners/kunsan.png')
 const ngkhai = require('../img/partners/ngkhai.png')
@@ -69,10 +71,22 @@ const linkages = [
     description: 'Academic Partner',
   },
   {
+    title: 'Jeju National University',
+    logo: jeju,
+    link: 'http://www.jejunu.ac.kr/main',
+    description: 'Academic Partner',
+  },
+  {
     title: 'Kunsan National University',
     logo: kunsan,
     link: 'http://en.kunsan.ac.kr/index.kunsan',
     description: 'Academic Partner for Post Graduate Education',
+  },
+  {
+    title: 'CISCO Academy',
+    logo: cisco,
+    link: 'https://www.netacad.com/academy/28848?academy_type=ca',
+    description: 'Academic Partner',
   },
   {
     title: 'Epic Games',

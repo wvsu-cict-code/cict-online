@@ -1,14 +1,12 @@
 import { Layout } from 'antd';
 import 'antd/dist/antd.less';
-import 'react-typist/dist/Typist.css'
-import '../app.less'
 import React from 'react';
 import Helmet from 'react-helmet';
+import 'react-typist/dist/Typist.css';
+import '../app.less';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import useSiteMetadata from './SiteMetadata';
-
-const { Header } = Layout;
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()

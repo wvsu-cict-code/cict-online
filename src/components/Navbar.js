@@ -1,9 +1,9 @@
-import React from 'react'
-import { Layout, Menu, Breadcrumb, Icon, Badge } from 'antd';
-import { Link, navigate } from 'gatsby'
-import logo from '../img/brandicon.svg'
+import { Badge, Icon, Layout, Menu } from 'antd';
+import { Link, navigate } from 'gatsby';
+import React from 'react';
+import logo from '../img/brandicon.svg';
 
-const { Header, Content } = Layout;
+const { Header } = Layout;
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -21,7 +21,7 @@ const Navbar = class extends React.Component {
         <Header style={{backgroundColor:'#fff', padding: 0, margin: '0 auto'}}>
       <div className="navbar">
       <Link to="/">
-      <img style={{
+      <img alt="" style={{
         width: '120px',
         height: '31px',
         margin: '16px 24px 16px 0',
