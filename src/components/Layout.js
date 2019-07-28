@@ -44,7 +44,7 @@ const TemplateWrapper = ({ children }) => {
 
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
-        <meta property="og:url" content="http://cict.wvsu.edu.ph" />
+        <meta property="og:url" content="http://cict.wvsu.edu.ph/" />
         <meta property="og:image" content="https://cictwvsu.com/img/og-image.jpg" />        
       </Helmet>
       <Layout className="layout">
