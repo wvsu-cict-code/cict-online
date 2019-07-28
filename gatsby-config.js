@@ -3,9 +3,10 @@ var proxy = require('http-proxy-middleware')
 module.exports = {
   siteMetadata: {
     title: 'WVSU-CICT Online',
-    url: "cict.wvsu.edu.ph",
-    description:
-      'Official website of the College of ICT.',
+    url: "http://cict.wvsu.edu.ph",
+    titleTemplate: "%s | WVSU-CICT Online",
+    description: 'Official website of the College of ICT.',
+    twitterUsername: "@cictwvsu",    
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -56,8 +57,7 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [
-          {
+        plugins: [{
             resolve: 'gatsby-remark-relative-images',
             options: {
               name: 'uploads',

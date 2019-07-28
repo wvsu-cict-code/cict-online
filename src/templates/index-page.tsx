@@ -190,15 +190,11 @@ const cursorOptions = {
 }
 
 export const IndexPageTemplate = ({
-  title,
   heading,
   subheading,
-  mainpitch,
-  description,
-  intro,
   goal,
 }: Props) => (
-    <div className="section">
+    <div className="section">      
       <div className="content">
         {/* <img style={{ width: 'auto', height: '150px', margin: '1rem auto' }} src={collegeLogo} />         */}
         <Alert
