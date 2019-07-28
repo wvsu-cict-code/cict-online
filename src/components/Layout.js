@@ -44,8 +44,11 @@ const TemplateWrapper = ({ children }) => {
 
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
-        <meta property="og:url" content="http://cict.wvsu.edu.ph/" />
-        <meta property="og:image" content="https://cictwvsu.com/img/og-image.jpg" />        
+        <meta property="og:url" content="https://cict.wvsu.edu.ph/" />
+        <meta property="og:image" content="https://cictwvsu.com/img/og-image.jpg" />   
+        <meta property="og:description" content="Official Website of the College of ICT" />  
+        <meta property="og:image" content="https://cictwvsu.com/img/og-image.jpg" />       
+        <meta property="fb:app_id" content="https://cict.wvsu.edu.ph" />  
       </Helmet>
       <Layout className="layout">
       <Navbar />
@@ -57,3 +60,4 @@ const TemplateWrapper = ({ children }) => {
 }
 
 export default TemplateWrapper
+
