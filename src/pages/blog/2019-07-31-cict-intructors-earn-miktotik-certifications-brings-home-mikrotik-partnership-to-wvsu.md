@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: >-
-  CICT Intructors Earn MiktoTik Certifications - Brings Home MikroTik
+  CICT Instructors Earn MiktoTik Certifications - Brings Home MikroTik
   Partnership to WVSU
 date: 2019-07-30T21:50:51.447Z
 description: >-
