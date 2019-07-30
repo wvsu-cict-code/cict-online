@@ -1,9 +1,11 @@
-import { Alert, Button, Divider, Icon, List, Typography } from 'antd';
+import { Alert, Button, Divider, Icon, List, Typography, Tooltip } from 'antd';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import Typist from 'react-typist';
 import Layout from '../components/Layout';
+import StackGrid from 'react-stack-grid'
+import Item from 'antd/lib/list/Item';
 // import collegeLogo from '../img/cict-dark.svg';
 // import cictLines from '../img/cict-lines.svg';
 const cs = require('../img/programs/cs-icon.svg')
@@ -194,16 +196,16 @@ export const IndexPageTemplate = ({
   subheading,
   goal,
 }: Props) => (
-    <div className="section">      
+    <div className="section">
       <div className="content">
         {/* <img style={{ width: 'auto', height: '150px', margin: '1rem auto' }} src={collegeLogo} />         */}
         <Alert
-        style={{marginBottom: '1rem'}}
-        description={<span>This website is still under heavy development. Please help us improve by contributing to the <a href="https://github.com/wvsu-cict-code/cict-online" target="_blank"><Icon type="github" /> source code</a> or by reporting issues.</span>}
-      message="Hello Stranger! It's been a while."
-      type="info"
-      closable
-    />
+          style={{ marginBottom: '1rem' }}
+          description={<span>This website is still under heavy development. Please help us improve by contributing to the <a href="https://github.com/wvsu-cict-code/cict-online" target="_blank"><Icon type="github" /> source code</a> or by reporting issues.</span>}
+          message="Hello Stranger! It's been a while."
+          type="info"
+          closable
+        />
         <Title level={2}>{`> ${heading}`}</Title>
         <p>{subheading}</p>
         <p>{goal}</p>
@@ -227,24 +229,27 @@ export const IndexPageTemplate = ({
             </List.Item>
           )}
         />
-          <Divider />
-        <Title level={3} style={{marginBottom: '2rem'}}>
+        <Divider />
+        <Title level={3} style={{ marginBottom: '2rem' }}>
           <Typist startDelay={3000} cursor={cursorOptions}>
             Academic Partners and Sponsors
           </Typist>
         </Title>
-        <List
-    dataSource={linkages}
-    renderItem={item => (
-      <List.Item>
-         <List.Item.Meta
-                avatar={<img style={{ height: '50px', width: 'auto' }} src={item.logo} />}
-                title={<a href={item.link}>{item.title}</a>}
-                description={item.description}
-              />
-      </List.Item>
-    )}
-  />
+        <StackGrid
+          columnWidth={160}
+          gutterHeight={50}
+          appearDelay={100}
+        >{
+            linkages.map((i: any) => (
+              <div className="linkages-link">
+                <a href={i.link}>
+                  <Tooltip title={i.title}>
+                  <img className="linkages-icon" src={i.logo} />
+                  </Tooltip>
+                </a>
+              </div>
+            ))
+          }</StackGrid>
       </div>
     </div>
   )
