@@ -14,6 +14,8 @@ tags:
   - academic_partner
   - certifications
 ---
-![](/img/mikrotik-certifications.png)
+![](/img/mikrotik-training.jpg)
 
 Congratulations Ma'am Lea Roncal Marcon and Sir Evan Sumido for earning your MikroTik certifications(MTCNA, MTCRE, MTCUME), Certified Academy Trainer and Consultants!
+
+![](/img/mikrotik-certifications.png)
