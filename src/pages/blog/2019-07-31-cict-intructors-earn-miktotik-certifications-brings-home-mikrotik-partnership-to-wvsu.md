@@ -5,9 +5,9 @@ title: >-
   Partnership to WVSU
 date: 2019-07-30T21:50:51.447Z
 description: >-
-  SIA Mikrotikls is a Latvian company which produces networking equipment and
-  software for data network management purposes, internationally known with
-  MikroTik RouterOS and RouterBOARD brands.
+  MikroTik is a Latvian company which was founded in 1996 to develop routers and
+  wireless ISP systems they provide hardware and software for Internet
+  connectivity in most of the countries around the world. 
 featuredpost: true
 featuredimage: /img/mikrotik-acad.png
 tags:
@@ -16,6 +16,8 @@ tags:
 ---
 ![](/img/mikrotik-training.jpg)
 
-Congratulations Ma'am Lea Roncal Marcon and Sir Evan Sumido for earning your MikroTik certifications(MTCNA, MTCRE, MTCUME), Certified Academy Trainer and Consultants!
+Engr. Lea M. Gabawa and Mr. Evan C. Sumido, both faculty from College of Information and Communications Technology(CICT), are now a certified Mikrotik Academy Trainer and Consultant after having successfully completed and passed three Mikrotik training courses on July 22-27, 2019 at Computer Systems Institute, Legazpi City, Albay, Philippines conducted by WIZMASTER Mikrotik Training Center.
+
+Engr. Gabawa and Mr. Sumido was recognized as Mikrotik Certified Network Associate (MTCNA), Mikrotik Certified Routing Engineer (MTCRE), and Mikrotik Certified User Management Engineer (MTCUME).
 
 ![](/img/mikrotik-certifications.png)
