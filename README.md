@@ -128,8 +128,10 @@ This plugin uses [gatsby-plugin-purgecss](https://www.gatsbyjs.org/packages/gats
 
 ## Contributors
 We specially want to recognize the following for helping us develop and maintain our website:
+* WVSU MIS Office - Official University Subdomain
 * CICT PTA - Domain and App Store Funding
 * Regin C. Cabacas - Hosting & Domain Manager
+* Shem Durst Elijah B. Sandig - Content Review
 * ICON Publication - Content Management
 * Link.exe - Photos & Videos
 * Wilson Olivier C. Gazer - Volunteer Animator
