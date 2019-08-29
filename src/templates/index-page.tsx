@@ -69,7 +69,7 @@ const linkages = [
   {
     title: 'MikroTik',
     logo: mikrotik,
-    link: 'https://mikrotik.com',
+    link: 'https://cictwvsu.com/blog/2019-07-31-cict-intructors-earn-miktotik-certifications-brings-home-mikrotik-partnership-to-wvsu/',
     description: 'Academic Partner',
   },
   {
