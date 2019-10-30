@@ -134,6 +134,7 @@ We specially want to recognize the following for helping us develop and maintain
 * Shem Durst Elijah B. Sandig - Content Review
 * ICON Publication - Content Management
 * Link.exe - Photos & Videos
+* Nouriel John Cariño - Official CICT Mascot
 * Wilson Olivier C. Gazer - Volunteer Animator
 * Nina Ricci Marie Benite - Code Contributor
 
