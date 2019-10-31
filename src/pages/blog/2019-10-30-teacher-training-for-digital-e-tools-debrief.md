@@ -24,10 +24,22 @@ Trainer: Mark Joseph J. Solidarios (Part-time Instructor)
 
 > First Tool: Google Web Designer
 
-Google web designer (GWD) is a free app that enables you to create ads, presentations and animations using the web technologies. It's a WYSIWYG (What You See Is What You Get) app and most of its lay-out features are drag-and-drop.
+Google Web Designer (GWD) is a free app that enables you to create ads, presentations and animations using the web technologies. It's a WYSIWYG (What You See Is What You Get) app and most of its lay-out features are drag-and-drop.
 
 ![](/img/gwd1.png)
 
 Due to the internet connection issue, we have changed our topic in using Adobe Flash instead but if you want to learn more about GWD, please visit their [official documentation](https://support.google.com/webdesigner/answer/3187129?hl=en&ref_topic=3249465).
 
-Second Tool: Adobe Flash
+> Second Tool: Adobe Flash
+
+Adobe Flash is another animation tool that can run offline. You can create animations for your lessons easily with this software.
+
+![](/img/flash1.png)
+
+Adobe Flash includes the following tools to quickly get you started:
+
+* Selection tools: Select, scale, distort, rotate objects
+* Drawing tools: Draw, paint, create text, and erase objects
+* View tools: Zoom and pan
+* Color tools: Set stroke and fill colors
+* Options: Modify the currently selected tool
