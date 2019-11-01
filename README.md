@@ -3,6 +3,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status)](https://app.netlify.com/sites/gatsby-starter-netlify-cms-ci/deploys)
 
+![cict-mascot](/src/img/mascot.png "CICT Mascot")
+
 ## CICTzens!
 Help us develop our website! If you found a bug or you want to contribute, please submit an [issue](https://help.github.com/articles/creating-an-issue/), contact the faculty or email your concern at [cict@wvsu.edu.ph](cict@wvsu.edu.ph). Student contributions are welcome!
 
