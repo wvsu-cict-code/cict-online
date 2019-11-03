@@ -14,7 +14,9 @@ tags:
 ---
 We would like to thank all the organizers, trainers, and, just as important, you, the hero teacher who always aspires to inspire our future generation! Your participation is greatly appreciated, and we hope to see more of you in our future trainings.
 
-Below are the resources that we prepared for you and you are free to share them with your fellow teachers as well who were not able to attend.
+You can [download](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/edu-training-resources.zip) the resources that we prepared for you and you are free to share them with your fellow teachers as well who were not able to attend.
+
+# Topics
 
 ## Part I: Digital Animation and Publication
 
@@ -24,7 +26,7 @@ Trainer: Mark Joseph J. Solidarios (Part-time Instructor)
 
 > First Tool: Google Web Designer
 
-Google Web Designer (GWD) is a free app that enables you to create ads, presentations and animations using the web technologies. It's a WYSIWYG (What You See Is What You Get) app and most of its lay-out features are drag-and-drop.
+**Google Web Designer** (GWD) is a free app that enables you to create ads, presentations and animations using the web technologies. It's a WYSIWYG (What You See Is What You Get) app and most of its lay-out features are drag-and-drop.
 
 ![](/img/gwd1.png)
 
@@ -32,7 +34,7 @@ Due to the internet connection issue, we have changed our topic in using Adobe F
 
 > Second Tool: Adobe Flash
 
-Adobe Flash is another animation tool that can run offline. You can create animations for your lessons easily with this software.
+**Adobe Flash** is another animation tool that can run offline. You can create animations for your lessons easily with this software.
 
 ![](/img/flash1.png)
 
@@ -43,3 +45,21 @@ Adobe Flash includes the following tools to quickly get you started:
 * View tools: Zoom and pan
 * Color tools: Set stroke and fill colors
 * Options: Modify the currently selected tool
+
+## Part II: Learning Management System
+
+Trainer: Shem Durst Elijah B. Sandig (Part-time Instructor)
+
+> First Tool: Schoology
+
+**Schoology** is a learning management system (LMS) for schools, and corporations. It allows users to create, manage, and share learning content and resources.
+
+![](/img/schoology.jpg)
+
+Second Tool: Moodle
+
+**Moodle** is a learning platform designed to provide educators, administrators and learners with a single robust, secure and integrated system to create personalized learning environments. 
+
+![](/img/moodle.jpg)
+
+[Download the learning resources](https://github.com/wvsu-cict-code/cict-online/raw/master/src/downloads/edu-training-resources.zip).
