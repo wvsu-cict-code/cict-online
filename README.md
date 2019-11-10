@@ -10,6 +10,7 @@ Help us develop our website! If you found a bug or you want to contribute, pleas
 
 ## Contributing to its Development
 * Contributing to the code will require you to use a GitHub account and knowledge of using Git. Please visit this [git tutorial](https://try.github.io/levels/1/challenges/1) to learn more.
+* Head on to the [issues](https://github.com/wvsu-cict-code/cict-online/issues) and look for a task that you want to help.
 
 ## Architecture
 This website follows the [JAMstack architecture](https://jamstack.org) focusing on ReactJS as the UI framework. by using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
@@ -19,7 +20,7 @@ This website follows the [JAMstack architecture](https://jamstack.org) focusing 
 - [x] Improve page responsiveness.
 - [ ] About Page
 - [ ] Students Page (Student's Works)
-- [ ] Admission Page
+- [ ] Admission Page for Applicants
 - [ ] Faculty & Staff Page
 - [ ] CICT Online Forms and Registration
 - [ ] Code Cleanup
@@ -43,7 +44,7 @@ This website follows the [JAMstack architecture](https://jamstack.org) focusing 
 ## Features ##
 
 - A simple landing page with blog functionality built with Netlify CMS
-- Editabe Pages: Landing, About, Product, Blog-Collection and Contact page with Netlify Form support
+- Editable Pages: Landing, About, Product, Blog-Collection and Contact page with Netlify Form support
 - Create Blog posts from Netlify CMS
 - Tags: Separate page for posts under each tag
 - Basic directory organization
