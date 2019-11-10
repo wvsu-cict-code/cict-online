@@ -11,9 +11,10 @@ Help us develop our website! If you found a bug or you want to contribute, pleas
 ## Contributing to its Development
 
 ### Design
-If you are a UI/UX designer, you may help us by improving the base design or proposing your own. Any design tool is accepted. To view the proposed design aka **CICT Next**, please check this Figma [link](https://www.figma.com/file/vgB1dLsVDOISTApGFk50qs/CICT-Next?node-id=0%3A1). You may also [email the maintainer](mjsolidarios@wvsu.edu.ph).
+If you are a UI/UX designer, you may help us by improving the base design or proposing your own. Any design tool is accepted. To view the proposed design aka **CICT Next**, please check this Figma [link](https://www.figma.com/file/vgB1dLsVDOISTApGFk50qs/CICT-Next?node-id=0%3A1). You may also [email the maintainer](mailto:mjsolidarios@wvsu.edu.ph) to gain editing access to the design.
+<br />
 ![cict-next](/docs/cict-next.jpg "CICT Next")
-* Illustrators are also welcome! You can create drawings that can be utilized for our page. We are still composing the guidelines for the illustrations but you may post an [issue](https://help.github.com/articles/creating-an-issue/) for early submissions.
+* Illustrators are also welcome! You can create drawings that can be utilized for our page. We are still composing the guidelines for the illustrations but you may post an [issue](https://help.github.com/articles/creating-an-issue/) for early submissions. Currently, the illustrations are added by kit-bashing assets from free online illustration providers (e.g.[Undraw](https://undraw.co/), [ManyPixels](https://www.manypixels.co), etc...).
 * For animators, we are using the Lottie [animation library](https://airbnb.io/lottie). 
 ![cict-lottie](/docs/ae-lottie.png "Animation")
 
