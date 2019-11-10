@@ -6,13 +6,16 @@
 ![cict-mascot](/src/img/mascot.png "CICT Mascot")
 
 ## CICTzens!
-Help us develop our website! If you found a bug or you want to contribute, please submit an [issue](https://help.github.com/articles/creating-an-issue/), contact the faculty or email your concern at [cict@wvsu.edu.ph](cict@wvsu.edu.ph). Student contributions are welcome!
+Help us develop our website! If you found a bug or you want to contribute, please submit an [issue](https://help.github.com/articles/creating-an-issue/), contact the faculty or email your concern at [cict@wvsu.edu.ph](mailto:cict@wvsu.edu.ph). Student contributions are welcome!
 
 ## Contributing to its Development
 
 ### Design
-If you are a UI/UX designer, you may help us by improving the base design or proposing your own. Any design tool is accepted. To view the proposed design aka **CICT Next**, please check this Figma [link](https://www.figma.com/file/vgB1dLsVDOISTApGFk50qs/CICT-Next?node-id=0%3A1). You may [email the maintainer](mjsolidarios@wvsu.edu.ph).
+If you are a UI/UX designer, you may help us by improving the base design or proposing your own. Any design tool is accepted. To view the proposed design aka **CICT Next**, please check this Figma [link](https://www.figma.com/file/vgB1dLsVDOISTApGFk50qs/CICT-Next?node-id=0%3A1). You may also [email the maintainer](mjsolidarios@wvsu.edu.ph).
+![cict-next](/docs/cict-next.png "CICT Next")
 * Illustrators are also welcome! You can create drawings that can be utilized for our page. We are still composing the guidelines for the illustrations but you may post an [issue](https://help.github.com/articles/creating-an-issue/) for early submissions.
+* For animators, we are using the Lottie [animation library](https://airbnb.io/lottie). 
+![cict-lottie](/docs/ae-lottie.png "Animation")
 
 ### Code
 Contributing to the code may require you to use a GitHub account and knowledge of using Git. Please visit this [git tutorial](https://try.github.io/levels/1/challenges/1) to learn more.
