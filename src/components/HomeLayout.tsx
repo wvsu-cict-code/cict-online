@@ -88,8 +88,14 @@ const TemplateWrapper = ({ children }) => {
                     <div className="home-page--layer-bg" style={{ backgroundImage: `url(${require('../img/assets/mobile-bg.png')})` }}>
                         <div style={{ padding: '2rem' }}>
                             <div className="center">
-                                <img style={{ height: '50px', width: 'auto', margin: '1rem auto' }} src={require('../img/brandicon.svg')} />
-                                <img style={{ height: '200px', width: 'auto', margin: '2rem auto' }} src={require('../img/mascot.png')} />
+                                <Row>
+                                    <Col>
+                                        <img style={{ height: '50px', width: 'auto', margin: '1rem auto' }} src={require('../img/brandicon.svg')} />
+                                    </Col>
+                                    <Col>
+                                        <img style={{ height: '200px', width: 'auto', margin: '2rem auto' }} src={require('../img/mascot.png')} />
+                                    </Col>
+                                </Row>
                             </div>
                             <Alert type="error" message={<p>Oops! Sorry CICTzen - this page is not yet optimized for mobile. <a target="_blank" href="https://github.com/wvsu-cict-code/cict-online">Help us implement this feature</a></p>} />
                         </div>
