@@ -157,6 +157,8 @@ We specially want to recognize the following for helping us develop and maintain
 * Nouriel John Cariño - Official CICT Mascot
 * Wilson Olivier C. Gazer - Volunteer Animator
 * Nina Ricci Marie Benite - Code Contributor
+* Anelie Decomotan - Code Contributor
+* Mark Anthony Lumbao - Code Contributor
 
 ## License
 &copy; 2016-Present, College of Information and Communications Technology, West Visayas State University. Licensed under an [Apache-2](https://github.com/wvsu-cict-code/cict-online/blob/master/LICENSE) license.
