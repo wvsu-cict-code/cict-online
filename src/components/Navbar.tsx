@@ -1,8 +1,8 @@
-import { Badge, Icon, Layout, Menu } from 'antd';
-import { Link, navigate } from 'gatsby';
+import { Layout } from 'antd';
+import { Link } from 'gatsby';
 import React from 'react';
-import logo from '../img/brandicon.svg';
 
+const logo = require('../img/brandicon.svg');
 const { Header } = Layout;
 
 const Navbar = class extends React.Component {
@@ -18,7 +18,7 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <div className="navbar-container">
-        <Header style={{backgroundColor:'#fff', padding: 0, margin: '0 auto'}}>
+        <Header style={{backgroundColor:'transparent', padding: 0, margin: '0 auto'}}>
       <div className="navbar">
       <Link to="/">
       <img alt="" style={{
@@ -28,14 +28,7 @@ const Navbar = class extends React.Component {
         float: 'left'
       }} src={logo} />
       </Link>
-      <Menu
-        theme="light"
-        mode="horizontal"
-        // defaultSelectedKeys={['1']}
-        style={{ lineHeight: '64px'}}
-      >
-        <Menu.Item key="1" onClick={()=>navigate('blog')}><Icon type="notification" /><Badge dot>Updates </Badge></Menu.Item>
-      </Menu>
+     
       </div>
     </Header>
       </div>

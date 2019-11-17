@@ -1,11 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql, StaticQuery } from 'gatsby'
-import { Card, Icon, Button, Avatar, Row, Col, Divider } from 'antd';
-import StackGrid from "react-stack-grid";
+import { Avatar, Card, Divider } from 'antd';
+import { graphql, Link, StaticQuery } from 'gatsby';
+import PropTypes from 'prop-types';
+import React from 'react';
 import sizeMe from 'react-sizeme';
-import PreviewCompatibleImage from './PreviewCompatibleImage'
-import appsLogo from '../img/apps.svg'
+import StackGrid from "react-stack-grid";
+import appsLogo from '../img/apps.svg';
+import PreviewCompatibleImage from './PreviewCompatibleImage';
 
 const { Meta } = Card;
 

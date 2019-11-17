@@ -1,8 +1,8 @@
-import React from 'react'
-import { Button, Typography, Divider, Row, Col, List, Avatar } from 'antd';
+import { Typography } from 'antd';
+import React from 'react';
 import Typist from 'react-typist';
-import Layout from '../../components/Layout'
-import BlogRoll from '../../components/BlogRoll'
+import BlogRoll from '../../components/BlogRoll';
+import Layout from '../../components/Layout';
 
 const { Title } = Typography;
 
