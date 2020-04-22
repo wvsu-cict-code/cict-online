@@ -20,8 +20,6 @@ If you are a UI/UX designer, you may help us by improving the base design or pro
 Contributing to the code may require you to use a GitHub account and knowledge of using Git. Please visit this [git tutorial](https://try.github.io/levels/1/challenges/1) to learn more.
 <br />
 * This website follows the [JAMstack architecture](https://jamstack.org) focusing on ReactJS as the UI framework. By using Git as a single source of truth, and [Netlify](https://www.netlify.com) for continuous deployment, and CDN distribution.
-![cict-arch](/docs/arch.png "Animation")
-<br />
 
 * To begin, head on to the [issues tab](https://github.com/wvsu-cict-code/cict-online/issues) and look for a task that you want to help.
 * Fork the base code and resolve the issue.
@@ -33,6 +31,7 @@ You can also help build our website in other ways like submitting articles, spel
 
 ## Todo
 - [x] Redesign the landing page.
+- [ ] Add Light and Dark mode.
 - [ ] Add After Effects animation to the line arts utilizing Lottie.
 - [x] Improve page responsiveness.
 - [ ] About Page Design
@@ -40,7 +39,7 @@ You can also help build our website in other ways like submitting articles, spel
 - [ ] Admission Page Design for Applicants
 - [ ] Faculty & Staff Page Design
 - [ ] CICT Online Forms and Registration    
-- [x] Code Cleanup
+- [ ] Code Cleanup
 - [ ] Tools and Resources Page
 - [x] Omni Updates Section (Medium Blog, Facebook, Twitter)
 - [x] Footer Section
@@ -58,25 +57,10 @@ You can also help build our website in other ways like submitting articles, spel
 - [ ] Matching, Placement and Career Support
 
 
-## Features ##
-
-- A simple landing page with blog functionality built with Netlify CMS
-- Editable Pages: Landing, About, Product, Blog-Collection and Contact page with Netlify Form support
-- Create Blog posts from Netlify CMS
-- Tags: Separate page for posts under each tag
-- Basic directory organization
-- Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files
-- Uses `gatbsy-image` with Netlify-CMS preview support
-- Separate components for everything
-- Netlify deploy configuration
-- Netlify function support, see `src/lambda` folder
-- Perfect score on Lighthouse for SEO, Accessibility and Performance (wip:PWA)
-- ..and more
-
 ## Prerequisites
 
 - Node (I recommend using v8.2.0 or higher)
-- [Gatsby CLI](https://www.gatsbyjs.org/docs/)
+- [React Static CLI](https://github.com/react-static/react-static)
 
 ## Getting Started (Recommended)
 
@@ -99,52 +83,8 @@ $ npm run build
 $ npm run serve
 ```
 
-### Media Libraries (installed, but optional)
-
-Media Libraries have been included in this starter as a default. If you are not planning to use `Uploadcare` or `Cloudinary` in your project, you **can** remove them from module import and registration in `src/cms/cms.js`. Here is an example of the lines to comment or remove them your project.
-```javascript
-import CMS from 'netlify-cms-app'
-// import uploadcare from 'netlify-cms-media-library-uploadcare'
-// import cloudinary from 'netlify-cms-media-library-cloudinary'
-
-import AboutPagePreview from './preview-templates/AboutPagePreview'
-import BlogPostPreview from './preview-templates/BlogPostPreview'
-import ProductPagePreview from './preview-templates/ProductPagePreview'
-import IndexPagePreview from './preview-templates/IndexPagePreview'
-
-// CMS.registerMediaLibrary(uploadcare);
-// CMS.registerMediaLibrary(cloudinary);
-
-CMS.registerPreviewTemplate('index', IndexPagePreview)
-CMS.registerPreviewTemplate('about', AboutPagePreview)
-CMS.registerPreviewTemplate('products', ProductPagePreview)
-CMS.registerPreviewTemplate('blog', BlogPostPreview)
-
-```
-
-## Getting Started (Without Netlify)
-```
-$ gatsby new [SITE_DIRECTORY_NAME] https://github.com/netlify-templates/gatsby-starter-netlify-cms/
-$ cd [SITE_DIRECTORY_NAME]
-$ npm run build
-$ npm run serve
-```
-
 ### Setting up the CMS
 Follow the [Netlify CMS Quick Start Guide](https://www.netlifycms.org/docs/quick-start/#authentication) to set up authentication, and hosting.
-
-## Debugging
-Windows users might encounter ```node-gyp``` errors when trying to npm install.
-To resolve, make sure that you have both Python 2.7 and the Visual C++ build environment installed.
-```
-npm config set python python2.7
-npm install --global --production windows-build-tools
-```
-
-[Full details here](https://www.npmjs.com/package/node-gyp 'NPM node-gyp page')
-
-## Purgecss
-This plugin uses [gatsby-plugin-purgecss](https://www.gatsbyjs.org/packages/gatsby-plugin-purgecss/) and [bulma](https://bulma.io/). The bulma builds are usually ~170K but reduced 90% by purgecss.
 
 ## Contributors
 We specially want to recognize the following for helping us develop and maintain our website:

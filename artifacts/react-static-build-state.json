@@ -1,0 +1,64 @@
+{
+  "prefetchRate": 5,
+  "maxThreads": null,
+  "disableRoutePrefixing": false,
+  "outputFileRate": 100,
+  "extensions": [
+    ".js",
+    ".jsx",
+    ".ts",
+    ".tsx"
+  ],
+  "minLoadTime": 200,
+  "disablePreload": false,
+  "disableRuntime": false,
+  "preloadPollInterval": 300,
+  "productionSourceMaps": false,
+  "entry": "/home/user/Repositories/cict-online/src/index.tsx",
+  "plugins": [
+    "react-static-plugin-typescript",
+    [
+      "/home/user/Repositories/cict-online/node_modules/react-static-plugin-source-filesystem/node.api.js",
+      {
+        "location": "/home/user/Repositories/cict-online/src/pages"
+      }
+    ],
+    "/home/user/Repositories/cict-online/node_modules/react-static-plugin-reach-router/browser.api.js",
+    "/home/user/Repositories/cict-online/node_modules/react-static-plugin-sitemap/dist/node.api.js",
+    "/home/user/Repositories/cict-online"
+  ],
+  "paths": {
+    "ROOT": "/home/user/Repositories/cict-online",
+    "SRC": "/home/user/Repositories/cict-online/src",
+    "DIST": "/home/user/Repositories/cict-online/dist",
+    "ASSETS": "/home/user/Repositories/cict-online/dist",
+    "PLUGINS": "/home/user/Repositories/cict-online/plugins",
+    "TEMP": "/home/user/Repositories/cict-online/tmp",
+    "ARTIFACTS": "/home/user/Repositories/cict-online/artifacts",
+    "PUBLIC": "/home/user/Repositories/cict-online/public",
+    "NODE_MODULES": "/home/user/Repositories/cict-online/node_modules",
+    "EXCLUDE_MODULES": "/home/user/Repositories/cict-online/node_modules",
+    "PACKAGE": "/home/user/Repositories/cict-online/package.json",
+    "HTML_TEMPLATE": "/home/user/Repositories/cict-online/dist/index.html",
+    "STATIC_DATA": "/home/user/Repositories/cict-online/dist/staticData"
+  },
+  "siteRoot": "/",
+  "basePath": "",
+  "publicPath": "/",
+  "assetsPath": "",
+  "extractCssChunks": false,
+  "inlineCss": false,
+  "babelExcludes": [],
+  "devServer": {
+    "host": "localhost",
+    "port": 3000
+  },
+  "terser": {
+    "terserOptions": {
+      "mangle": {},
+      "parse": {},
+      "compress": {},
+      "output": {}
+    }
+  }
+}
