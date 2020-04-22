@@ -18,6 +18,18 @@
   "plugins": [
     "react-static-plugin-typescript",
     [
+      "react-static-plugin-less",
+      {
+        "javascriptEnabled": true
+      }
+    ],
+    [
+      "css-loaders-plugin",
+      {
+        "purgecss": true
+      }
+    ],
+    [
       "/home/user/Repositories/cict-online/node_modules/react-static-plugin-source-filesystem/node.api.js",
       {
         "location": "/home/user/Repositories/cict-online/src/pages"
