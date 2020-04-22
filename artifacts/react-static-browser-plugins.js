@@ -13,7 +13,7 @@ const plugins = [{
         hooks: {}
       },
 {
-        location: "/home/user/Repositories/cict-online/plugins/tailwind-plugin",
+        location: "/home/user/Repositories/cict-online/plugins/css-loaders-plugin",
         plugins: [],
         hooks: {}
       },

@@ -33,7 +33,9 @@ export default {
         javascriptEnabled: true
       }
     ],
-    'tailwind-plugin',
+    ['css-loaders-plugin', {
+      purgecss: true
+    }],
     [
       require.resolve('react-static-plugin-source-filesystem'),
       {

@@ -10,7 +10,8 @@ const getOneOf = ({ oneOf } = {}) => {
 
 const defaultOptions = {
   autoPrefixer: true,
-  cssInJs: false
+  cssInJs: false,
+  purgecss: false
 }
 
 export default (options = {}) => ({
@@ -34,7 +35,15 @@ export default (options = {}) => ({
           require("tailwindcss"),
           require("postcss-nested"),
           require("postcss-custom-properties"),
-        ]        
+        ]
+        
+        if(opts.purgecss){
+          tailwindDefault.push(
+            require("@fullhuman/postcss-purgecss")({
+              content: ['./src/**/*.html', './src/**/*.tsx', './src/**/*.ts'],
+            })
+          )
+        }
 
         if (opts.autoPrefixer) {
           tailwindDefault.push(require('autoprefixer'))
