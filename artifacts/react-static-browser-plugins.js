@@ -8,6 +8,16 @@ const plugins = [{
         hooks: {}
       },
 {
+        location: "/home/user/Repositories/cict-online/node_modules/react-static-plugin-less",
+        plugins: [],
+        hooks: {}
+      },
+{
+        location: "/home/user/Repositories/cict-online/plugins/tailwind-plugin",
+        plugins: [],
+        hooks: {}
+      },
+{
         location: "/home/user/Repositories/cict-online/node_modules/react-static-plugin-source-filesystem",
         plugins: [],
         hooks: {}
