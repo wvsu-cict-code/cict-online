@@ -1,9 +1,15 @@
-import { navigate, Router, Redirect, Link } from '@reach/router';
+import { Link, navigate, Redirect, Router } from '@reach/router';
+import { Layout, Menu } from 'antd';
 import netlifyIdentity from 'netlify-identity-widget';
 import React, { Component } from 'react';
 import { addPrefetchExcludes, Root } from 'react-static';
-import './app.css';
-import './theme.less';
+import './app.less';
+import BrandIcon from './assets/brand.svg';
+
+
+
+const { Header, Footer, Content } = Layout;
+
 
 // Any routes that start with 'dynamic' will be treated as non-static routes
 addPrefetchExcludes(['dynamic'])
@@ -44,7 +50,7 @@ const AuthButton = (
         </button>
       </p>
     ) : (
-        <p>You are not logged in. <Link to="/login">Login</Link></p>
+        <p>You are not logged in. <a href="login">Login</a></p>
       )
 );
 
@@ -56,7 +62,24 @@ const AuthButton = (
 
 const Public: any = () => (
   <div>
-    <h2>Welcome CICTzen!</h2>
+    <div>
+      <Layout className="layout">
+        <Header>
+          <div className="home-header">
+            <Link to="/"><div className="brand-icon" style={{ backgroundImage: `url(${BrandIcon})` }} /></Link>
+            <Menu style={{ float: 'right' }} mode="horizontal" defaultSelectedKeys={['1']}>
+              <Menu.Item key="1">nav 1</Menu.Item>
+              <Menu.Item key="2">nav 2</Menu.Item>
+              <Menu.Item key="3">nav 3</Menu.Item>
+            </Menu>
+          </div>
+        </Header>
+        <Content style={{ padding: '0 50px' }}>
+          <div className="site-layout-content">Content</div>
+        </Content>
+        <Footer style={{ textAlign: 'center' }}>CICT Online ©2020 by CICTzens</Footer>
+      </Layout>
+    </div>
     <AuthButton />
   </div>
 );
@@ -67,7 +90,7 @@ const Dashboard: any = () => (
   </div>
 );
 
-class Login extends Component<any> {
+class Login extends Component<any, any> {
   state = { redirectToReferrer: false };
 
   login = () => {

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@reach/router": "^1.2.1",
+    "antd": "^4.1.4",
     "axios": "^0.19.2",
     "netlify-cms": "^2.10.47",
     "netlify-cms-app": "^2.12.11",
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",
+    "@types/antd": "^1.0.0",
     "@types/netlify-identity-widget": "^1.4.1",
     "@types/node": "^12.7.2",
     "@types/reach__router": "^1.2",

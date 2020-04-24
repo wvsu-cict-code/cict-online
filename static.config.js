@@ -30,11 +30,11 @@ export default {
     'react-static-plugin-typescript',
     ['react-static-plugin-less',
       {
-        javascriptEnabled: true
+        javascriptEnabled: true,
       }
     ],
     ['css-loaders-plugin', {
-      purgecss: true
+      purgecss: true // enable when publishing
     }],
     [
       require.resolve('react-static-plugin-source-filesystem'),
