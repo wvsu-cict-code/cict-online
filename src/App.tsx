@@ -1,11 +1,15 @@
 import { Link, navigate, Redirect, Router } from '@reach/router';
 import { Layout, Menu } from 'antd';
-import netlifyIdentity from 'netlify-identity-widget';
+
 import React, { Component } from 'react';
 import { addPrefetchExcludes, Root } from 'react-static';
 import './app.less';
 import BrandIcon from './assets/brand.svg';
 
+let netlifyIdentity:any;
+if (typeof document !== 'undefined') {
+  netlifyIdentity = require('netlify-identity-widget')
+}
 
 
 const { Header, Footer, Content } = Layout;
@@ -20,7 +24,7 @@ const netlifyAuth: any = {
   authenticate(callback: any) {
     this.isAuthenticated = true;
     netlifyIdentity.open();
-    netlifyIdentity.on('login', user => {
+    netlifyIdentity.on('login', (user:any) => {
       this.user = user;
       callback(user);
     });

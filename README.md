@@ -1,7 +1,14 @@
 # CICT Online
 > Source code of the CICT official website.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status)](https://app.netlify.com/sites/gatsby-starter-netlify-cms-ci/deploys)
+
+Master Build => [http://cict.wvsu.edu.ph](http://cict.wvsu.edu.ph)<br />
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status)](https://app.netlify.com/sites/cictwvsu/deploys)
+
+Development Build => [https://cictwvsu-dev.netlify.app](https://cictwvsu-dev.netlify.app)
+<br />
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b654c94e-08a6-4b79-b443-7837581b1d8d/deploy-status)](https://app.netlify.com/sites/cictwvsu-dev/deploys)
+
 
 ## CICTzens!
 Help us develop our website! If you found a bug or you want to contribute, please submit an [issue](https://help.github.com/articles/creating-an-issue/), contact the faculty or email your concern at [cict@wvsu.edu.ph](mailto:cict@wvsu.edu.ph). Student contributions are welcome!

@@ -7,8 +7,15 @@ import App from './App'
 // Export your top level component as JSX (for static rendering)
 export default App
 
-// Netlify Auth Widget
-import netlifyIdentity from 'netlify-identity-widget';
+let netlifyIdentity:any;
+if (typeof document !== 'undefined') {
+  netlifyIdentity = require('netlify-identity-widget')
+  netlifyIdentity.init();
+  
+  if (typeof window !== "undefined") {
+    window.netlifyIdentity = netlifyIdentity;
+  }
+}
 
 // Fix for typescript window error
 declare global {
@@ -16,12 +23,6 @@ declare global {
     netlifyIdentity: any;
   }
 }
-
-if (window) {
-  window.netlifyIdentity = netlifyIdentity;
-}
-
-netlifyIdentity.init();
 
 // Render your app
 if (typeof document !== 'undefined') {
