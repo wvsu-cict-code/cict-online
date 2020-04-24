@@ -31,7 +31,7 @@ export default (options = {}) => ({
       ) {
         const plugins = postcssLoader.options.plugins;
         const tailwindDefault = [
-          require("postcss-import"),
+          require("postcss-import")(),
           require("tailwindcss"),
           require("postcss-nested"),
           require("postcss-custom-properties"),

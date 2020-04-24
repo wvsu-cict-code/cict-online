@@ -1,0 +1,38 @@
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+
+.brand-icon {
+    @apply float-left bg-no-repeat bg-center bg-contain;
+    min-width: 80px;
+    height: 31px;
+    margin: 16px 24px 16px 0;
+}
+
+.card {
+    @apply w-48 h-64 bg-white shadow-md rounded-lg
+}
+
+.section-title {
+    @apply font-thin text-lg my-4
+}
+
+.card:hover{
+    @apply shadow-lg 
+}
+
+@screen md {
+
+}
+
+@screen lg {
+
+}
+
+@screen sm {
+
+}

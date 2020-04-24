@@ -1,11 +1,11 @@
-import { Link, navigate, Redirect, Router } from '@reach/router';
-import { Layout, Menu, Button } from 'antd';
-
+import { Link, Redirect, Router } from '@reach/router';
+import { Button, Layout, Menu } from 'antd';
+import SEO from 'components/SEO';
 import React, { Component } from 'react';
 import { addPrefetchExcludes, Root } from 'react-static';
 import './app.less';
 import BrandIcon from './assets/brand.svg';
-import SEO from 'components/SEO';
+
 
 let netlifyIdentity: any;
 if (typeof document !== 'undefined') {
@@ -42,23 +42,23 @@ const netlifyAuth: any = {
 };
 
 
-const AuthButton = (
-  () =>
-    netlifyAuth.isAuthenticated ? (
-      <p>
-        Welcome!{' '}
-        <button
-          onClick={() => {
-            netlifyAuth.signout(() => navigate("/"));
-          }}
-        >
-          Sign out
-        </button>
-      </p>
-    ) : (
-        <p>You are not logged in. <a href="login">Login</a></p>
-      )
-);
+// const AuthButton = (
+//   () =>
+//     netlifyAuth.isAuthenticated ? (
+//       <p>
+//         Welcome!{' '}
+//         <button
+//           onClick={() => {
+//             netlifyAuth.signout(() => navigate("/"));
+//           }}
+//         >
+//           Sign out
+//         </button>
+//       </p>
+//     ) : (
+//         <p>You are not logged in. <a href="login">Login</a></p>
+//       )
+// );
 
 // function PrivateRoute() {
 //   return (
@@ -75,63 +75,57 @@ const Public: any = () => (
         url="https://cict.wvsu.edu.ph/"
       />
       <Layout className="layout">
-        <Header>
+        <Header className="w-full">
           <div className="container mx-auto">
             <Link to="/"><div className="brand-icon" style={{ backgroundImage: `url(${BrandIcon})` }} /></Link>
-            <Menu style={{ float: 'right' }} mode="horizontal" defaultSelectedKeys={['1']}>
+            <Menu mode="horizontal" defaultSelectedKeys={['1']} className="float-right block lg-hidden" >
               <Menu.Item key="1">Home</Menu.Item>
               <Menu.Item key="2">Programs</Menu.Item>
               <Button type="primary">Apply to CICT</Button>
             </Menu>
           </div>
         </Header>
-        <Content style={{ padding: '0 50px' }}>
-          <div className="container mx-auto">
-            <div className="h-64 w-full bg-gray-500">
-            </div>
-            <div>
-            <AuthButton />
-              <h2 className="font-thin text-lg my-4">News and Updates</h2>
-              <div className="w-48 h-64 bg-gray-500">
-
+        <Content className="bg-white p-0">
+          <div>
+            <div className="w-full bg-gray-400">
+              <div className="container mx-auto bg-gray-300 font-normal text-center">
+                <h3>Enrich your Future with</h3>
+                <h1 className="text-lg">Technology</h1>
               </div>
             </div>
-            <div>
-              <h2 className="font-thin text-lg my-4">Course Offerings</h2>
-              <div className="w-48 h-64 bg-gray-500 block">
-
+            <div className="w-full bg-gray-300">
+              <div className="container mx-auto">
+                <p className="font-normal">
+                  West Visayas State University College of ICT continues the tradition of excellence through quality education, innovative ICT researches, and extension services to various stakeholders.
+              </p>
               </div>
             </div>
-            <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-6">
-  <div className="flex items-center flex-shrink-0 text-white mr-6">
-    <svg className="fill-current h-8 w-8 mr-2" width="54" height="54" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg"><path d="M13.5 22.1c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05zM0 38.3c1.8-7.2 6.3-10.8 13.5-10.8 10.8 0 12.15 8.1 17.55 9.45 3.6.9 6.75-.45 9.45-4.05-1.8 7.2-6.3 10.8-13.5 10.8-10.8 0-12.15-8.1-17.55-9.45-3.6-.9-6.75.45-9.45 4.05z"/></svg>
-    <span className="font-semibold text-xl tracking-tight">Tailwind CSS</span>
-  </div>
-  <div className="block lg:hidden">
-    <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
-      <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"/></svg>
-    </button>
-  </div>
-  <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
-    <div className="text-sm lg:flex-grow">
-      <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-        Docs
-      </a>
-      <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
-        Examples
-      </a>
-      <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
-        Blog
-      </a>
-    </div>
-    <div>
-      <a href="#" className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0">Download</a>
-    </div>
-  </div>
-</nav>
+            <div className="w-full bg-gray-500">
+              <div className="container mx-auto bg-gray-200 py-8">
+                <div>
+                  <h2 className="section-title">News and Updates</h2>
+                  <div className="card">
+
+                  </div>
+                </div>
+                <div>
+                  <h2 className="section-title">Course Offerings</h2>
+                  <div className="card">
+
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </Content>
-        <Footer className="text-center font-normal">CICT Online ©2020 by CICTzens</Footer>
+        <Footer style={{ backgroundColor: '#212121' }}>
+          <div className="w-full text-center">
+            <span className="font-normal text-white">
+              CICT Online ©2020 by CICTzens
+            </span>
+          </div>
+
+        </Footer>
       </Layout>
     </div>
   </div>
