@@ -108,13 +108,28 @@ const netlifyAuth: any = {
 //   )
 // }
 
+const Arrow = (props: any) => {
+  const { className, style, onClick, symbol } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block" }}
+      onClick={onClick}
+    >
+      {symbol}
+    </div>
+  );
+}
+
 const slickSettings = {
   dots: true,
   infinite: false,
   speed: 500,
   slidesToShow: 5,
   slidesToScroll: 5,
-  arrows:true
+  arrows: true,
+  nextArrow: <Arrow symbol=">" />,
+  prevArrow: <Arrow symbol="<" />
 };
 
 const Public: any = () => (
@@ -137,7 +152,7 @@ const Public: any = () => (
             </div>
           </Header>
         </div>
-        <Content className="bg-white p-0">
+        <Content className="bg-white p-0 px-8">
           <div>
             <div className="w-full">
               <div className="billboard">
@@ -165,14 +180,16 @@ const Public: any = () => (
               <div className="container mx-auto py-8">
                 <h2 className="text-center text-4xl">Courses Offered</h2>
                 <p className="max-w-lg mx-auto text-center font-normal text-lg">Your Foundation of Excellence in ICT.</p>
-                <Slider {...slickSettings}>
-                  {programs.map(i => (
-                    <div className="w-32 mx-8">
-                      <img className="mx-auto h-40" src={i.icon} alt="" />
-                      <p className="text-center text-lg">{i.name}</p>
-                    </div>
-                  ))}
-                </Slider>
+                <div className="px-8">
+                  <Slider {...slickSettings}>
+                    {programs.map(i => (
+                      <div className="w-32 mx-8">
+                        <img className="mx-auto h-40" src={i.icon} alt="" />
+                        <p className="text-center text-lg mx-auto" style={{maxWidth: '180px'}}>{i.name}</p>
+                      </div>
+                    ))}
+                  </Slider>
+                </div>
               </div>
             </div>
 
@@ -185,7 +202,7 @@ const Public: any = () => (
             </div>
           </div>
         </Content>
-        <Footer style={{backgroundColor: '#fff'}}>
+        <Footer style={{ backgroundColor: '#fff' }}>
           <div className="w-full text-center">
             <span className="font-normal text-gray-500">
               CICT Online ©2020 by CICTzens

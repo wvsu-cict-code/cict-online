@@ -1,7 +1,21 @@
 @import '~antd/dist/antd.less'; // Import Ant Design styles by less entry
-@import 'theme.less'; 
-@import "~slick-carousel/slick/slick.css"; 
-@import "~slick-carousel/slick/slick-theme.css";
+@import 'theme.less';
 // variables to override above
 @import "./tailwind.css";
 
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.slick-prev {
+    left: 0% !important;
+    z-index: 1;
+}
+
+.slick-next {
+    right: 0% !important;
+    z-index: 1;
+}
+
+.slick-prev::before, .slick-next::before{
+    color: orange!important;
+}
