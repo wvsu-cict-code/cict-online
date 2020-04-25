@@ -25,6 +25,19 @@
     @apply shadow-lg 
 }
 
+.billboard {
+    @apply font-normal
+}
+
+.billboard-header{
+    font-size: 3.125rem
+}
+
+.img-billboard{
+    width: auto;
+    height: 400px
+}
+
 @screen md {
 
 }

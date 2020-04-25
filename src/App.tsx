@@ -1,11 +1,11 @@
 import { Link, Redirect, Router } from '@reach/router';
-import { Button, Layout, Menu } from 'antd';
+import { Button, Layout, Menu, Row, Col } from 'antd';
 import SEO from 'components/SEO';
 import React, { Component } from 'react';
 import { addPrefetchExcludes, Root } from 'react-static';
 import './app.less';
 import BrandIcon from './assets/brand.svg';
-
+import ICTGraphics from './assets/ict.svg';
 
 let netlifyIdentity: any;
 if (typeof document !== 'undefined') {
@@ -75,29 +75,45 @@ const Public: any = () => (
         url="https://cict.wvsu.edu.ph/"
       />
       <Layout className="layout">
-        <Header className="w-full">
-          <div className="container mx-auto">
-            <Link to="/"><div className="brand-icon" style={{ backgroundImage: `url(${BrandIcon})` }} /></Link>
-            <Menu mode="horizontal" defaultSelectedKeys={['1']} className="float-right block lg-hidden" >
-              <Menu.Item key="1">Home</Menu.Item>
-              <Menu.Item key="2">Programs</Menu.Item>
-              <Button type="primary">Apply to CICT</Button>
-            </Menu>
-          </div>
-        </Header>
+        <div className="border-1 border-gray-200">
+          <Header className="w-full">
+            <div className="container mx-auto">
+              <Link to="/"><div className="brand-icon" style={{ backgroundImage: `url(${BrandIcon})` }} /></Link>
+              <Menu mode="horizontal" defaultSelectedKeys={['1']} className="float-right block lg-hidden" >
+                <Menu.Item key="1">Home</Menu.Item>
+                <Menu.Item key="2">Programs</Menu.Item>
+                <Button type="primary">Apply to CICT</Button>
+              </Menu>
+            </div>
+          </Header>
+        </div>
         <Content className="bg-white p-0">
           <div>
-            <div className="w-full bg-gray-400">
-              <div className="container mx-auto bg-gray-300 font-normal text-center">
-                <h3>Enrich your Future with</h3>
-                <h1 className="text-lg">Technology</h1>
+            <div className="w-full">
+              <div className="billboard">
+                <div className="container mx-auto billboard-greeting">
+                  <Row>
+                    <Col span={12}>
+                      <div className="grid py-32">
+                        <span>Your Future with Technology</span>
+                        <span className="billboard-header">Hello World!</span>
+                        <span className="font-normal">
+                          West Visayas State University College of ICT continues the tradition of excellence through quality education, innovative ICT researches, and extension services to various stakeholders.
+                        </span>
+                        <Button className="mt-8 w-64" type="primary" size="large">Apply Now</Button>
+                      </div>
+                    </Col>
+                    <Col span={12}>
+                      <img src={ICTGraphics} className="img-billboard mx-auto mt-8" />
+                    </Col>
+                  </Row>
+
+                </div>
               </div>
             </div>
             <div className="w-full bg-gray-300">
               <div className="container mx-auto">
-                <p className="font-normal">
-                  West Visayas State University College of ICT continues the tradition of excellence through quality education, innovative ICT researches, and extension services to various stakeholders.
-              </p>
+
               </div>
             </div>
             <div className="w-full bg-gray-500">
