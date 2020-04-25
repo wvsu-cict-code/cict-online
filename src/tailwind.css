@@ -5,6 +5,7 @@
 
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
 .brand-icon {
     @apply float-left bg-no-repeat bg-center bg-contain;
@@ -30,7 +31,12 @@
 }
 
 .billboard-header{
-    font-size: 3.125rem
+    font-size: 3.125rem;
+    color: #1A1A1A
+}
+
+.dark-section{
+    background-color: #111111
 }
 
 .img-billboard{

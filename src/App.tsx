@@ -6,6 +6,48 @@ import { addPrefetchExcludes, Root } from 'react-static';
 import './app.less';
 import BrandIcon from './assets/brand.svg';
 import ICTGraphics from './assets/ict.svg';
+import CICTLogo from './assets/logo.svg';
+import Slider from "react-slick";
+import ITIcon from './assets/it-icon.svg'
+import ISIcon from './assets/is-icon.svg'
+import CSIcon from './assets/cs-icon.svg'
+import BLISIcon from './assets/blis-icon.svg'
+import EMCIcon from './assets/emc-icon.svg'
+import MITIcon from './assets/msit-icon.svg'
+
+const programs = [
+  {
+    name: "Information Technology",
+    icon: ITIcon,
+    description: "Study, analyze, design, develop, implement, and evaluate ICT solutions. "
+  },
+  {
+    name: "Information Systems",
+    icon: ISIcon,
+    description: "Design and implementation of solutions that integrate information technology with business processes. "
+  },
+  {
+    name: "Computer Science",
+    icon: CSIcon,
+    description: "Designing, writing and developing computer programs and computer networks."
+  },
+  {
+    name: "Library and Information Science",
+    icon: BLISIcon,
+    description: "Management of library operations, the systematic organization, conservation, preservation and restoration of books, historical and cultural documents and other intellectual properties."
+  },
+  {
+    name: "Entertainment and Multimedia Computing",
+    icon: EMCIcon,
+    description: "Computing in the design and development of multimedia products and solutions. "
+  },
+  {
+    name: "Masters in Information Technology",
+    icon: MITIcon,
+    description: "Advanced computing subjects, or move into a new IT specialisation. "
+  },
+
+]
 
 let netlifyIdentity: any;
 if (typeof document !== 'undefined') {
@@ -66,6 +108,15 @@ const netlifyAuth: any = {
 //   )
 // }
 
+const slickSettings = {
+  dots: true,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 5,
+  slidesToScroll: 5,
+  arrows:true
+};
+
 const Public: any = () => (
   <div>
     <div>
@@ -81,7 +132,6 @@ const Public: any = () => (
               <Link to="/"><div className="brand-icon" style={{ backgroundImage: `url(${BrandIcon})` }} /></Link>
               <Menu mode="horizontal" defaultSelectedKeys={['1']} className="float-right block lg-hidden" >
                 <Menu.Item key="1">Home</Menu.Item>
-                <Menu.Item key="2">Programs</Menu.Item>
                 <Button type="primary">Apply to CICT</Button>
               </Menu>
             </div>
@@ -95,9 +145,9 @@ const Public: any = () => (
                   <Row>
                     <Col span={12}>
                       <div className="grid py-32">
-                        <span>Your Future with Technology</span>
+                        <span className="text-lg">Your Future with Technology</span>
                         <span className="billboard-header">Hello World!</span>
-                        <span className="font-normal">
+                        <span className="font-normal text-lg">
                           West Visayas State University College of ICT continues the tradition of excellence through quality education, innovative ICT researches, and extension services to various stakeholders.
                         </span>
                         <Button className="mt-8 w-64" type="primary" size="large">Apply Now</Button>
@@ -111,32 +161,33 @@ const Public: any = () => (
                 </div>
               </div>
             </div>
-            <div className="w-full bg-gray-300">
-              <div className="container mx-auto">
-
+            <div className="w-full">
+              <div className="container mx-auto py-8">
+                <h2 className="text-center text-4xl">Courses Offered</h2>
+                <p className="max-w-lg mx-auto text-center font-normal text-lg">Your Foundation of Excellence in ICT.</p>
+                <Slider {...slickSettings}>
+                  {programs.map(i => (
+                    <div className="w-32 mx-8">
+                      <img className="mx-auto h-40" src={i.icon} alt="" />
+                      <p className="text-center text-lg">{i.name}</p>
+                    </div>
+                  ))}
+                </Slider>
               </div>
             </div>
-            <div className="w-full bg-gray-500">
-              <div className="container mx-auto bg-gray-200 py-8">
-                <div>
-                  <h2 className="section-title">News and Updates</h2>
-                  <div className="card">
 
-                  </div>
-                </div>
-                <div>
-                  <h2 className="section-title">Course Offerings</h2>
-                  <div className="card">
-
-                  </div>
-                </div>
+            <div className="w-full">
+              <div className="container mx-auto py-8">
+                <img src={CICTLogo} className="w-40 h-40 mx-auto my-4" alt="CICT Logo" />
+                <h2 className="text-center text-4xl">Upholding the Tradition of Excellence</h2>
+                <p className="max-w-lg mx-auto text-center font-normal text-lg">Information and Communications Technology has penetrated the core of societal and individual lives. Its development is changing the course of all other technologies. ICT has now become less of a choice and more of a requirement for individuals and societies concerned with competitiveness in the international arena.</p>
               </div>
             </div>
           </div>
         </Content>
-        <Footer style={{ backgroundColor: '#212121' }}>
+        <Footer style={{backgroundColor: '#fff'}}>
           <div className="w-full text-center">
-            <span className="font-normal text-white">
+            <span className="font-normal text-gray-500">
               CICT Online ©2020 by CICTzens
             </span>
           </div>
