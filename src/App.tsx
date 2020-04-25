@@ -1,19 +1,24 @@
 import { Link, Redirect, Router } from '@reach/router';
-import { Button, Layout, Menu, Row, Col } from 'antd';
+import { Button, Col, Layout, Menu, Row, Drawer, Grid } from 'antd';
 import SEO from 'components/SEO';
-import React, { Component } from 'react';
-import { addPrefetchExcludes, Root } from 'react-static';
-import './app.less';
-import BrandIcon from './assets/brand.svg';
-import ICTGraphics from './assets/ict.svg';
-import CICTLogo from './assets/logo.svg';
+import React, { Component, useState } from 'react';
 import Slider from "react-slick";
-import ITIcon from './assets/it-icon.svg'
-import ISIcon from './assets/is-icon.svg'
-import CSIcon from './assets/cs-icon.svg'
-import BLISIcon from './assets/blis-icon.svg'
-import EMCIcon from './assets/emc-icon.svg'
-import MITIcon from './assets/msit-icon.svg'
+import { addPrefetchExcludes, Root } from 'react-static';
+import { MenuOutlined } from '@ant-design/icons';
+import './app.less';
+import BLISIcon from './assets/blis-icon.svg';
+import BrandIcon from './assets/brand.svg';
+import CSIcon from './assets/cs-icon.svg';
+import EMCIcon from './assets/emc-icon.svg';
+import ICTGraphics from './assets/ict.svg';
+import ISIcon from './assets/is-icon.svg';
+import ITIcon from './assets/it-icon.svg';
+import CICTLogo from './assets/logo.svg';
+import MITIcon from './assets/msit-icon.svg';
+
+const { Header, Footer, Content } = Layout;
+
+const { useBreakpoint } = Grid
 
 const programs = [
   {
@@ -53,9 +58,6 @@ let netlifyIdentity: any;
 if (typeof document !== 'undefined') {
   netlifyIdentity = require('netlify-identity-widget')
 }
-
-
-const { Header, Footer, Content } = Layout;
 
 
 
@@ -132,88 +134,111 @@ const slickSettings = {
   prevArrow: <Arrow symbol="<" />
 };
 
-const Public: any = () => (
-  <div>
+const Public: any = () => {
+  let [collapsed, toggleMenu] = useState(false)
+  const screens = useBreakpoint()
+  const breakpoints = Object.entries(screens)
+    .filter(screen => !!screen[1])
+    .map(screen => screen[0])
+  console.log(breakpoints)
+  return (
     <div>
-      <SEO
-        title="WVSU CICT - Home"
-        description="Official website of the College of ICT."
-        url="https://cict.wvsu.edu.ph/"
-      />
-      <Layout className="layout">
-        <div className="border-1 border-gray-200">
-          <Header className="w-full">
-            <div className="container mx-auto">
-              <Link to="/"><div className="brand-icon" style={{ backgroundImage: `url(${BrandIcon})` }} /></Link>
-              <Menu mode="horizontal" defaultSelectedKeys={['1']} className="float-right block lg-hidden" >
-                <Menu.Item key="1">Home</Menu.Item>
-                <Button type="primary">Apply to CICT</Button>
-              </Menu>
+      <div>
+        <SEO
+          title="WVSU CICT - Home"
+          description="Official website of the College of ICT."
+          url="https://cict.wvsu.edu.ph/"
+        />
+        <Layout className="layout">
+          <Drawer
+            title="CICT Online"
+            placement="right"
+            closable
+            onClose={() => toggleMenu(collapsed = !collapsed)}
+            visible={collapsed}
+          >
+            <Menu defaultSelectedKeys={['1']} >
+              <Menu.Item key="1">Home</Menu.Item>
+              <Button type="primary">Apply to CICT</Button>
+            </Menu>
+          </Drawer>
+          <Layout>
+            <div className="border-1 border-gray-200">
+              <Header className="w-full">
+                <div className="container mx-auto">
+                  <Link to="/"><div className="brand-icon" style={{ backgroundImage: `url(${BrandIcon})` }} /></Link>
+                  <Menu mode="horizontal" defaultSelectedKeys={['1']} className="navbar" >
+                    <Menu.Item key="1">Home</Menu.Item>
+                    <Button type="primary">Apply to CICT</Button>
+                  </Menu>
+                  <Button style={{ lineHeight: '10px' }} className="mobile-menu-button" icon={<MenuOutlined />} onClick={() => toggleMenu(collapsed = !collapsed)} />
+                </div>
+              </Header>
             </div>
-          </Header>
-        </div>
-        <Content className="bg-white p-0 px-8">
-          <div>
-            <div className="w-full">
-              <div className="billboard">
-                <div className="container mx-auto billboard-greeting">
-                  <Row>
-                    <Col span={12}>
-                      <div className="grid py-32">
-                        <span className="text-lg">Your Future with Technology</span>
-                        <span className="billboard-header">Hello World!</span>
-                        <span className="font-normal text-lg">
-                          West Visayas State University College of ICT continues the tradition of excellence through quality education, innovative ICT researches, and extension services to various stakeholders.
-                        </span>
-                        <Button className="mt-8 w-64" type="primary" size="large">Apply Now</Button>
-                      </div>
-                    </Col>
-                    <Col span={12}>
-                      <img src={ICTGraphics} className="img-billboard mx-auto mt-8" />
-                    </Col>
-                  </Row>
+            <Content className="bg-white p-0 px-8">
+              <div>
+                <div className="w-full">
+                  <div className="billboard">
+                    <div className="container mx-auto billboard-greeting">
+                      <Row>
+                        <Col span={breakpoints.includes('md')?12:24}>
+                          <div className="billboard-greeting-text">
+                            <span className="text-lg">Your Future with Technology</span>
+                            <span className="billboard-header">Hello World!</span>
+                            <span className="font-normal text-lg">
+                              West Visayas State University College of ICT continues the tradition of excellence through quality education, innovative ICT researches, and extension services to various stakeholders.
+                          </span>
+                            <Button className={breakpoints.includes('md')?"mt-8 w-64":"mt-8 w-full"} type="primary" size="large">Apply Now</Button>
+                          </div>
+                        </Col>
+                        <Col span={breakpoints.includes('md')?12:24}>
+                          <img src={ICTGraphics} className="img-billboard mx-auto mt-8" />
+                        </Col>
+                      </Row>
 
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full">
+                  <div className="container mx-auto py-8">
+                    <h2 className="text-center text-4xl">Courses Offered</h2>
+                    <p className="max-w-lg mx-auto text-center font-normal text-lg">Your Foundation of Excellence in ICT.</p>
+                    <div className="px-8">
+                      <Slider {...slickSettings}>
+                        {programs.map(i => (
+                          <div className="w-32 mx-8">
+                            <img className="mx-auto h-40" src={i.icon} alt="" />
+                            <p className="text-center text-lg mx-auto" style={{ maxWidth: '180px' }}>{i.name}</p>
+                          </div>
+                        ))}
+                      </Slider>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="w-full">
+                  <div className="container mx-auto py-8">
+                    <img src={CICTLogo} className="w-40 h-40 mx-auto my-4" alt="CICT Logo" />
+                    <h2 className="text-center text-4xl">Upholding the Tradition of Excellence</h2>
+                    <p className="max-w-lg mx-auto text-center font-normal text-lg">Information and Communications Technology has penetrated the core of societal and individual lives. Its development is changing the course of all other technologies. ICT has now become less of a choice and more of a requirement for individuals and societies concerned with competitiveness in the international arena.</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="w-full">
-              <div className="container mx-auto py-8">
-                <h2 className="text-center text-4xl">Courses Offered</h2>
-                <p className="max-w-lg mx-auto text-center font-normal text-lg">Your Foundation of Excellence in ICT.</p>
-                <div className="px-8">
-                  <Slider {...slickSettings}>
-                    {programs.map(i => (
-                      <div className="w-32 mx-8">
-                        <img className="mx-auto h-40" src={i.icon} alt="" />
-                        <p className="text-center text-lg mx-auto" style={{maxWidth: '180px'}}>{i.name}</p>
-                      </div>
-                    ))}
-                  </Slider>
-                </div>
+            </Content>
+            <Footer style={{ backgroundColor: '#fff' }}>
+              <div className="w-full text-center">
+                <span className="font-normal text-gray-500">
+                  CICT Online ©2020 by CICTzens
+              </span>
               </div>
-            </div>
 
-            <div className="w-full">
-              <div className="container mx-auto py-8">
-                <img src={CICTLogo} className="w-40 h-40 mx-auto my-4" alt="CICT Logo" />
-                <h2 className="text-center text-4xl">Upholding the Tradition of Excellence</h2>
-                <p className="max-w-lg mx-auto text-center font-normal text-lg">Information and Communications Technology has penetrated the core of societal and individual lives. Its development is changing the course of all other technologies. ICT has now become less of a choice and more of a requirement for individuals and societies concerned with competitiveness in the international arena.</p>
-              </div>
-            </div>
-          </div>
-        </Content>
-        <Footer style={{ backgroundColor: '#fff' }}>
-          <div className="w-full text-center">
-            <span className="font-normal text-gray-500">
-              CICT Online ©2020 by CICTzens
-            </span>
-          </div>
-
-        </Footer>
-      </Layout>
+            </Footer>
+          </Layout>
+        </Layout>
+      </div>
     </div>
-  </div>
-);
+  );
+}
 
 const Dashboard: any = () => (
   <div>

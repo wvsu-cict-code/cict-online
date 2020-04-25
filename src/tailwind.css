@@ -44,14 +44,39 @@
     height: 400px
 }
 
+.navbar{
+    @apply hidden
+}
+
+.mobile-menu-button{
+    @apply block fixed !important;
+    margin: 16px 0 16px 24px;
+    z-index: 10;
+    right: 40px
+}
+
+.billboard-greeting-text {
+    @apply py-8 grid
+}
+
 @screen md {
 
 }
 
 @screen lg {
+    .mobile-menu-button{
+       @apply hidden !important
+    }
 
+    .billboard-greeting-text{
+        @apply py-32
+    }
+
+   .navbar{
+       @apply block float-right !important
+   }
 }
 
 @screen sm {
-
+ 
 }
