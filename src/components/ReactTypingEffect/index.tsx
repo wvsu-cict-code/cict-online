@@ -3,25 +3,23 @@ import cx from 'classnames';
 import React, { Component } from 'react';
 import Cursor from './Cursor';
 
-interface Props {
-    speed: number,
-    typingDelay: number,
-    eraseDelay: number,
-    staticText: string,
-    text?: any,
-    className: string,
-    cursor: string,
-    cursorClassName: string
-}
-
 export default class TypingEffect extends Component<
-    Props, {
+    {
+        speed?: number,
+        typingDelay?: number,
+        eraseDelay?: number,
+        staticText?: string,
+        className?: string,
+        cursor?: string,
+        cursorClassName?: string,
+        text?:string
+    }, {
         index: number,
         displayText: string
     }> {
     _timeout: any;
 
-    constructor(props: Props) {
+    constructor(props: any) {
         super(props);
         this.state = {
             index: 0,
@@ -51,7 +49,7 @@ export default class TypingEffect extends Component<
 
     getRawText() {
         const { text } = this.props;
-        return typeof text === "string" ? [text] : [...text];
+        return typeof text === "string" ? [text] : "";
     }
 
     type() {
@@ -101,7 +99,6 @@ export default class TypingEffect extends Component<
             typingDelay,
             eraseDelay,
             staticText,
-            text,
             className,
             cursor,
             cursorClassName,

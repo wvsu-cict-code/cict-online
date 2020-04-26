@@ -22,7 +22,7 @@ const socialLinks = [
 
 const SocialSection:React.FC = () => (
     <div className="bg-white text-center p-4 text-sm">
-        <p>Follow Us</p>
+        <p className="mb-2">Follow Us</p>
         {socialLinks.map(i => (
             <Button className="mx-2" href={i.link} target="_blank" shape="circle" size="large">{i.icon}</Button>
         ))}

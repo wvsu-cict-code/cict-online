@@ -187,7 +187,7 @@ const Public: any = () => {
                         <Col span={breakpoints.includes('md') ? 12 : 24}>
                           <div className="billboard-greeting-text">
                             <span className="text-lg">Your Future with Technology</span>
-                            <span className="billboard-header">{"~$"}<ReactTypingEffect text="echo 'Hello World!'" /></span>
+                            <span className="billboard-header">{"~$"}<ReactTypingEffect speed={100} eraseDelay={3000} typingDelay={200} text="echo 'Hello World!'"></ReactTypingEffect></span>
                             <span className="font-normal text-lg">
                               West Visayas State University College of ICT continues the tradition of excellence through quality education, innovative ICT researches, and extension services to various stakeholders.
                           </span>
