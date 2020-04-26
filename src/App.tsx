@@ -1,14 +1,15 @@
-import { Link, Redirect, Router } from '@reach/router';
-import { Button, Col, Layout, Menu, Row, Drawer, Grid } from 'antd';
+import { Redirect, Router } from '@reach/router';
+import { Button, Col, Grid, Layout, Row } from 'antd';
+import Navbar from 'components/Navbar';
 import SEO from 'components/SEO';
-import React, { Component, useState } from 'react';
+import Dynamic from 'containers/Dynamic';
+import React, { Component } from 'react';
+import SocialSection from 'components/SocialSection'
 import Slider from "react-slick";
-import { addPrefetchExcludes, Root } from 'react-static';
-import { MenuOutlined } from '@ant-design/icons';
+import { addPrefetchExcludes, Root, Routes } from 'react-static';
 import ReactTypingEffect from 'react-typing-effect';
 import './app.less';
 import BLISIcon from './assets/blis-icon.svg';
-import BrandIcon from './assets/brand.svg';
 import CSIcon from './assets/cs-icon.svg';
 import EMCIcon from './assets/emc-icon.svg';
 import ICTGraphics from './assets/ict.svg';
@@ -16,8 +17,9 @@ import ISIcon from './assets/is-icon.svg';
 import ITIcon from './assets/it-icon.svg';
 import CICTLogo from './assets/logo.svg';
 import MITIcon from './assets/msit-icon.svg';
+import Footerbar from './components/Footerbar';
 
-const { Header, Footer, Content } = Layout;
+const { Content } = Layout;
 
 const { useBreakpoint } = Grid
 
@@ -59,8 +61,6 @@ let netlifyIdentity: any;
 if (typeof document !== 'undefined') {
   netlifyIdentity = require('netlify-identity-widget')
 }
-
-
 
 // Any routes that start with 'dynamic' will be treated as non-static routes
 addPrefetchExcludes(['dynamic'])
@@ -162,7 +162,6 @@ const slickSettings = {
 };
 
 const Public: any = () => {
-  let [collapsed, toggleMenu] = useState(false)
   const screens = useBreakpoint()
   const breakpoints = Object.entries(screens)
     .filter(screen => !!screen[1])
@@ -177,31 +176,8 @@ const Public: any = () => {
           url="https://cict.wvsu.edu.ph/"
         />
         <Layout className="layout">
-          <Drawer
-            title="CICT Online"
-            placement="right"
-            closable
-            onClose={() => toggleMenu(collapsed = !collapsed)}
-            visible={collapsed}
-          >
-            <Menu defaultSelectedKeys={['1']} >
-              <Menu.Item key="1">Home</Menu.Item>
-              <Button type="primary">Apply to CICT</Button>
-            </Menu>
-          </Drawer>
           <Layout>
-            <div className="border-1 border-gray-200">
-              <Header className="w-full">
-                <div className="container mx-auto">
-                  <Link to="/"><div className="brand-icon" style={{ backgroundImage: `url(${BrandIcon})` }} /></Link>
-                  <Menu mode="horizontal" defaultSelectedKeys={['1']} className="navbar" >
-                    <Menu.Item key="1">Home</Menu.Item>
-                    <Button type="primary">Apply to CICT</Button>
-                  </Menu>
-                  <Button style={{ lineHeight: '10px' }} className="mobile-menu-button" icon={<MenuOutlined />} onClick={() => toggleMenu(collapsed = !collapsed)} />
-                </div>
-              </Header>
-            </div>
+            <Navbar />
             <Content className="bg-white p-0 px-8">
               <div>
                 <div className="w-full">
@@ -215,7 +191,7 @@ const Public: any = () => {
                             <span className="font-normal text-lg">
                               West Visayas State University College of ICT continues the tradition of excellence through quality education, innovative ICT researches, and extension services to various stakeholders.
                           </span>
-                            <Button className={breakpoints.includes('md') ? "mt-8 w-64" : "mt-8 w-full"} type="primary" size="large">Apply Now</Button>
+                            <Button href="/applynow" className={breakpoints.includes('md') ? "mt-8 w-64" : "mt-8 w-full"} type="primary" size="large">Apply Now</Button>
                           </div>
                         </Col>
                         <Col span={breakpoints.includes('md') ? 12 : 24}>
@@ -252,14 +228,8 @@ const Public: any = () => {
                 </div>
               </div>
             </Content>
-            <Footer style={{ backgroundColor: '#fff' }}>
-              <div className="w-full text-center">
-                <span className="font-normal text-gray-500">
-                  CICT Online ©2020 by CICTzens
-              </span>
-              </div>
-
-            </Footer>
+            <SocialSection />
+            <Footerbar />
           </Layout>
         </Layout>
       </div>
@@ -307,6 +277,8 @@ function App() {
             <Public path="/" />
             <Dashboard path="/dashboard" />
             <Login path="/login" />
+            <Dynamic path="dynamic" />
+            <Routes path="*" />
             {/* <PrivateRoute path="/protected" component={Protected} /> */}
           </Router>
         </React.Suspense>
