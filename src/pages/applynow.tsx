@@ -12,7 +12,7 @@ export default () => (
       title="WVSU CICT - Apply"
       description="Apply Now."
       url="https://cictwvsu.com/applynow/"
-      image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image.jpg"
+      image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image-1.jpg"
       twitterUsername="cictwvsu"
     />
     <Layout className="layout">
