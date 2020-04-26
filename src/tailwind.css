@@ -31,7 +31,7 @@
 }
 
 .billboard-header{
-    font-size: 3.125rem;
+    font-size: 2rem;
     color: #1A1A1A
 }
 
@@ -74,6 +74,10 @@
 
    .navbar{
        @apply block float-right !important
+   }
+
+   .billboard-header{
+       font-size: 3.125rem
    }
 }
 

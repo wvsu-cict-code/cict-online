@@ -5,6 +5,7 @@ import React, { Component, useState } from 'react';
 import Slider from "react-slick";
 import { addPrefetchExcludes, Root } from 'react-static';
 import { MenuOutlined } from '@ant-design/icons';
+import ReactTypingEffect from 'react-typing-effect';
 import './app.less';
 import BLISIcon from './assets/blis-icon.svg';
 import BrandIcon from './assets/brand.svg';
@@ -131,7 +132,33 @@ const slickSettings = {
   slidesToScroll: 5,
   arrows: true,
   nextArrow: <Arrow symbol=">" />,
-  prevArrow: <Arrow symbol="<" />
+  prevArrow: <Arrow symbol="<" />,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
 };
 
 const Public: any = () => {
@@ -181,17 +208,17 @@ const Public: any = () => {
                   <div className="billboard">
                     <div className="container mx-auto billboard-greeting">
                       <Row>
-                        <Col span={breakpoints.includes('md')?12:24}>
+                        <Col span={breakpoints.includes('md') ? 12 : 24}>
                           <div className="billboard-greeting-text">
                             <span className="text-lg">Your Future with Technology</span>
-                            <span className="billboard-header">Hello World!</span>
+                            <span className="billboard-header">{"~$"}<ReactTypingEffect text="echo 'Hello World!'" /></span>
                             <span className="font-normal text-lg">
                               West Visayas State University College of ICT continues the tradition of excellence through quality education, innovative ICT researches, and extension services to various stakeholders.
                           </span>
-                            <Button className={breakpoints.includes('md')?"mt-8 w-64":"mt-8 w-full"} type="primary" size="large">Apply Now</Button>
+                            <Button className={breakpoints.includes('md') ? "mt-8 w-64" : "mt-8 w-full"} type="primary" size="large">Apply Now</Button>
                           </div>
                         </Col>
-                        <Col span={breakpoints.includes('md')?12:24}>
+                        <Col span={breakpoints.includes('md') ? 12 : 24}>
                           <img src={ICTGraphics} className="img-billboard mx-auto mt-8" />
                         </Col>
                       </Row>
@@ -202,11 +229,11 @@ const Public: any = () => {
                 <div className="w-full">
                   <div className="container mx-auto py-8">
                     <h2 className="text-center text-4xl">Courses Offered</h2>
-                    <p className="max-w-lg mx-auto text-center font-normal text-lg">Your Foundation of Excellence in ICT.</p>
+                    <p className="max-w-lg mx-auto text-center font-normal text-lg">Choose your Foundation.</p>
                     <div className="px-8">
                       <Slider {...slickSettings}>
                         {programs.map(i => (
-                          <div className="w-32 mx-8">
+                          <div className="w-32 mx-auto">
                             <img className="mx-auto h-40" src={i.icon} alt="" />
                             <p className="text-center text-lg mx-auto" style={{ maxWidth: '180px' }}>{i.name}</p>
                           </div>
