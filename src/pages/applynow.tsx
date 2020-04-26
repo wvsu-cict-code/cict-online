@@ -9,7 +9,9 @@ export default () => (
     <SEO
       title="WVSU CICT - Apply"
       description="Apply Now."
-      url="https://cict.wvsu.edu.ph/"
+      url="https://cictwvsu-dev.netlify.app/applynow"
+      image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image.jpg"
+      twitterUsername="cictwvsu"        
     />
     <Layout className="layout">
       <Layout>

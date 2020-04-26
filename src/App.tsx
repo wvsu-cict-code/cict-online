@@ -174,6 +174,8 @@ const Public: any = () => {
           title="WVSU CICT - Home"
           description="Official website of the College of ICT."
           url="https://cict.wvsu.edu.ph/"
+          image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image.jpg"
+          twitterUsername="cictwvsu"        
         />
         <Layout className="layout">
           <Layout>
