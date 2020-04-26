@@ -34,7 +34,7 @@ export default {
       }
     ],
     ['css-loaders-plugin', {
-      purgecss: true // enable when publishing
+      purgecss: false // enable when publishing
     }],
     [
       require.resolve('react-static-plugin-source-filesystem'),

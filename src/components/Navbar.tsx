@@ -1,4 +1,4 @@
-import { MenuOutlined, HomeOutlined } from '@ant-design/icons';
+import { MenuOutlined, HomeOutlined, QuestionCircleOutlined } from '@ant-design/icons';
 import { Link, navigate } from '@reach/router';
 import { Button, Drawer, Layout, Menu } from 'antd';
 import React, { useState } from 'react';
@@ -19,7 +19,8 @@ const Navbar: React.FC<{
                     <Link to="/"><div className="brand-icon" style={{ backgroundImage: `url(${BrandIcon})` }} /></Link>
                     <Menu mode="horizontal" defaultSelectedKeys={defaultSelected ? defaultSelected : []} className="navbar" >
                         <Menu.Item onClick={() => navigate('/')} key="1"><HomeOutlined /></Menu.Item>
-                        {showApplication && <Button href="/applynow" type="primary">Apply to CICT</Button>}
+                        <Menu.Item onClick={() => navigate('https://medium.com/cictwvsu-online/our-story-87a461c14ab')} key="2"><QuestionCircleOutlined /></Menu.Item>
+                        {showApplication && <Button href="/applynow" type="primary">Admission Form</Button>}
                     </Menu>
                     <Button style={{ lineHeight: '10px' }} className="mobile-menu-button" icon={<MenuOutlined />} onClick={() => toggleMenu(collapsed = !collapsed)} />
                 </div>
@@ -33,7 +34,7 @@ const Navbar: React.FC<{
             >
                 <Menu defaultSelectedKeys={[]} >
                     <Menu.Item key="1" onClick={() => navigate("/")}>Home</Menu.Item>
-                    {showApplication && <Menu.Item key="1"><Button href="/applynow" className="w-full" type="primary"><span className="text-white">Apply to CICT</span></Button></Menu.Item>}
+                    {showApplication && <Menu.Item key="1"><Button href="/applynow" className="w-full" type="primary"><span className="text-white">Admission Form</span></Button></Menu.Item>}
                 </Menu>
             </Drawer>
         </div>

@@ -1,13 +1,12 @@
 import { Redirect, Router } from '@reach/router';
-import { Button, Col, Grid, Layout, Row } from 'antd';
+import { Button, Col, Grid, Layout, Row, Divider, Alert } from 'antd';
 import Navbar from 'components/Navbar';
 import SEO from 'components/SEO';
+import SocialSection from 'components/SocialSection';
 import Dynamic from 'containers/Dynamic';
 import React, { Component } from 'react';
-import SocialSection from 'components/SocialSection'
 import Slider from "react-slick";
 import { addPrefetchExcludes, Root, Routes } from 'react-static';
-import ReactTypingEffect from './components/ReactTypingEffect';
 import './app.less';
 import BLISIcon from './assets/blis-icon.svg';
 import CSIcon from './assets/cs-icon.svg';
@@ -18,6 +17,7 @@ import ITIcon from './assets/it-icon.svg';
 import CICTLogo from './assets/logo.svg';
 import MITIcon from './assets/msit-icon.svg';
 import Footerbar from './components/Footerbar';
+import ReactTypingEffect from './components/ReactTypingEffect';
 
 const { Content } = Layout;
 
@@ -191,7 +191,9 @@ const Public: any = () => {
                             <span className="font-normal text-lg">
                               West Visayas State University College of ICT continues the tradition of excellence through quality education, innovative ICT researches, and extension services to various stakeholders.
                           </span>
-                            <Button href="/applynow" className={breakpoints.includes('md') ? "mt-8 w-64" : "mt-8 w-full"} type="primary" size="large">Apply Now</Button>
+                            <Divider />
+                            <Alert showIcon message={<span>*Application for admission for 1<sup>st</sup> Semester SY 2020-2021 is now open!<br /></span>} />
+                            <Button href="/applynow" className={breakpoints.includes('md') ? "mt-4 w-64" : "mt-4 w-full"} type="primary" size="large">Apply Now for Admission</Button>
                           </div>
                         </Col>
                         <Col span={breakpoints.includes('md') ? 12 : 24}>

@@ -31,7 +31,7 @@
 }
 
 .billboard-header{
-    font-size: 2rem;
+    font-size: 1.9rem;
     color: #1A1A1A
 }
 
@@ -60,7 +60,9 @@
 }
 
 @screen md {
-
+    .billboard-header{
+        font-size: 2rem;
+    }
 }
 
 @screen lg {
