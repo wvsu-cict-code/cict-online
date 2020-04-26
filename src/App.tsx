@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 import SocialSection from 'components/SocialSection'
 import Slider from "react-slick";
 import { addPrefetchExcludes, Root, Routes } from 'react-static';
-import ReactTypingEffect from 'react-typing-effect';
+import ReactTypingEffect from './components/ReactTypingEffect';
 import './app.less';
 import BLISIcon from './assets/blis-icon.svg';
 import CSIcon from './assets/cs-icon.svg';
