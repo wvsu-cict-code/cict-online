@@ -13,7 +13,7 @@ export default () => (
     />
     <Layout className="layout">
       <Layout>
-        <Navbar />
+        <Navbar showApplication={false} />
         <div className="bg-white p-0 px-8">
           <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSffrJ9taFHBEfJV360WN7yIBI1dGWYvEIiTITkbKWsdOPowzQ/viewform?embedded=true" className="w-full min-h-screen" height="2942">Loading…</iframe>
         </div>

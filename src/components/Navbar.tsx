@@ -1,21 +1,25 @@
-import { MenuOutlined } from '@ant-design/icons';
-import { Link } from '@reach/router';
+import { MenuOutlined, HomeOutlined } from '@ant-design/icons';
+import { Link, navigate } from '@reach/router';
 import { Button, Drawer, Layout, Menu } from 'antd';
 import React, { useState } from 'react';
 import BrandIcon from '../assets/brand.svg';
 
 const { Header } = Layout;
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC<{
+    showApplication?: boolean,
+    defaultSelected?: any
+}> = (props) => {
     let [collapsed, toggleMenu] = useState(false)
+    const { defaultSelected, showApplication } = props
     return (
         <div className="border-1 border-gray-200">
             <Header className="w-full">
                 <div className="container mx-auto">
                     <Link to="/"><div className="brand-icon" style={{ backgroundImage: `url(${BrandIcon})` }} /></Link>
-                    <Menu mode="horizontal" defaultSelectedKeys={['1']} className="navbar" >
-                        <Menu.Item key="1">Home</Menu.Item>
-                        <Button href="/applynow" type="primary">Apply to CICT</Button>
+                    <Menu mode="horizontal" defaultSelectedKeys={defaultSelected ? defaultSelected : []} className="navbar" >
+                        <Menu.Item onClick={() => navigate('/')} key="1"><HomeOutlined /></Menu.Item>
+                        {showApplication && <Button href="/applynow" type="primary">Apply to CICT</Button>}
                     </Menu>
                     <Button style={{ lineHeight: '10px' }} className="mobile-menu-button" icon={<MenuOutlined />} onClick={() => toggleMenu(collapsed = !collapsed)} />
                 </div>
@@ -27,8 +31,9 @@ const Navbar: React.FC = () => {
                 onClose={() => toggleMenu(collapsed = !collapsed)}
                 visible={collapsed}
             >
-                <Menu defaultSelectedKeys={['3']} >
-                    <Menu.Item key="1"><Button href="/applynow" className="w-full" type="primary"><span className="text-white">Apply to CICT</span></Button></Menu.Item>
+                <Menu defaultSelectedKeys={[]} >
+                    <Menu.Item key="1" onClick={() => navigate("/")}>Home</Menu.Item>
+                    {showApplication && <Menu.Item key="1"><Button href="/applynow" className="w-full" type="primary"><span className="text-white">Apply to CICT</span></Button></Menu.Item>}
                 </Menu>
             </Drawer>
         </div>

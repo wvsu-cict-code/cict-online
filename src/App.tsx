@@ -177,7 +177,7 @@ const Public: any = () => {
         />
         <Layout className="layout">
           <Layout>
-            <Navbar />
+            <Navbar showApplication={true} defaultSelected={['1']} />
             <Content className="bg-white p-0 px-8">
               <div>
                 <div className="w-full">
