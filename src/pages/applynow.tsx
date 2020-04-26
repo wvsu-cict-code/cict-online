@@ -9,7 +9,7 @@ import { Facebook, Twitter, Share2 } from "react-feather";
 export default () => (
   <div>
     <SEO
-      title="WVSU CICT - Apply"
+      title="WVSU CICT - Online Application"
       description="Apply Now."
       url="https://cictwvsu.com/applynow/"
       image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image-1.jpg"
