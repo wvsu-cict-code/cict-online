@@ -34,6 +34,7 @@ const Navbar: React.FC<{
             >
                 <Menu defaultSelectedKeys={[]} >
                     <Menu.Item key="1" onClick={() => navigate("/")}>Home</Menu.Item>
+                    <Menu.Item key="1" onClick={() => navigate("https://medium.com/cictwvsu-online/our-story-87a461c14ab")}>About</Menu.Item>
                     {showApplication && <Menu.Item key="1"><Button href="/applynow" className="w-full" type="primary"><span className="text-white">Admission Form</span></Button></Menu.Item>}
                 </Menu>
             </Drawer>
