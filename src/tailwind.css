@@ -1,0 +1,88 @@
+
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+.brand-icon {
+    @apply float-left bg-no-repeat bg-center bg-contain;
+    min-width: 80px;
+    height: 31px;
+    margin: 16px 24px 16px 0;
+}
+
+.card {
+    @apply w-48 h-64 bg-white shadow-md rounded-lg
+}
+
+.section-title {
+    @apply font-thin text-lg my-4
+}
+
+.card:hover{
+    @apply shadow-lg 
+}
+
+.billboard {
+    @apply font-normal
+}
+
+.billboard-header{
+    font-size: 1.9rem;
+    color: #1A1A1A
+}
+
+.dark-section{
+    background-color: #111111
+}
+
+.img-billboard{
+    width: auto;
+    height: 400px
+}
+
+.navbar{
+    @apply hidden
+}
+
+.mobile-menu-button{
+    @apply block fixed !important;
+    margin: 16px 0 16px 24px;
+    z-index: 10;
+    right: 40px
+}
+
+.billboard-greeting-text {
+    @apply py-8 grid
+}
+
+@screen md {
+    .billboard-header{
+        font-size: 2rem;
+    }
+}
+
+@screen lg {
+    .mobile-menu-button{
+       @apply hidden !important
+    }
+
+    .billboard-greeting-text{
+        @apply py-32
+    }
+
+   .navbar{
+       @apply block float-right !important
+   }
+
+   .billboard-header{
+       font-size: 3.125rem
+   }
+}
+
+@screen sm {
+ 
+}

@@ -1,69 +1,21 @@
-.layout{
-    background-color: #fff
+@import '~antd/dist/antd.less'; // Import Ant Design styles by less entry
+@import 'theme.less';
+// variables to override above
+@import "./tailwind.css";
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css");
+
+.slick-prev {
+    left: 0% !important;
+    z-index: 1;
 }
 
-.section{
-    padding: 0;
-    max-width: 950px;
-    margin:  2rem auto
+.slick-next {
+    right: 0% !important;
+    z-index: 1;
 }
 
-.navbar {
-    max-width: 1280px;
-    margin:  2rem auto
-}
-
-.content {
-    max-width: 1280px;
-    margin:  0 auto;
-    padding: 0 50px;
-}
-
-.linkages-icon{
-    width: 120px;
-    height: auto;
-    margin:  1rem auto;
-}
-
-.linkages-link{
-    text-align: center;
-    width: 150px;
-    height: 150px;
-}
-
-.home-page{
-    background-color: #FDF4E5;
-    min-height: 100vh;
-    
-}
-
-.navbar-container{
-    width: 100%;
-}
-
-.home-page--layer-bg{
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-}
-
-.home-page--illustration-1{
-    background-position: right;
-    background-size: contain;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    overflow: hidden;
-}
-
-.home-page--illustration-2{
-    background-position: left bottom;
-    background-size: 30vh;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    overflow: hidden;
-}
-.center{
-    text-align: center;
-    margin: 0 auto;
+.slick-prev::before, .slick-next::before{
+    color: orange!important;
 }
