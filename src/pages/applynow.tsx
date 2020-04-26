@@ -11,8 +11,8 @@ export default () => (
     <SEO
       title="WVSU CICT - Apply"
       description="Apply Now."
-      url="https://cict.wvsu.edu.ph/applynow"
-      image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image.jpg"
+      url="https://cictwvsu.com/applynow/"
+      image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image-1.jpg"
       twitterUsername="cictwvsu"
     />
     <Layout className="layout">
@@ -23,10 +23,10 @@ export default () => (
             <div className="my-4 px-8">
               <span className="flex mx-auto text-center float-right mb-4">
                 <Share2 className="opacity-50" size={25} />
-                <FacebookShareButton hashtag="cictadmission2021" quote="Application for admission for 1st Semester SY 2020-2021 is now open!" url="https://cict.wvsu.edu.ph/applynow">
+                <FacebookShareButton hashtag="cictadmission2021" quote="Application for admission for 1st Semester SY 2020-2021 is now open!" url="https://cictwvsu.com/applynow">
                   <Facebook size={25} />
                 </FacebookShareButton>
-                <TwitterShareButton url="https://cict.wvsu.edu.ph/applynow" title="Application for admission for 1st Semester SY 2020-2021 is now open!">
+                <TwitterShareButton url="https://cictwvsu.com/applynow" title="Application for admission for 1st Semester SY 2020-2021 is now open!">
                   <Twitter size={25} />
                 </TwitterShareButton>
               </span>
