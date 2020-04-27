@@ -187,8 +187,8 @@ const Public: any = () => {
                     <Masonry
                       breakpointCols={{
                         default: 4,
-                        1280: 3,
-                        1020: 2,
+                        1280: 4,
+                        800: 2,
                         700: 2,
                         500: 1
                       }}
