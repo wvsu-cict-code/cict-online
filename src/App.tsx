@@ -3,7 +3,7 @@ import { Button, Col, Grid, Layout, Row, Divider, Alert, Card } from 'antd';
 import { filter } from 'lodash'
 import Navbar from 'components/Navbar';
 import SEO from 'components/SEO';
-import { EditOutlined, EllipsisOutlined, SettingOutlined } from '@ant-design/icons';
+import { ExternalLink } from 'react-feather';
 import SocialSection from 'components/SocialSection';
 import Dynamic from 'containers/Dynamic';
 import React, { Component } from 'react';
@@ -248,12 +248,10 @@ const Public: any = () => {
                       }}
                       className="my-masonry-grid"
                       columnClassName="my-masonry-grid_column">
-                      {posts && filter(posts.items, (post: Post) => post.categories.length > 0).slice(0,4).map((post: Post) => (
+                      {posts && filter(posts.items, (post: Post) => post.categories.length > 0).slice(0, 4).map((post: Post) => (
                         <Card actions={[
-                          <SettingOutlined key="setting" />,
-                          <EditOutlined key="edit" />,
-                          <EllipsisOutlined key="ellipsis" />,
-                        ]} style={{ width: '290px', margin: '0 auto', marginBottom: '30px' }} cover={<img src={post.thumbnail} />}>
+                          <a href={post.link} target="_blank"><span className="flex w-40 mx-auto"><span className="mx-auto">Read this Story</span><span><ExternalLink className="ml-4" key="link" /></span></span></a>,
+                        ]} style={{ width: '290px', margin: '0 auto', marginBottom: '30px' }} cover={<div className="h-64 w-full bg-center no-repeat bg-cover" style={{ backgroundImage: `url(${post.thumbnail})` }} />}>
                           <Card.Meta title={post.title} description={post.pubDate}></Card.Meta>
                         </Card>
                       ))}
