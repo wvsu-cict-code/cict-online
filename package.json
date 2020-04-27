@@ -35,6 +35,7 @@
     "react-static-plugin-sitemap": "^7.2.0",
     "react-static-plugin-source-filesystem": "^7.2.0",
     "react-static-plugin-typescript": "^7.2.0",
+    "react-timeago": "^4.4.0",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "^1.3.4"
   },

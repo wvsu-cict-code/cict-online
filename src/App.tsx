@@ -22,6 +22,7 @@ import MITIcon from './assets/msit-icon.svg';
 import Footerbar from './components/Footerbar';
 import ReactTypingEffect from './components/ReactTypingEffect';
 import { useRouteData } from 'react-static'
+import TimeAgo from 'react-timeago'
 import { Post } from 'types'
 
 const { Content } = Layout;
@@ -252,7 +253,7 @@ const Public: any = () => {
                         <Card actions={[
                           <a href={post.link} target="_blank"><span className="flex w-40 mx-auto"><span className="mx-auto">Read this Story</span><span><ExternalLink className="ml-4" key="link" /></span></span></a>,
                         ]} style={{ width: '290px', margin: '0 auto', marginBottom: '30px' }} cover={<div className="h-64 w-full bg-center no-repeat bg-cover" style={{ backgroundImage: `url(${post.thumbnail})` }} />}>
-                          <Card.Meta title={post.title} description={post.pubDate}></Card.Meta>
+                          <Card.Meta title={post.title} description={<TimeAgo date={post.pubDate} />}></Card.Meta>
                         </Card>
                       ))}
                     </Masonry>

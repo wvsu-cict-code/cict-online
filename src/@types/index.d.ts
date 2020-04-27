@@ -9,3 +9,5 @@ declare module "react-typing-effect"
 declare module "react-feather"
 
 declare module "react-masonry-css"
+
+declare module 'react-timeago'
