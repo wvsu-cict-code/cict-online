@@ -10,8 +10,6 @@ import Slider from "react-slick";
 import { useRouteData } from 'react-static';
 import TimeAgo from 'react-timeago';
 import { Post } from 'types';
-import Footerbar from '../components/Footerbar';
-import ReactTypingEffect from '../components/ReactTypingEffect';
 import '../app.less';
 import BLISIcon from '../assets/blis-icon.svg';
 import CSIcon from '../assets/cs-icon.svg';
@@ -21,6 +19,8 @@ import ISIcon from '../assets/is-icon.svg';
 import ITIcon from '../assets/it-icon.svg';
 import CICTLogo from '../assets/logo.svg';
 import MITIcon from '../assets/msit-icon.svg';
+import Footerbar from '../components/Footerbar';
+import ReactTypingEffect from '../components/ReactTypingEffect';
 
 const { Content } = Layout;
 
@@ -65,6 +65,10 @@ const programs = [
   },
 
 ]
+
+function createMarkup(content: string) { return { __html: content } }
+
+const fbvideostring = '<div class="mx-auto" id="fb-root"></div><div class="fb-video" data-href="https://www.facebook.com/271881056529940/videos/358272304557481/" data-show-text="false" data-width=""><blockquote cite="https://developers.facebook.com/cictwvsu/videos/358272304557481/" class="fb-xfbml-parse-ignore"><a href="https://developers.facebook.com/cictwvsu/videos/358272304557481/">CICT Short Intro</a><p>A short intro about our college. </div>'
 
 const Arrow = (props: any) => {
   const { className, style, onClick, symbol } = props;
@@ -199,13 +203,14 @@ const Public: any = () => {
                       ))}
                     </Masonry>
 
-
                   </div>
                 </div>
                 <div className="w-full">
                   <div className="container mx-auto py-8">
                     <img src={CICTLogo} className="w-40 h-40 mx-auto my-4" alt="CICT Logo" />
                     <h2 className="text-center text-4xl">Upholding the Tradition of Excellence</h2>
+
+                    <div dangerouslySetInnerHTML={createMarkup(fbvideostring)}></div>
                     <p className="max-w-lg mx-auto text-center font-normal text-lg">Information and Communications Technology has penetrated the core of societal and individual lives. Its development is changing the course of all other technologies. ICT has now become less of a choice and more of a requirement for individuals and societies concerned with competitiveness in the international arena.</p>
                   </div>
                 </div>

@@ -71,6 +71,7 @@ class SEO extends Component<SEOProps, any> {
                     {image && <meta name="twitter:image" content={image} />}
                     <meta property="fb:app_id" content="2302291186701393" />
                     <title>{title}</title>
+                    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0&appId=2302291186701393&autoLogAppEvents=1"></script>                    
                 </Head>
             </>
         );

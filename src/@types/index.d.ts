@@ -11,3 +11,5 @@ declare module "react-feather"
 declare module "react-masonry-css"
 
 declare module 'react-timeago'
+
+declare module 'react-facebook'
