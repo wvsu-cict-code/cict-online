@@ -68,7 +68,7 @@ const programs = [
 
 function createMarkup(content: string) { return { __html: content } }
 
-const fbvideostring = '<div class="mx-auto" id="fb-root"></div><div class="fb-video" data-href="https://www.facebook.com/271881056529940/videos/358272304557481/" data-show-text="false" data-width=""><blockquote cite="https://developers.facebook.com/cictwvsu/videos/358272304557481/" class="fb-xfbml-parse-ignore"><a href="https://developers.facebook.com/cictwvsu/videos/358272304557481/">CICT Short Intro</a><p>A short intro about our college. </div>'
+const fbvideostring = '<iframe class="mx-auto" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcictwvsu%2Fvideos%2F358272304557481%2F&show_text=false&width=734&appId=2302291186701393&height=411" width="734" height="411" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>'
 
 const Arrow = (props: any) => {
   const { className, style, onClick, symbol } = props;

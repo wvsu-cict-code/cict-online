@@ -59,7 +59,7 @@ const netlifyAuth: any = {
 //   )
 // }
 
-// function createMarkup(content:string){return {__html: content}}
+
 
 const Dashboard: any = () => (
   <div>

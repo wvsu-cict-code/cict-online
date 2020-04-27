@@ -12,4 +12,4 @@ declare module "react-masonry-css"
 
 declare module 'react-timeago'
 
-declare module 'react-facebook'
+declare module 'facebook-sdk'
