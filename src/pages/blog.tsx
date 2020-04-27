@@ -11,7 +11,7 @@ export default () => {
       <br />
       All Posts:
       <ul>
-        {posts.items.map((post:Post) => (
+        {posts && posts.items.map((post:Post) => (
           <li key={post.guid}>
             <a href={post.link} target="_blank">{post.title}</a>            
           </li>

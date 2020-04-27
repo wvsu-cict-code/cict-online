@@ -20,7 +20,7 @@ const Navbar: React.FC<{
                     <Menu mode="horizontal" defaultSelectedKeys={defaultSelected ? defaultSelected : []} className="navbar" >
                         <Menu.Item onClick={() => navigate('/')} key="1"><HomeOutlined /></Menu.Item>
                         <Menu.Item onClick={() => navigate('https://medium.com/cictwvsu-online/our-story-87a461c14ab')} key="2"><QuestionCircleOutlined /></Menu.Item>
-                        {showApplication && <Button href="/applynow" type="primary">Admission Form</Button>}
+                        <Menu.Item key="3">{showApplication && <Button href="/applynow" type="primary">Admission Form</Button>}</Menu.Item>
                     </Menu>
                     <Button style={{ lineHeight: '10px' }} className="mobile-menu-button" icon={<MenuOutlined />} onClick={() => toggleMenu(collapsed = !collapsed)} />
                 </div>
