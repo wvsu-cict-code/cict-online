@@ -1,10 +1,9 @@
 import React from 'react'
 import { useRouteData } from 'react-static'
-import { Link } from '@reach/router'
 import { Post } from 'types'
 
 export default () => {
-  const { posts }: { posts: Post[] } = useRouteData()
+  const { posts }: { posts: any } = useRouteData()
 
   return (
     <div>
@@ -12,9 +11,9 @@ export default () => {
       <br />
       All Posts:
       <ul>
-        {posts.map(post => (
-          <li key={post.id}>
-            <Link to={`/blog/post/${post.id}/`}>{post.title}</Link>
+        {posts.items.map((post:Post) => (
+          <li key={post.guid}>
+            <a href={post.link} target="_blank">{post.title}</a>            
           </li>
         ))}
       </ul>
