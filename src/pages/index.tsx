@@ -68,8 +68,6 @@ const programs = [
 
 function createMarkup(content: string) { return { __html: content } }
 
-const fbvideostring = '<iframe class="mx-auto" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcictwvsu%2Fvideos%2F358272304557481%2F&show_text=false&width=734&appId=2302291186701393&height=411" width="734" height="411" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>'
-
 const Arrow = (props: any) => {
   const { className, style, onClick, symbol } = props;
   return (
@@ -126,6 +124,7 @@ const Public: any = () => {
     .filter(screen => !!screen[1])
     .map(screen => screen[0])
   const { posts }: { posts: any } = useRouteData()
+  let fbvideostring = `<iframe style="max-width: 734px; height:${breakpoints.includes('md')?'411px':'auto'}" class="mx-auto my-8 bg-gray-300 w-full h-auto" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcictwvsu%2Fvideos%2F358272304557481%2F&show_text=false&width=734&appId=2302291186701393&height=411" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>`
   return (
     <div>
       <div>
@@ -188,7 +187,8 @@ const Public: any = () => {
                     <Masonry
                       breakpointCols={{
                         default: 4,
-                        1100: 3,
+                        1280: 3,
+                        1020: 2,
                         700: 2,
                         500: 1
                       }}
