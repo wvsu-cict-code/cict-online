@@ -1,4 +1,4 @@
-import { Alert, Button, Card, Col, Divider, Grid, Layout, Row } from 'antd';
+import { Alert, Card, Col, Divider, Grid, Layout, Row } from 'antd';
 import Navbar from 'components/Navbar';
 import SEO from 'components/SEO';
 import SocialSection from 'components/SocialSection';
@@ -147,13 +147,13 @@ const Public: any = () => {
                         <Col span={breakpoints.includes('md') ? 12 : 24}>
                           <div className="billboard-greeting-text">
                             <span className="text-lg">Your Future with Technology</span>
-                            <span className="billboard-header">{"~$"}<ReactTypingEffect speed={100} eraseDelay={3000} typingDelay={200} text="echo 'Hello World!'"></ReactTypingEffect></span>
+                            <span className="billboard-header">{"~$"}<ReactTypingEffect speed={100} eraseDelay={5000} typingDelay={200} text="echo 'Hello World!'"></ReactTypingEffect></span>
                             <span className="font-normal text-lg">
                               West Visayas State University College of ICT continues the <b>tradition of excellence</b> through <b>quality education</b>, <b>innovative ICT researches</b>, and <b>extension services</b> to various stakeholders.
                           </span>
                             <Divider />
-                            <Alert showIcon message={<span>*Application for admission for 1<sup>st</sup> Semester SY 2020-2021 is now open!<br /></span>} />
-                            <Button href="/applynow" className={breakpoints.includes('md') ? "mt-4 w-64" : "mt-4 w-full"} type="primary" size="large">Apply Now for Admission</Button>
+                            <Alert showIcon message={<span>*Application for Admission is now Online!<br /></span>} />
+                            <a href="/applynow" className={breakpoints.includes('md') ? "w-64 apply-button" : "w-full apply-button"}>Apply Now</a>                            
                           </div>
                         </Col>
                         <Col span={breakpoints.includes('md') ? 12 : 24}>

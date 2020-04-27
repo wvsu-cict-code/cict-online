@@ -55,6 +55,14 @@
     right: 40px
 }
 
+.apply-button{
+    @apply mt-4 text-center dark-section text-white rounded p-3 border text-xl cursor-pointer uppercase
+}
+
+.apply-button:hover{
+    @apply border-solid border border-gray-900 bg-white text-black
+}
+
 .billboard-greeting-text {
     @apply py-8 grid
 }
