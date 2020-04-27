@@ -1,6 +1,6 @@
-import { MenuOutlined, HomeOutlined, QuestionCircleOutlined } from '@ant-design/icons';
+import { HomeOutlined, MenuOutlined, QuestionCircleOutlined, FormOutlined } from '@ant-design/icons';
 import { Link, navigate } from '@reach/router';
-import { Button, Drawer, Layout, Menu } from 'antd';
+import { Button, Drawer, Layout, Menu, Badge, Tooltip } from 'antd';
 import React, { useState } from 'react';
 import BrandIcon from '../assets/brand.svg';
 
@@ -18,9 +18,9 @@ const Navbar: React.FC<{
                 <div className="container mx-auto">
                     <Link to="/"><div className="brand-icon" style={{ backgroundImage: `url(${BrandIcon})` }} /></Link>
                     <Menu mode="horizontal" defaultSelectedKeys={defaultSelected ? defaultSelected : []} className="navbar" >
-                        <Menu.Item onClick={() => navigate('/')} key="1"><HomeOutlined /></Menu.Item>
-                        <Menu.Item onClick={() => navigate('https://medium.com/cictwvsu-online/our-story-87a461c14ab')} key="2"><QuestionCircleOutlined /></Menu.Item>
-                        {showApplication && <Button href="/applynow" type="primary">Admission Form</Button>}
+                        <Menu.Item onClick={() => navigate('/')} key="1"><Tooltip title="Home"><HomeOutlined /></Tooltip></Menu.Item>
+                        <Menu.Item onClick={() => navigate('https://medium.com/cictwvsu-online/our-story-87a461c14ab')} key="2"><Tooltip title="About CICT"><QuestionCircleOutlined /></Tooltip></Menu.Item>
+                        {showApplication && <Menu.Item onClick={() => navigate('/applynow')} key="3"><Badge dot><Tooltip title="Online Application"><FormOutlined /></Tooltip></Badge></Menu.Item>}
                     </Menu>
                     <Button style={{ lineHeight: '10px' }} className="mobile-menu-button" icon={<MenuOutlined />} onClick={() => toggleMenu(collapsed = !collapsed)} />
                 </div>
@@ -34,8 +34,8 @@ const Navbar: React.FC<{
             >
                 <Menu defaultSelectedKeys={[]} >
                     <Menu.Item key="1" onClick={() => navigate("/")}>Home</Menu.Item>
-                    <Menu.Item key="1" onClick={() => navigate("https://medium.com/cictwvsu-online/our-story-87a461c14ab")}>About</Menu.Item>
-                    {showApplication && <Menu.Item key="1"><Button href="/applynow" className="w-full" type="primary"><span className="text-white">Admission Form</span></Button></Menu.Item>}
+                    <Menu.Item key="2" onClick={() => navigate("https://medium.com/cictwvsu-online/our-story-87a461c14ab")}>About</Menu.Item>
+                    {showApplication && <Menu.Item key="3" onClick={() => navigate('/applynow')}><Badge dot>Admission Form</Badge></Menu.Item>}
                 </Menu>
             </Drawer>
         </div>

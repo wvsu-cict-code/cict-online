@@ -10,14 +10,14 @@ export default {
     const {
       data: posts
     } /* :{ data: Post[] } */ = await axios.get(
-      'https://jsonplaceholder.typicode.com/posts'
+      'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@cictwvsu'
     )
     return [{
-      path: '/blog',
+      path: '/',
       getData: () => ({
         posts,
       }),
-      children: posts.map((post /* : Post */ ) => ({
+      children: posts.items.map((post /* : Post */ ) => ({
         path: `/post/${post.id}`,
         template: 'src/containers/Post',
         getData: () => ({
@@ -34,7 +34,7 @@ export default {
       }
     ],
     ['css-loaders-plugin', {
-      purgecss: false // enable when publishing
+      purgecss: true // enable when publishing
     }],
     [
       require.resolve('react-static-plugin-source-filesystem'),

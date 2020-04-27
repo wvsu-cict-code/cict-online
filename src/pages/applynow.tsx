@@ -1,21 +1,21 @@
-import { Link } from '@reach/router';
-import { Alert, Button, Divider, Layout, List } from 'antd';
+//import { Link } from '@reach/router';
+import { Divider, Layout } from 'antd';
 import Footerbar from 'components/Footerbar';
 import Navbar from 'components/Navbar';
 import SEO from 'components/SEO';
-import React, { useState } from 'react';
+import React from 'react';
 import { Facebook, Share2, Twitter } from "react-feather";
 import { FacebookShareButton, TwitterShareButton } from 'react-share';
 
-const requirements = [
-  'WVSU-CAT Result Slip (with a score of 80 or higher)',
-  'SHS Report Card (Original and Photocopy)',
-  'Certificate of Good moral character (Original and Photocopy)',
-  'Birth Certificate (2 Photocopies)',
-  'Medical Certificate (to be secured from the University Clinic)'
-];
+// const requirements = [
+//   'WVSU-CAT Result Slip (with a score of 80 or higher)',
+//   'SHS Report Card (Original and Photocopy)',
+//   'Certificate of Good moral character (Original and Photocopy)',
+//   'Birth Certificate (2 Photocopies)',
+//   'Medical Certificate (to be secured from the University Clinic)'
+// ];
 export default () => {
-  let [collapsed, toggleContent] = useState(false)
+  // let [collapsed, toggleContent] = useState(false)
   return (
     <div>
       <SEO
@@ -43,7 +43,7 @@ export default () => {
               </div>
             </div>
             <Divider />
-            <div className="container mx-auto px-4" style={{ maxWidth: '640px' }} >
+            {/* <div className="container mx-auto px-4" style={{ maxWidth: '640px' }} >
               <h2 className="text-3xl">Online Application for Admission</h2>
               {!collapsed &&
                 <>
@@ -79,7 +79,7 @@ export default () => {
                 </>
               }
               <Button onClick={() => toggleContent(collapsed = !collapsed)} className="w-full">{collapsed ? "Show Info" : "Hide Info"}</Button>
-            </div>
+            </div> */}
 
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSffrJ9taFHBEfJV360WN7yIBI1dGWYvEIiTITkbKWsdOPowzQ/viewform?embedded=true" className="w-full min-h-screen">Loading…</iframe>
           </div>

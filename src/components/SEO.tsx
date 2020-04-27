@@ -70,7 +70,7 @@ class SEO extends Component<SEOProps, any> {
                     )}
                     {image && <meta name="twitter:image" content={image} />}
                     <meta property="fb:app_id" content="2302291186701393" />
-                    <title>{title}</title>
+                    <title>{title}</title>                    
                 </Head>
             </>
         );
