@@ -18,16 +18,20 @@ Help us develop our website! If you found a bug or you want to contribute, pleas
 ### Design
 If you are a UI/UX designer, you may help us by improving the base design or proposing your own. Any design tool is accepted. 
 
-<br />
 ![cict-current](/docs/cict-current.png "CICT Current")
 
 We are currently using a simple design for fast deployment. If you are interested in the new design, you may head up to the proposed on aka **CICT Next**, please check this Figma [link](https://www.figma.com/file/vgB1dLsVDOISTApGFk50qs/CICT-Next?node-id=0%3A1). You may also [email the maintainer](mailto:mjsolidarios@wvsu.edu.ph) to gain editing access to the design.
-<br />
+
 ![cict-next](/docs/cict-next.jpg "CICT Next")
+<br />
 
 * Illustrators are also welcome! You can create drawings that can be utilized for our page. We are still composing the guidelines for the illustrations but you may post an [issue](https://help.github.com/articles/creating-an-issue/) for early submissions. Currently, the illustrations are added by kit-bashing assets from free online illustration providers (e.g.[Undraw](https://undraw.co/), [ManyPixels](https://www.manypixels.co), etc...).
 * For animators, we are now using the Rive [animation tool](https://rive.app). 
+
+
 ![cict-rive](/docs/rive_logo_black.svg "Animation")
+<br />
+
 
 ### Code
 Contributing to the code may require you to use a GitHub account and knowledge of using Git. Please visit this [git tutorial](https://try.github.io/levels/1/challenges/1) to learn more.
