@@ -28,7 +28,7 @@ export default () => {
       <Layout className="layout">
         <Layout>
           <Navbar showApplication={false} />
-          <div className="bg-white p-0">
+          <div className="p-0">
             <div className="container mx-auto" style={{ maxWidth: '640px' }} >
               <div className="my-4 px-8">
                 <span className="flex mx-auto text-center float-right mb-4">

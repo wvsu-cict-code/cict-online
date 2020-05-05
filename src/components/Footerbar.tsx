@@ -6,7 +6,7 @@ const { Footer } = Layout;
 const Footerbar: React.FC = () => (
     (
         <>
-        <Footer style={{ backgroundColor: '#fff' }}>
+        <Footer style={{backgroundColor: '#FCFCFC'}}>
         <Divider />
             <div className="w-full text-center">
                 <span className="font-normal text-gray-700">
