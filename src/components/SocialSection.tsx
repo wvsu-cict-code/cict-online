@@ -24,7 +24,7 @@ const socialLinks = [
 ]
 
 const SocialSection: React.FC = () => (
-    <div className="bg-white text-center p-4 text-sm">
+    <div className="text-center p-4 text-sm" style={{backgroundColor: '#FCFCFC'}}>
         <p className="mb-2">Follow Us</p>
         {socialLinks.map(i => (
             <Button key={i.id} className="mx-2" href={i.link} target="_blank" shape="circle" size="large">{i.icon}</Button>

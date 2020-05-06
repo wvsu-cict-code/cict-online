@@ -1,4 +1,5 @@
-import { Alert, Card, Col, Divider, Grid, Layout, Row } from 'antd';
+import { Alert, Card, Col, Divider, Grid, Layout, Row, Button } from 'antd';
+import { ArrowRight } from 'react-feather';
 import Navbar from 'components/Navbar';
 import SEO from 'components/SEO';
 import SocialSection from 'components/SocialSection';
@@ -135,10 +136,10 @@ const Public: any = () => {
           image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image-1.jpg"
           twitterUsername="cictwvsu"
         />
-        <Layout className="layout">
+        <Layout>
           <Layout>
-            <Navbar showApplication={true} defaultSelected={['1']} />
-            <Content className="bg-white p-0 px-8">
+            <Navbar showApplication={false} defaultSelected={['1']} />
+            <Content className="layout p-0 px-8">
               <div>
                 <div className="w-full">
                   <div className="billboard">
@@ -152,8 +153,8 @@ const Public: any = () => {
                               West Visayas State University College of ICT continues the <b>tradition of excellence</b> through <b>quality education</b>, <b>innovative ICT researches</b>, and <b>extension services</b> to various stakeholders.
                           </span>
                             <Divider />
-                            <Alert showIcon message={<span>*Application for Admission is now Online!<br /></span>} />
-                            <a href="/applynow" className={breakpoints.includes('md') ? "w-64 apply-button" : "w-full apply-button"}>Apply Now</a>                            
+                            <Alert type="warning" showIcon message={<span>*Application is currently closed until further notice.<br /></span>} />
+                            {/* <a href="/applynow" className={breakpoints.includes('md') ? "w-64 apply-button" : "w-full apply-button"}>Apply Now</a>                             */}
                           </div>
                         </Col>
                         <Col span={breakpoints.includes('md') ? 12 : 24}>
@@ -194,15 +195,15 @@ const Public: any = () => {
                       }}
                       className="my-masonry-grid"
                       columnClassName="my-masonry-grid_column">
-                      {posts && filter(posts.items, (post: Post) => post.categories.length > 0).slice(0, 4).map((post: Post) => (
-                        <Card key={post.guid} actions={[
+                      {posts && filter(posts.items, (post: Post) => post.categories.length > 0).slice(0, 8).map((post: Post) => (
+                        <Card className="card-updates" key={post.guid} actions={[
                           <a key="1" href={post.link} target="_blank"><span className="flex w-40 mx-auto"><span className="mx-auto">Read this Story</span><span><ExternalLink className="ml-4" key="link" /></span></span></a>,
                         ]} style={{ width: '290px', margin: '0 auto', marginBottom: '30px' }} cover={<div className="h-64 w-full bg-center no-repeat bg-cover" style={{ backgroundImage: `url(${post.thumbnail})` }} />}>
                           <Card.Meta title={post.title} description={<TimeAgo date={post.pubDate} />}></Card.Meta>
                         </Card>
                       ))}
                     </Masonry>
-
+                    <Button type="primary" size="large"href="https://medium.com/cictwvsu-online" target="_blank">Read More On Our Medium Page <ArrowRight size="20" className="inline"/> </Button>
                   </div>
                 </div>
                 <div className="w-full">
