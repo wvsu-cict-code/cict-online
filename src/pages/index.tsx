@@ -1,10 +1,10 @@
+import React, { useEffect, useState } from 'react';
 import { Alert, Card, Col, Divider, Grid, Layout, Row, Button } from 'antd';
 import { ArrowRight } from 'react-feather';
 import Navbar from 'components/Navbar';
 import SEO from 'components/SEO';
 import SocialSection from 'components/SocialSection';
 import { filter } from 'lodash';
-import React from 'react';
 import { ExternalLink } from 'react-feather';
 import Masonry from 'react-masonry-css';
 import Slider from "react-slick";
@@ -22,6 +22,8 @@ import CICTLogo from '../assets/logo.svg';
 import MITIcon from '../assets/msit-icon.svg';
 import Footerbar from '../components/Footerbar';
 import ReactTypingEffect from '../components/ReactTypingEffect';
+import { DEFAULT_THEME } from '../themes';
+import { applyTheme } from '../themes/utils';
 
 const { Content } = Layout;
 
@@ -119,7 +121,18 @@ const slickSettings = {
   ]
 };
 
-const Public: any = () => {
+const Public = () => {
+  const [theme, setTheme] = useState(DEFAULT_THEME);
+
+  /**
+   * Run the applyTheme function every time the theme state changes
+   */
+  useEffect(() => {
+    applyTheme(theme);
+  }, [theme]);
+
+  const themeModeHandler = () => (theme === 'base' ? setTheme('dark') : setTheme('base'));
+
   const screens = useBreakpoint()
   const breakpoints = Object.entries(screens)
     .filter(screen => !!screen[1])
@@ -127,7 +140,7 @@ const Public: any = () => {
   const { posts }: { posts: any } = useRouteData()
   let fbvideostring = `<iframe style="max-width: 734px; height:${breakpoints.includes('md')?'411px':'auto'}" class="mx-auto my-8 bg-gray-300 w-full h-auto" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcictwvsu%2Fvideos%2F358272304557481%2F&show_text=false&width=734&appId=2302291186701393&height=411" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>`
   return (
-    <div>
+    <div style={{ backgroundColor: '#000' }} >
       <div>
         <SEO
           title="WVSU CICT - Home"
@@ -138,7 +151,7 @@ const Public: any = () => {
         />
         <Layout>
           <Layout>
-            <Navbar showApplication={false} defaultSelected={['1']} />
+            <Navbar showApplication={false} themeState={theme} themeModeHandler={themeModeHandler} defaultSelected={['1']} />
             <Content className="layout p-0 px-8">
               <div>
                 <div className="w-full">
