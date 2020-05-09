@@ -1,6 +1,9 @@
 import React from 'react';
 import { Facebook, GitHub, Twitter } from "react-feather";
 import { Button } from 'antd';
+interface themeProps {
+    themeState:string
+}
 
 const socialLinks = [
     {
@@ -23,9 +26,9 @@ const socialLinks = [
     },
 ]
 
-const SocialSection: React.FC = () => (
-    <div className="text-center p-4 text-sm" style={{backgroundColor: '#FCFCFC'}}>
-        <p className="mb-2">Follow Us</p>
+const SocialSection = (props:themeProps) => (
+    <div className="text-center p-4 text-sm" style={{backgroundColor: props.themeState==='base'?'#FCFCFC':'#111'}}>
+        <p className={`mb-2 ${props.themeState!=='base'&&'text-white'}`}>Follow Us</p>
         {socialLinks.map(i => (
             <Button key={i.id} className="mx-2" href={i.link} target="_blank" shape="circle" size="large">{i.icon}</Button>
         ))}
