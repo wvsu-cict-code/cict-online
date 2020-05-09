@@ -9,6 +9,8 @@ const { Header } = Layout;
 const Navbar: React.FC<{
     showApplication?: boolean,
     defaultSelected?: any
+    themeModeHandler?: () => void,
+    themeState?: string,
 }> = (props) => {
     let [collapsed, toggleMenu] = useState(false)
     const { defaultSelected, showApplication } = props
@@ -17,11 +19,14 @@ const Navbar: React.FC<{
             <Header className="w-full">
                 <div className="container mx-auto">
                     <Link to="/"><div className="brand-icon" style={{ backgroundImage: `url(${BrandIcon})` }} /></Link>
-                    <Menu mode="horizontal" defaultSelectedKeys={defaultSelected ? defaultSelected : []} className="navbar" >
+                    <Menu theme={props.themeState === 'base' ? 'light' : 'dark'} mode="horizontal" defaultSelectedKeys={defaultSelected ? defaultSelected : []} className="navbar" >
                         <Menu.Item onClick={() => navigate('/')} key="1"><Tooltip title="Home"><HomeOutlined /></Tooltip></Menu.Item>
                         <Menu.Item onClick={() => navigate('https://medium.com/cictwvsu-online/our-story-87a461c14ab')} key="2"><Tooltip title="About CICT"><QuestionCircleOutlined /></Tooltip></Menu.Item>
                         {showApplication && <Menu.Item onClick={() => navigate('/applynow')} key="3"><Badge dot><Tooltip title="Online Application"><FormOutlined /></Tooltip></Badge></Menu.Item>}
                     </Menu>
+                    <Button size="small" onClick={() => props.themeModeHandler()}>
+                        {props.themeState === 'base' ? 'Set to Dark Mode' : 'Set to Light Mode'}
+                    </Button>
                     <Button style={{ lineHeight: '10px' }} className="mobile-menu-button" icon={<MenuOutlined />} onClick={() => toggleMenu(collapsed = !collapsed)} />
                 </div>
             </Header>

@@ -1,10 +1,10 @@
+import React, { useEffect, useState } from 'react';
 import { Alert, Card, Col, Divider, Grid, Layout, Row, Button } from 'antd';
 import { ArrowRight } from 'react-feather';
 import Navbar from 'components/Navbar';
 import SEO from 'components/SEO';
 import SocialSection from 'components/SocialSection';
 import { filter } from 'lodash';
-import React from 'react';
 import { ExternalLink } from 'react-feather';
 import Masonry from 'react-masonry-css';
 import Slider from "react-slick";
@@ -22,6 +22,8 @@ import CICTLogo from '../assets/logo.svg';
 import MITIcon from '../assets/msit-icon.svg';
 import Footerbar from '../components/Footerbar';
 import ReactTypingEffect from '../components/ReactTypingEffect';
+import { DEFAULT_THEME } from '../themes';
+import { applyTheme } from '../themes/utils';
 
 const { Content } = Layout;
 
@@ -119,7 +121,18 @@ const slickSettings = {
   ]
 };
 
-const Public: any = () => {
+const Public = () => {
+  const [theme, setTheme] = useState(DEFAULT_THEME);
+
+  /**
+   * Run the applyTheme function every time the theme state changes
+   */
+  useEffect(() => {
+    applyTheme(theme);
+  }, [theme]);
+
+  const themeModeHandler = () => (theme === 'base' ? setTheme('dark') : setTheme('base'));
+
   const screens = useBreakpoint()
   const breakpoints = Object.entries(screens)
     .filter(screen => !!screen[1])
@@ -127,7 +140,7 @@ const Public: any = () => {
   const { posts }: { posts: any } = useRouteData()
   let fbvideostring = `<iframe style="max-width: 734px; height:${breakpoints.includes('md')?'411px':'auto'}" class="mx-auto my-8 bg-gray-300 w-full h-auto" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcictwvsu%2Fvideos%2F358272304557481%2F&show_text=false&width=734&appId=2302291186701393&height=411" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>`
   return (
-    <div>
+    <div style={{ backgroundColor: '#000' }} >
       <div>
         <SEO
           title="WVSU CICT - Home"
@@ -138,7 +151,7 @@ const Public: any = () => {
         />
         <Layout>
           <Layout>
-            <Navbar showApplication={false} defaultSelected={['1']} />
+            <Navbar showApplication={false} themeState={theme} themeModeHandler={themeModeHandler} defaultSelected={['1']} />
             <Content className="layout p-0 px-8">
               <div>
                 <div className="w-full">
@@ -147,9 +160,9 @@ const Public: any = () => {
                       <Row>
                         <Col span={breakpoints.includes('md') ? 12 : 24}>
                           <div className="billboard-greeting-text">
-                            <span className="text-lg">Your Future with Technology</span>
-                            <span className="billboard-header">{"~$"}<ReactTypingEffect speed={100} eraseDelay={5000} typingDelay={200} text="echo 'Hello World!'"></ReactTypingEffect></span>
-                            <span className="font-normal text-lg">
+                            <span className="text-lg text-primary-text">Your Future with Technology</span>
+                            <span className="billboard-header text-primary-text">{"~$"}<ReactTypingEffect speed={100} eraseDelay={5000} typingDelay={200} text="echo 'Hello World!'"></ReactTypingEffect></span>
+                            <span className="font-normal text-primary-text text-lg">
                               West Visayas State University College of ICT continues the <b>tradition of excellence</b> through <b>quality education</b>, <b>innovative ICT researches</b>, and <b>extension services</b> to various stakeholders.
                           </span>
                             <Divider />
@@ -167,14 +180,14 @@ const Public: any = () => {
                 </div>
                 <div className="w-full">
                   <div className="container mx-auto py-8">
-                    <h2 className="text-center text-4xl">Courses Offered</h2>
-                    <p className="max-w-lg mx-auto text-center font-normal text-lg">Choose your Foundation.</p>
+                    <h2 className="text-center text-primary-text text-4xl">Courses Offered</h2>
+                    <p className="max-w-lg mx-auto text-center text-primary-text font-normal text-lg">Choose your Foundation.</p>
                     <div className="px-8">
                       <Slider {...slickSettings}>
                         {programs.map(i => (
                           <div key={i.id} className="w-32 mx-auto">
                             <img className="mx-auto h-40" src={i.icon} alt="" />
-                            <p className="text-center text-lg mx-auto" style={{ maxWidth: '180px' }}>{i.name}</p>
+                            <p className="text-center text-primary-text text-lg mx-auto" style={{ maxWidth: '180px' }}>{i.name}</p>
                           </div>
                         ))}
                       </Slider>
@@ -183,8 +196,8 @@ const Public: any = () => {
                 </div>
                 <div className="w-full">
                   <div className="container mx-auto py-8">
-                    <h2 className="text-center text-4xl">News and Updates</h2>
-                    <p className="max-w-lg mx-auto text-center font-normal text-lg mb-4">Discover CICT stories, studies and much more.</p>
+                    <h2 className="text-center text-primary-text text-4xl">News and Updates</h2>
+                    <p className="max-w-lg mx-auto text-primary-text text-center font-normal text-lg mb-4">Discover CICT stories, studies and much more.</p>
                     <Masonry
                       breakpointCols={{
                         default: 4,
@@ -197,7 +210,7 @@ const Public: any = () => {
                       columnClassName="my-masonry-grid_column">
                       {posts && filter(posts.items, (post: Post) => post.categories.length > 0).slice(0, 8).map((post: Post) => (
                         <Card className="card-updates" key={post.guid} actions={[
-                          <a key="1" href={post.link} target="_blank"><span className="flex w-40 mx-auto"><span className="mx-auto">Read this Story</span><span><ExternalLink className="ml-4" key="link" /></span></span></a>,
+                          <a key="1" href={post.link} target="_blank"><span className="flex text-primary-text w-40 mx-auto"><span className="mx-auto text-primary-text">Read this Story</span><span><ExternalLink className="ml-4" key="link" /></span></span></a>,
                         ]} style={{ width: '290px', margin: '0 auto', marginBottom: '30px' }} cover={<div className="h-64 w-full bg-center no-repeat bg-cover" style={{ backgroundImage: `url(${post.thumbnail})` }} />}>
                           <Card.Meta title={post.title} description={<TimeAgo date={post.pubDate} />}></Card.Meta>
                         </Card>
@@ -209,10 +222,10 @@ const Public: any = () => {
                 <div className="w-full">
                   <div className="container mx-auto py-8">
                     <img src={CICTLogo} className="w-40 h-40 mx-auto my-4" alt="CICT Logo" />
-                    <h2 className="text-center text-4xl">Upholding the Tradition of Excellence</h2>
+                    <h2 className="text-center text-primary-text text-4xl">Upholding the Tradition of Excellence</h2>
 
                     <div dangerouslySetInnerHTML={createMarkup(fbvideostring)}></div>
-                    <p className="max-w-lg mx-auto text-center font-normal text-lg">Information and Communications Technology has penetrated the core of societal and individual lives. Its development is changing the course of all other technologies. ICT has now become less of a choice and more of a requirement for individuals and societies concerned with competitiveness in the international arena.</p>
+                    <p className="max-w-lg mx-auto text-center text-primary-text font-normal text-lg">Information and Communications Technology has penetrated the core of societal and individual lives. Its development is changing the course of all other technologies. ICT has now become less of a choice and more of a requirement for individuals and societies concerned with competitiveness in the international arena.</p>
                   </div>
                 </div>
               </div>
