@@ -12,15 +12,24 @@ import { useRouteData } from 'react-static';
 import TimeAgo from 'react-timeago';
 import { Post } from 'types';
 import '../app.less';
-import BLISIcon from '../assets/blis-icon.svg';
-import CSIcon from '../assets/cs-icon.svg';
-import EMCIcon from '../assets/emc-icon.svg';
-import ICTGraphics from '../assets/ict.svg';
-import ISIcon from '../assets/is-icon.svg';
-import ITIcon from '../assets/it-icon.svg';
+import BLISIconDark from '../assets/blis-icon.svg';
+import CSIconDark from '../assets/cs-icon.svg';
+import EMCIconDark from '../assets/emc-icon.svg';
+import ISIconDark from '../assets/is-icon.svg';
+import ITIconDark from '../assets/it-icon.svg';
+import MITIconDark from '../assets/msit-icon.svg';
+
+import BLISIconLight from '../assets/blis-icon-light.svg';
+import CSIconLight from '../assets/cs-icon-light.svg';
+import EMCIconLight from '../assets/emc-icon-light.svg';
+import ISIconLight from '../assets/is-icon-light.svg';
+import ITIconLight from '../assets/it-icon-light.svg';
+import MITIconLight from '../assets/msit-icon-light.svg';
+
 import CICTLogo from '../assets/logo.svg';
-import MITIcon from '../assets/msit-icon.svg';
 import Footerbar from '../components/Footerbar';
+import ICTGraphicsDark from '../assets/ict.svg';
+import ICTGraphicsLight from '../assets/ict-light.svg';
 import ReactTypingEffect from '../components/ReactTypingEffect';
 import { DEFAULT_THEME } from '../themes';
 import { applyTheme } from '../themes/utils';
@@ -33,37 +42,43 @@ const programs = [
   {
     id: "it",
     name: "Information Technology",
-    icon: ITIcon,
+    iconLight: ITIconLight,
+    iconDark: ITIconDark,
     description: "Study, analyze, design, develop, implement, and evaluate ICT solutions. "
   },
   {
     id: "is",
     name: "Information Systems",
-    icon: ISIcon,
+    iconLight: ISIconLight,
+    iconDark: ISIconDark,
     description: "Design and implementation of solutions that integrate information technology with business processes. "
   },
   {
     id: "cs",
     name: "Computer Science",
-    icon: CSIcon,
+    iconLight: CSIconLight,
+    iconDark: CSIconDark,
     description: "Designing, writing and developing computer programs and computer networks."
   },
   {
     id: "blis",
     name: "Library and Information Science",
-    icon: BLISIcon,
+    iconLight: BLISIconLight,
+    iconDark: BLISIconDark,
     description: "Management of library operations, the systematic organization, conservation, preservation and restoration of books, historical and cultural documents and other intellectual properties."
   },
   {
     id: "emc",
     name: "Entertainment and Multimedia Computing",
-    icon: EMCIcon,
+    iconLight: EMCIconLight,
+    iconDark: EMCIconDark,
     description: "Computing in the design and development of multimedia products and solutions. "
   },
   {
     id: "mit",
     name: "Masters in Information Technology",
-    icon: MITIcon,
+    iconLight: MITIconLight,
+    iconDark: MITIconDark,
     description: "Advanced computing subjects, or move into a new IT specialisation. "
   },
 
@@ -138,7 +153,7 @@ const Public = () => {
     .filter(screen => !!screen[1])
     .map(screen => screen[0])
   const { posts }: { posts: any } = useRouteData()
-  let fbvideostring = `<iframe style="max-width: 734px; height:${breakpoints.includes('md')?'411px':'auto'}" class="mx-auto my-8 bg-gray-300 w-full h-auto" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcictwvsu%2Fvideos%2F358272304557481%2F&show_text=false&width=734&appId=2302291186701393&height=411" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>`
+  let fbvideostring = `<iframe style="max-width: 734px; height:${breakpoints.includes('md') ? '411px' : 'auto'}" class="mx-auto my-8 bg-gray-300 w-full h-auto" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcictwvsu%2Fvideos%2F358272304557481%2F&show_text=false&width=734&appId=2302291186701393&height=411" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>`
   return (
     <div style={{ backgroundColor: '#000' }} >
       <div>
@@ -159,10 +174,10 @@ const Public = () => {
                     <div className="container mx-auto billboard-greeting">
                       <Row>
                         <Col span={breakpoints.includes('md') ? 12 : 24}>
-                          <div className="billboard-greeting-text">
-                            <span className="text-lg text-primary-text">Your Future with Technology</span>
-                            <span className="billboard-header text-primary-text">{"~$"}<ReactTypingEffect speed={100} eraseDelay={5000} typingDelay={200} text="echo 'Hello World!'"></ReactTypingEffect></span>
-                            <span className="font-normal text-primary-text text-lg">
+                          <div className={`billboard-greeting-text ${theme !== 'base' && 'text-white'}`}>
+                            <span className="text-lg">Your Future with Technology</span>
+                            <span className="billboard-header">{"~$"}<ReactTypingEffect speed={100} eraseDelay={5000} typingDelay={200} text="echo 'Hello World!'"></ReactTypingEffect></span>
+                            <span className="font-normal text-lg">
                               West Visayas State University College of ICT continues the <b>tradition of excellence</b> through <b>quality education</b>, <b>innovative ICT researches</b>, and <b>extension services</b> to various stakeholders.
                           </span>
                             <Divider />
@@ -171,7 +186,7 @@ const Public = () => {
                           </div>
                         </Col>
                         <Col span={breakpoints.includes('md') ? 12 : 24}>
-                          <img src={ICTGraphics} className="img-billboard mx-auto mt-8" />
+                          <img src={theme === 'base' ? ICTGraphicsDark : ICTGraphicsLight} className="img-billboard mx-auto mt-8" />
                         </Col>
                       </Row>
 
@@ -186,7 +201,7 @@ const Public = () => {
                       <Slider {...slickSettings}>
                         {programs.map(i => (
                           <div key={i.id} className="w-32 mx-auto">
-                            <img className="mx-auto h-40" src={i.icon} alt="" />
+                            <img className="mx-auto h-40" src={theme === 'base' ? i.iconDark : i.iconLight} alt="" />
                             <p className="text-center text-primary-text text-lg mx-auto" style={{ maxWidth: '180px' }}>{i.name}</p>
                           </div>
                         ))}
@@ -209,14 +224,14 @@ const Public = () => {
                       className="my-masonry-grid"
                       columnClassName="my-masonry-grid_column">
                       {posts && filter(posts.items, (post: Post) => post.categories.length > 0).slice(0, 8).map((post: Post) => (
-                        <Card className="card-updates" key={post.guid} actions={[
-                          <a key="1" href={post.link} target="_blank"><span className="flex text-primary-text w-40 mx-auto"><span className="mx-auto text-primary-text">Read this Story</span><span><ExternalLink className="ml-4" key="link" /></span></span></a>,
+                        <Card bodyStyle={{ backgroundColor: theme === 'base' ? '#fff' : '#111' }} bordered={false} className="card-updates" key={post.guid} actions={[
+                          <a key="1" href={post.link} target="_blank"><span className="flex w-40 mx-auto"><span className="mx-auto">Read this Story</span><span><ExternalLink className="ml-4" key="link" /></span></span></a>,
                         ]} style={{ width: '290px', margin: '0 auto', marginBottom: '30px' }} cover={<div className="h-64 w-full bg-center no-repeat bg-cover" style={{ backgroundImage: `url(${post.thumbnail})` }} />}>
-                          <Card.Meta title={post.title} description={<TimeAgo date={post.pubDate} />}></Card.Meta>
+                          <Card.Meta title={<span className={theme !== 'base' && 'text-white'}>{post.title}</span>} description={<span className={theme !== 'base' && 'text-white'} ><TimeAgo date={post.pubDate} /></span>}></Card.Meta>
                         </Card>
                       ))}
                     </Masonry>
-                    <Button type="primary" size="large"href="https://medium.com/cictwvsu-online" target="_blank">Read More On Our Medium Page <ArrowRight size="20" className="inline"/> </Button>
+                    <Button type="primary" size="large" href="https://medium.com/cictwvsu-online" target="_blank">Read More On Our Medium Page <ArrowRight size="20" className="inline" /> </Button>
                   </div>
                 </div>
                 <div className="w-full">
@@ -230,8 +245,8 @@ const Public = () => {
                 </div>
               </div>
             </Content>
-            <SocialSection />
-            <Footerbar />
+            <SocialSection themeState={theme} />
+            <Footerbar themeState={theme} />
           </Layout>
         </Layout>
       </div>

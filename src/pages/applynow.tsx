@@ -3,9 +3,11 @@ import { Divider, Layout } from 'antd';
 import Footerbar from 'components/Footerbar';
 import Navbar from 'components/Navbar';
 import SEO from 'components/SEO';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Facebook, Share2, Twitter } from "react-feather";
 import { FacebookShareButton, TwitterShareButton } from 'react-share';
+import { DEFAULT_THEME } from '../themes';
+import { applyTheme } from '../themes/utils';
 
 // const requirements = [
 //   'WVSU-CAT Result Slip (with a score of 80 or higher)',
@@ -16,6 +18,15 @@ import { FacebookShareButton, TwitterShareButton } from 'react-share';
 // ];
 export default () => {
   // let [collapsed, toggleContent] = useState(false)
+  const [theme] = useState(DEFAULT_THEME);
+
+  /**
+   * Run the applyTheme function every time the theme state changes
+   */
+  useEffect(() => {
+    applyTheme(theme);
+  }, [theme]);
+
   return (
     <div>
       <SEO
@@ -83,7 +94,7 @@ export default () => {
 
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSffrJ9taFHBEfJV360WN7yIBI1dGWYvEIiTITkbKWsdOPowzQ/viewform?embedded=true" className="w-full min-h-screen">Loading…</iframe>
           </div>
-          <Footerbar />
+          <Footerbar themeState={theme} />
         </Layout>
       </Layout>
     </div>

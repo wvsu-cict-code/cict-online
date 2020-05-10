@@ -3,6 +3,6 @@ import base from './base';
 
 export default extend(base, {
   backgroundPrimary: '#111111',
-  backgroundSecondary: '#444444',
+  backgroundSecondary: '#212121',
   textPrimary: '#fff',
 });

@@ -38,7 +38,6 @@
 
 .billboard-header{
     font-size: 1.9rem;
-    color: #1A1A1A
 }
 
 .dark-section{
@@ -52,6 +51,14 @@
 
 .navbar{
     @apply hidden
+}
+
+.navbar-dark{
+    background-color: #111111!important
+}
+
+.navbar-theme-icon{
+    margin: 23px 0 23px 0;
 }
 
 .mobile-menu-button{

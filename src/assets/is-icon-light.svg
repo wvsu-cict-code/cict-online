@@ -8,7 +8,7 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   sodipodi:docname="is-icon.svg"
+   sodipodi:docname="is-icon-light.svg"
    id="svg128"
    version="1.1"
    fill="none"
@@ -50,11 +50,11 @@
      bordercolor="#666666"
      pagecolor="#ffffff" />
   <g
-     style="stroke:#000000;stroke-opacity:1"
+     style="stroke:#ffffff;stroke-opacity:1"
      id="g121"
      clip-path="url(#clip0)">
     <path
-       style="stroke:#000000;stroke-opacity:1"
+       style="stroke:#ffffff;stroke-opacity:1"
        id="path89"
        stroke-linejoin="round"
        stroke-linecap="round"
@@ -62,7 +62,7 @@
        stroke="black"
        d="M145.471 36.0535H70.5443V103.671H145.471V36.0535Z" />
     <path
-       style="stroke:#000000;stroke-opacity:1"
+       style="stroke:#ffffff;stroke-opacity:1"
        id="path91"
        stroke-linejoin="round"
        stroke-linecap="round"
@@ -70,13 +70,13 @@
        stroke="black"
        d="M134.386 67.3094H81.6306V92.8363H134.386V67.3094Z" />
     <path
-       style="stroke:#000000;stroke-opacity:1"
+       style="stroke:#ffffff;stroke-opacity:1"
        id="path93"
        stroke-width="4"
        stroke="black"
        d="M70.5443 56.0389L145.471 56.1794" />
     <path
-       style="stroke:#000000;stroke-opacity:1"
+       style="stroke:#ffffff;stroke-opacity:1"
        id="path95"
        stroke-linejoin="round"
        stroke-linecap="round"
@@ -84,25 +84,25 @@
        stroke="black"
        d="M116.784 103.671H99.2336V119.426H116.784V103.671Z" />
     <path
-       style="stroke:#000000;stroke-opacity:1"
+       style="stroke:#ffffff;stroke-opacity:1"
        id="path97"
        stroke-width="4"
        stroke="black"
        d="M108.008 119.426V132.347" />
     <path
-       style="stroke:#000000;stroke-opacity:1"
+       style="stroke:#ffffff;stroke-opacity:1"
        id="path99"
        stroke-width="4"
        stroke="black"
        d="M145.472 69.8623H167.552V132.347" />
     <path
-       style="stroke:#000000;stroke-opacity:1"
+       style="stroke:#ffffff;stroke-opacity:1"
        id="path101"
        stroke-width="4"
        stroke="black"
        d="M70.5448 69.8623H48.4648V132.347" />
     <path
-       style="stroke:#000000;stroke-opacity:1"
+       style="stroke:#ffffff;stroke-opacity:1"
        id="path103"
        stroke-linejoin="round"
        stroke-linecap="round"
@@ -110,7 +110,7 @@
        stroke="black"
        d="M39.6741 132.347H57.2247V145.981H39.6741V132.347Z" />
     <path
-       style="stroke:#000000;stroke-opacity:1"
+       style="stroke:#ffffff;stroke-opacity:1"
        id="path105"
        stroke-linejoin="round"
        stroke-linecap="round"
@@ -118,7 +118,7 @@
        stroke="black"
        d="M31.2855 145.977H65.6136V180.097H31.2855V145.977Z" />
     <path
-       style="stroke:#000000;stroke-opacity:1"
+       style="stroke:#ffffff;stroke-opacity:1"
        id="path107"
        stroke-linejoin="round"
        stroke-linecap="round"
@@ -126,7 +126,7 @@
        stroke="black"
        d="M57.1294 154.551H39.7716V171.523H57.1294V154.551Z" />
     <path
-       style="stroke:#000000;stroke-opacity:1"
+       style="stroke:#ffffff;stroke-opacity:1"
        id="path109"
        stroke-linejoin="round"
        stroke-linecap="round"
@@ -134,7 +134,7 @@
        stroke="black"
        d="M99.2318 132.347H116.782V145.981H99.2318V132.347Z" />
     <path
-       style="stroke:#000000;stroke-opacity:1"
+       style="stroke:#ffffff;stroke-opacity:1"
        id="path111"
        stroke-linejoin="round"
        stroke-linecap="round"
@@ -142,7 +142,7 @@
        stroke="black"
        d="M90.843 145.977H125.171V180.097H90.843V145.977Z" />
     <path
-       style="stroke:#000000;stroke-opacity:1"
+       style="stroke:#ffffff;stroke-opacity:1"
        id="path113"
        stroke-linejoin="round"
        stroke-linecap="round"
@@ -150,7 +150,7 @@
        stroke="black"
        d="M116.687 154.551H99.3291V171.523H116.687V154.551Z" />
     <path
-       style="stroke:#000000;stroke-opacity:1"
+       style="stroke:#ffffff;stroke-opacity:1"
        id="path115"
        stroke-linejoin="round"
        stroke-linecap="round"
@@ -158,7 +158,7 @@
        stroke="black"
        d="M158.777 132.347H176.328V145.981H158.777V132.347Z" />
     <path
-       style="stroke:#000000;stroke-opacity:1"
+       style="stroke:#ffffff;stroke-opacity:1"
        id="path117"
        stroke-linejoin="round"
        stroke-linecap="round"
@@ -166,7 +166,7 @@
        stroke="black"
        d="M150.388 145.977H184.716V180.097H150.388V145.977Z" />
     <path
-       style="stroke:#000000;stroke-opacity:1"
+       style="stroke:#ffffff;stroke-opacity:1"
        id="path119"
        stroke-linejoin="round"
        stroke-linecap="round"
