@@ -7,9 +7,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 
-.layout{
-    background-color: #FCFCFC!important
-}
+.layout{ @apply bg-sec-background; }
 
 .brand-icon {
     @apply float-left bg-no-repeat bg-center bg-contain;
@@ -40,7 +38,6 @@
 
 .billboard-header{
     font-size: 1.9rem;
-    color: #1A1A1A
 }
 
 .dark-section{
@@ -54,6 +51,14 @@
 
 .navbar{
     @apply hidden
+}
+
+.navbar-dark{
+    background-color: #111111!important
+}
+
+.navbar-theme-icon{
+    margin: 23px 0 23px 0;
 }
 
 .mobile-menu-button{

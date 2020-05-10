@@ -1,4 +1,5 @@
 const POSTCSS_LOADER = "postcss-loader";
+const tailwindcss = require('tailwindcss');
 const isPostCssLoader = ({ loader } = {}) => loader === POSTCSS_LOADER;
 const getOneOf = ({ oneOf } = {}) => {
   if (oneOf) {
@@ -32,7 +33,7 @@ export default (options = {}) => ({
         const plugins = postcssLoader.options.plugins;
         const tailwindDefault = [
           require("postcss-import")(),
-          require("tailwindcss"),
+          require("tailwindcss")('./tailwind.js'),
           require("postcss-nested"),
           require("postcss-custom-properties"),
         ]
