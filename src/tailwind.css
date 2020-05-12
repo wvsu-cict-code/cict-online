@@ -16,11 +16,11 @@
     margin: 16px 24px 16px 0;
 }
 
-.card-updates {
+.card-component {
     @apply shadow-md !important
 }
 
-.card-updates:hover {
+.card-component:hover {
     @apply shadow-2xl !important
 }
 
