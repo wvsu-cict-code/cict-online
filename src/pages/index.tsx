@@ -149,16 +149,20 @@ const Public = () => {
   const themeModeHandler = () => (theme === 'base' ? setTheme('dark') : setTheme('base'));
 
   const screens = useBreakpoint()
+  
   const breakpoints = Object.entries(screens)
     .filter(screen => !!screen[1])
     .map(screen => screen[0])
-  const { posts }: { posts: any } = useRouteData()
+  
+    const { posts }: { posts: any } = useRouteData()
+
   let fbvideostring = `<iframe style="max-width: 734px; height:${breakpoints.includes('md') ? '411px' : 'auto'}" class="mx-auto my-8 bg-gray-300 w-full h-auto" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcictwvsu%2Fvideos%2F358272304557481%2F&show_text=false&width=734&appId=2302291186701393&height=411" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>`
+  
   return (
     <div style={{ backgroundColor: '#000' }} >
       <div>
         <SEO
-          title="WVSU CICT - Home"
+          title="WVSU CICT | Your Future with Technology"
           description="Official website of the College of ICT."
           url="https://cictwvsu.com/"
           image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image-2.jpg"
@@ -181,7 +185,7 @@ const Public = () => {
                               West Visayas State University College of ICT continues the <b>tradition of excellence</b> through <b>quality education</b>, <b>innovative ICT researches</b>, and <b>extension services</b> to various stakeholders.
                           </span>
                             <Divider />
-                            <Alert type="warning" showIcon message={<span>*Application is currently closed until further notice.<br /></span>} />
+                            <Alert type="warning" showIcon message={<span>*Online Application is now catered by the Integrated University Information System.<br /></span>} />
                             {/* <a href="/applynow" className={breakpoints.includes('md') ? "w-64 apply-button" : "w-full apply-button"}>Apply Now</a>                             */}
                           </div>
                         </Col>
@@ -224,7 +228,7 @@ const Public = () => {
                       className="my-masonry-grid"
                       columnClassName="my-masonry-grid_column">
                       {posts && filter(posts.items, (post: Post) => post.categories.length > 0).slice(0, 8).map((post: Post) => (
-                        <Card bodyStyle={{ backgroundColor: theme === 'base' ? '#fff' : '#111' }} bordered={false} className="card-updates" key={post.guid} actions={[
+                        <Card bodyStyle={{ backgroundColor: theme === 'base' ? '#fff' : '#111' }} bordered={false} className="card-component" key={post.guid} actions={[
                           <a key="1" href={post.link} target="_blank"><span className="flex w-40 mx-auto"><span className="mx-auto">Read this Story</span><span><ExternalLink className="ml-4" key="link" /></span></span></a>,
                         ]} style={{ width: '290px', margin: '0 auto', marginBottom: '30px' }} cover={<div className="h-64 w-full bg-center no-repeat bg-cover" style={{ backgroundImage: `url(${post.thumbnail})` }} />}>
                           <Card.Meta title={<span className={theme !== 'base' && 'text-white'}>{post.title}</span>} description={<span className={theme !== 'base' && 'text-white'} ><TimeAgo date={post.pubDate} /></span>}></Card.Meta>
