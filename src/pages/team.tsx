@@ -9,6 +9,87 @@ import Masonry from 'react-masonry-css';
 
 const { Content } = Layout;
 
+const team = [
+	{
+		name: "",
+		description: "",
+		position: "",
+		avatar: "",
+		type: "",
+	},
+	{
+		name: "",
+		description: "",
+		position: "",
+		avatar: "",
+		type: "",
+	},
+	{
+		name: "",
+		description: "",
+		position: "",
+		avatar: "",
+		type: "",
+	},
+	{
+		name: "",
+		description: "",
+		position: "",
+		avatar: "",
+		type: "",
+	},
+	{
+		name: "",
+		description: "",
+		position: "",
+		avatar: "",
+		type: "",
+	},
+	{
+		name: "",
+		description: "",
+		position: "",
+		avatar: "",
+		type: "",
+	},
+	{
+		name: "",
+		description: "",
+		position: "",
+		avatar: "",
+		type: "",
+	},
+	{
+		name: "",
+		description: "",
+		position: "",
+		avatar: "",
+		type: "",
+	},
+	{
+		name: "",
+		description: "",
+		position: "",
+		avatar: "",
+		type: "",
+	},
+	{
+		name: "",
+		description: "",
+		position: "",
+		avatar: "",
+		type: "",
+	},
+	{
+		name: "",
+		description: "",
+		position: "",
+		avatar: "",
+		type: "",
+	},
+
+]
+
 export default () => {
   const [theme, setTheme] = useState(DEFAULT_THEME);
 
