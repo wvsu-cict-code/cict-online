@@ -40,7 +40,7 @@ const team = [
 	{
 		name: "Dr. Ma.Beth S. Concepcion",
 		description: "Bio Here",
-		position: ["College Dean", "College Alumni Coordinator", "Associate Professor I"],
+		position: ["College Dean", "Associate Professor III"],
 		education: ["Doctor in Information Technology", "Master in Info Management, BS Info Management"],
 		avatar: concepcion,
 		type: "faculty",
@@ -148,7 +148,7 @@ const team = [
 	{
 		name: "Dr. Regin C. Cabacas",
 		description: "",
-		position: ["Instructor I"],
+		position: ["College Alumni Coordinator", "Instructor I"],
 		education: ["Doctor in Information & Knowledge Engineering", "Master in Information and Knowledge Eng."],
 		avatar: cabacas,
 		type: "faculty",
@@ -200,7 +200,7 @@ const team = [
 		tags: ["cs"]
 	},
 	{
-		name: "Rem Sequijo",
+		name: "Remegio S. Soqueño II",
 		description: "",
 		position: ["Part-time Instructor"],
 		education: ["Masters in Computer Science (on-going)"],
