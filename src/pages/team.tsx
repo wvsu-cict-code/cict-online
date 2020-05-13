@@ -129,10 +129,10 @@ const team = [
 		tags: ["it"]
 	},
 	{
-		name: "Engr. Leah M. Gabawa",
+		name: "Engr. Lea Marcon - Gabawa",
 		description: "",
-		position: ["College Guidance  Coordinator", "Instructor I"],
-		education: ["Ph D in Curriculum and Instruction (on-going)", "Master in Engineering"],
+		position: ["College Guidance  Coordinator", "Assistant Professor III"],
+		education: ["PhD in Education major in Curriculum Development (on-going)", "Master in Engineering"],
 		avatar: gabawa,
 		type: "faculty",
 		tags: ["it"]
@@ -147,10 +147,10 @@ const team = [
 		tags: ["it"]
 	},
 	{
-		name: "Dr. Regin C. Cabacas",
+		name: "Dr. Regin A. Cabacas",
 		description: "",
-		position: ["College Alumni Coordinator", "Instructor I"],
-		education: ["Doctor in Information & Knowledge Engineering", "Master in Information and Knowledge Engineering"],
+		position: ["College Alumni Coordinator", "Assistant Professor IV"],
+		education: ["Doctor of Engineering", "Master of Engineering"],
 		avatar: cabacas,
 		type: "faculty",
 		tags: ["it"]
