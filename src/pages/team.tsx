@@ -103,7 +103,7 @@ const team = [
 	{
 		name: "Dr. Joel T. De Castro",
 		description: "",
-		position: ["Manager, GTBI", "Professor VI"],
+		position: ["GTBI Head", "Professor VI"],
 		education: ["Doctor in Industrial Technology", "Masters in Computer Science"],
 		avatar: decastro,
 		type: "faculty",
