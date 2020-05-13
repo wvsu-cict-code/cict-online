@@ -10,9 +10,10 @@ import Masonry from 'react-masonry-css';
 import concepcion from '../assets/team/concepcion.png'
 import elijorde from '../assets/team/elijorde.png'
 import secondes from '../assets/team/secondes.png'
-import dofitas from '../assets/team/dofitas.png'
+import dofitas from '../assets/team/dofitas.jpg'
 import sabayle from '../assets/team/sabayle.png'
 import sumido from '../assets/team/sumido.jpg'
+import dayot from '../assets/team/dayot.png'
 import gerardo from '../assets/team/gerardo.jpg'
 import decastro from '../assets/team/decastro.png'
 import dumpit from '../assets/team/dumpit.png'
@@ -41,7 +42,7 @@ const team = [
 		name: "Dr. Ma.Beth S. Concepcion",
 		description: "Bio Here",
 		position: ["College Dean", "Associate Professor III"],
-		education: ["Doctor in Information Technology", "Master in Info Management, BS Info Management"],
+		education: ["Doctor in Information Technology", "Master of Science in Information Management, BS Info Management"],
 		avatar: concepcion,
 		type: "faculty",
 		tags: ["is", "admin"]
@@ -50,7 +51,7 @@ const team = [
 		name: "Dr. Frank I. Elijorde",
 		description: "Bio Here",
 		position: ["Associate Dean", "Division Chair, Computer Science", "Associate Professor IV"],
-		education: ["Doctor in Information & Knowledge Eng.", "MS Computer Science"],
+		education: ["Doctor in Information & Knowledge Engineering", "Master of Science in Computer Science"],
 		avatar: elijorde,
 		type: "faculty",
 		tags: ["cs"]
@@ -59,7 +60,7 @@ const team = [
 		name: "Dr. Arnel N. Secondes",
 		description: "",
 		position: ["College Secretary", "College Quality Assurance Coordinator", "Instructor I"],
-		education: ["Doctor in Industrial Technology", "MS Computer Science"],
+		education: ["Doctor in Industrial Technology", "Master of Science in Computer Science"],
 		avatar: secondes,
 		type: "faculty",
 		tags: ["cs"]
@@ -68,7 +69,7 @@ const team = [
 		name: "Prof. Cyreneo Dofitas Jr.",
 		description: "",
 		position: ["Division Chair, Information Tech", "DRMM Coordinator", "Associate Professor I"],
-		education: ["MS Computer Science"],
+		education: ["Master of Science in Computer Science"],
 		avatar: dofitas,
 		type: "faculty",
 		tags: ["it"]
@@ -77,7 +78,7 @@ const team = [
 		name: "Dr. Luche M. Sabayle",
 		description: "",
 		position: ["Department Head, IS", "CHED & ISO Liaison Officer", "Instructor I"],
-		education: ["Doctor in Industrial Technology", "MS Computer Science"],
+		education: ["Doctor in Industrial Technology", "Master of Science in Computer Science"],
 		avatar: sabayle,
 		type: "faculty",
 		tags: ["is"]
@@ -95,7 +96,7 @@ const team = [
 		name: "Dr. Bobby D. Gerardo",
 		description: "",
 		position: ["Graduate Studies Coordinator", "Professor VI"],
-		education: ["Doctor in Information & Knowledge Engineering", "MS Mathematics"],
+		education: ["Doctor in Information & Knowledge Engineering", "Master of Science in Mathematics"],
 		avatar: gerardo,
 		type: "faculty",
 		tags: ["it"]
@@ -104,7 +105,7 @@ const team = [
 		name: "Dr. Joel T. De Castro",
 		description: "",
 		position: ["GTBI Head", "Professor VI"],
-		education: ["Doctor in Industrial Technology", "Masters in Computer Science"],
+		education: ["Doctor in Industrial Technology", "Master of Science in Computer Science"],
 		avatar: decastro,
 		type: "faculty",
 		tags: ["is"]
@@ -131,7 +132,7 @@ const team = [
 		name: "Engr. Leah M. Gabawa",
 		description: "",
 		position: ["College Guidance  Coordinator", "Instructor I"],
-		education: ["Ph D in Curriculum and Instruction (on-going)", "MS Engineering"],
+		education: ["Ph D in Curriculum and Instruction (on-going)", "Master in Engineering"],
 		avatar: gabawa,
 		type: "faculty",
 		tags: ["it"]
@@ -149,7 +150,7 @@ const team = [
 		name: "Dr. Regin C. Cabacas",
 		description: "",
 		position: ["College Alumni Coordinator", "Instructor I"],
-		education: ["Doctor in Information & Knowledge Engineering", "Master in Information and Knowledge Eng."],
+		education: ["Doctor in Information & Knowledge Engineering", "Master in Information and Knowledge Engineering"],
 		avatar: cabacas,
 		type: "faculty",
 		tags: ["it"]
@@ -158,7 +159,7 @@ const team = [
 		name: "Engr. Erwin Osorio",
 		description: "",
 		position: ["Network Supervisor", "Assistant Prof"],
-		education: ["Master Information Technology"],
+		education: ["Master in Information Technology"],
 		avatar: osorio,
 		type: "faculty",
 		tags: ["is"]
@@ -167,8 +168,17 @@ const team = [
 		name: "Paul Marlou Subong",
 		description: "",
 		position: ["Instructor I"],
-		education: ["Master Information Technology"],
+		education: ["Master in Information Technology"],
 		avatar: subong,
+		type: "faculty",
+		tags: ["it"]
+	},
+	{
+		name: "Ralph Voltaire Dayot",
+		description: "",
+		position: ["Instructor I"],
+		education: ["Master in Information Technology", "Doctor in Information & Knowledge Engineering (on-going)"],
+		avatar: dayot,
 		type: "faculty",
 		tags: ["it"]
 	},
@@ -185,7 +195,7 @@ const team = [
 		name: "Mark Joseph J. Solidarios",
 		description: "",
 		position: ["Part-time Instructor"],
-		education: ["Masters in Computer Science (on-going)"],
+		education: ["Master of Science in Computer Science (on-going)"],
 		avatar: solidarios,
 		type: "",
 		tags: ["emc"]
@@ -194,7 +204,7 @@ const team = [
 		name: "John Rey Alipe",
 		description: "",
 		position: ["Part-time Instructor"],
-		education: ["Masters in Computer Science"],
+		education: ["Master of Science in Computer Science"],
 		avatar: alipe,
 		type: "",
 		tags: ["cs"]
@@ -203,7 +213,7 @@ const team = [
 		name: "Remegio S. Soqueño II",
 		description: "",
 		position: ["Part-time Instructor"],
-		education: ["Masters in Computer Science (on-going)"],
+		education: ["Master of Science in Computer Science (on-going)"],
 		avatar: sequijo,
 		type: "",
 		tags: ["emc"]
@@ -297,13 +307,13 @@ export default () => {
 												<Card.Meta title={i.name} description={
 													<>
 
-														<p>{i.position && i.position.join(', ')}</p>
+														<p className="mb-2">{i.position && i.position.join(', ')}</p>
 													</>
 												} />
-												<p>
+												<p className="mb-2">
 													{i.education && i.education.join(', ')}
 												</p>
-												<p>
+												<p className="mb-2">
 													{i.tags.map(k => <Tag color="orange">{k.toUpperCase()}</Tag>)}
 												</p>
 											</Card>
