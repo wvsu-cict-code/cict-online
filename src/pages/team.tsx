@@ -11,81 +11,218 @@ const { Content } = Layout;
 
 const team = [
 	{
-		name: "",
-		description: "",
-		position: "",
+		name: "Dr. Ma.Beth S. Concepcion",
+		description: "Bio Here",
+		position: ["College Dean", "College Alumni Coordinator", "Associate Professor I"],
+		education: ["Doctor in Information Technology", "Master in Info Management, BS Info Management"],
 		avatar: "",
-		type: "",
+		type: "faculty",
+		tags: ["is", "admin"]
 	},
 	{
-		name: "",
-		description: "",
-		position: "",
+		name: "Dr. Frank I. Elijorde",
+		description: "Bio Here",
+		position: ["Associate Dean", "Division Chair, Computer Science", "Associate Professor IV"],
+		education: ["Doctor in Information & Knowledge Eng.", "MS Computer Science"],
 		avatar: "",
-		type: "",
+		type: "faculty",
+		tags: ["cs"]
 	},
 	{
-		name: "",
+		name: "Dr. Arnel N. Secondes",
 		description: "",
-		position: "",
+		position: ["College Secretary", "College Quality Assurance Coordinator", "Instructor I"],
+		education: ["Doctor in Industrial Technology", "MS Computer Science"],
 		avatar: "",
-		type: "",
+		type: "faculty",
+		tags: ["cs"]
 	},
 	{
-		name: "",
+		name: "Prof. Cyreneo Dofitas Jr.",
 		description: "",
-		position: "",
+		position: ["Division Chair, Information Tech", "DRMM Coordinator", "Associate Professor I"],
+		education: ["MS Computer Science"],
 		avatar: "",
-		type: "",
+		type: "faculty",
+		tags: ["it"]
 	},
 	{
-		name: "",
+		name: "Dr. Luche M. Sabayle",
 		description: "",
-		position: "",
+		position: ["Department Head, IS", "CHED & ISO Liaison Officer", "Instructor I"],
+		education: ["Doctor in Industrial Technology", "MS Computer Science"],
 		avatar: "",
-		type: "",
+		type: "faculty",
+		tags: ["is"]
 	},
 	{
-		name: "",
+		name: "Mr. Evan Sumido",
 		description: "",
-		position: "",
+		position: ["Department Head, EMC", "Coordinator, Network Security", "Instructor I"],
+		education: ["Doctor in Information Technology (on-going)", "Master in Engineering"],
 		avatar: "",
-		type: "",
+		type: "faculty",
+		tags: ["emc"]
 	},
 	{
-		name: "",
+		name: "Dr. Bobby D. Gerardo",
 		description: "",
-		position: "",
+		position: ["Graduate Studies Coordinator", "Professor VI"],
+		education: ["Doctor in Information & Knowledge Engineering", "MS Mathematics"]
 		avatar: "",
-		type: "",
+		type: "faculty",
+		tags: ["it"]
 	},
 	{
-		name: "",
+		name: "Dr. Joel T. De Castro",
 		description: "",
-		position: "",
+		position: ["Manager, GTBI","Professor VI"],
+		education: ["Doctor in Industrial Technology","Masters in Computer Science"],
 		avatar: "",
-		type: "",
+		type: "faculty",
+		tags: ["is"]
+	},	
+	{
+		name: "Prof. Karen Alinor Dumpit",
+		description: "",
+		position: ["Assistant Prof."],
+		education: ["Master in Math,"],
+		avatar: "",
+		type: "faculty",
+		tags: ["emc"]
 	},
 	{
-		name: "",
+		name: "Mr. Evans B. Sansolis",
 		description: "",
-		position: "",
+		position: ["Computer Lab Supervisor", "Instructor I"],
+		education: ["Doctor in Management (on-going)", "Master in Information Technology"]
 		avatar: "",
 		type: "",
+		tags: ["it"]
 	},
 	{
-		name: "",
+		name: "Engr. Leah M. Gabawa",
 		description: "",
-		position: "",
+		position: ["College Guidance  Coordinator","Instructor I"],
+		education: ["Ph D in Curriculum and Instruction (on-going)", "MS Engineering"],
 		avatar: "",
-		type: "",
+		type: "faculty",
+		tags: ["it"]
 	},
 	{
-		name: "",
+		name: "Dr. Cheryll Anne Feliprada",
 		description: "",
-		position: "",
+		position: ["Extension Coordinator", "Instructor I"],
+		education: ["Doctor in Educational Management","Master in Engineering"],
+		avatar: "",
+		type: "faculty",
+		tags: ["it"]
+	},
+	{
+		name: "Dr. Regin C. Cabacas",
+		description: "",
+		position: ["Instructor I"],
+		education: ["Doctor in Information & Knowledge Engineering", "Master in Information and Knowledge Eng."],
+		avatar: "",
+		type: "faculty",
+		tags: ["it"]
+	},
+	{
+		name: "Engr. Erwin Osorio",
+		description: "",
+		position: ["Network Supervisor", "Assistant Prof"],
+		education: ["Master Information Technology"]
+		avatar: "",
+		type: "faculty",
+		tags: ["is"]
+	},
+	{
+		name: "Paul Marlou Subong",
+		description: "",
+		position: ["Instructor I"],
+		education: ["Master Information Technology"]
+		avatar: "",
+		type: "faculty",
+		tags: ["it"]
+	},
+	{
+		name: "Shem Durst Elijah B. Sandig",
+		description: "",
+		position: ["Part-time Instructor"],
+		education: ["Master in Information Technology-Management"],
+		avatar: "",
+		type: "faculty",
+		tags: ["is"]
+	},
+	{
+		name: "Mark Joseph J. Solidarios",
+		description: "",
+		position: ["Part-time Instructor"],
+		education: ["Masters in Computer Science (on-going)"],
 		avatar: "",
 		type: "",
+		tags: ["emc"]
+	},
+	{
+		name: "John Rey Alipe",
+		description: "",
+		position: ["Part-time Instructor"],
+		education: ["Masters in Computer Science"],
+		avatar: "",
+		type: "",
+		tags: ["cs"]
+	},
+	{
+		name: "Rem Sequijo",
+		description: "",
+		position: ["Part-time Instructor"],
+		education: ["Masters in Computer Science (on-going)"],
+		avatar: "",
+		type: "",
+		tags: ["emc"]
+	},
+	{
+		name: "Mr. Louie F. Cervantes",
+		description: "",
+		position: ["Director, University MIS", "Lecturer"],
+		education: ["BS Information Technology"]
+		avatar: "",
+		type: "",
+		tags: ["it", "cs"]
+	},
+	{
+		name: "Felizardo Ygot Jr.",
+		description: "",
+		position: ["Laboratory Custodian"],
+		education: [],
+		avatar: "",
+		type: "staff",
+		tags: ["admin"]
+	},
+	{
+		name: "Russel Laurence Ferrer",
+		description: "",
+		position: ["Assistant Laboratory Custodian"],
+		education: []
+		avatar: "",
+		type: "staff",
+		tags: ["admin"]
+	},
+		{
+		name: "Marian Figueroa",
+		description: "",
+		position: ["College Clerk"],
+		avatar: "",
+		type: "staff",
+		tags: ["admin"]
+	},
+			{
+		name: "Genebem Gantala",
+		description: "",
+		position: ["Office Staff, Graduate School"],
+		avatar: "",
+		type: "staff",
+		tags: ["admin"]
 	},
 
 ]
@@ -127,17 +264,19 @@ export default () => {
                     }}
                     className="my-masonry-grid"
                     columnClassName="my-masonry-grid_column">
-                    <Card className="card-component">
-                      <Card.Meta title="Dr. Arnel N. Secondes" description={
+                    {team.map(i=>(
+					<Card className="card-component">
+                      <Card.Meta title={i.name} description={
                         <>
 
-                          <p>College Secretary</p>
+                          <p>{i.position}</p>
                         </>
                       } />
                       <p>
                         Netlify CMS Lead. Really trying to never write server code ever again. Except maybe Functions-as-a-service, those are cool.
                           </p>
                     </Card>
+                    	))}
                   </Masonry>  
                 </div>
               </div>
