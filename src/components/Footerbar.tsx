@@ -14,10 +14,10 @@ const Footerbar = (props: themeProps) => (
                 {props.themeState === 'base' && <Divider />}
                 <div className="w-full text-center">
                     <span className={`font-normal ${props.themeState == 'base' ? 'text-gray-700' : 'text-gray-300'}`}>
-                        CICT Online ©2020 by CICTzens | <Link target="_blank" to="https://github.com/wvsu-cict-code/cict-online">Contribute to Code</Link> | <Link to="/volunteers" target="_blank">Volunteers</Link>
+                        CICT Online ©2020 by CICTzens | <a target="_blank" href="https://github.com/wvsu-cict-code/cict-online">Contribute to Code</a> | <Link to="/volunteers" target="_blank">Volunteers</Link>
                     </span>
                     <p className={`mt-2 ${props.themeState == 'base' ? 'text-gray-700' : 'text-gray-300'}`}>
-                        <Link to="https://wvsu.edu.ph/" target="_blank">West Visayas State University</Link>
+                        <a href="https://wvsu.edu.ph/" target="_blank">West Visayas State University</a>
                     </p>
                 </div>
             </Footer>
