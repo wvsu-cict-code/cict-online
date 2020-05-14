@@ -142,7 +142,7 @@ export default () => {
     return (
         <>
             <SEO
-                title="WVSU CICT | Admission Guidelines"
+                title="WVSU CICT | Admission Guidelines and Support"
                 description="Get help with our University's Admission Process"
                 url="https://cictwvsu.com/"
                 image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image-2.jpg"
@@ -155,7 +155,7 @@ export default () => {
                         <div className="container mx-auto">
                             <div className={`my-4 ${theme === 'base' ? 'text-black' : 'text-white'}`}>
                                 <span className="text-3xl mb-4"><ReactTypingEffect speed={100} eraseDelay={5000} typingDelay={200} text='F1: Admission Guide and Support'></ReactTypingEffect></span>
-                                <p>We are here to help! Our University just release the final set of guidelines for online Admission. We compiled everything in one place to assist with your application.</p>
+                                <p>We are here to help! Our University just released the final set of guidelines for online Admission. We compiled everything in one place to assist with your application.</p>
                                 <Alert message="Updated Last Friday 15, May 2020" />
                                 <Tabs defaultActiveKey="1" onChange={() => { }}>
                                     <TabPane tab={<span className={theme === 'base' ? 'text-black' : 'text-white'}>General Guidelines</span>} key="1">
