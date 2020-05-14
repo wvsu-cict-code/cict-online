@@ -212,7 +212,7 @@ const team: {
 			name: "Shem Durst Elijah B. Sandig",
 			description: "",
 			position: ["Part-time Instructor"],
-			education: ["Master in Information Technology-Management"],
+			education: ["Master of Science in Information Technology"],
 			avatar: sandig,
 			type: "faculty",
 			tags: ["is"],
