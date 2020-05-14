@@ -110,6 +110,23 @@ const faqs: any = [
                 </React.Fragment>
             ))}
         </div>
+    },
+    {
+        q: 'My name in the prescribed format was already taken. What can I do?',
+        a: <div>
+            <p>
+                You can do the following as answered on our WVSU Facebook page:
+                <ul>
+                    <li>omit the dot</li>
+                    <li>replace the dot with a dash or underscore</li>
+                    <li>insert your middle initial after the first name</li>
+                    <li>examples: firstname-lastname@gmail.com, firstname_lastname@gmail.com, firstnamemiddleinitial.lastname@gmail.com</li>
+                    <li>try it with either Gmail or Yahoo</li>
+                </ul>
+            </p>
+            <p>If you still can't find a complying email format, email  our <Button type="primary" size="small" href="mailto:mis@wvsu.edu.ph">MIS Office</Button> so they can help you.</p>
+            <p><small>Reference: https://www.facebook.com/wvsufb/posts/10157048776166196</small></p>
+        </div>
     }
 ]
 
@@ -139,6 +156,7 @@ export default () => {
                             <div className={`my-4 ${theme === 'base' ? 'text-black' : 'text-white'}`}>
                                 <span className="text-3xl mb-4"><ReactTypingEffect speed={100} eraseDelay={5000} typingDelay={200} text='F1: Admission Guide and Support'></ReactTypingEffect></span>
                                 <p>We are here to help! Our University just release the final set of guidelines for online Admission. We compiled everything in one place to assist with your application.</p>
+                                <Alert message="Updated Last Friday 15, May 2020" />
                                 <Tabs defaultActiveKey="1" onChange={() => { }}>
                                     <TabPane tab={<span className={theme === 'base' ? 'text-black' : 'text-white'}>General Guidelines</span>} key="1">
                                         <List
