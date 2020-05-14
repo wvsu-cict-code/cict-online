@@ -67,6 +67,12 @@ const volunteers: {
             link: null
         },
         {
+            avatar: "Jan Rayman Arnaldo",
+            name: "Jan Rayman Arnaldo",
+            work: ["Volunteer Animator"],
+            link: null
+        },
+        {
             avatar: "Anelie Decomotan",
             name: "Anelie Decomotan",
             work: ["Volunteer Developer"],
