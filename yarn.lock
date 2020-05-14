@@ -9939,7 +9939,7 @@ react-dnd@^7.3.2:
     invariant "^2.1.0"
     shallowequal "^1.1.0"
 
-react-dom@^16.8.4, react-dom@^16.9.0:
+react-dom@^16.13.0, react-dom@^16.8.4, react-dom@^16.9.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
   integrity sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==
@@ -9989,6 +9989,14 @@ react-hot-loader@*, react-hot-loader@^4.12.11, react-hot-loader@^4.3.6, react-ho
     react-lifecycles-compat "^3.0.4"
     shallowequal "^1.1.0"
     source-map "^0.7.3"
+
+react-identicons@^1.2.4:
+  version "1.2.4"
+  resolved "https://registry.yarnpkg.com/react-identicons/-/react-identicons-1.2.4.tgz#d913e6ff7523bbb4dd328abff4a07ddf96dd0e0f"
+  integrity sha512-my4CFMlO88kWjhX/y5qiGjQE9KgVLLeUKEM2wilUko6UzUTmzHJvl0rjkcftG9bMq3WLkpJkB2qwFMRllS+NmQ==
+  dependencies:
+    react "^16.13.0"
+    react-dom "^16.13.0"
 
 react-immutable-proptypes@^2.1.0:
   version "2.2.0"
@@ -10389,7 +10397,7 @@ react-window@^1.8.5:
     "@babel/runtime" "^7.0.0"
     memoize-one ">=3.1.1 <6"
 
-react@^16.8.4, react@^16.9.0:
+react@^16.13.0, react@^16.8.4, react@^16.9.0:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
   integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==

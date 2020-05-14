@@ -313,7 +313,7 @@ export default () => {
 		<>
 			<SEO
 				title="WVSU CICT | Faculty and Staff"
-				description="Official website of the College of ICT."
+				description="Get to know your college professors and staffs."
 				url="https://cictwvsu.com/"
 				image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image-2.jpg"
 				twitterUsername="cictwvsu"
@@ -338,8 +338,8 @@ export default () => {
 										className="my-masonry-grid"
 										columnClassName="my-masonry-grid_column">
 										{team.map(i => (
-											<Card className="card-component" style={{ backgroundColor: theme === 'base' ? '#fff' : '#000', border: "none" }}>
-												<img src={i.avatar} className="w-20 h-20 rounded-full mb-8" />
+											<Card className="card-component" style={{ backgroundColor: theme === 'base' ? '#fff' : '#111', border: "none" }}>
+												<img src={i.avatar} className="rounded-full mb-8" />
 										<Card.Meta title={<span className={`${theme !== 'base' && 'text-white'}`}>{i.name}</span>} description={
 													<>
 														<p className={`${theme !== 'base' && 'text-gray-600'} mb-2`}>{i.position && i.position.join(', ')}</p>
