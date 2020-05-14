@@ -252,7 +252,7 @@ const team: {
 			name: "Mr. Louie F. Cervantes",
 			description: "",
 			position: ["Director, University MIS", "IT Officer II", "Lecturer"],
-			education: ["Master of Science in Information Technology"],
+			education: ["Master of information and Knowledge Engineering"],
 			avatar: cervantes,
 			type: "faculty",
 			tags: ["it", "cs"],
