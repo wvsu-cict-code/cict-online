@@ -10,6 +10,16 @@ import { applyTheme } from '../themes/utils';
 import SocialSection from 'components/SocialSection';
 import Footerbar from 'components/Footerbar';
 
+import link from '../assets/volunteers/link.jpg'
+import icon from '../assets/volunteers/icon.png'
+import cabacas from '../assets/team/cabacas.png'
+import sandig from '../assets/team/sandig.png'
+import decomotan from '../assets/volunteers/decomotan.png'
+import escanlar from '../assets/volunteers/escanlar.png'
+import gazer from '../assets/volunteers/gazer.png'
+import lumbao from '../assets/volunteers/lumbao.png'
+import malimit from '../assets/volunteers/malimit.png'
+
 const { Content } = Layout
 
 const volunteers: {
@@ -19,79 +29,79 @@ const volunteers: {
     link: string;
 }[] = [
         {
-            avatar: "Link.exe",
+            avatar: link,
             name: "Link.exe",
             work: ["Photos", "Videos"],
             link: "https://www.facebook.com/linkexeofficial/"
         },
         {
-            avatar: "ICON Publication",
+            avatar: icon,
             name: "ICON Publication",
             work: ["News and Updates"],
             link: "https://www.facebook.com/weareicon.wvsu/"
         },
         {
-            avatar: "CICT PTA",
+            avatar: null,
             name: "CICT PTA",
             work: ["Domain and App Store Funding"],
             link: null
         },
         {
-            avatar: "Dr. Regin A. Cabacas",
+            avatar: cabacas,
             name: "Dr. Regin A. Cabacas",
             work: ["Hosting & Domain Manager"],
             link: null
         },
         {
-            avatar: "Shem Durst Elijah B. Sandig",
+            avatar: sandig,
             name: "Shem Durst Elijah B. Sandig",
             work: ["Content Review"],
             link: null
         },
         {
-            avatar: "Nouriel John Cariño",
+            avatar: null,
             name: "Nouriel John Cariño",
             work: ["Official CICT Mascot"],
             link: null
         },
         {
-            avatar: "Wilson Olivier C. Gazer",
+            avatar: gazer,
             name: "Wilson Olivier C. Gazer",
             work: ["Volunteer Animator"],
             link: null
         },
         {
-            avatar: "Nina Ricci Marie Benite",
+            avatar: null,
             name: "Nina Ricci Marie Benite",
             work: ["Volunteer ReactJS Developer", "Geek Mode Developer"],
             link: null
         },
         {
-            avatar: "Jan Rayman Arnaldo",
+            avatar: null,
             name: "Jan Rayman Arnaldo",
             work: ["Volunteer Animator"],
             link: null
         },
         {
-            avatar: "Anelie Decomotan",
+            avatar: decomotan,
             name: "Anelie Decomotan",
             work: ["Volunteer Developer"],
             link: null
         },
         {
-            avatar: "Mark Anthony Lumbao",
+            avatar: lumbao,
             name: "Mark Anthony Lumbao",
             work: ["Volunteer ReactJS Developer", "Dynamic Theming Implementor", "Geek Mode Developer"],
             link: "http://m-a-l.herokuapp.com/"
         },
         {
-            avatar: "Luie John Malimit",
+            avatar: malimit,
             name: "Luie John Malimit",
             work: ["Volunteer Student Developer"],
             link: null
         },
         {
-            avatar: "Mariela Excel Escanlar",
+            avatar: escanlar,
             name: "Mariela Excel Escanlar",
             work: ["Volunteer SEO Consultant"],
             link: null
@@ -139,9 +149,10 @@ export default () => {
                                                 <Card actions={i.link&&[
                                                     <Button href={i.link} target="_blank">Learn More</Button>
                                                 ]} className="card-component" style={{ backgroundColor: theme === 'base' ? '#fff' : '#111', border: "none" }}>
-                                                    <Identicon string={i.avatar} size={60} className="rounded-full mb-8 mx-auto border p-2" />
+                                                    {!i.avatar&&<Identicon string={i.name} size={70} className="rounded-full mb-8 mx-auto border  border-gray-500 p-2" />}
+                                                    {i.avatar&&<img src={i.avatar} className="rounded-full mx-auto mb-8 w-20 h-20 border border-solid border-gray-500" />}
                                                     <Card.Meta title={<span className={`${theme !== 'base' && 'text-white'}`}>{i.name}</span>} description={
-                                                        <>
+                                                        <>                                                        
                                                             <p className={`${theme !== 'base' && 'text-gray-600'} mb-2`}>{i.work && i.work.join(', ')}</p>
                                                         </>
                                                     } />
