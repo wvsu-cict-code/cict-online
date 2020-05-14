@@ -15,6 +15,7 @@ import icon from '../assets/volunteers/icon.png'
 import cabacas from '../assets/team/cabacas.png'
 import sandig from '../assets/team/sandig.png'
 import decomotan from '../assets/volunteers/decomotan.png'
+import benite from '../assets/volunteers/benite.png'
 import escanlar from '../assets/volunteers/escanlar.png'
 import gazer from '../assets/volunteers/gazer.png'
 import lumbao from '../assets/volunteers/lumbao.png'
@@ -71,7 +72,7 @@ const volunteers: {
             link: null
         },
         {
-            avatar: null,
+            avatar: benite,
             name: "Nina Ricci Marie Benite",
             work: ["Volunteer ReactJS Developer", "Geek Mode Developer"],
             link: null

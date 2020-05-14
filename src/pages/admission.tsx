@@ -6,6 +6,8 @@ import React, { useEffect, useState } from 'react';
 import ReactTypingEffect from '../components/ReactTypingEffect';
 import { DEFAULT_THEME } from '../themes';
 import { applyTheme } from '../themes/utils';
+import SocialSection from 'components/SocialSection';
+import Footerbar from 'components/Footerbar';
 const { TabPane } = Tabs;
 const { Content } = Layout
 const { Panel } = Collapse;
@@ -25,7 +27,7 @@ const photoIDGuidelines = [
 ]
 
 const summarizedGuidelines = [
-    `Go to http://iuis.wvsu.edu.ph/aims/applicants/`,
+    <span>Go to the IUIS <a href="http://iuis.wvsu.edu.ph/aims/applicants/" target="_blank">Online Application Website</a>.</span>,
     `Click Apply Here`,
     `Fill up all text fields with correct information and select Main Campus in the list of campuses.`,
     `*Make sure to supply the correct email address. You will need that for confirmation later.`,
@@ -47,9 +49,10 @@ const generalGuidelines = [
     'Applicants who filed their college application personally or through email before May 15, 2020 are still required to submit online through the IUIS.',
     'Undergraduate applicants must personally register and apply online.',
     'Applicants may only apply for admission to any of the three priority programs indicated in the WVSUCAT Form. Changes to the priority programs are not allowed.',
-    'The applicant must fill out the Applicant Module with the required data. Refer to the detailed instructions on how to fill out the Online Application Module. Also, provide or attach the following documents:',
-    'scanned image or photo of the applicant',
-    'scanned image or photo of the Senior High GWA for first semester',
+    <span>The applicant must fill out the Applicant Module with the required data. Refer to the detailed instructions on how to fill out the Online Application Module. Also, provide or attach the following documents:<ul>
+        <li>* scanned image or photo of the applicant</li>
+        <li>* scanned image or photo of the Senior High GWA for first semester</li>
+    </ul></span>,
     'Only those applicants who have complete documents will be scheduled for interview. For some colleges that have other requirements, the applicants must comply to be eligible for the interview. Any additional requirements must be sent by email to the college.',
     'The applicant who meets the requirements stated in step 5 will be notified via email of the schedule of the interview. In case two or more colleges have set the same schedule for interview, the applicant must notify the other colleges so he or she will be given a new schedule.',
     'The interview will be done online or via a phone call. Instruction on the conduct of the interview will be posted later.',
@@ -99,10 +102,10 @@ export default () => {
                                             bordered
                                             dataSource={summarizedGuidelines}
                                             renderItem={(item: any, key: number) => (
-                                                <List.Item>                                                    
+                                                <List.Item>
                                                     <List.Item.Meta
-                                                    avatar={<Avatar style={{ backgroundColor: '#3C5A9A' }}>{key + 1}</Avatar> }
-                                                    description={<span className={theme !== 'base' && 'text-white'}>{item}</span>}  
+                                                        avatar={<Avatar style={{ backgroundColor: '#3C5A9A' }}>{key + 1}</Avatar>}
+                                                        description={<span className={theme !== 'base' && 'text-white'}>{item}</span>}
                                                     />
                                                 </List.Item>
                                             )}
@@ -115,10 +118,10 @@ export default () => {
                                             bordered
                                             dataSource={generalGuidelines}
                                             renderItem={(item: any, key: number) => (
-                                                <List.Item>                                                    
+                                                <List.Item>
                                                     <List.Item.Meta
-                                                    avatar={<Avatar style={{ backgroundColor: '#3C5A9A' }}>{key + 1}</Avatar> }
-                                                    description={<span className={theme !== 'base' && 'text-white'}>{item}</span>}  
+                                                        avatar={<Avatar style={{ backgroundColor: '#3C5A9A' }}>{key + 1}</Avatar>}
+                                                        description={<span className={theme !== 'base' && 'text-white'}>{item}</span>}
                                                     />
                                                 </List.Item>
                                             )}
@@ -130,29 +133,15 @@ export default () => {
                                             bordered
                                             dataSource={photoIDGuidelines}
                                             renderItem={(item: any, key: number) => (
-                                                <List.Item>                                                    
+                                                <List.Item>
                                                     <List.Item.Meta
-                                                    avatar={<Avatar style={{ backgroundColor: '#3C5A9A' }}>{key + 1}</Avatar> }
-                                                    description={<span className={theme !== 'base' && 'text-white'}>{item}</span>}  
+                                                        avatar={<Avatar style={{ backgroundColor: '#3C5A9A' }}>{key + 1}</Avatar>}
+                                                        description={<span className={theme !== 'base' && 'text-white'}>{item}</span>}
                                                     />
                                                 </List.Item>
                                             )}
                                         />
-                                    </TabPane>
-                                    <TabPane tab={<span className={theme !== 'base' && 'text-white'}>Image Resizer Guidelines</span>} key="4">
-                                        <List
-                                            footer={<small className="text-gray-500">Reference: <a href="https://drive.google.com/file/d/1TflI6WBmBXZDfQt-Tr1sgiXLqCgg-93O/view">https://drive.google.com/file/d/1TflI6WBmBXZDfQt-Tr1sgiXLqCgg-93O/view</a></small>}
-                                            bordered
-                                            dataSource={photoIDGuidelines}
-                                            renderItem={(item: any, key: number) => (
-                                                <List.Item>                                                    
-                                                    <List.Item.Meta
-                                                    avatar={<Avatar style={{ backgroundColor: '#3C5A9A' }}>{key + 1}</Avatar> }
-                                                    description={<span className={theme !== 'base' && 'text-white'}>{item}</span>}  
-                                                    />
-                                                </List.Item>
-                                            )}
-                                        />
+                                        <Button type="primary" target="_blank" className="my-4" href="https://drive.google.com/file/d/1TflI6WBmBXZDfQt-Tr1sgiXLqCgg-93O/view">Open Image Resizer Guide</Button>
                                     </TabPane>
                                     <TabPane tab={<span className={theme !== 'base' && 'text-white'}>FAQs</span>} key="5">
                                         <Collapse defaultActiveKey={['1']} >
@@ -180,6 +169,8 @@ export default () => {
                             />
                         </div>
                     </Content>
+                    <SocialSection themeState={theme} />
+                    <Footerbar themeState={theme} />
                 </Layout>
             </Layout>
         </>
