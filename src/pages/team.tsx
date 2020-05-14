@@ -156,7 +156,7 @@ const team: {
 			avatar: gabawa,
 			type: "faculty",
 			tags: ["it"],
-			specialization: ["Curriculum Development", "Micro Controllers", "CISCO & MikroTik Networking Tools"]
+			specialization: ["Curriculum Development", "Micro Controllers", "CISCO & MikroTik Networking Tools", "Electronics Engineering",  "Logic Design"]
 		},
 		{
 			name: "Dr. Cheryll Anne Feliprada",
