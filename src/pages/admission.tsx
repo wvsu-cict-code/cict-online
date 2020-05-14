@@ -107,7 +107,7 @@ export default () => {
                                                 </List.Item>
                                             )}
                                         />
-                                        <Button type="primary" className="my-4" href="https://drive.google.com/file/d/1dU__ilymFLMgFoWybHxU-yW6OIwLQOUF/view">Open the IUIS Online Application Manual</Button>
+                                        <Button type="primary" target="_blank" className="my-4" href="https://drive.google.com/file/d/1dU__ilymFLMgFoWybHxU-yW6OIwLQOUF/view">Open the IUIS Online Application Manual</Button>
                                     </TabPane>
                                     <TabPane tab={<span className={theme !== 'base' && 'text-white'}>General Guidelines</span>} key="2">
                                         <List
