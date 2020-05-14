@@ -117,15 +117,15 @@ const faqs: any = [
             <p>
                 You can do the following as answered on our WVSU Facebook page:
                 <ul>
-                    <li>omit the dot</li>
-                    <li>replace the dot with a dash or underscore</li>
-                    <li>insert your middle initial after the first name</li>
-                    <li>examples: firstname-lastname@gmail.com, firstname_lastname@gmail.com, firstnamemiddleinitial.lastname@gmail.com</li>
-                    <li>try it with either Gmail or Yahoo</li>
+                    <li>* omit the dot</li>
+                    <li>* replace the dot with a dash or underscore</li>
+                    <li>* insert your middle initial after the first name</li>
+                    <li>* examples: firstname-lastname@gmail.com, firstname_lastname@gmail.com, firstnamemiddleinitial.lastname@gmail.com</li>
+                    <li>* try it with either Gmail or Yahoo</li>
                 </ul>
             </p>
             <p>If you still can't find a complying email format, email  our <Button type="primary" size="small" href="mailto:mis@wvsu.edu.ph">MIS Office</Button> so they can help you.</p>
-            <p><small>Reference: https://www.facebook.com/wvsufb/posts/10157048776166196</small></p>
+            <p><small>Reference: <a href="https://www.facebook.com/wvsufb/posts/10157048776166196" target="_blank">https://www.facebook.com/wvsufb/posts/10157048776166196</a></small></p>
         </div>
     }
 ]
