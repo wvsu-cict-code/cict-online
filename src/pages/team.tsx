@@ -89,7 +89,7 @@ const team: {
 			specialization: [".NET Applications Development", "Micro Controllers", "Assistive Technologies"]
 		},
 		{
-			name: "Dr. Luche M. Sabayle",
+			name: "Dr. Ma. Luche P. Sabayle",
 			description: "",
 			position: ["Department Head, IS", "CHED & ISO Liaison Officer", "Instructor I"],
 			education: ["Doctor in Industrial Technology", "Master of Science in Computer Science"],
@@ -251,8 +251,8 @@ const team: {
 		{
 			name: "Mr. Louie F. Cervantes",
 			description: "",
-			position: ["Director, University MIS", , "IT Officer II", "Lecturer"],
-			education: ["BS Information Technology"],
+			position: ["Director, University MIS", "IT Officer II", "Lecturer"],
+			education: ["Master of Science in Information Technology"],
 			avatar: cervantes,
 			type: "faculty",
 			tags: ["it", "cs"],
