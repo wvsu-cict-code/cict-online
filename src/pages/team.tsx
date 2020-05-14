@@ -339,7 +339,7 @@ export default () => {
 										columnClassName="my-masonry-grid_column">
 										{team.map(i => (
 											<Card className="card-component" style={{ backgroundColor: theme === 'base' ? '#fff' : '#111', border: "none" }}>
-												<img src={i.avatar} className="rounded-full mb-8" />
+												<img src={i.avatar} className="rounded-full mb-8 w-24 h-24" />
 										<Card.Meta title={<span className={`${theme !== 'base' && 'text-white'}`}>{i.name}</span>} description={
 													<>
 														<p className={`${theme !== 'base' && 'text-gray-600'} mb-2`}>{i.position && i.position.join(', ')}</p>

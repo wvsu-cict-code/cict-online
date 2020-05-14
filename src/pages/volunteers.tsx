@@ -146,13 +146,13 @@ export default () => {
                                         columnClassName="my-masonry-grid_column">
                                         {volunteers.map(i => (
                                             <div className="text-center">
-                                                <Card actions={i.link&&[
+                                                <Card actions={i.link && [
                                                     <Button href={i.link} target="_blank">Learn More</Button>
                                                 ]} className="card-component" style={{ backgroundColor: theme === 'base' ? '#fff' : '#111', border: "none" }}>
-                                                    {!i.avatar&&<Identicon string={i.name} size={70} className="rounded-full mb-8 mx-auto border  border-gray-500 p-2" />}
-                                                    {i.avatar&&<img src={i.avatar} className="rounded-full mx-auto mb-8 w-20 h-20 border border-solid border-gray-500" />}
+                                                    {!i.avatar && <Identicon string={i.name} size={70} className="rounded-full mb-8 mx-auto border  border-gray-500 p-2" />}
+                                                    {i.avatar && <img src={i.avatar} className="rounded-full mx-auto mb-8 w-20 h-20 border border-solid border-gray-500" />}
                                                     <Card.Meta title={<span className={`${theme !== 'base' && 'text-white'}`}>{i.name}</span>} description={
-                                                        <>                                                        
+                                                        <>
                                                             <p className={`${theme !== 'base' && 'text-gray-600'} mb-2`}>{i.work && i.work.join(', ')}</p>
                                                         </>
                                                     } />
@@ -162,10 +162,13 @@ export default () => {
                                     </Masonry>
                                 </div>
                             </div>
+                            <p className="text-center">
+                                <Button className="mb-8" size="large" href="https://github.com/wvsu-cict-code/cict-online" type="primary" target="_blank">Be a Volunteer!</Button>
+                            </p>
                         </div>
                     </Content>
                     <SocialSection themeState={theme} />
-					<Footerbar themeState={theme} />
+                    <Footerbar themeState={theme} />
                 </Layout>
             </Layout>
         </>

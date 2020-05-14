@@ -12,6 +12,12 @@ import { useRouteData } from 'react-static';
 import TimeAgo from 'react-timeago';
 import { Post } from 'types';
 import '../app.less';
+
+import AdmissionIconLight from '../assets/admission-light.svg';
+import FacultyStaffIconLight from '../assets/faculty-and-staff-light.svg';
+import AdmissionIconDark from '../assets/admission-dark.svg';
+import FacultyStaffIconDark from '../assets/faculty-and-staff-dark.svg';
+
 import BLISIconDark from '../assets/blis-icon.svg';
 import CSIconDark from '../assets/cs-icon.svg';
 import EMCIconDark from '../assets/emc-icon.svg';
@@ -33,6 +39,7 @@ import ICTGraphicsLight from '../assets/ict-light.svg';
 import ReactTypingEffect from '../components/ReactTypingEffect';
 import { DEFAULT_THEME } from '../themes';
 import { applyTheme } from '../themes/utils';
+import { Link } from '@reach/router';
 
 const { Content } = Layout;
 
@@ -82,6 +89,23 @@ const programs = [
     description: "Advanced computing subjects, or move into a new IT specialisation. "
   },
 
+]
+
+const quicklinks = [
+  {
+    id: "adm",
+    name: "Admission Guide",
+    link: "/admission",
+    iconLight: AdmissionIconLight,
+    iconDark: AdmissionIconDark
+  },
+  {
+    id: "t",
+    name: "Faculty and Staff",
+    link: "/team",
+    iconLight: FacultyStaffIconLight,
+    iconDark: FacultyStaffIconDark
+  },
 ]
 
 function createMarkup(content: string) { return { __html: content } }
@@ -149,15 +173,15 @@ const Public = () => {
   const themeModeHandler = () => (theme === 'base' ? setTheme('dark') : setTheme('base'));
 
   const screens = useBreakpoint()
-  
+
   const breakpoints = Object.entries(screens)
     .filter(screen => !!screen[1])
     .map(screen => screen[0])
-  
-    const { posts }: { posts: any } = useRouteData()
+
+  const { posts }: { posts: any } = useRouteData()
 
   let fbvideostring = `<iframe style="max-width: 734px; height:${breakpoints.includes('md') ? '411px' : 'auto'}" class="mx-auto my-8 bg-gray-300 w-full h-auto" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcictwvsu%2Fvideos%2F358272304557481%2F&show_text=false&width=734&appId=2302291186701393&height=411" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>`
-  
+
   return (
     <div style={{ backgroundColor: '#000' }} >
       <div>
@@ -185,7 +209,7 @@ const Public = () => {
                               West Visayas State University College of ICT continues the <b>tradition of excellence</b> through <b>quality education</b>, <b>innovative ICT researches</b>, and <b>extension services</b> to various stakeholders.
                           </span>
                             <Divider />
-                            <Alert type="warning" showIcon message={<span>*Online Application is now catered by the Integrated University Information System.<br /></span>} />
+                            <Alert type="warning" showIcon message={<span>*Online Application is now catered by the Integrated University Information System. You may check our link below for guide and support.<br /></span>} />
                             {/* <a href="/applynow" className={breakpoints.includes('md') ? "w-64 apply-button" : "w-full apply-button"}>Apply Now</a>                             */}
                           </div>
                         </Col>
@@ -197,6 +221,26 @@ const Public = () => {
                     </div>
                   </div>
                 </div>
+                <Divider />
+                <div className="w-full">
+                  <div className="container mx-auto py-8">
+                    <h2 className="text-center text-primary-text text-4xl">Quick Links</h2>
+                    <p className="max-w-lg mx-auto text-center text-primary-text font-normal text-lg mb-8">Need help with the admission? Wanna learn more about your instructor? We got your back!</p>
+                    <div className="px-8">
+                      <Slider {...slickSettings}>
+                        {quicklinks.map(i => (
+                          <Link key={i.id} to={i.link}>
+                            <div className="w-32 mx-auto">
+                              <img className="mx-auto h-36 mb-2" src={theme === 'base' ? i.iconDark : i.iconLight} alt="" />
+                              <p className="text-center text-primary-text text-lg mx-auto underline" style={{ maxWidth: '180px' }}>{i.name}</p>
+                            </div>
+                          </Link>
+                        ))}
+                      </Slider>
+                    </div>
+                  </div>
+                </div>
+                <Divider />
                 <div className="w-full">
                   <div className="container mx-auto py-8">
                     <h2 className="text-center text-primary-text text-4xl">Courses Offered</h2>
