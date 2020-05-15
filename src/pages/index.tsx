@@ -225,7 +225,7 @@ const Public = () => {
                 <div className="w-full">
                   <div className="container mx-auto py-8">
                     <h2 className="text-center text-primary-text text-4xl">Quick Links</h2>
-                    <p className="max-w-lg mx-auto text-center text-primary-text font-normal text-lg mb-8">Need help with the admission? Wanna learn more about your instructor? We got your back!</p>
+                    <p className="max-w-lg mx-auto text-center text-primary-text font-normal text-lg mb-8">We have pinned these links for you!</p>
                     <div className="px-8">
                       <Slider {...slickSettings}>
                         {quicklinks.map(i => (
