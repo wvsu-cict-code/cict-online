@@ -13,3 +13,7 @@ declare module "react-masonry-css"
 declare module 'react-timeago'
 
 declare module 'facebook-sdk'
+
+declare module 'react-identicons'
+
+declare module 'disqus-react'
