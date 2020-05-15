@@ -122,8 +122,8 @@ export default () => {
             <SEO
                 title="WVSU CICT | Source Code Volunteers"
                 description="This website is not possible without these volunteers. Thank you!"
-                url="https://cictwvsu.com/"
-                image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image-2.jpg"
+                url="https://cictwvsu.com/volunteers/"
+                image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image-4.jpg"
                 twitterUsername="cictwvsu"
             />
             <Layout className="layout">
