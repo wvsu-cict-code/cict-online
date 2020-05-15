@@ -144,7 +144,7 @@ export default () => {
             <SEO
                 title="WVSU CICT | Admission Guidelines and Support"
                 description="Get help with our University's Admission Process"
-                url="https://cictwvsu.com/admission"
+                url="https://cictwvsu.com/admission/"
                 image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image-3.jpg"
                 twitterUsername="cictwvsu"
             />
