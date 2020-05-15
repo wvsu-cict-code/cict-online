@@ -48,13 +48,13 @@ You can also help build our website in other ways like submitting articles, spel
 
 ## Todo
 - [x] Redesign the landing page.
-- [ ] Add Light and Dark mode.
+- [x] Add Light and Dark mode.
 - [ ] Add Rive animations to the graphic assets.
 - [x] Improve page responsiveness.
 - [x] About Page (Used Medium Page)
 - [ ] Students Page (Student's Works) Design
 - [ ] Admission Page Design for Applicants
-- [ ] Faculty & Staff Page Design
+- [x] Faculty & Staff Page Design
 - [ ] CICT Online Forms and Registration    
 - [ ] Code Cleanup
 - [ ] Tools and Resources Page
