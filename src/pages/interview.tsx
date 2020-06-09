@@ -54,10 +54,10 @@ export default () => {
     return (
         <>
             <SEO
-                title="WVSU CICT | Admission Guidelines and Support"
-                description="Get help with our University's Admission Process"
-                url="https://cictwvsu.com/admission/"
-                image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image-3.jpg"
+                title="WVSU CICT | Interview Guidelines and Support"
+                description="Get help with our Interview Process"
+                url="https://cictwvsu.com/interview/"
+                image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image-5.jpg"
                 twitterUsername="cictwvsu"
             />
             <Layout className="layout">
