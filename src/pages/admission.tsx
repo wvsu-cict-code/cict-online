@@ -247,7 +247,7 @@ your application</b>.</li>
                                             <Button target="_blank" className="my-4 mx-2" href="https://drive.google.com/file/d/1dU__ilymFLMgFoWybHxU-yW6OIwLQOUF/view">Open the IUIS Online Application Manual</Button>
                                         </p>
                                     </TabPane>
-                                    <TabPane tab={<span className={theme === 'base' ? 'text-black' : 'text-white'}>FAQs</span>} key="5">
+                                    <TabPane tab={<span className={theme === 'base' ? 'text-black' : 'text-white'}>FAQ</span>} key="5">
                                         <Collapse defaultActiveKey={['0']} >
                                             {Object.keys(faqs).map(i => (
                                                 <Panel header={faqs[i].q} key={i}>

@@ -12,6 +12,8 @@ import { useRouteData } from 'react-static';
 import TimeAgo from 'react-timeago';
 import { Post } from 'types';
 import '../app.less';
+import InterviewIconLight from '../assets/interview-light.svg';
+import InterviewIconDark from '../assets/interview-dark.svg';
 
 import AdmissionIconLight from '../assets/admission-light.svg';
 import FacultyStaffIconLight from '../assets/faculty-and-staff-light.svg';
@@ -98,6 +100,13 @@ const quicklinks = [
     link: "/admission",
     iconLight: AdmissionIconLight,
     iconDark: AdmissionIconDark
+  },
+  {
+    id: "intvw",
+    name: "Interview Guide",
+    link: "/interview",
+    iconLight: InterviewIconLight,
+    iconDark: InterviewIconDark
   },
   {
     id: "t",
