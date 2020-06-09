@@ -32,10 +32,21 @@ const guideUsingGmail = [
     <span>Click Join.</span>,
 ]
 
+const guideUsingMobile = [
+    <span>Go to the Play Store (Android) or App Store (Apple® iOS®).</span>,
+    <span>Download and install the Google Meet app .</span>,
+    <span>On your device, tap the Google Meet app  to open.</span>,
+    <span>Open the Meet app .</span>,
+    <span>Tap (plus icon) New meeting to start a meeting, or tap (keyboard icon) Meeting code, and enter a meeting code.</span>,
+    <span>Tap Join meeting.</span>
+
+]
+
 const options = [
-    'Join a video meeting from Gmail.',
-    'Join a video meeting from a Google Calendar event.',
-    'Join a video meeting from Meet.'
+    'Join using Gmail.',
+    'Join using Google Calendar event.',
+    'Join using from Google Meet Web App.',
+    'Join using Google Meet Mobile App.',
 ]
 
 const faqs: any = [
@@ -86,7 +97,7 @@ export default () => {
                                 />
                                 <Divider />
                                 <Tabs defaultActiveKey="1" onChange={() => { }}>
-                                    <TabPane tab={<span className={theme === 'base' ? 'text-black' : 'text-white'}>Joining via Gmail</span>} key="1">
+                                    <TabPane tab={<span className={theme === 'base' ? 'text-black' : 'text-white'}>Joining via Gmail</span>} key="0">
                                         <List
                                             footer={<Button type="primary" href="https://www.youtube.com/watch?time_continue=1&v=8t20ePJGM6w&feature=emb_logo" target="_blank">Watch Video</Button>}
                                             bordered
@@ -101,7 +112,7 @@ export default () => {
                                             )}
                                         />
                                     </TabPane>
-                                    <TabPane tab={<span className={theme === 'base' ? 'text-black' : 'text-white'}>Joining via Google Calendar </span>} key="2">
+                                    <TabPane tab={<span className={theme === 'base' ? 'text-black' : 'text-white'}>Joining via Google Calendar </span>} key="1">
                                         <List
                                             footer={<Button type="primary" href="https://youtu.be/1CdYl9tApRU" target="_blank">Watch Video</Button>}
                                             bordered
@@ -116,10 +127,10 @@ export default () => {
                                             )}
                                         />                                        
                                     </TabPane>
-                                    <TabPane tab={<span className={theme === 'base' ? 'text-black' : 'text-white'}>Joing via Google Meet</span>} key="3">                                        
+                                    <TabPane tab={<span className={theme === 'base' ? 'text-black' : 'text-white'}>Joining via Google Meet</span>} key="2">                                        
                                         <List
                                             style={{ marginTop: '2rem' }}
-                                            footer={<Button href="The meeting code is the string of letters at the end of the meeting link. You don't have to enter the hyphens." target="_blank" type="primary">Open the Google Meetup Guide Document</Button>}
+                                            footer={<Button href="https://support.google.com/meet/answer/9303069?co=GENIE.Platform%3DDesktop&hl=en#" target="_blank" type="primary">Open the Google Meetup Guide Document</Button>}
                                             bordered
                                             dataSource={googleMeetGuide}
                                             renderItem={(item: any, key: number) => (
@@ -132,7 +143,23 @@ export default () => {
                                             )}
                                         />
                                     </TabPane>
-                                    <TabPane tab={<span className={theme === 'base' ? 'text-black' : 'text-white'}>FAQ</span>} key="5">
+                                    <TabPane tab={<span className={theme === 'base' ? 'text-black' : 'text-white'}>Joining using your Mobile Phone</span>} key="3">                                        
+                                        <List
+                                            style={{ marginTop: '2rem' }}
+                                            footer={<Button href="https://www.youtube.com/watch?v=gE7_AHJW7mE" target="_blank" type="primary">Watch the Video</Button>}
+                                            bordered
+                                            dataSource={guideUsingMobile}
+                                            renderItem={(item: any, key: number) => (
+                                                <List.Item>
+                                                    <List.Item.Meta
+                                                        avatar={<Avatar style={{ backgroundColor: '#3C5A9A' }}>{key + 1}</Avatar>}
+                                                        description={<span className={theme === 'base' ? 'text-black' : 'text-white'}>{item}</span>}
+                                                    />
+                                                </List.Item>
+                                            )}
+                                        />
+                                    </TabPane>
+                                    <TabPane tab={<span className={theme === 'base' ? 'text-black' : 'text-white'}>FAQ</span>} key="4">
                                         {faqs.length > 0 ? <Collapse defaultActiveKey={['0']} >
                                             {Object.keys(faqs).map(i => (
                                                 <Panel header={faqs[i].q} key={i}>
