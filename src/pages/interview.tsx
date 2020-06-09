@@ -78,7 +78,7 @@ export default () => {
                         <div className="container mx-auto">
                             <div className={`my-4 ${theme === 'base' ? 'text-black' : 'text-white'}`}>
                                 <span className="text-3xl mb-4"><ReactTypingEffect speed={100} eraseDelay={5000} typingDelay={200} text='Online Interview Guides and Support'></ReactTypingEffect></span>
-                                <p>We wish you all the luck in your upcoming interview!</p>
+                                <p>We wish you all the good luck in your upcoming interview!</p>
                                 <Alert message="Updated Last June 9, 2020" />
                                 <p className="my-8 text-2xl">
                                     CICT Applicants, we will be using Google Meet for your interview. You can join with any of the following methods listed below:
@@ -96,7 +96,7 @@ export default () => {
                                     )}
                                 />
                                 <Divider />
-                                <Tabs defaultActiveKey="1" onChange={() => { }}>
+                                <Tabs defaultActiveKey="0" onChange={() => { }}>
                                     <TabPane tab={<span className={theme === 'base' ? 'text-black' : 'text-white'}>Joining via Gmail</span>} key="0">
                                         <List
                                             footer={<Button type="primary" href="https://www.youtube.com/watch?time_continue=1&v=8t20ePJGM6w&feature=emb_logo" target="_blank">Watch Video</Button>}
@@ -166,7 +166,7 @@ export default () => {
                                                     <p>{faqs[i].a}</p>
                                                 </Panel>
                                             ))}
-                                        </Collapse>:<Empty image={<img className="mx-auto" src={mascot} />} description="No FAQ Entries Available Yet" />}
+                                        </Collapse>:<Empty image={<img className="mx-auto" src={mascot} />} description={<span className={theme === 'base' ? 'text-black' : 'text-white'}>No FAQ Entries Available Yet</span>} />}
                                     </TabPane>
                                 </Tabs>
                                 <Divider />
