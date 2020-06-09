@@ -106,7 +106,7 @@ const team: {
 			avatar: sumido,
 			type: "faculty",
 			tags: ["emc"],
-			specialization: ["Unity Game Development", "Multimedia", "C++ Programming", "MikroTik Networking Tools"]
+			specialization: ["Unity Game Development", "Multimedia Technologies", "C++ Programming", "Java Programming", "C# Programming", "MikroTik Networking Tools"]
 		},
 		{
 			name: "Dr. Bobby D. Gerardo",

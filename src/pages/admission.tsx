@@ -94,6 +94,12 @@ const generalGuidelines = [
     <span>Applicants to the Main Campus <b>who fail to qualify</b> for admission may submit their WVSUCAT result for possible admission to an <b>External Campus</b> of WVSU. Likewise, applicants to the External campuses may use their WVSUCAT result to apply for admission to other External campuses.</span>,
 ]
 
+const threeStages = [
+    'Registration. You provide a valid email to obtain a temporary account to login to the module and start inputting your data.',
+    'Data entry. You login using your temporary account and input your data.',
+    'Final confirmation. When you finish data entry you click submit then click okay to finalize your application. You will receive your Applicant Account in your email indicating the system has received your application.'
+]
+
 const faqs: any = [
     {
         q: 'Can I use my existing email even if it is not following the specified format?',
@@ -144,7 +150,7 @@ export default () => {
             <SEO
                 title="WVSU CICT | Admission Guidelines and Support"
                 description="Get help with our University's Admission Process"
-                url="https://cictwvsu.com/"
+                url="https://cictwvsu.com/admission/"
                 image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image-3.jpg"
                 twitterUsername="cictwvsu"
             />
@@ -156,7 +162,24 @@ export default () => {
                             <div className={`my-4 ${theme === 'base' ? 'text-black' : 'text-white'}`}>
                                 <span className="text-3xl mb-4"><ReactTypingEffect speed={100} eraseDelay={5000} typingDelay={200} text='F1: Admission Guide and Support'></ReactTypingEffect></span>
                                 <p>We are here to help! Our University just released the final set of guidelines for online Admission. We compiled everything in one place to assist with your application.</p>
-                                <Alert message="Updated Last Friday 15, May 2020" />
+                                <Alert message="Updated Last Friday 16, May 2020" />
+                                <p className="my-8 text-2xl">
+                                    Your online application has 3 distinct stages:
+                                </p>
+                                <List
+                                    footer={<small className="text-gray-500">Reference: <a href="https://www.facebook.com/wvsufb/posts/10157053631176196">https://www.facebook.com/wvsufb/posts/10157053631176196</a></small>}
+                                    bordered
+                                    dataSource={threeStages}
+                                    renderItem={(item: any, key: number) => (
+                                        <List.Item>
+                                            <List.Item.Meta
+                                                avatar={<Avatar style={{ backgroundColor: '#34B1A3' }}>{key + 1}</Avatar>}
+                                                description={<span className={theme === 'base' ? 'text-black' : 'text-white'}>{item}</span>}
+                                            />
+                                        </List.Item>
+                                    )}
+                                />
+                                <Divider />
                                 <Tabs defaultActiveKey="1" onChange={() => { }}>
                                     <TabPane tab={<span className={theme === 'base' ? 'text-black' : 'text-white'}>General Guidelines</span>} key="1">
                                         <List
@@ -206,7 +229,7 @@ your application</b>.</li>
                                             </div>
                                         } />
                                         <List
-                                            style={{marginTop: '2rem'}}
+                                            style={{ marginTop: '2rem' }}
                                             footer={<small className="text-gray-500">Reference: <a href="https://www.facebook.com/wvsufb/posts/10157048013876196">https://www.facebook.com/wvsufb/posts/10157048013876196</a></small>}
                                             bordered
                                             dataSource={summarizedGuidelines}
@@ -220,11 +243,11 @@ your application</b>.</li>
                                             )}
                                         />
                                         <p>
-                                        <Button type="primary" target="_blank" className="my-4 mx-2" href="http://iuis.wvsu.edu.ph/aims/applicants/">Open the IUIS Online Application</Button>
-                                        <Button target="_blank" className="my-4 mx-2" href="https://drive.google.com/file/d/1dU__ilymFLMgFoWybHxU-yW6OIwLQOUF/view">Open the IUIS Online Application Manual</Button>
+                                            <Button type="primary" target="_blank" className="my-4 mx-2" href="http://iuis.wvsu.edu.ph/aims/applicants/">Open the IUIS Online Application</Button>
+                                            <Button target="_blank" className="my-4 mx-2" href="https://drive.google.com/file/d/1dU__ilymFLMgFoWybHxU-yW6OIwLQOUF/view">Open the IUIS Online Application Manual</Button>
                                         </p>
                                     </TabPane>
-                                    <TabPane tab={<span className={theme === 'base' ? 'text-black' : 'text-white'}>FAQs</span>} key="5">
+                                    <TabPane tab={<span className={theme === 'base' ? 'text-black' : 'text-white'}>FAQ</span>} key="5">
                                         <Collapse defaultActiveKey={['0']} >
                                             {Object.keys(faqs).map(i => (
                                                 <Panel header={faqs[i].q} key={i}>

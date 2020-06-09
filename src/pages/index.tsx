@@ -12,6 +12,8 @@ import { useRouteData } from 'react-static';
 import TimeAgo from 'react-timeago';
 import { Post } from 'types';
 import '../app.less';
+import InterviewIconLight from '../assets/interview-light.svg';
+import InterviewIconDark from '../assets/interview-dark.svg';
 
 import AdmissionIconLight from '../assets/admission-light.svg';
 import FacultyStaffIconLight from '../assets/faculty-and-staff-light.svg';
@@ -98,6 +100,13 @@ const quicklinks = [
     link: "/admission",
     iconLight: AdmissionIconLight,
     iconDark: AdmissionIconDark
+  },
+  {
+    id: "intvw",
+    name: "Interview Guide",
+    link: "/interview",
+    iconLight: InterviewIconLight,
+    iconDark: InterviewIconDark
   },
   {
     id: "t",
@@ -225,7 +234,7 @@ const Public = () => {
                 <div className="w-full">
                   <div className="container mx-auto py-8">
                     <h2 className="text-center text-primary-text text-4xl">Quick Links</h2>
-                    <p className="max-w-lg mx-auto text-center text-primary-text font-normal text-lg mb-8">Need help with the admission? Wanna learn more about your instructor? We got your back!</p>
+                    <p className="max-w-lg mx-auto text-center text-primary-text font-normal text-lg mb-8">We have pinned these links for you!</p>
                     <div className="px-8">
                       <Slider {...slickSettings}>
                         {quicklinks.map(i => (
