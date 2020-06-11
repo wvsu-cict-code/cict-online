@@ -65,7 +65,7 @@ export default () => {
     return (
         <>
             <SEO
-                title="WVSU CICT | Interview Guidelines and Support"
+                title="Interview Guidelines and Support | WVSU CICT"
                 description="Get help with our Interview Process"
                 url="https://cictwvsu.com/interview/"
                 image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image-5.jpg"

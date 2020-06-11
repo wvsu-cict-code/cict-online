@@ -95,18 +95,18 @@ const programs = [
 
 const quicklinks = [
   {
-    id: "adm",
-    name: "Admission Guide",
-    link: "/admission",
-    iconLight: AdmissionIconLight,
-    iconDark: AdmissionIconDark
-  },
-  {
     id: "intvw",
     name: "Interview Guide",
     link: "/interview",
     iconLight: InterviewIconLight,
     iconDark: InterviewIconDark
+  },
+  {
+    id: "adm",
+    name: "Admission Guide",
+    link: "/admission",
+    iconLight: AdmissionIconLight,
+    iconDark: AdmissionIconDark
   },
   {
     id: "t",
@@ -218,8 +218,8 @@ const Public = () => {
                               West Visayas State University College of ICT continues the <b>tradition of excellence</b> through <b>quality education</b>, <b>innovative ICT researches</b>, and <b>extension services</b> to various stakeholders.
                           </span>
                             <Divider />
-                            <Alert type="warning" showIcon message={<span>*Online Application is now catered by the Integrated University Information System. You may check our link below for guide and support.<br /></span>} />
-                            {/* <a href="/applynow" className={breakpoints.includes('md') ? "w-64 apply-button" : "w-full apply-button"}>Apply Now</a>                             */}
+                            <Alert type="info" showIcon message={<span>To prepare for your interview, please visit our <a href="/interview">interview page</a> for tips and instructions.<br /></span>} />
+                            <a href="/interview" className={breakpoints.includes('md') ? "w-64 apply-button" : "w-full apply-button"}>Interview Guide</a>                            
                           </div>
                         </Col>
                         <Col span={breakpoints.includes('md') ? 12 : 24}>
