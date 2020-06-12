@@ -37,12 +37,14 @@ const Navbar: React.FC<{
                 onClose={() => toggleMenu(collapsed = !collapsed)}
                 visible={collapsed}
             >
+                {/* TODO: Put nav links in the config file */}
                 <Menu defaultSelectedKeys={[]} >
                     <Menu.Item key="1" onClick={() => navigate("/")}>Home</Menu.Item>
-                    <Menu.Item key="2" onClick={() => navigate("/admission")}>Admission Guide</Menu.Item>
-                    <Menu.Item key="3" onClick={() => navigate("/team")}>Faculty and Staff</Menu.Item>
-                    <Menu.Item key="4" onClick={() => navigate("https://medium.com/cictwvsu-online/our-story-87a461c14ab")}>About</Menu.Item>
-                    <Menu.Item key="5" onClick={() => props.themeModeHandler()}>{`Switch to ${props.themeState === 'base' ? 'Dark' : 'Light'} Mode`}</Menu.Item>
+                    <Menu.Item key="2" onClick={() => navigate("/interview")}>Interview Guide</Menu.Item>
+                    <Menu.Item key="3" onClick={() => navigate("/admission")}>Admission Guide</Menu.Item>
+                    <Menu.Item key="4" onClick={() => navigate("/team")}>Faculty and Staff</Menu.Item>
+                    <Menu.Item key="5" onClick={() => navigate("https://medium.com/cictwvsu-online/our-story-87a461c14ab")}>About</Menu.Item>
+                    <Menu.Item key="6" onClick={() => props.themeModeHandler()}>{`Switch to ${props.themeState === 'base' ? 'Dark' : 'Light'} Mode`}</Menu.Item>
                     {showApplication && <Menu.Item key="3" onClick={() => navigate('/applynow')}><Badge dot>Admission Form&nbsp;</Badge></Menu.Item>}
                 </Menu>
             </Drawer>

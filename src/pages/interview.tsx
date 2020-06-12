@@ -15,7 +15,6 @@ const { Panel } = Collapse;
 const googleCalendarGuide = [
     <span>In Google Calendar, click the event you want to join.</span>,
     <span>Click Join with Google Meet.</span>,
-    <span>Click Join with Google Meet.</span>
 ]
 
 const googleMeetGuide = [
@@ -47,6 +46,7 @@ const options = [
     'Join using Google Calendar event.',
     'Join using from Google Meet Web App.',
     'Join using Google Meet Mobile App.',
+    'Via Telephone Call (Offline).',
 ]
 
 const faqs: any = [
@@ -65,7 +65,7 @@ export default () => {
     return (
         <>
             <SEO
-                title="WVSU CICT | Interview Guidelines and Support"
+                title="Interview Guidelines and Support | WVSU CICT"
                 description="Get help with our Interview Process"
                 url="https://cictwvsu.com/interview/"
                 image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image-5.jpg"
@@ -79,10 +79,10 @@ export default () => {
                             <div className={`my-4 ${theme === 'base' ? 'text-black' : 'text-white'}`}>
                                 <span className="text-3xl mb-4"><ReactTypingEffect speed={100} eraseDelay={5000} typingDelay={200} text='Online Interview Guides and Support'></ReactTypingEffect></span>
                                 <p>We wish you all the good luck in your upcoming interview!</p>
-                                <Alert message="Updated Last June 9, 2020" />
-                                <p className="my-8 text-2xl">
-                                    CICT Applicants, we will be using Google Meet for your interview. You can join with any of the following methods listed below:
-                                </p>
+                                <Alert message="CICT Applicants, we will be using Google Meet for your interview. You can join with any of the following methods listed below or read the full article." />                                                            
+                                <Button className="my-4" href="https://medium.com/cictwvsu-online/preparing-for-your-college-cict-interview-97192fa48aee?source=rss-b9b09f8dface------2" target="_blank" size="large" type="primary">Read Full Article</Button>
+                                <Divider />
+                                <h2 className="text-2xl">General Options</h2>
                                 <List
                                     bordered
                                     dataSource={options}
