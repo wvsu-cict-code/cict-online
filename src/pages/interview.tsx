@@ -79,8 +79,8 @@ export default () => {
                             <div className={`my-4 ${theme === 'base' ? 'text-black' : 'text-white'}`}>
                                 <span className="text-3xl mb-4"><ReactTypingEffect speed={100} eraseDelay={5000} typingDelay={200} text='Online Interview Guides and Support'></ReactTypingEffect></span>
                                 <p>We wish you all the good luck in your upcoming interview!</p>
-                                <Alert message="CICT Applicants, we will be using Google Meet for your interview. You can join with any of the following methods listed below or read the full article." />                                                            
-                                <Button className="my-4" href="https://medium.com/cictwvsu-online/preparing-for-your-college-cict-interview-97192fa48aee?source=rss-b9b09f8dface------2" target="_blank" size="large" type="primary">Read Full Article</Button>
+                                <Alert message="College Interview is coming. Are you ready? Before your scheduled interview make sure you have read our Interview Guidelines and selected your best option to connect via Google Meet." />                                                            
+                                <Button className="my-4" href="https://medium.com/cictwvsu-online/preparing-for-your-college-cict-interview-97192fa48aee?source=rss-b9b09f8dface------2" target="_blank" size="large" type="primary">Interview Guidelines</Button>
                                 <Divider />
                                 <h2 className="text-2xl">General Options</h2>
                                 <List
