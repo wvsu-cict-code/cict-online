@@ -1,47 +1,46 @@
-import React, { useEffect, useState } from 'react';
-import { Alert, Card, Col, Divider, Grid, Layout, Row, Button } from 'antd';
-import { ArrowRight } from 'react-feather';
+import { Link } from '@reach/router';
+import { Button, Card, Col, Divider, Grid, Layout, Row } from 'antd';
 import Navbar from 'components/Navbar';
 import SEO from 'components/SEO';
 import SocialSection from 'components/SocialSection';
 import { filter } from 'lodash';
-import { ExternalLink } from 'react-feather';
+import React, { useEffect, useState } from 'react';
+import { ArrowRight, ExternalLink } from 'react-feather';
 import Masonry from 'react-masonry-css';
 import Slider from "react-slick";
 import { useRouteData } from 'react-static';
 import TimeAgo from 'react-timeago';
 import { Post } from 'types';
 import '../app.less';
-import InterviewIconLight from '../assets/interview-light.svg';
-import InterviewIconDark from '../assets/interview-dark.svg';
-
-import AdmissionIconLight from '../assets/admission-light.svg';
-import FacultyStaffIconLight from '../assets/faculty-and-staff-light.svg';
 import AdmissionIconDark from '../assets/admission-dark.svg';
-import FacultyStaffIconDark from '../assets/faculty-and-staff-dark.svg';
-
-import BLISIconDark from '../assets/blis-icon.svg';
-import CSIconDark from '../assets/cs-icon.svg';
-import EMCIconDark from '../assets/emc-icon.svg';
-import ISIconDark from '../assets/is-icon.svg';
-import ITIconDark from '../assets/it-icon.svg';
-import MITIconDark from '../assets/msit-icon.svg';
-
+import AdmissionIconLight from '../assets/admission-light.svg';
 import BLISIconLight from '../assets/blis-icon-light.svg';
+import BLISIconDark from '../assets/blis-icon.svg';
 import CSIconLight from '../assets/cs-icon-light.svg';
+import CSIconDark from '../assets/cs-icon.svg';
 import EMCIconLight from '../assets/emc-icon-light.svg';
-import ISIconLight from '../assets/is-icon-light.svg';
-import ITIconLight from '../assets/it-icon-light.svg';
-import MITIconLight from '../assets/msit-icon-light.svg';
-
-import CICTLogo from '../assets/logo.svg';
-import Footerbar from '../components/Footerbar';
-import ICTGraphicsDark from '../assets/ict.svg';
+import EMCIconDark from '../assets/emc-icon.svg';
+import FacultyStaffIconDark from '../assets/faculty-and-staff-dark.svg';
+import FacultyStaffIconLight from '../assets/faculty-and-staff-light.svg';
 import ICTGraphicsLight from '../assets/ict-light.svg';
+import ICTGraphicsDark from '../assets/ict.svg';
+import InterviewIconDark from '../assets/interview-dark.svg';
+import InterviewIconLight from '../assets/interview-light.svg';
+import ISIconLight from '../assets/is-icon-light.svg';
+import ISIconDark from '../assets/is-icon.svg';
+import ITIconLight from '../assets/it-icon-light.svg';
+import ITIconDark from '../assets/it-icon.svg';
+import CICTLogo from '../assets/logo.svg';
+import MITIconLight from '../assets/msit-icon-light.svg';
+import MITIconDark from '../assets/msit-icon.svg';
+import Footerbar from '../components/Footerbar';
 import ReactTypingEffect from '../components/ReactTypingEffect';
 import { DEFAULT_THEME } from '../themes';
 import { applyTheme } from '../themes/utils';
-import { Link } from '@reach/router';
+
+
+
+
 
 const { Content } = Layout;
 
@@ -213,13 +212,10 @@ const Public = () => {
                         <Col span={breakpoints.includes('md') ? 12 : 24}>
                           <div className={`billboard-greeting-text ${theme !== 'base' && 'text-white'}`}>
                             <span className="text-lg">Your Future with Technology</span>
-                            <span className="billboard-header">{"~$"}<ReactTypingEffect speed={100} eraseDelay={5000} typingDelay={200} text="echo 'Hello World!'"></ReactTypingEffect></span>
+                            <span className="billboard-header">{"~$"}<ReactTypingEffect speed={100} eraseDelay={5000} typingDelay={200} text="echo 'Stay Safe!'"></ReactTypingEffect></span>
                             <span className="font-normal text-lg">
                               West Visayas State University College of ICT continues the <b>tradition of excellence</b> through <b>quality education</b>, <b>innovative ICT researches</b>, and <b>extension services</b> to various stakeholders.
                           </span>
-                            <Divider />
-                            <Alert type="info" showIcon message={<span>To prepare for your interview, please visit our <a href="/interview">interview page</a> for tips and instructions.<br /></span>} />
-                            <a href="/interview" className={breakpoints.includes('md') ? "w-64 apply-button" : "w-full apply-button"}>Interview Guide</a>                            
                           </div>
                         </Col>
                         <Col span={breakpoints.includes('md') ? 12 : 24}>
