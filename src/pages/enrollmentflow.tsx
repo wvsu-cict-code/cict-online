@@ -47,7 +47,7 @@ const Node = React.forwardRef(({ node, children, ...otherProps }: INodeDefaultPr
         case 'student':
             return (
 
-                <div ref={ref} {...otherProps} className={`absolute p-10 rounded bg-blue-600 text-white w-64 max-w-xs h-20 flex justify-center items-center ${otherProps.isSelected && 'shadow-lg'}`}>
+                <div ref={ref} {...otherProps} className={`absolute p-10 rounded bg-blue-600 text-white w-64 max-w-xs h-24 flex justify-center items-center ${otherProps.isSelected && 'shadow-lg'}`}>
                     {children}
                 </div>
 
@@ -55,7 +55,7 @@ const Node = React.forwardRef(({ node, children, ...otherProps }: INodeDefaultPr
             break;
         case 'adviser':
             return (
-                <div ref={ref} {...otherProps} className="absolute p-4 rounded bg-orange-200 w-64 max-w-xs h-20 flex justify-center items-center">
+                <div ref={ref} {...otherProps} className="absolute p-4 rounded bg-orange-200 w-64 max-w-xs h-24 flex justify-center items-center">
                     {children}
                 </div>
             )
@@ -63,7 +63,7 @@ const Node = React.forwardRef(({ node, children, ...otherProps }: INodeDefaultPr
         case 'finance':
             return (
 
-                <div ref={ref} {...otherProps} className="absolute p-4 rounded bg-red-200 w-64 max-w-xs h-20 flex justify-center items-center">
+                <div ref={ref} {...otherProps} className="absolute p-4 rounded bg-red-200 w-64 max-w-xs h-24 flex justify-center items-center">
                     {children}
                 </div>
 
@@ -72,7 +72,7 @@ const Node = React.forwardRef(({ node, children, ...otherProps }: INodeDefaultPr
         case 'osa':
             return (
 
-                <div ref={ref} {...otherProps} className="absolute p-4 rounded bg-green-200 w-64 max-w-xs h-20 flex justify-center items-center">
+                <div ref={ref} {...otherProps} className="absolute p-4 rounded bg-green-200 w-64 max-w-xs h-24 flex justify-center items-center">
                     {children}
                 </div>
             )
@@ -87,7 +87,7 @@ const Node = React.forwardRef(({ node, children, ...otherProps }: INodeDefaultPr
         default:
             return (
 
-                <div ref={ref} {...otherProps} className="absolute p-4 rounded bg-white w-64 max-w-xs h-20 flex justify-center items-center">
+                <div ref={ref} {...otherProps} className="absolute p-4 rounded bg-white w-64 max-w-xs h-24 flex justify-center items-center">
                     {children}
                 </div>
             )
@@ -190,7 +190,7 @@ export default () => {
                                 <Button icon={<CloudDownloadOutlined />} href={`${data === 'old' ? 'https://github.com/wvsu-cict-code/cict-online/raw/development/src/downloads/Enrollment-Continuing-2020.pdf' : 'https://github.com/wvsu-cict-code/cict-online/raw/development/src/downloads/Enrollment-New-2020.pdf'}`} target="_blank">Download PDF</Button>
                             </Button.Group>
                             <br />
-                            <Alert showIcon type="info" message="Click on a node item with red badge to interact." />
+                            <Alert showIcon type="info" message="Click on a node item with red badge to interact and use the mouse buttons to navigate." />
 
                         </div>
 
