@@ -24,8 +24,8 @@ import FacultyStaffIconDark from '../assets/faculty-and-staff-dark.svg';
 import FacultyStaffIconLight from '../assets/faculty-and-staff-light.svg';
 import ICTGraphicsLight from '../assets/ict-light.svg';
 import ICTGraphicsDark from '../assets/ict.svg';
-import InterviewIconDark from '../assets/interview-dark.svg';
-import InterviewIconLight from '../assets/interview-light.svg';
+// import InterviewIconDark from '../assets/interview-dark.svg';
+// import InterviewIconLight from '../assets/interview-light.svg';
 import ISIconLight from '../assets/is-icon-light.svg';
 import ISIconDark from '../assets/is-icon.svg';
 import ITIconLight from '../assets/it-icon-light.svg';
@@ -94,16 +94,9 @@ const programs = [
 
 const quicklinks = [
   {
-    id: "intvw",
-    name: "Interview Guide",
-    link: "/interview",
-    iconLight: InterviewIconLight,
-    iconDark: InterviewIconDark
-  },
-  {
     id: "adm",
-    name: "Admission Guide",
-    link: "/admission",
+    name: "Enrollment Flow",
+    link: "/enrollmentflow",
     iconLight: AdmissionIconLight,
     iconDark: AdmissionIconDark
   },

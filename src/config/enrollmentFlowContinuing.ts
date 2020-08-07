@@ -27,7 +27,7 @@ const chart: IChart = {
         node2: {
             id: "node2",
             properties: {
-                value: 'Applicant logs-in to the applicant module'
+                value: 'Student logs-in to the Student module'
             },
             type: "student",
             position: {
@@ -139,7 +139,7 @@ const chart: IChart = {
         node7: {
             id: "node7",
             properties: {
-                value: 'College Advisers update the applicant status and level. Proceed to Enlistment.',
+                value: 'College Advisers update the student status and level. Proceed to Enlistment.',
                 description: 'After you have submitted the Enrollment Confirmation, your data will travel a long way from the College to the OSA, to the Finance Office. (Please be considerate as these offices entertains all enrollees and has a skeletal staff (due to pandemic) to accommodate all.)'
             },
             type: "adviser",
@@ -167,7 +167,7 @@ const chart: IChart = {
         node8: {
             id: "node8",
             properties: {
-                value: 'OSA receives the applicant enlistment and confirmation.'
+                value: 'OSA receives the student enlistment and confirmation.'
             },
             type: "osa",
             position: {
@@ -221,7 +221,7 @@ const chart: IChart = {
         node10: {
             id: "node10",
             properties: {
-                value: 'Finance receives the enlisted applicants and w/ scholarship (if applicable).'
+                value: 'Finance receives the enlisted students and w/ scholarship (if applicable).'
             },
             type: "finance",
             position: {
@@ -270,7 +270,7 @@ const chart: IChart = {
         node12: {
             id: "node12",
             properties: {
-                value: 'Applicant receives assessment email/message.',
+                value: 'Student receives assessment email/message.',
                 description: 'Please be patient and check your email and IUIS account from time to time.'
             },
             type: "input-output",
@@ -292,7 +292,7 @@ const chart: IChart = {
         node13: {
             id: "node13",
             properties: {
-                value: 'Applicant download and review the registration and assessment.'
+                value: 'Student download and review the registration and assessment.'
             },
             type: "input-output",
             position: {
@@ -427,7 +427,7 @@ const chart: IChart = {
         node18: {
             id: "node18",
             properties: {
-                value: 'Applicant receives enrollment or payment confirmation via email/messaging.',
+                value: 'Student receives enrollment or payment confirmation via email/messaging.',
                 description: 'Payment is only for our graduate school and students who did not applied for Free Higher Education (FHE) scholarship.'
             },
             type: "input-output",
@@ -455,7 +455,7 @@ const chart: IChart = {
         node19: {
             id: "node19",
             properties: {
-                value: 'Finance/SA Post Applicant Scholarship.'
+                value: 'Finance/SA Post Student Scholarship.'
             },
             type: "finance",
             position: {
