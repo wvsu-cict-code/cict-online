@@ -16,7 +16,7 @@ import decastro from '../assets/team/decastro.png';
 import dofitas from '../assets/team/dofitas.jpg';
 import dumpit from '../assets/team/dumpit.png';
 import elijorde from '../assets/team/elijorde.png';
-import feliprada from '../assets/team/feliprada.jpg';
+import feliprada from '../assets/team/feliprada.png';
 import ferrer from '../assets/team/ferrer.png';
 import figueroa from '../assets/team/figueroa.jpg';
 import gabawa from '../assets/team/gabawa.jpg';
@@ -68,7 +68,7 @@ const team: {
 		{
 			name: "Dr. Frank I. Elijorde",
 			description: "Bio Here",
-			position: ["Associate Dean", "Division Chair, Computer Science", "Associate Professor IV"],
+			position: ["Associate Dean", "Associate Professor IV"],
 			education: ["Doctor in Information & Knowledge Engineering", "Master of Science in Computer Science"],
 			avatar: elijorde,
 			type: "faculty",
@@ -101,7 +101,7 @@ const team: {
 		{
 			name: "Dr. Ma. Luche P. Sabayle",
 			description: "",
-			position: ["Department Head, IS", "CHED & ISO Liaison Officer", "Instructor I"],
+			position: ["Department Head, CS", "CHED & ISO Liaison Officer", "Instructor I"],
 			education: ["Doctor in Industrial Technology", "Master of Computer Science"],
 			avatar: sabayle,
 			type: "faculty",
@@ -143,10 +143,10 @@ const team: {
 			advisory: ['cs 2b'],
 		},
 		{
-			name: "Prof. Karen Alinor Dumpit",
+			name: "Karen Alinor J. Dumpit",
 			description: "",
-			position: ["Assistant Prof."],
-			education: ["Master in Math,"],
+			position: ["Assistant Prof IV"],
+			education: ["Master of Arts in Mathematics"],
 			avatar: dumpit,
 			type: "faculty",
 			tags: ["emc"],
@@ -167,7 +167,7 @@ const team: {
 		{
 			name: "Engr. Lea Marcon - Gabawa",
 			description: "",
-			position: ["College Guidance  Coordinator", "Assistant Professor III"],
+			position: ["Assistant Professor III"],
 			education: ["PhD in Education major in Curriculum Development (on-going)", "Master in Engineering"],
 			avatar: gabawa,
 			type: "faculty",
@@ -178,18 +178,18 @@ const team: {
 		{
 			name: "Dr. Cheryll Anne Feliprada",
 			description: "",
-			position: ["Extension Coordinator", "Instructor I"],
+			position: ["Extension Coordinator","College Guidance Coordinator", "Instructor I"],
 			education: ["Doctor in Educational Management", "Master in Engineering"],
 			avatar: feliprada,
 			type: "faculty",
-			tags: ["it"],
+			tags: ["guidances","it"],
 			specialization: ["ICT Skills Enhancement", "Networking"],
 			advisory: ['it 1b'],
 		},
 		{
 			name: "Dr. Regin A. Cabacas",
 			description: "",
-			position: ["College Alumni Coordinator", "Assistant Professor IV"],
+			position: ["Department Head, IS","College Alumni Coordinator", "Assistant Professor IV"],
 			education: ["Doctor of Engineering", "Master of Engineering"],
 			avatar: cabacas,
 			type: "faculty",
