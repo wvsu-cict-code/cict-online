@@ -1,42 +1,47 @@
-import React, { useState, useEffect } from 'react'
-import SEO from 'components/SEO'
-import { Layout, Card, Tag, Divider } from 'antd'
-import Navbar from 'components/Navbar'
-import ReactTypingEffect from '../components/ReactTypingEffect';
-import { DEFAULT_THEME } from '../themes'
-import { applyTheme } from '../themes/utils'
-import Masonry from 'react-masonry-css';
-
-import concepcion from '../assets/team/concepcion.png'
-import elijorde from '../assets/team/elijorde.png'
-import secondes from '../assets/team/secondes.png'
-import dofitas from '../assets/team/dofitas.jpg'
-import sabayle from '../assets/team/sabayle.png'
-import sumido from '../assets/team/sumido.jpg'
-import dayot from '../assets/team/dayot.png'
-import gerardo from '../assets/team/gerardo.jpg'
-import decastro from '../assets/team/decastro.png'
-import dumpit from '../assets/team/dumpit.png'
-import sansolis from '../assets/team/sansolis.jpg'
-import feliprada from '../assets/team/feliprada.jpg'
-import gabawa from '../assets/team/gabawa.jpg'
-import cabacas from '../assets/team/cabacas.png'
-import osorio from '../assets/team/osorio.png'
-import subong from '../assets/team/subong.png'
-import sandig from '../assets/team/sandig.png'
-import solidarios from '../assets/team/solidarios.jpg'
-import alipe from '../assets/team/alipe.png'
-import sequijo from '../assets/team/sequijo.png'
-import cervantes from '../assets/team/cervantes.png'
-import ygot from '../assets/team/ygot.png'
-import ferrer from '../assets/team/ferrer.png'
-import figueroa from '../assets/team/figueroa.jpg'
-import gantala from '../assets/team/gantala.jpg'
-import SocialSection from 'components/SocialSection';
+import { Card, Divider, Input, Layout, Tabs, Tag } from 'antd';
 import Footerbar from 'components/Footerbar';
+import Navbar from 'components/Navbar';
+import SEO from 'components/SEO';
+import SocialSection from 'components/SocialSection';
+import { filter, upperCase } from 'lodash';
+import React, { useEffect, useState } from 'react';
+import Masonry from 'react-masonry-css';
+import useFuse from 'use-fuse';
+import alipe from '../assets/team/alipe.png';
+import cabacas from '../assets/team/cabacas.png';
+import cervantes from '../assets/team/cervantes.png';
+import concepcion from '../assets/team/concepcion.png';
+import dayot from '../assets/team/dayot.png';
+import decastro from '../assets/team/decastro.png';
+import dofitas from '../assets/team/dofitas.jpg';
+import dumpit from '../assets/team/dumpit.png';
+import elijorde from '../assets/team/elijorde.png';
+import feliprada from '../assets/team/feliprada.jpg';
+import ferrer from '../assets/team/ferrer.png';
+import figueroa from '../assets/team/figueroa.jpg';
+import gabawa from '../assets/team/gabawa.jpg';
+import gantala from '../assets/team/gantala.jpg';
+import gerardo from '../assets/team/gerardo.jpg';
+import madalogdog from '../assets/team/madalogdog.png';
+import osorio from '../assets/team/osorio.png';
+import sabayle from '../assets/team/sabayle.png';
+import sandig from '../assets/team/sandig.png';
+import sansolis from '../assets/team/sansolis.jpg';
+import secondes from '../assets/team/secondes.png';
+import sequijo from '../assets/team/sequijo.png';
+import solidarios from '../assets/team/solidarios.jpg';
+import subong from '../assets/team/subong.png';
+import sumido from '../assets/team/sumido.jpg';
+import ygot from '../assets/team/ygot.png';
+import ReactTypingEffect from '../components/ReactTypingEffect';
+import { DEFAULT_THEME } from '../themes';
+import { applyTheme } from '../themes/utils';
+
 
 const { Content } = Layout;
 
+
+const { TabPane } = Tabs;
 
 const team: {
 	name: string;
@@ -47,6 +52,7 @@ const team: {
 	type: string;
 	tags: string[];
 	specialization: string[];
+	advisory: string[]
 }[] = [
 		{
 			name: "Dr. Ma.Beth S. Concepcion",
@@ -56,7 +62,8 @@ const team: {
 			avatar: concepcion,
 			type: "faculty",
 			tags: ["dean", "is", "admin"],
-			specialization: ["Open Data Processing", "Systems Development", "Multimedia Systems"]
+			specialization: ["Open Data Processing", "Systems Development", "Multimedia Systems"],
+			advisory: ['is 3a'],
 		},
 		{
 			name: "Dr. Frank I. Elijorde",
@@ -66,7 +73,8 @@ const team: {
 			avatar: elijorde,
 			type: "faculty",
 			tags: ["cs"],
-			specialization: ["Knowledge Engineering", "Computer Vision", "Artificial Neural Networks", "C++ Programming"]
+			specialization: ["Knowledge Engineering", "Computer Vision", "Artificial Neural Networks", "C++ Programming"],
+			advisory: ['cs 2a'],
 		},
 		{
 			name: "Dr. Arnel N. Secondes",
@@ -76,7 +84,8 @@ const team: {
 			avatar: secondes,
 			type: "faculty",
 			tags: ["cs"],
-			specialization: ["Software Engineering", "Information Management", "System Analysis"]
+			specialization: ["Software Engineering", "Information Management", "System Analysis"],
+			advisory: ['cs 1a'],
 		},
 		{
 			name: "Prof. Cyreneo Dofitas Jr.",
@@ -86,7 +95,8 @@ const team: {
 			avatar: dofitas,
 			type: "faculty",
 			tags: ["it"],
-			specialization: [".NET Applications Development", "Micro Controllers", "Assistive Technologies"]
+			specialization: [".NET Applications Development", "Micro Controllers", "Assistive Technologies"],
+			advisory: ['it 1a', 'it 3a'],
 		},
 		{
 			name: "Dr. Ma. Luche P. Sabayle",
@@ -96,7 +106,8 @@ const team: {
 			avatar: sabayle,
 			type: "faculty",
 			tags: ["is"],
-			specialization: ["Mathematics", "Java Programming"]
+			specialization: ["Mathematics", "Java Programming"],
+			advisory: ['cs 1b'],
 		},
 		{
 			name: "Mr. Evan Sumido",
@@ -106,7 +117,8 @@ const team: {
 			avatar: sumido,
 			type: "faculty",
 			tags: ["emc"],
-			specialization: ["Unity Game Development", "Multimedia Technologies", "C++ Programming", "Java Programming", "C# Programming", "MikroTik Networking Tools"]
+			specialization: ["Unity Game Development", "Multimedia Technologies", "C++ Programming", "Java Programming", "C# Programming", "MikroTik Networking Tools"],
+			advisory: ['emc 1a', 'emc 3a'],
 		},
 		{
 			name: "Dr. Bobby D. Gerardo",
@@ -116,7 +128,8 @@ const team: {
 			avatar: gerardo,
 			type: "faculty",
 			tags: ["it"],
-			specialization: ["Knowledge Engineering", "Cyber Security", "Systems Development", "Smart Engineering Solutions", "Algorithms"]
+			specialization: ["Knowledge Engineering", "Cyber Security", "Systems Development", "Smart Engineering Solutions", "Algorithms"],
+			advisory: ['cs 3a'],
 		},
 		{
 			name: "Dr. Joel T. De Castro",
@@ -126,7 +139,8 @@ const team: {
 			avatar: decastro,
 			type: "faculty",
 			tags: ["is"],
-			specialization: ["System Management", "IoT Research", "Business Analytics"]
+			specialization: ["System Management", "IoT Research", "Business Analytics"],
+			advisory: ['cs 2b'],
 		},
 		{
 			name: "Prof. Karen Alinor Dumpit",
@@ -136,7 +150,8 @@ const team: {
 			avatar: dumpit,
 			type: "faculty",
 			tags: ["emc"],
-			specialization: ["2D Animation", "Traditional Art", "Logic Design"]
+			specialization: ["2D Animation", "Traditional Art", "Logic Design"],
+			advisory: ['emc 2a'],
 		},
 		{
 			name: "Mr. Evans B. Sansolis",
@@ -146,7 +161,8 @@ const team: {
 			avatar: sansolis,
 			type: "",
 			tags: ["it"],
-			specialization: ["Micro Controllers", "IoT Devices", "Smart Systems"]
+			specialization: ["Micro Controllers", "IoT Devices", "Smart Systems"],
+			advisory: ['it 2a'],
 		},
 		{
 			name: "Engr. Lea Marcon - Gabawa",
@@ -156,7 +172,8 @@ const team: {
 			avatar: gabawa,
 			type: "faculty",
 			tags: ["it"],
-			specialization: ["Curriculum Development", "Micro Controllers", "CISCO & MikroTik Networking Tools", "Electronics Engineering",  "Logic Design"]
+			specialization: ["Curriculum Development", "Micro Controllers", "CISCO & MikroTik Networking Tools", "Electronics Engineering", "Logic Design"],
+			advisory: ['it 3b'],
 		},
 		{
 			name: "Dr. Cheryll Anne Feliprada",
@@ -166,7 +183,8 @@ const team: {
 			avatar: feliprada,
 			type: "faculty",
 			tags: ["it"],
-			specialization: ["ICT Skills Enhancement", "Networking"]
+			specialization: ["ICT Skills Enhancement", "Networking"],
+			advisory: ['it 1b'],
 		},
 		{
 			name: "Dr. Regin A. Cabacas",
@@ -176,7 +194,8 @@ const team: {
 			avatar: cabacas,
 			type: "faculty",
 			tags: ["it"],
-			specialization: ["Delay Tolerant Networks", "Wireless Sensor Networks", "Vehicular Ad-hoc Networks", "Blockchain"]
+			specialization: ["Delay Tolerant Networks", "Wireless Sensor Networks", "Vehicular Ad-hoc Networks", "Blockchain"],
+			advisory: ['is 1a'],
 		},
 		{
 			name: "Engr. Erwin Osorio",
@@ -186,7 +205,8 @@ const team: {
 			avatar: osorio,
 			type: "faculty",
 			tags: ["is"],
-			specialization: ["ICT Skills Enhancement", "Electrical Engineering", "Networking"]
+			specialization: ["ICT Skills Enhancement", "Electrical Engineering", "Networking"],
+			advisory: ['is 2b'],
 		},
 		{
 			name: "Paul Marlou Subong",
@@ -196,7 +216,8 @@ const team: {
 			avatar: subong,
 			type: "faculty",
 			tags: ["it"],
-			specialization: ["Programming"]
+			specialization: ["Programming"],
+			advisory: ['it 2b'],
 		},
 		{
 			name: "Ralph Voltaire Dayot",
@@ -206,7 +227,8 @@ const team: {
 			avatar: dayot,
 			type: "faculty",
 			tags: ["it"],
-			specialization: ["Knowledge Engineering", "Systems Development", "C++ & Python Programming"]
+			specialization: ["Knowledge Engineering", "Systems Development", "C++ & Python Programming"],
+			advisory: [],
 		},
 		{
 			name: "Shem Durst Elijah B. Sandig",
@@ -216,7 +238,8 @@ const team: {
 			avatar: sandig,
 			type: "faculty",
 			tags: ["is"],
-			specialization: ["Open Data Processing", "UX Design", "Data Analytics", "Information Management", "MySQL Database Development", "Linux Proficiency"]
+			specialization: ["Open Data Processing", "UX Design", "Data Analytics", "Information Management", "MySQL Database Development", "Linux Proficiency"],
+			advisory: ["isa 2a"],
 		},
 		{
 			name: "Mark Joseph J. Solidarios",
@@ -226,7 +249,8 @@ const team: {
 			avatar: solidarios,
 			type: "faculty",
 			tags: ["emc"],
-			specialization: ["3D Graphics", "Open-Source Technologies", "App and Games Development", "Linux Proficiency"]
+			specialization: ["3D Graphics", "Open-Source Technologies", "App and Games Development", "Linux Proficiency"],
+			advisory: [],
 		},
 		{
 			name: "John Rey Alipe",
@@ -236,7 +260,8 @@ const team: {
 			avatar: alipe,
 			type: "faculty",
 			tags: ["cs"],
-			specialization: ["Systems Development", "Micro Controllers", "Java Programming", "Game Development", "Software Engineering"]
+			specialization: ["Systems Development", "Micro Controllers", "Java Programming", "Game Development", "Software Engineering"],
+			advisory: ['cs 3a'],
 		},
 		{
 			name: "Remegio S. Soqueño II",
@@ -246,7 +271,8 @@ const team: {
 			avatar: sequijo,
 			type: "faculty",
 			tags: ["emc"],
-			specialization: ["Multimedia Systems", "Web App Development"]
+			specialization: ["Multimedia Systems", "Web App Development"],
+			advisory: ['emc 1a'],
 		},
 		{
 			name: "Mr. Louie F. Cervantes",
@@ -256,7 +282,19 @@ const team: {
 			avatar: cervantes,
 			type: "faculty",
 			tags: ["it", "cs"],
-			specialization: ["Information Engineering", "Distributed Systems", "Artificial Intelligence"]
+			specialization: ["Information Engineering", "Distributed Systems", "Artificial Intelligence"],
+			advisory: [],
+		},
+		{
+			name: "Ms. Elra Madalogdog",
+			description: "",
+			position: ["University Library Officer"],
+			education: ["Master in Library and Information Science"],
+			avatar: madalogdog,
+			type: "faculty",
+			tags: ["admin", "blis"],
+			specialization: ["Library and Information Science"],
+			advisory: ['blis 1a', 'blis 2a'],
 		},
 		{
 			name: "Felizardo Ygot Jr.",
@@ -266,7 +304,8 @@ const team: {
 			avatar: ygot,
 			type: "staff",
 			tags: ["admin", "staff"],
-			specialization: []
+			specialization: [],
+			advisory: [],
 		},
 		{
 			name: "Russel Laurence Ferrer",
@@ -276,7 +315,8 @@ const team: {
 			avatar: ferrer,
 			type: "staff",
 			tags: ["admin", "staff"],
-			specialization: []
+			specialization: [],
+			advisory: [],
 		},
 		{
 			name: "Marian Figueroa",
@@ -287,6 +327,7 @@ const team: {
 			type: "staff",
 			tags: ["admin", "staff"],
 			specialization: [],
+			advisory: [],
 		},
 		{
 			name: "Genebem Gantala",
@@ -296,16 +337,41 @@ const team: {
 			education: [],
 			type: "staff",
 			tags: ["admin", "staff"],
-			specialization: []
+			specialization: [],
+			advisory: [],
 		}
 	]
 
+const fuseOptions = {
+	// isCaseSensitive: false,
+	// includeScore: false,
+	// shouldSort: true,
+	// includeMatches: false,
+	// findAllMatches: false,
+	// minMatchCharLength: 1,
+	// location: 0,
+	// threshold: 0.6,
+	// distance: 100,
+	// useExtendedSearch: false,
+	// ignoreLocation: false,
+	// ignoreFieldNorm: false,
+	keys: [
+		"name",
+		"advisory"
+	]
+};
+
 export default () => {
 	const [theme, setTheme] = useState(DEFAULT_THEME);
+	const [list] = useState(filter(team, o => o.advisory.length > 0))
+	const [search, setSearch] = useState('')
+	const filteredList = useFuse(list, search, fuseOptions)
 
 	useEffect(() => {
 		applyTheme(theme);
 	}, [theme]);
+
+
 
 	const themeModeHandler = () => (theme === 'base' ? setTheme('dark') : setTheme('base'));
 
@@ -325,41 +391,88 @@ export default () => {
 						<div className="container mx-auto">
 							<div className={`my-4 ${theme !== 'base' && 'text-white'}`}>
 								<span className="text-3xl"><ReactTypingEffect speed={100} eraseDelay={5000} typingDelay={200} text='cout << "Nice to Meet You!";'></ReactTypingEffect></span>
-								<p>Get to know your college professors and staffs.</p>
-								<div className="my-8">
-									<Masonry
-										breakpointCols={{
-											default: 4,
-											1280: 4,
-											800: 2,
-											700: 2,
-											500: 1
-										}}
-										className="my-masonry-grid"
-										columnClassName="my-masonry-grid_column">
-										{team.map(i => (
-											<Card className="card-component" style={{ backgroundColor: theme === 'base' ? '#fff' : '#111', border: "none" }}>
-												<img src={i.avatar} className="rounded-full mb-8 w-24 h-24" />
-										<Card.Meta title={<span className={`${theme !== 'base' && 'text-white'}`}>{i.name}</span>} description={
-													<>
-														<p className={`${theme !== 'base' && 'text-gray-600'} mb-2`}>{i.position && i.position.join(', ')}</p>
-													</>
-												} />
-												<p className={`${theme !== 'base' && 'text-white'} mb-2`}>
-													{i.education && i.education.join(', ')}
-												</p>
-												<Divider orientation="left"><small className="text-gray-500">Department/Functions</small></Divider>
-												<p className={`${theme !== 'base' && 'text-white'} mb-2`}>
-													{i.tags.map(k => <Tag color="orange">{k.toUpperCase()}</Tag>)}
-												</p>
-												{i.specialization.length > 1 && <Divider orientation="left"><small className="text-gray-500">Specializations</small></Divider>}
-												<p className={`${theme !== 'base' && 'text-white'} mb-2`}>
-													{i.specialization.map(l => <Tag style={{ marginBottom: '0.5rem' }} color="blue">{l}</Tag>)}
-												</p>
-											</Card>
-										))}
-									</Masonry>
-								</div>
+								<p>Get to know our college professors and staff.</p>
+								<Tabs defaultActiveKey="1">
+									<TabPane tab="Class Advisers" key="1">
+										<div className="p-4">
+											<Input.Search value={search} onChange={e => setSearch(e.target.value)} placeholder="Search a section or faculty" />
+										</div>
+										<div className="my-8">
+
+											<Masonry
+												breakpointCols={{
+													default: 4,
+													1280: 4,
+													800: 2,
+													700: 2,
+													500: 1
+												}}
+												className="my-masonry-grid"
+												columnClassName="my-masonry-grid_column">
+												{(search ? filteredList : list).map((i: any) => (
+													<Card className="card-component" style={{ backgroundColor: theme === 'base' ? '#fff' : '#111', border: "none" }}>
+
+														<img src={i.item ? i.item.avatar : i.avatar} className="rounded-full mb-8 w-24 h-24" />
+														<Card.Meta title={<span className={`${theme !== 'base' && 'text-white'}`}>{i.item ? i.item.name : i.name}</span>} description={
+															<>
+																<p className={`${theme !== 'base' && 'text-gray-600'} mb-2`}>{i.position && i.position.join(', ')}</p>
+															</>
+														} />
+														<p className={`${theme !== 'base' && 'text-white'} mb-2`}>
+															{i.item ? i.item.education : i.education && i.item ? i.item.education : i.education.join(', ')}
+														</p>
+														<Divider orientation="left"><small className="text-gray-500">Advisory</small></Divider>
+														<p className={`${theme !== 'base' && 'text-white'} mb-2`}>
+															<span>
+																{
+																	i.item ? i.item.advisory.map((m: string) => <Tag color="magenta">{upperCase(m)}</Tag>) :
+																		i.advisory.map((m: string) => <Tag color="magenta">{upperCase(m)}</Tag>)
+																}</span>
+														</p>
+													</Card>
+												)
+												)}
+											</Masonry>
+										</div>
+									</TabPane>
+									<TabPane tab="All Faculty and Staff" key="2">
+										<div className="my-8">
+											<Masonry
+												breakpointCols={{
+													default: 4,
+													1280: 4,
+													800: 2,
+													700: 2,
+													500: 1
+												}}
+												className="my-masonry-grid"
+												columnClassName="my-masonry-grid_column">
+												{team.map(i => (
+													<Card className="card-component" style={{ backgroundColor: theme === 'base' ? '#fff' : '#111', border: "none" }}>
+														<img src={i.avatar} className="rounded-full mb-8 w-24 h-24" />
+														<Card.Meta title={<span className={`${theme !== 'base' && 'text-white'}`}>{i.name}</span>} description={
+															<>
+																<p className={`${theme !== 'base' && 'text-gray-600'} mb-2`}>{i.position && i.position.join(', ')}</p>
+															</>
+														} />
+														<p className={`${theme !== 'base' && 'text-white'} mb-2`}>
+															{i.education && i.education.join(', ')}
+														</p>
+														<Divider orientation="left"><small className="text-gray-500">Department/Functions</small></Divider>
+														<p className={`${theme !== 'base' && 'text-white'} mb-2`}>
+															{i.tags.map(k => <Tag color="orange">{k.toUpperCase()}</Tag>)}
+														</p>
+														{i.specialization.length > 0 && <Divider orientation="left"><small className="text-gray-500">{`Specialization${i.specialization.length === 1 ? '' : 's'}`}</small></Divider>}
+														<p className={`${theme !== 'base' && 'text-white'} mb-2`}>
+															{i.specialization.map(l => <Tag style={{ marginBottom: '0.5rem' }} color="blue">{l}</Tag>)}
+														</p>
+													</Card>
+												))}
+											</Masonry>
+										</div>
+									</TabPane>
+								</Tabs>
+
 							</div>
 						</div>
 					</Content>
