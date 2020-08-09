@@ -16,7 +16,7 @@ import decastro from '../assets/team/decastro.png';
 import dofitas from '../assets/team/dofitas.jpg';
 import dumpit from '../assets/team/dumpit.png';
 import elijorde from '../assets/team/elijorde.png';
-import feliprada from '../assets/team/feliprada.jpg';
+import feliprada from '../assets/team/feliprada.png';
 import ferrer from '../assets/team/ferrer.png';
 import figueroa from '../assets/team/figueroa.jpg';
 import gabawa from '../assets/team/gabawa.jpg';
@@ -68,7 +68,7 @@ const team: {
 		{
 			name: "Dr. Frank I. Elijorde",
 			description: "Bio Here",
-			position: ["Associate Dean", "Division Chair, Computer Science", "Associate Professor IV"],
+			position: ["Associate Dean", "Associate Professor IV"],
 			education: ["Doctor in Information & Knowledge Engineering", "Master of Science in Computer Science"],
 			avatar: elijorde,
 			type: "faculty",
@@ -101,7 +101,7 @@ const team: {
 		{
 			name: "Dr. Ma. Luche P. Sabayle",
 			description: "",
-			position: ["Department Head, IS", "CHED & ISO Liaison Officer", "Instructor I"],
+			position: ["Department Head, CS", "CHED & ISO Liaison Officer", "Instructor I"],
 			education: ["Doctor in Industrial Technology", "Master of Computer Science"],
 			avatar: sabayle,
 			type: "faculty",
@@ -178,7 +178,7 @@ const team: {
 		{
 			name: "Dr. Cheryll Anne Feliprada",
 			description: "",
-			position: ["College Guidance Councilor","Extension Coordinator", "Instructor I"],
+			position: ["Extension Coordinator","College Guidance Councilor", "Instructor I"],
 			education: ["Doctor in Educational Management", "Master in Engineering"],
 			avatar: feliprada,
 			type: "faculty",
@@ -189,7 +189,7 @@ const team: {
 		{
 			name: "Dr. Regin A. Cabacas",
 			description: "",
-			position: ["College Alumni Coordinator", "Assistant Professor IV"],
+			position: ["Department Head, IS","College Alumni Coordinator", "Assistant Professor IV"],
 			education: ["Doctor of Engineering", "Master of Engineering"],
 			avatar: cabacas,
 			type: "faculty",
