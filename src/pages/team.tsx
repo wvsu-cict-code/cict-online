@@ -79,7 +79,7 @@ const team: {
 		{
 			name: "Dr. Arnel N. Secondes",
 			description: "",
-			position: ["College Secretary", "College Quality Assurance Coordinator", "Instructor I"],
+			position: ["College Secretary", "College Quality Assurance Coordinator", "Assistant Professor III"],
 			education: ["Doctor in Industrial Technology", "Master of Science in Computer Science"],
 			avatar: secondes,
 			type: "faculty",
