@@ -393,7 +393,7 @@ export default () => {
 								<span className="text-3xl"><ReactTypingEffect speed={100} eraseDelay={5000} typingDelay={200} text='cout << "Nice to Meet You!";'></ReactTypingEffect></span>
 								<p>Get to know our college professors and staff.</p>
 								<Tabs defaultActiveKey="1">
-									<TabPane tab="Class Advisers" key="1">
+									<TabPane tab={<span className={`${theme !== 'base' && 'text-white'}`}>Class Advisers</span>} key="1">
 										<div className="p-4">
 											<Input.Search value={search} onChange={e => setSearch(e.target.value)} placeholder="Search a section or faculty" />
 										</div>
@@ -435,7 +435,7 @@ export default () => {
 											</Masonry>
 										</div>
 									</TabPane>
-									<TabPane tab="All Faculty and Staff" key="2">
+									<TabPane tab={<span className={`${theme !== 'base' && 'text-white'}`}>All Faculty and Staff</span>} key="2">
 										<div className="my-8">
 											<Masonry
 												breakpointCols={{
