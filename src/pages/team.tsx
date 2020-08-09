@@ -167,7 +167,7 @@ const team: {
 		{
 			name: "Engr. Lea Marcon - Gabawa",
 			description: "",
-			position: ["College Guidance  Coordinator", "Assistant Professor III"],
+			position: ["Assistant Professor III"],
 			education: ["PhD in Education major in Curriculum Development (on-going)", "Master in Engineering"],
 			avatar: gabawa,
 			type: "faculty",
@@ -178,7 +178,7 @@ const team: {
 		{
 			name: "Dr. Cheryll Anne Feliprada",
 			description: "",
-			position: ["Extension Coordinator","College Guidance Councilor", "Instructor I"],
+			position: ["Extension Coordinator","College Guidance Coordinator", "Instructor I"],
 			education: ["Doctor in Educational Management", "Master in Engineering"],
 			avatar: feliprada,
 			type: "faculty",
