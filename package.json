@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@mrblenny/react-flow-chart": "^0.0.14",
+    "@sanity/image-url": "^0.140.19",
     "antd": "^4.1.4",
     "axios": "^0.19.2",
     "classnames": "^2.2.6",
