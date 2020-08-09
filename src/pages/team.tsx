@@ -36,6 +36,7 @@ import ygot from '../assets/team/ygot.png';
 import ReactTypingEffect from '../components/ReactTypingEffect';
 import { DEFAULT_THEME } from '../themes';
 import { applyTheme } from '../themes/utils';
+import sanityClient from '../config/sanityClient'
 
 
 const { Content } = Layout;
@@ -370,6 +371,10 @@ export default () => {
 	useEffect(() => {
 		applyTheme(theme);
 	}, [theme]);
+
+	useEffect(()=>{
+		sanityClient.fetch(`*[type == post]`).then(res=>console.log(res))
+	})
 
 
 
