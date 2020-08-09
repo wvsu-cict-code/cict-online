@@ -101,7 +101,7 @@ const team: {
 		{
 			name: "Dr. Ma. Luche P. Sabayle",
 			description: "",
-			position: ["Department Head, CS", "CHED & ISO Liaison Officer", "Instructor I"],
+			position: ["Department Head, CS", "CHED & ISO Liaison Officer", "Assistant Professor III"],
 			education: ["Doctor in Industrial Technology", "Master of Computer Science"],
 			avatar: sabayle,
 			type: "faculty",
