@@ -19,3 +19,12 @@
 .slick-prev::before, .slick-next::before{
     color: orange!important;
 }
+
+/**
+ * @NOTE
+ * Override for ant-layout to provide a smooth transition
+ * on theme change.
+ */
+.ant-layout, .ant-layout * {
+    transition: background .5s;
+}
