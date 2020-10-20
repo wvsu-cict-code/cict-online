@@ -28,3 +28,17 @@
 .ant-layout, .ant-layout * {
     transition: background .5s;
 }
+
+/**
+ * @NOTE
+ * Overrided for dark themed card actions.
+ */
+.card-component__dark > .ant-card-actions {
+    background: #222222;
+    border-top: #222222;
+}
+.card-component__dark > .ant-card-actions > li > span > .ant-btn{
+    color: rgba(#fff);
+    background: #222222;
+    border-color: #d9d9d9;
+}
