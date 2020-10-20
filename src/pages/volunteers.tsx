@@ -93,7 +93,7 @@ const volunteers: {
             avatar: lumbao,
             name: "Mark Anthony Lumbao",
             work: ["Volunteer ReactJS Developer", "Dynamic Theming Implementor", "Geek Mode Developer"],
-            link: "http://m-a-l.herokuapp.com/"
+            link: "https://m-a-l.herokuapp.com/"
         },
         {
             avatar: malimit,
@@ -147,9 +147,11 @@ export default () => {
                                         columnClassName="my-masonry-grid_column">
                                         {volunteers.map(i => (
                                             <div className="text-center">
-                                                <Card actions={i.link && [
-                                                    <Button href={i.link} target="_blank">Learn More</Button>
-                                                ]} className="card-component" style={{ backgroundColor: theme === 'base' ? '#fff' : '#111', border: "none" }}>
+                                                <Card
+                                                    actions={i.link && [<Button href={i.link} target="_blank">Learn More</Button>]}
+                                                    className={`card-component ${theme === 'dark' && 'card-component__dark'}`}
+                                                    style={{ backgroundColor: theme === 'base' ? '#fff' : '#111', border: "none" }}
+                                                >
                                                     {!i.avatar && <Identicon string={i.name} size={70} className="rounded-full mb-8 mx-auto border  border-gray-500 p-2" />}
                                                     {i.avatar && <img src={i.avatar} className="rounded-full mx-auto mb-8 w-20 h-20 border border-solid border-gray-500" />}
                                                     <Card.Meta title={<span className={`${theme !== 'base' && 'text-white'}`}>{i.name}</span>} description={
