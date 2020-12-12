@@ -6,13 +6,13 @@
 
 1. Place the following in a Long Brown Envelope:
 
-- SHS Report Card (1 original and 1 photocopy)
-- Certificate of Good Moral Character (1 original and 1 photocopy)
-- PSA (NSO) Birth Certificate (2 Photocopies only)
-- Medical Requirements (1 original and 1 photocopy each) (Except those whose PE was conducted at the WVSU Clinic)
-- FHE Application Form (1 original and 1 photocopy)
-- 2x2 ID Picture (2 pcs.)
-- Long Orange Folder (2 pcs.)
+* SHS Report Card (1 original and 1 photocopy)
+* Certificate of Good Moral Character (1 original and 1 photocopy)
+* PSA (NSO) Birth Certificate (2 Photocopies only)
+* Medical Requirements (1 original and 1 photocopy each) (Except those whose PE was conducted at the WVSU Clinic)
+* FHE Application Form (1 original and 1 photocopy)
+* 2x2 ID Picture (2 pcs.)
+* Long Orange Folder (2 pcs.)
 
 2. Label the Envelope with the following Information:
 
