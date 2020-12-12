@@ -32,6 +32,4 @@
 
 3. Submit using any of the following modes most convenient to you:
 * Via Courier
-* Personal or through Representative during office hours/working days. If you intend to submit using this mode, you are advised to schedule your visit to the university campus through: https://wvsu.edu.ph/ticketon/ 
-
-**Take note** that your reason for visiting the campus is to **“Submit Documents to CICT Office”**. Screenshot or print out the Approval Code and present to the security guard upon entering the Campus.
+* Personal or through Representative during office hours/working days. If you intend to submit using this mode, you are advised to schedule your visit to the university campus through: https://wvsu.edu.ph/ticketon/. **Take note** that your reason for visiting the campus is to **“Submit Documents to CICT Office”**. Screenshot or print out the Approval Code and present to the security guard upon entering the Campus.
