@@ -6,6 +6,8 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css");
 
+@import url('https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css');
+
 .slick-prev {
     left: 0% !important;
     z-index: 1;
@@ -41,4 +43,12 @@
     color: rgba(#fff);
     background: #3a3b44;
     border-color: #d9d9d9;
+}
+
+.markdown-body > ul, .markdown-body > ul ul {
+    list-style: disc!important;
+}
+
+.markdown-body > ol {
+    list-style: decimal!important;
 }
