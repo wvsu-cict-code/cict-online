@@ -31,8 +31,8 @@
 > 5000
 
 3. Submit using any of the following modes most convenient to you:
-   - Via Courier
-   - Personal or through Representative during office hours/working days 
+* Via Courier
+* Personal or through Representative during office hours/working days 
    
 > If you intend to submit using this mode, you are advised to schedule your visit to the university campus through: https://wvsu.edu.ph/ticketon/ 
 
