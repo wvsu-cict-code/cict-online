@@ -41,8 +41,8 @@ export default () => {
             <SEO
                 title="Announcement | WVSU CICT"
                 description="Get help with our Interview Process"
-                url="https://cictwvsu.com/interview/"
-                image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image-5.jpg"
+                url="https://cictwvsu.com/announcement/"
+                image="https://github.com/wvsu-cict-code/cict-online/raw/development/src/assets/social-image-announcement.jpg"
                 twitterUsername="cictwvsu"
             />
             <Layout className="layout">
