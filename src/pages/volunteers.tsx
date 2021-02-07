@@ -93,7 +93,7 @@ const volunteers: {
             avatar: lumbao,
             name: "Mark Anthony Lumbao",
             work: ["Volunteer ReactJS Developer", "Dynamic Theming Implementor", "Geek Mode Developer"],
-            link: "https://m-a-l.herokuapp.com/"
+            link: "https://mark-lumbao.github.io/"
         },
         {
             avatar: malimit,
