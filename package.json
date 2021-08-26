@@ -13,7 +13,7 @@
     "@mrblenny/react-flow-chart": "^0.0.14",
     "@sanity/image-url": "^0.140.19",
     "antd": "^4.1.4",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "disqus-react": "^1.0.8",
     "flare-react": "^1.0.7",
